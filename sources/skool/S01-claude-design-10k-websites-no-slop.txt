@@ -1,0 +1,710 @@
+LESSON: 👾 Claude Design $10,000 Websites (NO Slop) (md=476103, video 22 min) ====================
+
+DESCRIPTION:
+[v2][{"type":"heading","attrs":{"level":3}},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","text":"  "}]},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Hey, in this video, you're gonna learn:"}]},{"type":"paragraph","content":[{"type":"text","text":"🎨 "},{"type":"text","marks":[{"type":"bold"}],"text":"Use Claude Design with reference websites and design systems"},{"type":"text","text":" to create websites that avoid repetitive AI patterns such as generic gradients, three-card layouts, frosted glass effects, rounded sections, and default typography."}]},{"type":"paragraph","content":[{"type":"text","text":"🔍 "},{"type":"text","marks":[{"type":"bold"}],"text":"Find and compare niche-specific website references such as Duolingo, Quizlet, Slush, Linear, and Mercury"},{"type":"text","text":" so Claude can reverse-engineer stronger layouts, visual styles, interaction patterns, and design decisions."}]},{"type":"paragraph","content":[{"type":"text","text":"🧩 "},{"type":"text","marks":[{"type":"bold"}],"text":"Build a codified design system in Claude"},{"type":"text","text":" with reusable typography, buttons, color palettes, login screens, interface components, graphic rules, and other assets that can be applied consistently across new pages."}]},{"type":"paragraph","content":[{"type":"text","text":"🔄 "},{"type":"text","marks":[{"type":"bold"}],"text":"Use the Design Loop / Gauntlet Loop in Claude Code"},{"type":"text","text":" to compare your website against a gold-standard reference and repeatedly evaluate the output with design judges until it reaches the desired quality."}]},{"type":"paragraph","content":[{"type":"text","text":"🖼️ "},{"type":"text","marks":[{"type":"bold"}],"text":"Connect Higsfield to Claude Code through the CLI"},{"type":"text","text":" to generate custom images, animations, characters, and videos, including using Seed to Dance 2.5 for video generation inside a website-design workflow."}]},{"type":"paragraph","content":[{"type":"text","text":"🔤 "},{"type":"text","marks":[{"type":"bold"}],"text":"Improve website typography with curated fonts and font-reference libraries"},{"type":"text","text":" by evaluating typefaces based on brand personality, readability, kerning, trust, confidence, and the intended SaaS or product aesthetic."}]},{"type":"paragraph","content":[{"type":"text","text":"✍️ "},{"type":"text","marks":[{"type":"bold"}],"text":"Run website copy through a structured AI copy system using GPT 5.6"},{"type":"text","text":" to identify AI-style writing, improve sales messaging, benchmark successful SaaS competitors, and apply principles such as “Don’t Make Me Think,” pain-first messaging, and one ask per screen."}]},{"type":"paragraph","content":[{"type":"text","text":"🛠️ "},{"type":"text","marks":[{"type":"bold"}],"text":"Combine Claude Design, Claude Code, Higsfield, custom typography, image and video generation, and copy optimization"},{"type":"text","text":" into a repeatable website-building system that produces a distinct visual identity instead of copying a single reference design."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"In this video, we cover:"}]},{"type":"paragraph","content":[{"type":"text","text":"The main problem is that AI-generated websites often look similar because users give Claude the same types of prompts, resulting in repeated fonts, gradients, card layouts, hero sections, copy patterns, and visual treatments."}]},{"type":"paragraph","content":[{"type":"text","text":"The video teaches a system-first workflow where Claude is given strong website references, a codified design system, the Design Loop / Gauntlet Loop, custom graphics, better typography, and a structured copy-review process instead of relying on a single generic prompt."}]},{"type":"paragraph","content":[{"type":"text","text":"Practical implementation includes finding niche-specific reference websites, building an AI education website inspired by Duolingo, creating reusable design-system components, connecting Higsfield through the CLI, generating unique characters and animations, using the Design Loop to evaluate results, selecting appropriate fonts, improving website copy with GPT 5.6, and locking the final typography, color palettes, buttons, graphics, and page rules into a reusable system."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Who this is for:"}]},{"type":"unorderedList","content":[{"type":"listItem","content":[{"type":"paragraph","content":[{"type":"text","text":"💻 "},{"type":"text","marks":[{"type":"bold"}],"text":"Claude Design and Claude Code users, AI builders, SaaS founders, and web designers"},{"type":"text","text":" who want to create distinctive websites using reference-based design systems, the Design Loop / Gauntlet Loop, custom graphics, typography, and reusable components."}]}]},{"type":"listItem","content":[{"type":"paragraph","content":[{"type":"text","text":"🚀 "},{"type":"text","marks":[{"type":"bold"}],"text":"Entrepreneurs, marketers, and automation builders"},{"type":"text","text":" who want a repeatable workflow for combining Claude, Higsfield, AI-generated images and videos, font systems, and conversion-focused website copy."}]}]}]},{"type":"paragraph","content":[{"type":"text","text":"  "}]}]
+
+RESOURCES:
+- 📊 Claude Code Course: https://bit.ly/3QQlsuX
+- Design Loop Skill: https://app.notion.com/p/The-Design-Loop-Free-Guide-3b8e8d6bd13781ff8bf2fc06fd5d0aac
+- FILE transcript (Claude Design Now Builds Beautiful $10,000 Websites (NO AI Slop) (1).txt): 35200 chars
+
+--- FILE CONTENT: Claude Design Now Builds Beautiful $10,000 Websites (NO AI Slop) (1).txt ---
+[00:00:00] Claw design can now build beautiful
+[00:00:02] websites that don't look like AI slot,
+[00:00:05] but only if you use the right systems
+[00:00:07] that are now available. And in this
+[00:00:09] video, I'll show you this simple and new
+[00:00:11] system to build gorgeous websites in any
+[00:00:14] design replicably so you can destroy the
+[00:00:16] AI slop monster. And if you haven't
+[00:00:19] already, grab that beautiful coffee and
+[00:00:21] let's dive straight in. Now, the enemy
+[00:00:23] has a name. It is the AI slop monster. I
+[00:00:26] invite you to join me on this crusade.
+[00:00:28] Now, the reason why most websites look
+[00:00:30] exactly the same is because everybody
+[00:00:32] gives it the same prompt. And these
+[00:00:33] models are splitting up the same
+[00:00:35] consistent outcome, the same gradient,
+[00:00:37] the same cards, the same hero section,
+[00:00:39] everything, guys. It's like living in
+[00:00:41] Groundhog Day every single day. And I
+[00:00:43] like variety. This is why I'm making
+[00:00:44] this video. Now, you can spot it in a
+[00:00:46] second. So, let's understand what the
+[00:00:48] slop monster is before we understand
+[00:00:50] what the solution actually is. It's the
+[00:00:52] same type face. Font is so so important
+[00:00:56] and barely anybody speaks about it and
+[00:00:58] by the end of this video you're going to
+[00:01:00] have a system to create beautiful
+[00:01:01] websites. It's going to level up your
+[00:01:03] graphical game. They're going to be
+[00:01:04] saying, "Hey, who is this incredible
+[00:01:05] designer person and where did you come
+[00:01:06] from?" The other thing we've got is the
+[00:01:08] classic indigo to violet fade. I know
+[00:01:10] that this itself is an indigo. The irony
+[00:01:12] is not lost on me, but purple is the
+[00:01:14] color I wanted as a gradient on this
+[00:01:15] one. Three feature cards everywhere.
+[00:01:18] It's always consistently three. Have you
+[00:01:19] noticed that all the time? It's through.
+[00:01:21] Everything's got the same round on it.
+[00:01:22] the frosted glass and a headline that
+[00:01:25] just sounds like AI slot. People don't
+[00:01:28] even change the text. So, the first
+[00:01:29] level in destroying the AI slot monster
+[00:01:32] is to give it a system, not a prompt.
+[00:01:36] Jack, what do you mean by that? Well, we
+[00:01:37] want to give it a design system. Okay,
+[00:01:39] so essentially Claude itself does not
+[00:01:42] know what great design is. Now, we can
+[00:01:44] look at different websites to do this.
+[00:01:45] One fantastic example is this. I
+[00:01:48] mentioned it on a previous video. This
+[00:01:50] guys is like Willy Wonker's chocolate
+[00:01:52] factory for gorgeous websites. I mean
+[00:01:54] look at this. We got linear, we've got
+[00:01:55] steep, we've got air. These are
+[00:01:57] gorgeous. The Mercury website. It's
+[00:01:59] fantastic. So what we can do is leverage
+[00:02:01] this to actually understand what amazing
+[00:02:04] design looks like. And then when we know
+[00:02:06] what that looks like, we can reverse
+[00:02:08] engineer how you actually create
+[00:02:10] something that is gorgeous. For example,
+[00:02:11] it could be, you know, you can just see
+[00:02:13] the different design styles that come
+[00:02:15] down here. So the first thing that we
+[00:02:17] need to do is go over to this website
+[00:02:18] here. I'm going to put all the links
+[00:02:19] down below. Anytime you get any free
+[00:02:22] resources and I give away the game for
+[00:02:23] free, it is the second link in the
+[00:02:25] description which says free resources.
+[00:02:27] It'll take you free through to a free
+[00:02:29] community. It looks like this and it'll
+[00:02:30] have a direct link to everything. It's
+[00:02:32] just a place where I put all of my free
+[00:02:34] guides. I get so many questions on it. I
+[00:02:35] just want to make sure that you can
+[00:02:36] access everything that you need to very
+[00:02:38] easily. So, what we're going to do,
+[00:02:40] guys, is grab this like so. And then
+[00:02:41] head over to Claude. Now, the first
+[00:02:43] thing we do, of course, is top up on
+[00:02:44] coffee. Don't forget to tip your
+[00:02:47] barista, guys. And what we're going to
+[00:02:48] do is the blunt. We'll come down and
+[00:02:50] we're going to paste in this here like
+[00:02:52] so. And you're going to say, I would
+[00:02:54] like to build a beautiful website. I
+[00:02:56] have given you a list to loads of
+[00:02:58] gorgeous frontier websites. And what I
+[00:03:01] would like you to do is to go through
+[00:03:03] those and find for me three examples
+[00:03:05] that are most closely related to my
+[00:03:09] desired business. My desired business is
+[00:03:12] an AI education app kind of like
+[00:03:15] Duolingo. Give me the three links. Okay,
+[00:03:17] enter that in and then just send it off.
+[00:03:19] Now, you can look yourself, but this is
+[00:03:21] the first step. Effectively, what I want
+[00:03:23] to do here is find websites that look
+[00:03:25] gorgeous, that are in our niche, look
+[00:03:27] fantastic. Already my eye is drawn to
+[00:03:29] Dolingo. I think that looks gorgeous.
+[00:03:31] And we can find these different designs.
+[00:03:33] You can do this yourself or you can get
+[00:03:34] AI to help you because there are
+[00:03:36] hundreds and hundreds and hundreds of
+[00:03:39] websites listed here and they are all
+[00:03:41] gorgeous. And then Claude is going to
+[00:03:42] give us three of its best options.
+[00:03:44] Again, you can do this directly. For
+[00:03:46] example, you can actually come down to
+[00:03:48] popular, which is awesome. And you can
+[00:03:49] see the most popular ones that are
+[00:03:50] there. Mercury is gorgeous. We can look
+[00:03:53] at the newest. And we can also even come
+[00:03:54] down here and search. So, I could just
+[00:03:56] come down for education, for example.
+[00:03:58] And then I can see all of the different
+[00:03:59] education ones if I want to. But you can
+[00:04:02] see it's gorgeous. Lots of optionality.
+[00:04:04] So, we have Dolinger, which I think is
+[00:04:06] excellent. We have Quizlet, which is
+[00:04:08] okay, I think. And then we have Slush.
+[00:04:10] Slush is very finessy. I think the most
+[00:04:13] relevant of them all. Obviously, Slush
+[00:04:15] is very cool, very fresh. I do love the
+[00:04:17] way that the kind of apps bleed in. It's
+[00:04:19] kind of got good scrolling animations.
+[00:04:20] And then Dolingo itself here just has a
+[00:04:23] beautiful thing and it's got these like
+[00:04:25] individual graphics which I think look
+[00:04:27] fantastic. So, what we're going to do is
+[00:04:29] go ahead with Dolingo because I think it
+[00:04:31] looks awesome. So, we're just going to
+[00:04:32] come down and copy this and then inside
+[00:04:34] Claude, you're going to give it the
+[00:04:35] below prompt, which is this. Hey, I
+[00:04:37] would like you to look at this design
+[00:04:39] reference for Dolingo. I'm going to
+[00:04:41] build an app that teaches people AI. I
+[00:04:43] would like to keep everything else
+[00:04:45] essentially was saying be inspired by
+[00:04:46] this design system. Here's another
+[00:04:48] design system you may want to look at as
+[00:04:50] well as a secondary reference. But
+[00:04:51] essentially just use this entire design
+[00:04:53] system to build me one for something
+[00:04:55] where basically I am teaching AI to
+[00:04:58] individuals. I am the Dolingo of AI.
+[00:05:00] Basically come down and just literally
+[00:05:02] drop in the link to Dolingo. And if you
+[00:05:04] want to you can also go ahead and drop
+[00:05:06] in a second design system. That's
+[00:05:07] optional. The model we're going to use
+[00:05:08] is going to be Fable 5. And we will be
+[00:05:11] okay with extra. You can also do high.
+[00:05:12] it doesn't make too much of a
+[00:05:14] difference. Then of course we'll get
+[00:05:15] some clarificatory questions from Claude
+[00:05:17] as well. So what's the app called? Why
+[00:05:19] don't we go ahead and call it Neuro?
+[00:05:21] That's an interesting idea. That could
+[00:05:23] be cool. Oh, promptly. Promptly sounds a
+[00:05:25] bit lame. Let's go for this one. Cool.
+[00:05:27] I'm going to say we can do do a link of
+[00:05:28] green. Let's just keep it as it is. I
+[00:05:30] think maybe do a little bit more of a
+[00:05:31] blue style instead of green. Great. And
+[00:05:33] send that one off. And also guys, I'm
+[00:05:34] going to put a link down below for a
+[00:05:36] skill that knits parts of process
+[00:05:38] together. So it's going to really
+[00:05:40] drastically improve your output. and
+[00:05:42] will improve the quality massively. Now,
+[00:05:44] it's come back and it has done it. So,
+[00:05:45] let's check out the neuro website. Now,
+[00:05:48] brain, this is draft one. As you can
+[00:05:50] see, it's got that very Dolingoes, like
+[00:05:52] get started. Very cool. We've got the
+[00:05:53] buttons, free, fun, effective, and we've
+[00:05:56] got some kind of placeholders there.
+[00:05:58] Really cool. Scroll down, learn anytime,
+[00:06:00] anywhere. Beautiful job with the font.
+[00:06:02] Come down. Looks good. And I think it's
+[00:06:04] really crushed this. And then bottom
+[00:06:06] right, design system. And then this
+[00:06:07] essentially is our entire design system.
+[00:06:09] We come down, login for the app. Now,
+[00:06:11] the cool thing is you have a fully
+[00:06:12] codified design system here. Why is that
+[00:06:14] cool? Well, basically when you're
+[00:06:16] building out the apps, you got these
+[00:06:17] mechanics like I'm just showing this as
+[00:06:18] an example. In reality, you wouldn't
+[00:06:20] just use Duolingos, but you get the idea
+[00:06:21] of how powerful this is. Email,
+[00:06:23] password, login. Love this. It really
+[00:06:26] does crush it and get all the different
+[00:06:28] game, excuse me, the game mechanics. I
+[00:06:30] need more coffees. This is crazy. Writes
+[00:06:31] about dogs. As you can see, it's got all
+[00:06:33] this sort of stuff locked down, which is
+[00:06:35] great. Now, this is locked in, but what
+[00:06:37] we need to do is take it to a new level.
+[00:06:39] Now we have the architecture and the
+[00:06:41] skeleton inside. And we're going to do
+[00:06:43] that by moving on to the second level.
+[00:06:46] And the idea with this is the ability to
+[00:06:48] generate beautiful graphics, videos,
+[00:06:51] animations, and also compare basically
+[00:06:54] combine this with its strongest skill
+[00:06:56] with the design system strongest skill.
+[00:06:58] What do I actually mean by that? Well,
+[00:07:01] the idea is we want to generate videos.
+[00:07:02] We want to have reference inputs. We
+[00:07:04] want to have um if we want volume of
+[00:07:06] sound, which I don't recommend, but you
+[00:07:07] can have that in there. We can crush the
+[00:07:08] slot monster and we can bring everything
+[00:07:10] together. So to do that, we're going to
+[00:07:12] do two things. I'm going to be using
+[00:07:13] Higsfield for this. You can use and
+[00:07:15] basically generate anything here, any
+[00:07:16] images you want to, any videos, lots of
+[00:07:18] different models. It's very cool. And
+[00:07:20] the cool thing is we can actually
+[00:07:21] connect this to Claude super duper easy
+[00:07:23] with this page, which means that we can
+[00:07:25] set Claude off on a mission and then it
+[00:07:28] will use Higsfield and the models within
+[00:07:30] Higsfield to essentially create a
+[00:07:32] gargantellian number of beautiful
+[00:07:33] designs, which is freaking awesome. So,
+[00:07:35] first thing to do if you haven't already
+[00:07:36] is you can literally screenshot this,
+[00:07:38] copy. You come over to Claude, paste
+[00:07:40] that in and say, "Hey there, I want you
+[00:07:42] to connect to the Higsfield via the
+[00:07:45] CLI." And once you've done that, it will
+[00:07:47] then open a new window. You'll sign in
+[00:07:49] and then you'll be able to use Higfield
+[00:07:51] with inside Claude Code. And what we're
+[00:07:53] going to do is combine it with
+[00:07:54] Incredible Prompt. So, I'm going to go
+[00:07:55] ahead and grab this from I believe it's
+[00:07:57] in the vault. Come down and we're
+[00:07:58] looking for design loops. Now, if you
+[00:08:01] haven't seen this design loop video, I
+[00:08:02] will link it on screen. It is really
+[00:08:04] cool. It gets me super excited about it.
+[00:08:06] But all you're going to do is come down
+[00:08:07] and grab the skill. Again, I'll put this
+[00:08:10] uh in the same resources in my second
+[00:08:11] link under description. It is amazing.
+[00:08:13] It's called the gauntlet loop. I call it
+[00:08:15] the design loop. It is absolutely
+[00:08:17] fantastic. And effectively, what we're
+[00:08:19] going to do now is copy this and head
+[00:08:21] back over to Claude. And then we're
+[00:08:22] going to give it the blur prompt. So,
+[00:08:23] I'm going to actually paste in my design
+[00:08:25] loop. Okay, which I've already created
+[00:08:27] as a skill. So, if you haven't done
+[00:08:28] this, just paste this in and say, "Hey
+[00:08:30] there. I want you to turn this into a
+[00:08:32] skill." All right. Then basically come
+[00:08:34] down, paste this in, and it will turn it
+[00:08:36] into the design loop skill. Now, when
+[00:08:38] that's installed, when you do forward
+[00:08:39] slash, you can literally type in loop,
+[00:08:41] and it brings out the design loop. Now,
+[00:08:43] here's the cool thing that I want you to
+[00:08:45] do. I want you to give it a prompt that
+[00:08:47] sounds a little something like this. I'm
+[00:08:49] basically going to do this. Hey there, I
+[00:08:51] want you to go ahead for me and
+[00:08:53] ruthlessly compare this website with
+[00:08:56] Dolingo. Specifically, I want to bring
+[00:08:59] this to live. Dualinga has loads of
+[00:09:01] beautiful animated graphics. It's got a
+[00:09:04] distinctive graphic style. I want you to
+[00:09:06] go ahead and create a unique graphic
+[00:09:08] style with unique characters um in the
+[00:09:10] kind of Dolingo style, but obviously
+[00:09:12] make it unique so it's specific to us.
+[00:09:14] And I want you to then go ahead and use
+[00:09:16] Dualingo as a gold standard reference. I
+[00:09:19] want you to go ahead and look at the
+[00:09:20] graphics, look at the animations all the
+[00:09:22] way through it and basically create our
+[00:09:24] version of what that is based on our
+[00:09:27] unique style that you create and unique
+[00:09:29] motions. such that it essentially looks
+[00:09:32] like the AI version of this. So it's not
+[00:09:34] the same thing. It's our own style, our
+[00:09:36] own unique business, our own product,
+[00:09:38] but effectively look at it. And for
+[00:09:39] example, look at the section where we
+[00:09:41] have learn anytime, anywhere. Every
+[00:09:43] section I want to look gorgeous and
+[00:09:45] absolutely flawless. This is what I
+[00:09:47] would call the gold standard. Now, I
+[00:09:48] want you to go ahead and use the Hicks
+[00:09:50] Field CLI to generate the unique
+[00:09:53] graphics and also the unique videos. And
+[00:09:56] make sure you're using Seed to Dance 2.5
+[00:09:58] for the best video generations. I can
+[00:10:01] see just looking at the graphics, a lot
+[00:10:03] of them are on a loop. There's a lot of
+[00:10:05] personality. It's quirky and it's very
+[00:10:07] distinctive. Make sure you understand
+[00:10:08] all aspects of the website to bring that
+[00:10:11] personality out. Then you're going to
+[00:10:13] come back over, drop that in like so,
+[00:10:15] and literally let it run its magic. Now,
+[00:10:17] the cool thing about the design loop is
+[00:10:18] the design loop itself says, "Hey, this
+[00:10:21] is our website." And you give it a gold
+[00:10:24] standard. And essentially what it does
+[00:10:26] is the um the model is going to try and
+[00:10:28] recreate it and it'll have various
+[00:10:31] judges that are saying does this hit the
+[00:10:33] mark yes or no. And if it does it passes
+[00:10:36] but if not essentially it goes through a
+[00:10:38] loop because if you ask Claude to
+[00:10:41] improve a design it will often say okay
+[00:10:43] great you ask it five times it finds
+[00:10:45] five different reasons. So the design
+[00:10:47] loop system helps us cut a lot of that
+[00:10:49] out. So since I'm generating unique
+[00:10:51] video assets, I'm going to go with a
+[00:10:53] pilot strategy first to make sure that I
+[00:10:54] like the design and the feel and it
+[00:10:56] enables us to iterate it before hitting
+[00:10:58] the full bam bam walaba bing bomb which
+[00:11:01] is code for basically doing the full
+[00:11:03] website. So what should our character
+[00:11:05] cast be? So Duolingo has do the owl plus
+[00:11:07] a cast of humans. We need our own
+[00:11:09] equivalent that reads as AI without
+[00:11:11] being a cliche robot. I completely
+[00:11:13] agree. Neuro the neuron sounds lame to
+[00:11:15] me. Little robot devices. Now this is
+[00:11:17] the bit where you want to inject your
+[00:11:18] own personal design. So AI should help
+[00:11:21] us basically the design bit is the fun
+[00:11:23] bit. I want to own the creative output.
+[00:11:25] I don't want AI to replace creativity.
+[00:11:26] It's not its job. Its job is to replace
+[00:11:29] repetition in the creative process, not
+[00:11:31] the creativity itself actually. So for
+[00:11:34] example here I've said I want to do a
+[00:11:35] shark as our core thing. Kind of like
+[00:11:37] gym shark but our robot version. We'll
+[00:11:39] call him robo shark. So we could
+[00:11:41] probably play around with a kind of
+[00:11:42] oceanic and land theme bring in
+[00:11:43] different robotic mechanical versions of
+[00:11:45] animals to make it kind of appearing
+[00:11:46] appealing but clear that it is AI and
+[00:11:49] then send that one off. And then once
+[00:11:50] the design loop has completed it has
+[00:11:52] gone ahead and built me this. Now I must
+[00:11:53] admit I went back and said I didn't
+[00:11:55] quite like the idea of a robo crocodile
+[00:11:56] and I actually settled on a different
+[00:11:58] design idea because with basically
+[00:12:00] claude will come back and say hey do you
+[00:12:02] want this do you want that and I was
+[00:12:03] like actually I think this design style
+[00:12:05] is really cool. So check this out. This
+[00:12:07] is the website with the loop and
+[00:12:09] everything we've got here. One less than
+[00:12:11] five minutes. So, we have this
+[00:12:12] interactive thing here. And you can feel
+[00:12:14] this do a lingo. That wasn't a real
+[00:12:16] question, by the way. That was a test.
+[00:12:18] Although, that one was legit. Going to
+[00:12:19] come down. We've got this beautiful
+[00:12:20] interactivity here built on how people
+[00:12:22] actually learn. This is gorgeous.
+[00:12:26] I'm really really impressed with this. I
+[00:12:29] mean, it's got its own unique design
+[00:12:31] style. It is actually crazy. I mean,
+[00:12:33] look at this, guys. Have you seen stuff
+[00:12:35] like this being created in this process?
+[00:12:37] It is wild. In a month, you'll prompt
+[00:12:39] like you mean it. Get started. And then
+[00:12:40] we got a nice animation at the bottom.
+[00:12:42] Things popping up. They're having a good
+[00:12:44] time. And then we have the full
+[00:12:45] beautiful website building using this
+[00:12:48] exact system. And all we did is link in
+[00:12:50] Higsville CLI for the image and video
+[00:12:52] generation. It create various different
+[00:12:53] images and various different videos. But
+[00:12:55] that links very nicely onto the next
+[00:12:57] level for this. And what is it the next
+[00:13:00] level beyond this one? Well, once we've
+[00:13:01] done the image and video generation, we
+[00:13:03] have to talk about typography. In our
+[00:13:06] battle against the AI slop monster, one
+[00:13:08] of the things that we need to do is
+[00:13:10] genuinely upgrade our ability to use
+[00:13:13] better fonts. And the reason for that,
+[00:13:15] and you can just have a look at this, is
+[00:13:16] for instance, fonts change everything.
+[00:13:19] It's like the biggest difference. I
+[00:13:21] remember when I did my corporate job
+[00:13:22] when I was doing a big strategy job
+[00:13:23] before I left to become an entrepreneur
+[00:13:24] a few years ago and I always remember
+[00:13:26] any doc I got the first thing I did is
+[00:13:28] control A change it to Aanir or just any
+[00:13:30] font I could get my hand on in that
+[00:13:32] terrible uh Microsoft Word that I I was
+[00:13:35] stuck in. So fonts change everything.
+[00:13:37] There's so many different fonts. It is a
+[00:13:38] rabbit hole. But what do I mean by that?
+[00:13:40] Well, there's actually a load of really
+[00:13:42] free fonts you can play around with. I I
+[00:13:44] talk about them all the time inside the
+[00:13:45] community. But all these fonts here are
+[00:13:47] completely free that you can actually
+[00:13:49] use and it's dead simple to integrate. I
+[00:13:52] really love fonts.com. Uh they're not a
+[00:13:54] sponsor of anything fontest.com because
+[00:13:56] it actually shows you what fonts look
+[00:13:58] like in real life situations. Fonts and
+[00:14:00] use is another really good example of
+[00:14:02] that. You can see like wow this looks
+[00:14:04] really cool and you can get different
+[00:14:06] ideations from this. Now practically
+[00:14:08] speaking I built this system inside my
+[00:14:09] community to help people with design
+[00:14:11] systems and one of the things I added in
+[00:14:13] there is this graphic section here. Now,
+[00:14:15] the cool thing about the graphic section
+[00:14:17] is when it goes ahead and designs your
+[00:14:19] website. It effectively shows you what
+[00:14:21] that looks like. Um, it explains the
+[00:14:23] construction rules. It shows you the
+[00:14:24] asset inventory. Again, this is all
+[00:14:27] completely unique generated imagery. It
+[00:14:29] shows you kind of like a model sheet
+[00:14:30] that you can follow with an ideal color
+[00:14:32] palette. But beyond that, if you
+[00:14:34] actually scroll down, you can see that
+[00:14:36] what it does is has all these different
+[00:14:38] fonts you can choose from. And you can
+[00:14:39] actually come down and select these.
+[00:14:41] Now, what's cool is I've added in a
+[00:14:43] recommended selector and essentially
+[00:14:45] what the AI does is has a look at what
+[00:14:48] the brand is about, what it's doing,
+[00:14:49] what it's not doing, and then we'll
+[00:14:51] essentially say, well, you're going for
+[00:14:52] like a modern SAS look, and based on
+[00:14:54] that information, you want to evoke like
+[00:14:56] trust and confidence, you want something
+[00:14:58] that's got the right level of kerneling,
+[00:14:59] all that sort of stuff. And you can
+[00:15:00] literally come down and just see the
+[00:15:02] fonts that you want. All these are
+[00:15:04] available. You can play around with
+[00:15:05] them. you can click them and basically
+[00:15:06] change that if you want to see what it
+[00:15:08] looks like, which I think is an
+[00:15:10] incredible thing. So, you always want to
+[00:15:12] check the licensing on fonts. I wouldn't
+[00:15:14] personally be adverse to buying a
+[00:15:16] brilliant font. I think it's worth its
+[00:15:17] weight and gold, but there are so many
+[00:15:19] free fonts that you can play around
+[00:15:21] with, and it will honestly just elevate
+[00:15:23] and lift the quality of any design that
+[00:15:26] you're doing. Or fonts are one thing,
+[00:15:27] but if you don't have this next level
+[00:15:29] solved, none of this is worth anything.
+[00:15:31] And of course, it is the copy. I could
+[00:15:34] have the best design, the best, most
+[00:15:36] beautiful graphics on the planet, but
+[00:15:38] there's one simple thing. If this copy
+[00:15:40] is terrible and doesn't look good,
+[00:15:43] nobody's really going to buy from it
+[00:15:44] because it's just the biggest giveaway
+[00:15:47] in the world is the copy. The copy has
+[00:15:50] to look absolutely beautiful. I mean,
+[00:15:51] just look at these beautiful images
+[00:15:53] we've got here, guys, for different tuto
+[00:15:55] different things that we offer here on
+[00:15:57] Euro. I mean, this is I'm about to sign
+[00:15:59] up. I'm about to get my credit card out
+[00:16:00] and sign up to this service. Honestly,
+[00:16:02] I'm 2 seconds away from buying it.
+[00:16:03] That's how good this design is. But when
+[00:16:05] it comes to copy, it genuinely really is
+[00:16:09] everything. It's super duper important.
+[00:16:10] It changes you. It really does change
+[00:16:12] the way that things are perceived. Now,
+[00:16:13] one skill I did share as well, and I'll
+[00:16:15] share this skill with you down below uh
+[00:16:16] in the copy. And by the way, if this
+[00:16:18] sounds like I'm speaking design Spanish,
+[00:16:20] I'm going to put a link down below for
+[00:16:21] my Claude Code master class that will
+[00:16:23] take you through the basics, building
+[00:16:25] beautiful websites, power features,
+[00:16:27] memory systems, Hermes agent, building
+[00:16:29] anything stuff I've never shared on
+[00:16:30] YouTube. You also get full access to the
+[00:16:32] entire Aentic operating system, the
+[00:16:35] memory operating systems, the ability to
+[00:16:37] chat with any single model, and my
+[00:16:39] exclusive design operating system, which
+[00:16:42] is so freaking cool. I'll put a link
+[00:16:44] down below. It will save you so much
+[00:16:45] time and get you to a level you wouldn't
+[00:16:47] even imagine. It is so amazing. Now
+[00:16:49] let's come back and chat about the
+[00:16:51] actual copy here and what that
+[00:16:52] physically looks like because it is
+[00:16:54] really really important. So one of the
+[00:16:56] copy systems that I actually built was
+[00:16:58] this great thing and essentially what I
+[00:16:59] wanted to do is you can take any copy on
+[00:17:02] a website and you can run it through a
+[00:17:03] system. Now what this effectively does
+[00:17:05] is it checks it for multiple things.
+[00:17:06] First thing it does it kills the AI
+[00:17:08] slop. So it identifies what are all the
+[00:17:10] features that AI writing has and are
+[00:17:12] incredible GitHub repos that I brought
+[00:17:13] in for this specific reason. Any signs
+[00:17:15] of AI writing. We're going to run it
+[00:17:16] through GBT 5.6. We do this because
+[00:17:20] Claude is so prolific. Its greatest
+[00:17:22] strength has in a sense become its
+[00:17:24] biggest weakness because everybody's
+[00:17:26] using it, right? So GPT 5.6 just makes
+[00:17:29] it sound a little more human rather than
+[00:17:30] claesque. We get world class copy. This
+[00:17:33] has been trained on things like what are
+[00:17:35] the best marketers actually saying? What
+[00:17:37] it also does is it identifies for
+[00:17:39] example what are the brands that you're
+[00:17:41] using. So for example if I'm building a
+[00:17:43] website because the point of the website
+[00:17:44] is to get customers right if I'm doing a
+[00:17:46] website on a SAS let's look at the top
+[00:17:49] five SAS companies in our niche and what
+[00:17:52] are they all doing that the losers
+[00:17:54] aren't doing like what can we learn from
+[00:17:56] what's actually crushing it and it takes
+[00:17:58] that copy and that edge and that design
+[00:18:00] and brings it in to the actual copy. So,
+[00:18:02] not only is it got deification,
+[00:18:05] it's it's adjusting the sales copy for
+[00:18:07] you as well. It has a band list for
+[00:18:09] words, certain ways of doing it, runs it
+[00:18:11] through various different things. The
+[00:18:12] five big principles are the below. And I
+[00:18:14] say this because it genuinely matters to
+[00:18:16] me that you crush and you can apply
+[00:18:17] these principles anywhere. Don't make me
+[00:18:19] think. One of the best books I have ever
+[00:18:21] read. Whole idea is you want basically
+[00:18:23] system one thinking, not system two. In
+[00:18:26] other words, when I own your website, I
+[00:18:28] shouldn't have to engage my brain. I it
+[00:18:30] should just roll over me. And that's the
+[00:18:32] purpose of great design and great copy
+[00:18:34] that I don't have to think difficultly.
+[00:18:37] If I said, "Hey, it's 29.62%
+[00:18:39] and you've got to take the square root."
+[00:18:41] All of a sudden, you've lost me. You're
+[00:18:42] making me do too much work to understand
+[00:18:44] it. That's why thumbnails that are
+[00:18:46] simpler tend to do better as well. Name
+[00:18:48] the pain first. This is from Daniel
+[00:18:50] Priest's marketing system. It's very,
+[00:18:51] very cool. Specific assignment. Um, one
+[00:18:54] ask per screen. This is something I
+[00:18:55] always do. one page, one thought. Which
+[00:18:58] is why you'll often find even on our
+[00:19:00] system here, if I just duplicate this
+[00:19:02] and show you, check this out. I come to
+[00:19:03] the website. What's the idea? I'm on one
+[00:19:06] screen. We call this a kind of like um
+[00:19:08] uh I've got the specific name for it,
+[00:19:10] but the height is that like everything
+[00:19:11] fits in one screen view. And it's got
+[00:19:13] one point. And the point of this is to
+[00:19:14] get started. Then the next one is the
+[00:19:17] demo. And then this one is one again,
+[00:19:19] one screen, one point. As you can see,
+[00:19:21] it's really important. This one here,
+[00:19:22] download the app or whatever the
+[00:19:23] specific thing is. All that to say, it's
+[00:19:26] built on everything, but it doesn't mean
+[00:19:27] anything unless it's actually good. So,
+[00:19:29] let's see what's happened here. So, this
+[00:19:31] is actually suggested change 28 lines.
+[00:19:33] Let me show what I mean. So, instead of
+[00:19:35] get started, start free. Way more
+[00:19:37] compelling. Get genuinely good at AI 5
+[00:19:40] minutes at a time. Everyone uses AI.
+[00:19:42] Almost nobody is good at it.
+[00:19:44] Interesting. You got here is 5 minutes a
+[00:19:47] day of real prompting. Problems marked
+[00:19:48] the second you answer. You stop guessing
+[00:19:50] at what works. Beautiful. Get started.
+[00:19:52] Start your first lesson. It's specific.
+[00:19:54] And again, and it just comes down and
+[00:19:55] explains everything it's doing. It's
+[00:19:56] really, really freaking impressive.
+[00:19:58] Like, check this out. For example,
+[00:19:59] instead of saying five minutes wherever
+[00:20:00] you are, five minutes on the train
+[00:20:02] counts. That's so good because now I've
+[00:20:05] got a visualization of, hey, I'm on the
+[00:20:06] train. I'm doing something that actually
+[00:20:08] matters. It's really, really impressive.
+[00:20:09] Instead of go further with when 5
+[00:20:11] minutes isn't enough instead of get
+[00:20:12] started, start your first license. So,
+[00:20:14] there's like a million different things
+[00:20:15] we get down here. I think it found
+[00:20:16] actually 28 different changes that it
+[00:20:18] went ahead and moved to this. I'm also
+[00:20:20] going to be updating this to apply like
+[00:20:21] more logic as well, which I think would
+[00:20:23] be really cool to level up the system.
+[00:20:25] And the other thing that the system did
+[00:20:26] as well is I actually go ahead and build
+[00:20:27] the neuro design system. So you can see
+[00:20:29] it basically shows you the typography,
+[00:20:31] how it works, all the different buttons.
+[00:20:32] And the cool thing about a design system
+[00:20:34] is it shows you how you log in, how you
+[00:20:36] do everything, your color palettes, all
+[00:20:37] that sort of stuff. So essentially what
+[00:20:39] it means is that if we need to recreate
+[00:20:41] any of the pages, any systems, we've got
+[00:20:42] like this design system locked in. And
+[00:20:45] honestly, don't underestimate the power
+[00:20:47] of image and video generation. I use
+[00:20:49] this platform a lot and one of the
+[00:20:51] interesting things that I often find
+[00:20:52] when I'm using it is it just really
+[00:20:55] elevates the website. Any kind of
+[00:20:56] interactivity and bear in mind we could
+[00:20:58] go back and forth to make this like
+[00:21:00] level turn. I just want to show you what
+[00:21:01] when you combine the best-in-class
+[00:21:03] prompting, you know, claw design, the
+[00:21:05] right kind of image and video generation
+[00:21:07] like we used at Higsfield in this
+[00:21:08] example, just the kind of thing that you
+[00:21:10] can get that doesn't feel like AI slop.
+[00:21:13] And so it's also important to bear in
+[00:21:14] mind is that any fonts that you're
+[00:21:15] using, just make sure that you have the
+[00:21:17] right license for it. So some are free
+[00:21:18] for personal use but commercial will
+[00:21:20] not. So just make sure that you're
+[00:21:21] locked in and secure with that. Then
+[00:21:22] also when it comes down to design I use
+[00:21:24] Dualingo as an example here. In reality
+[00:21:26] you want to combine multiple different
+[00:21:28] designs to create something unique and
+[00:21:30] your own particular style. I'm just
+[00:21:32] showing you what is possible here when
+[00:21:33] you do this. So in reality I wouldn't
+[00:21:35] copy this step by step and I would be
+[00:21:37] changing certain things out. I'd be
+[00:21:38] doing different design systems. But you
+[00:21:39] can see how you can take any principle
+[00:21:41] essentially whatever you imagine. If I
+[00:21:43] wanted to do the AI of Duolingo we have
+[00:21:45] just built it like in this video. That's
+[00:21:47] how freaking cool it is. We've got our
+[00:21:48] own graphic style. We've got our own
+[00:21:49] images. It is literally outrageous. But
+[00:21:52] it does lead us onto a big problem, and
+[00:21:53] that's the fact that design systems are
+[00:21:56] great. But if you don't have your own
+[00:21:58] agentic operating system that combines
+[00:22:01] designs with productivity and
+[00:22:04] automations and AI and really unlocks
+[00:22:07] next level capabilities for you, you're
+[00:22:10] leaving way too much on the table. So,
+[00:22:12] the next thing that we need to do is
+[00:22:14] learn exactly how to do that. in this
+[00:22:16] video right

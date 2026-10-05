@@ -1,0 +1,404 @@
+LESSON: 👀 This New Prompting Technique just 10X'd Claude (md=9aa5bc, video 12 min) ====================
+
+DESCRIPTION:
+[v2][{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","text":"   "}]},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Hey, in this video, you're gonna learn:"}]},{"type":"paragraph","content":[{"type":"text","text":" 🔄 How the Gauntlet Loop (Design Loop) works — a multi-round adversarial critic system where three independent judges (brief, system, craft) challenge Claude's design output in a loop until it passes all three criteria without mercy"}]},{"type":"paragraph","content":[{"type":"text","text":"🧠 Why Claude can't grade its own homework — and how spinning up fresh-context critics that judge rendered frames (not the code) produces dramatically higher quality outputs on the first shot"}]},{"type":"paragraph","content":[{"type":"text","text":"🎨 How to build a Design System in Claude Design — converting any existing presentation or design asset into a codified typography, color, and style blueprint that Claude references on every generation"}]},{"type":"paragraph","content":[{"type":"text","text":"🛠️ How to install the Three Critic Skill in Claude Code — copying the skill from the free resource community, pasting it into a new chat, and activating the "},{"type":"text","marks":[{"type":"code"}],"text":"/design_loop"},{"type":"text","text":" command in three steps"}]},{"type":"paragraph","content":[{"type":"text","text":"📊 How to manage Gauntlet Loop token costs — understanding when to use it (high-value reusable templates, carousels, big jobs) vs. when to skip it, and how to delegate critic rounds to cheaper models like DeepSeek V4 Flash or Haiku to reduce spend"}]},{"type":"paragraph","content":[{"type":"text","text":"🧪 Live comparison of three difficulty levels — carousel recreation from an Instagram URL, HTML animation with a custom design system, and an interactive website with falling numbers — all generated in one shot using the Gauntlet Loop"}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"In this video, I cover:"}]},{"type":"paragraph","content":[{"type":"text","text":"You'll start by understanding the core limitation the Gauntlet Loop solves: Claude judges its own design output, declares it done, and you spend hours in back-and-forth revision — the loop replaces that with three independent critics that run automatically in rounds until the design passes every criterion."}]},{"type":"paragraph","content":[{"type":"text","text":"You'll then build a Design System inside Claude Design by uploading any existing design asset (a presentation, a brand guide, anything) and asking Claude to codify it — producing a reusable typography, color, and layout blueprint you export as a project HTML file and inject into every future build."}]},{"type":"paragraph","content":[{"type":"text","text":"You'll install the Three Critic Skill from the free resource community — pasting it into a new Claude chat, converting it into a skill, and activating the "},{"type":"text","marks":[{"type":"code"}],"text":"/design_loop"},{"type":"text","text":" command — which triggers the full adversarial loop: interview, pre-flight checklist, teardown, critic rounds, and a final gate check."}]},{"type":"paragraph","content":[{"type":"text","text":"You'll see three live builds at increasing complexity: a carousel recreated from an Instagram URL alone, a 10–15 second HTML animation overlaid on a presentation using a custom design system, and an interactive website inspired by a concept reference — each showing how many critic rounds it took, what each round caught, and the final token cost breakdown."}]},{"type":"paragraph","content":[{"type":"text","text":"You'll learn the token cost reality: the loop can consume 2–3 million tokens per build, so the right strategy is to use Haiku and Sonnet for critic rounds, reserve Claude (the big model) for design judgment, and save the loop for reusable templates and high-stakes deliverables rather than one-off quick builds."}]},{"type":"paragraph","content":[{"type":"text","text":"You'll close with the key principle: taste becomes a checklist — and the Gauntlet Loop runs that checklist automatically so you don't have to."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Who this is for:"}]},{"type":"unorderedList","content":[{"type":"listItem","content":[{"type":"paragraph","content":[{"type":"text","text":"Designers, content creators, and agency owners who use Claude for visual output — websites, carousels, HTML animations, presentations — and want a systematic way to get high-quality first drafts without endless manual revision cycles."}]}]},{"type":"listItem","content":[{"type":"paragraph","content":[{"type":"text","text":"Builders already using Claude Code or Claude Design who want to understand how to install and run the Three Critic Skill, manage token costs across critic rounds, and combine a custom Design System with the Gauntlet Loop for consistent, brand-accurate output at scale."}]}]}]}]
+
+RESOURCES:
+- 🔁 Design Loop: https://app.notion.com/p/The-Design-Loop-Free-Guide-3b8e8d6bd13781ff8bf2fc06fd5d0aac
+- FILE transcript (This New Prompting Technique just 10X'd Claude Design (1).txt): 19860 chars
+
+--- FILE CONTENT: This New Prompting Technique just 10X'd Claude Design (1).txt ---
+[00:00:00] B can create beautiful designs, but a
+[00:00:03] brand new prompting technique just
+[00:00:05] solved its number one limitation. It's
+[00:00:08] called the gauntlet loop, and it enables
+[00:00:11] you to get incredible websites,
+[00:00:13] graphics, presentations in one shot with
+[00:00:17] less mistakes. And in this video, I'll
+[00:00:19] show you exactly how to do it, even if
+[00:00:22] you're a complete beginner. So, if you
+[00:00:23] haven't already, grab that beautiful
+[00:00:25] coffee and let's dive straight in. So,
+[00:00:27] it's called the gauntlet loop or the
+[00:00:29] design loop, which is really
+[00:00:30] fascinating. Now, as we know, Claude can
+[00:00:32] build beautiful designs like this, for
+[00:00:34] example. It can build HTML animations
+[00:00:37] that look a little bit like this.
+[00:00:39] Effectively, anything we want to, but
+[00:00:41] the biggest problem that we have here is
+[00:00:44] simply the fact that Claude judges its
+[00:00:47] own homework. It says, "I think I've
+[00:00:49] done it. In reality, has it really?" And
+[00:00:51] you end up pulling your hair out and we
+[00:00:52] need our hair if we can keep it. So,
+[00:00:54] what is the solution and how is it
+[00:00:56] fixed? Well, the gauntlet lube
+[00:00:57] essentially is independent critics. Now,
+[00:01:00] this was popularized by a guy called
+[00:01:02] Matt Schumer. So, huge call out to Matt.
+[00:01:04] This happened on X and Robo Nuggets
+[00:01:06] covered it recently. So, huge shout out
+[00:01:07] to Robo Nugs as well. Really freaking
+[00:01:09] cool. Now, look at what this did in
+[00:01:11] basically one shot. Check this out. Now,
+[00:01:13] this has audio too. You can see this was
+[00:01:15] basically using this exact technique.
+[00:01:17] This is what it produced. Now, if you
+[00:01:19] spent your whole childhood playing Call
+[00:01:21] of Duty, hey, I'm not going to say
+[00:01:23] anything and we've all been there.
+[00:01:24] you'll know exactly how cool it is and
+[00:01:26] how realistic it actually can be. We've
+[00:01:28] even got Andre Kapathy chiming in as you
+[00:01:30] can see. Basically talking about one of
+[00:01:31] the ways we can think about a model's
+[00:01:33] capability is it ability to build these
+[00:01:34] beautiful expected
+[00:01:37] >> 3D worlds in one shot. We've got Elon
+[00:01:39] Mus chiming in. All that to say, it is
+[00:01:40] very talented. And once you make it to
+[00:01:42] the end of this video, you're going to
+[00:01:44] be able to recreate in any design system
+[00:01:46] or not something that is fantastic. I
+[00:01:49] cannot wait to literally show you how
+[00:01:51] cool this is. But the first thing we
+[00:01:52] need to do is build a design system in
+[00:01:54] Claude. This is optional but will really
+[00:01:57] supercharge your entire systems. Now to
+[00:01:59] access this just come over to the Claude
+[00:02:01] website. Click on design in the bottom
+[00:02:03] leftand corner and you can literally
+[00:02:04] create your design system by here under
+[00:02:06] design systems and then you can create a
+[00:02:08] new design system. Think of this as
+[00:02:10] having the world's best designer and he
+[00:02:13] has at the moment what is known as a
+[00:02:14] terrible memory something like Forest
+[00:02:16] Gump/Mto style. And what we're going to
+[00:02:18] do here is give them a codified
+[00:02:20] blueprint, typographies, graphics,
+[00:02:23] everything. So it understands exactly
+[00:02:25] your specific design style. And you'll
+[00:02:28] get something that looks like this. It
+[00:02:29] is brilliant. And we can use this for
+[00:02:31] everything. So this is an example of all
+[00:02:33] I did. I gave it a presentation. I said,
+[00:02:35] "Hey, I love this presentation. Turn it
+[00:02:37] into a design system." So action one,
+[00:02:39] take any design assets that you've got,
+[00:02:41] give it to Claude, and it will turn it
+[00:02:43] for you into a full design system. Then
+[00:02:45] once you've done that, come over to
+[00:02:47] share the top right and you're going to
+[00:02:48] go ahead and export this out. Now the
+[00:02:51] reason why you want to go ahead and
+[00:02:52] export this out and again you can do it
+[00:02:53] as project html that's absolutely fine
+[00:02:55] because we they can use this in Claude
+[00:02:58] to actually build something incredible
+[00:03:00] using this technique. Now the reason why
+[00:03:02] we're going to run this outside of
+[00:03:03] Claude is purely because of the strength
+[00:03:05] of this technique and it's the fact that
+[00:03:06] what we need to do is spin up what are
+[00:03:08] called fresh context critics.
+[00:03:10] Effectively, what we're going to do is
+[00:03:13] give Claude a reference design of, "Hey,
+[00:03:16] I want it to look like this or be this."
+[00:03:18] Give it a criteria, and it's going to
+[00:03:20] spin up multiple critics who will
+[00:03:22] ruthlessly challenge Claude's design,
+[00:03:25] and it will go around in a loop, hence
+[00:03:27] the called the gauntlet loop, as Matt
+[00:03:29] said, or the design loop, until it
+[00:03:31] reaches this end state, meaning that you
+[00:03:33] have less back and forth, and you don't
+[00:03:35] need to keep basically coming back and
+[00:03:37] forth as much, and the first design is
+[00:03:39] way better. So essentially taste becomes
+[00:03:42] a checklist and I love that. I love my
+[00:03:44] checklist and I love taste. You know we
+[00:03:47] got an interview pre-flight tear down
+[00:03:48] the bar build it. It's going to have
+[00:03:49] critics. It's going to have everything.
+[00:03:51] So for example, one critic can be the
+[00:03:53] brief. So did you do what I asked? For
+[00:03:55] example, if I say, "Hey, I want you to
+[00:03:56] do ABCD EFG." Then one critic is just
+[00:03:59] saying, "Hey, did you actually do the
+[00:04:01] brief, bro?" And he might say, "Hey,
+[00:04:02] bro, no, I didn't." And go back and
+[00:04:04] change it. Then you could have the
+[00:04:06] system. So is it really in line with the
+[00:04:08] system? And then you've got the craft.
+[00:04:09] So this could be for example rendered
+[00:04:11] frames, never the code, and actually
+[00:04:12] judges the bar all based dynamically on
+[00:04:15] your prompt. So once we've created a
+[00:04:17] system, you're going to export that just
+[00:04:18] like I showed you. And the great news is
+[00:04:20] I've actually built you a skill which
+[00:04:21] makes this unbelievably easy. So step
+[00:04:23] one, export your design system. Step
+[00:04:26] two, and I've made this so easy, is just
+[00:04:27] come down and grab the three critic
+[00:04:29] skill. It explains what the three roles
+[00:04:31] are. And all you're going to do is copy
+[00:04:33] this whole page. Crl C. It will be the
+[00:04:35] second link in the description below.
+[00:04:37] You can grab that from my free resource
+[00:04:39] community. Again, 100% free. You can
+[00:04:41] grab it. No gatekeeping at all. Then
+[00:04:43] you're going to over to Claude, open up
+[00:04:45] a brand new chat, and just say, "Hey,
+[00:04:47] turn this into a skill." And then come
+[00:04:49] down, paste it all in, and then you'll
+[00:04:51] be ready to go. And it will create once
+[00:04:52] that's done a skill, which if you do
+[00:04:54] for/ loop is called the design loop. So,
+[00:04:57] we're going to test this across three
+[00:04:59] levels of difficulty. And level one is
+[00:05:02] going to be the carousel. So, for
+[00:05:04] example, I found this carousel earlier
+[00:05:05] and I thought this was absolutely
+[00:05:08] gorgeous. And look, it's blown up. It's
+[00:05:10] got 15,000 likes on Instagram. And let's
+[00:05:12] just put it to the test and say, "Hey,
+[00:05:14] can you actually, if I just gave you the
+[00:05:16] URL, I'm not even going to tell you
+[00:05:18] anything. I'm just going to give you the
+[00:05:19] URL. Can you actually design this?" And
+[00:05:21] look at this. This is the best prompt
+[00:05:23] pairing. So, attempting in Switzerland,
+[00:05:25] uh, different fonts basically beautiful
+[00:05:27] design, looks gorgeous, really love it,
+[00:05:29] really aesthetic. And then at the end,
+[00:05:31] uh, you can come to Paris and you get
+[00:05:33] all of these fonts for you, which is
+[00:05:34] absolutely awesome. And by the way, if
+[00:05:36] this entire thing is starting to sound a
+[00:05:38] little bit like Spanish or you want to
+[00:05:40] just level up your design game and your
+[00:05:41] Claude code game, I'm going to put a
+[00:05:43] link down below for the full Claude code
+[00:05:44] masterass inside the community. It has
+[00:05:46] stuff that I have never shared on
+[00:05:48] YouTube. I get messages about this all
+[00:05:50] the time. It has design systems, apps,
+[00:05:52] building everything, you name it. And
+[00:05:53] you get access to the full Aentic OS and
+[00:05:56] like a gargantillion other things. cuz
+[00:05:57] I'm going to put a link down below so
+[00:05:58] you can grab that and get some serious
+[00:06:00] high levels. Now, what we're going to do
+[00:06:02] is literally copy this. Then head over
+[00:06:04] to claw. You're going to open up a brand
+[00:06:05] new window and you're going to do
+[00:06:06] forward slash and you're going to go
+[00:06:07] design loop like so. And then literally
+[00:06:10] just say activate this skill. Okay. And
+[00:06:13] what it might do once it's done that is
+[00:06:14] it'll come back and it'll ask us a
+[00:06:16] couple of questions. That's exactly how
+[00:06:17] I built the skill for you. So you can
+[00:06:18] just throw it in and then just get
+[00:06:20] started basically. So here we go. I
+[00:06:21] would like you to go ahead and I want
+[00:06:22] you to look at this URL and build me a
+[00:06:24] version of this for AI tool. So go
+[00:06:26] through the Jack Roberts YouTube channel
+[00:06:28] and find out all the tools that I
+[00:06:29] mentioned and in the same design
+[00:06:31] aesthetic um you know inspired by that
+[00:06:33] design aesthetic just do me something
+[00:06:35] covering all the top tools that I
+[00:06:36] basically build. Bam come down drop this
+[00:06:39] off and also it says any files I should
+[00:06:41] work from and if you've connected
+[00:06:43] everything together in this it also has
+[00:06:45] access to that so be ready to rock and
+[00:06:47] roll. And then guys look at this. Okay
+[00:06:49] going to come down and let's go through
+[00:06:50] all the designs that we've got. Seven AI
+[00:06:52] tools claude code ships whole projects
+[00:06:54] chat GPT daily thinking partner this is
+[00:06:57] not bad right this is really cool and
+[00:06:58] again common AI to get the full guide to
+[00:07:00] all seven tools but this is wild again
+[00:07:02] and you just give it one prompt and it
+[00:07:04] runs and it does the whole thing I think
+[00:07:06] this is fantastic now I wouldn't
+[00:07:08] normally go ahead and do this because I
+[00:07:09] like to do it in my own design style and
+[00:07:11] build my own things but the fact that I
+[00:07:12] can give it a reference image and it can
+[00:07:14] go ahead and do that now imagine you
+[00:07:16] overlay with your own design styles all
+[00:07:18] these are 100% unique images and it's
+[00:07:20] gone ahead and done that. Otherwise,
+[00:07:22] this would have been a thousand back and
+[00:07:24] forths. You know, I'd start, as I say,
+[00:07:25] with no mustache, and then by the time
+[00:07:27] I'm done, I'd have a huge mustache.
+[00:07:28] That's how long it can take sometimes.
+[00:07:29] Now, for the second level, I wanted to
+[00:07:31] do something with my own design system.
+[00:07:33] And funny enough, it's the exact thing
+[00:07:34] that I use in all my presentations here.
+[00:07:36] Uh, which is cool. And basically, I've
+[00:07:38] got this design system on claw design.
+[00:07:40] So, what I'm going to do is give it a
+[00:07:42] prompt to build me a little bit of an
+[00:07:43] animation. And as you can see, same
+[00:07:45] process, design loop. I'm going to say
+[00:07:46] use the below design system. And I want
+[00:07:48] to make a beautiful HTML graphic that
+[00:07:50] lasts 10 to 15 seconds that I can
+[00:07:52] overlay with a blow sentence. The
+[00:07:53] gauntlet loop is a technique that we can
+[00:07:55] use in CL design to create beautiful
+[00:07:57] websites, presentations, emails, HTML
+[00:07:59] designs, and much more. And you can use
+[00:08:00] it in three simple steps. Oh, and by the
+[00:08:02] way, if you are new here, my name is
+[00:08:03] Jack. I built and saw my LT tech startup
+[00:08:05] with like a gazillion customers. And now
+[00:08:07] I'm building my own AI startup and I
+[00:08:09] share my channel all the cool stuff that
+[00:08:10] works. And one of the reasons why I'm so
+[00:08:12] passionate about design is because in my
+[00:08:14] first tech startup, it was actually one
+[00:08:15] of the things that everybody always
+[00:08:17] commented on. And it genuinely led to uh
+[00:08:19] investor conversations. It led to new
+[00:08:21] clients and it really set the standard.
+[00:08:23] So that's why I I I really passionately
+[00:08:24] believe in it. And we have this design
+[00:08:26] and you can judge for yourself how
+[00:08:27] closely you think it nailed it. But look
+[00:08:28] at this websites, presentations, emails,
+[00:08:30] HTML designs. This is great. And this is
+[00:08:33] run in the background whilst you're
+[00:08:34] talking and you can brief, build and
+[00:08:35] critique. And if you don't like these
+[00:08:37] things, you can move them around. But
+[00:08:38] just incredible that you can use just
+[00:08:40] simply one of these things and get these
+[00:08:41] kinds of outputs. And if you're
+[00:08:42] wondering what does this cost, I'm going
+[00:08:44] to show you that as well. and all the
+[00:08:45] transparency because I can hear your
+[00:08:47] wallet crying from through the screen
+[00:08:48] right now. So don't worry, I'm going to
+[00:08:50] say exactly what this is will cost in
+[00:08:51] credits. The third one I want to show
+[00:08:53] you is the website. So let's say I found
+[00:08:55] this really cool one here which I think
+[00:08:56] is fantastic. So credit to Almon who
+[00:08:58] built this are kind of like you know
+[00:09:00] numbers dropping down and moving around.
+[00:09:02] Wouldn't that be really cool? So what
+[00:09:04] we're going to do is copy this and do
+[00:09:05] the exact same process design loop and
+[00:09:07] let's see what it actually comes back
+[00:09:09] with. All right guys, here we go. 4 404.
+[00:09:12] Okay, cool. And we got all the things
+[00:09:13] moving around. This is crazy. And can I
+[00:09:15] I can actually do this as well. Do you
+[00:09:16] know what guy? This has turned a
+[00:09:18] disaster into something very fun. I
+[00:09:20] mean, I might even just stop the video
+[00:09:22] and play around with this for a few
+[00:09:22] hours and see how I get on. See how many
+[00:09:24] combinations I can get. This is actually
+[00:09:26] very, very freaking fun. I love this.
+[00:09:27] But again, what was the design
+[00:09:28] reference? It wasn't even a website. It
+[00:09:30] was just the idea of a website. It was
+[00:09:32] more the concept or the thought of a
+[00:09:34] website. And obviously, there's things
+[00:09:35] we could do. We can improve it. But how
+[00:09:37] amazing is that? But let's actually see
+[00:09:39] behind the hood now cuz this is really
+[00:09:40] important in terms of what does this
+[00:09:41] cost and how do I use it? and what if
+[00:09:43] any of limitations cuz I want to make
+[00:09:45] sure you always get the full picture and
+[00:09:46] this is it I guess limitation of the
+[00:09:49] kind of solution and that's the fact
+[00:09:50] that it spent 3 million tokens now in
+[00:09:53] the skill that I've given you I delegate
+[00:09:54] it out to sort of smaller models but you
+[00:09:57] can see how this can add up over time
+[00:09:59] then for the design loop itself again
+[00:10:01] this had this was a system it was
+[00:10:02] interview pre-flight checklist tear down
+[00:10:04] a loop um basically and it was really
+[00:10:06] good how it kind of broke everything
+[00:10:07] down it showed the evolution three
+[00:10:09] critics three blind spots covered and
+[00:10:11] this is the issue can't grade its own
+[00:10:13] homework. You can't be the judge, the
+[00:10:15] jury, and the executioner. So, bring it
+[00:10:17] in. And it just tells you what each
+[00:10:19] thing caught. So, for example, this is
+[00:10:20] why this is so valuable. Round one,
+[00:10:22] three fells, no logos, color breaking,
+[00:10:24] monochrome, loud words, underscaled.
+[00:10:26] Round two, her mark was too small. Round
+[00:10:28] three, lime ship was a second accent.
+[00:10:30] Round four, and you can see there were
+[00:10:31] 10 rounds to get to this point. And the
+[00:10:33] thing is, if you give anything to Claude
+[00:10:34] and say, "Hey, what's wrong with this?"
+[00:10:36] If you ask it five times, you will get
+[00:10:38] five different actors. So, it's like
+[00:10:40] each of these critics are looking at it
+[00:10:41] 10 times before you get the result,
+[00:10:43] which is why it looked so high quality
+[00:10:45] and why I think it's so cool. And
+[00:10:46] actually, dude, honestly, in terms of
+[00:10:48] the price for this one, not too bad. So,
+[00:10:49] it's basically 730,000 Haiku tokens,
+[00:10:52] which is not too bad. And Sonic was 1.9
+[00:10:54] million, which I think was great. And
+[00:10:55] finally, we have the Gauntlet Loop. So,
+[00:10:57] again, six rounds. This one took three
+[00:10:59] judges, zero mercy. We don't give any
+[00:11:01] mercy in the beautiful critical loop,
+[00:11:03] which is cool. And this one came in at
+[00:11:04] around 2 million tokens. Now, one of the
+[00:11:06] things that I'm definitely going to be
+[00:11:07] experimenting with going forward as well
+[00:11:09] is doing the same loop over a longer
+[00:11:11] period of time, maybe with like a Deep
+[00:11:13] Seek V4 Flash or some other models.
+[00:11:15] Again, if it sounds like magic or
+[00:11:16] German, I'll put a link down below for
+[00:11:18] the master class. Enjoy the community.
+[00:11:20] But in the case, I think this system is
+[00:11:22] honestly amazing. I'm so so impressed
+[00:11:24] with the results we got on one shot. And
+[00:11:26] so, the other good thing to bear in mind
+[00:11:27] here is that the loop can eat your
+[00:11:29] credits, which is important. So I would
+[00:11:31] reserve this for your bigger things like
+[00:11:33] the things that you really want to crush
+[00:11:35] down and get ready like templates for
+[00:11:36] example that you are then going to go
+[00:11:38] and reuse like your carousels or big
+[00:11:40] jobs or you could actually bring in
+[00:11:43] other models like a Deep Seek V4. But
+[00:11:45] you do want the big model to be clawed
+[00:11:47] cuz it's got great design taste. Again,
+[00:11:49] one piece per project and you can be the
+[00:11:51] person who stops it once it's gone
+[00:11:52] through automations, but I found when I
+[00:11:54] went through rounds, it kind of ended
+[00:11:56] naturally at a great point. And so now
+[00:11:57] we've covered this incredible skill. The
+[00:11:59] next thing that we're going to do is
+[00:12:00] learn how to leverage that skill to
+[00:12:01] build beautiful websites, which we can
+[00:12:03] do in this video right

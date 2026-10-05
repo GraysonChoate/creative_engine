@@ -1,0 +1,575 @@
+LESSON: 🤓 Turn Claude into a Design Genius... (md=66b2c3, video 18 min) ====================
+
+DESCRIPTION:
+[v2][{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Hey, in this video, you're gonna learn:"}]},{"type":"paragraph","content":[{"type":"text","text":"🎨 "},{"type":"text","marks":[{"type":"bold"}],"text":"Use Claude with Apple and Linear design references"},{"type":"text","text":" to improve typography, imagery, hierarchy, color, spacing, border radius, shadows, and other design-system details instead of relying on generic prompts."}]},{"type":"paragraph","content":[{"type":"text","text":"🔍 "},{"type":"text","marks":[{"type":"bold"}],"text":"Compare an existing website against a reference website in Claude"},{"type":"text","text":" to identify specific design gaps such as letter spacing, line height, white space, elevation, hero imagery, color palettes, and design hierarchy."}]},{"type":"paragraph","content":[{"type":"text","text":"🔄 "},{"type":"text","marks":[{"type":"bold"}],"text":"Use the Design Loop / Gauntlet Loop in Claude"},{"type":"text","text":" to create designs through iterative critic agents that evaluate brief alignment, design quality, and visual impact until the output reaches the desired benchmark."}]},{"type":"paragraph","content":[{"type":"text","text":"🖥️ "},{"type":"text","marks":[{"type":"bold"}],"text":"Turn screenshot-based design inspiration into usable HTML with Claude"},{"type":"text","text":", including recreating product-launch emails based on Apple, Figma, Anthropic, and other brand references."}]},{"type":"paragraph","content":[{"type":"text","text":"📧 "},{"type":"text","marks":[{"type":"bold"}],"text":"Connect Claude Code with Zapier"},{"type":"text","text":" to take generated HTML and create or send formatted emails through an external authentication and integration layer."}]},{"type":"paragraph","content":[{"type":"text","text":"🧩 "},{"type":"text","marks":[{"type":"bold"}],"text":"Build a local Design Operating System for Claude Code"},{"type":"text","text":" that combines image and video generation, asset management, usage tracking, design systems, and locally stored creative resources."}]},{"type":"paragraph","content":[{"type":"text","text":"🖼️ "},{"type":"text","marks":[{"type":"bold"}],"text":"Generate and manage visual assets with Higfield, Kia AI, Open Router, OpenAI, and Nano Banana 2"},{"type":"text","text":", including choosing aspect ratio, resolution, image quantity, model, and tracking generation costs."}]},{"type":"paragraph","content":[{"type":"text","text":"🏷️ "},{"type":"text","marks":[{"type":"bold"}],"text":"Create reusable style recipes and searchable local asset libraries"},{"type":"text","text":" so Claude can find images by visual content and consistently reproduce brand styles for thumbnails, websites, presentations, and other design assets."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"In this video, I cover:"}]},{"type":"paragraph","content":[{"type":"text","text":"The main problem is that generic Claude prompts often produce recognizable AI-generated design patterns because the model is not being given strong examples of professional design."}]},{"type":"paragraph","content":[{"type":"text","text":"The video introduces a three-level system: using high-quality reference design systems, applying the "},{"type":"text","marks":[{"type":"bold"}],"text":"Design Loop / Gauntlet Loop"},{"type":"text","text":" for iterative design evaluation, and building a local "},{"type":"text","marks":[{"type":"bold"}],"text":"Design Operating System"},{"type":"text","text":" around Claude Code."}]},{"type":"paragraph","content":[{"type":"text","text":"Practical implementation includes selecting reference websites such as Apple or Linear, comparing them against an existing design, converting screenshots into HTML, using multiple critic agents to refine outputs, connecting generated assets through Zapier, generating images with different AI models, indexing local image and video libraries, and creating reusable style recipes for consistent brand design."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Who this is for:"}]},{"type":"unorderedList","content":[{"type":"listItem","content":[{"type":"paragraph","content":[{"type":"text","text":"👤 "},{"type":"text","marks":[{"type":"bold"}],"text":"AI builders, Claude and Claude Code users, designers, marketers, content creators, and business owners"},{"type":"text","text":" who want to improve the quality and consistency of AI-generated designs."}]}]},{"type":"listItem","content":[{"type":"paragraph","content":[{"type":"text","text":"🛠️ "},{"type":"text","marks":[{"type":"bold"}],"text":"Users creating websites, HTML emails, thumbnails, presentations, and branded visual assets"},{"type":"text","text":" who want to use design references, the Design Loop / Gauntlet Loop, reusable style recipes, and a local Design Operating System."}]}]}]},{"type":"paragraph","content":[{"type":"text","text":"  "}]}]
+
+RESOURCES:
+- 🔁 Design Loop: https://app.notion.com/p/The-Design-Loop-Free-Guide-3b8e8d6bd13781ff8bf2fc06fd5d0aac
+- FILE 🩵 Design Teardown Skill (design-teardown-skill.zip): 857274 chars
+- FILE transcript (Turn Claude into a Design Genius... Just Watch (1).txt): 28253 chars
+
+--- FILE SKIPPED (binary, not opened): design-teardown-skill.zip ---
+
+--- FILE CONTENT: Turn Claude into a Design Genius... Just Watch (1).txt ---
+[00:00:00] I'm going to show you how to turn Claude
+[00:00:02] into a design genius and destroy the AI
+[00:00:05] slop monster forever with three simple
+[00:00:08] but powerful techniques that will let
+[00:00:11] you create designer level quality across
+[00:00:14] anything quickly and avoid any costly
+[00:00:17] mistakes. And so, if you haven't
+[00:00:18] already, grab that beautiful coffee and
+[00:00:21] let's dive straight in. Now, the war
+[00:00:23] against AI slop has officially begun and
+[00:00:26] I invite you to join me in this crusade.
+[00:00:29] So, we want to turn Claude into design
+[00:00:31] genius and destroy AI slop. And we're
+[00:00:33] going to cover three very simple
+[00:00:34] questions. So, you're going to leave the
+[00:00:36] end of this video with something
+[00:00:37] incredibly helpful that is going to lift
+[00:00:39] the quality of your design on. Number
+[00:00:41] one is what actually is outstanding
+[00:00:44] design and how can we enable Claude to
+[00:00:45] use that to build some epic stuff
+[00:00:47] together. Number one, number two, excuse
+[00:00:49] me, how do we then use it on something
+[00:00:52] real? Maybe a few different ideas. Then
+[00:00:54] thirdly, how do we give Claude a
+[00:00:56] systematic advantage, which I am most
+[00:00:58] excited about, and I've been building
+[00:01:00] some for a few days, so I can show you
+[00:01:01] exactly what I mean. Now, here's one
+[00:01:03] thing to bear in mind. This was
+[00:01:04] explained by Mike, is that they make bad
+[00:01:06] designs because they've never seen what
+[00:01:09] good or great design looks like. So, we
+[00:01:11] have to actually see what humans have
+[00:01:12] done to understand excellent design in
+[00:01:14] any capacity, whether you're using the
+[00:01:16] Claude app or you're using the Claude
+[00:01:18] design ecosystem. Now, before I show you
+[00:01:20] the first thing, here are two things
+[00:01:21] that you have to know. Write these on
+[00:01:23] your forehead. Write it on a sheet of
+[00:01:24] paper. Why is slop so apparent? My
+[00:01:27] theory on this is very simple. Number
+[00:01:29] one is that it stopped looking bad, but
+[00:01:31] it didn't stop being recognizable. And
+[00:01:34] by that, I mean, you'll find these
+[00:01:35] certain tells that appear everywhere
+[00:01:37] else. And there are literally five
+[00:01:39] things that you'll notice. It's
+[00:01:40] typography, imagery, hierarchy, color,
+[00:01:42] spacing, some classic telltale signs.
+[00:01:45] So, if we just give Claude a prompt the
+[00:01:48] same as everybody else, we're just going
+[00:01:49] to get the same results as everybody
+[00:01:51] else. So the question becomes, how do we
+[00:01:53] make Claude think like an actual
+[00:01:56] designer and build something pretty
+[00:01:57] beautiful? Now, Level One is essentially
+[00:01:59] an incredible website that has over
+[00:02:02] 2,000 designs of what excellent looks
+[00:02:05] like. You've got whisper flow,
+[00:02:07] structured, we don't say whispers,
+[00:02:08] whisper flow on this channel, but we've
+[00:02:10] got loads of different designs here.
+[00:02:12] Look at these phantom linear whatever it
+[00:02:14] is. Now, interestingly, let's say I
+[00:02:16] click on slush as a for instance, I can
+[00:02:18] see the website. This is gorgeous
+[00:02:20] design. But not only that, what this
+[00:02:21] website does with these 2,000 designs is
+[00:02:24] it grabs this. It grabs an extended view
+[00:02:28] of the design hierarchy. I've got an
+[00:02:30] explainer on the left. I have the color
+[00:02:32] palette. I have typography. I have
+[00:02:35] everything all bit everything I could
+[00:02:36] ever want and more. The kind of thing
+[00:02:38] that clients would pay so much money to
+[00:02:39] have. And look, it's got other things
+[00:02:41] down there. We can see Tailwind before
+[00:02:43] the CSS variables, uh, design tokens.
+[00:02:46] You can basically grab and go as you
+[00:02:48] want to. So there are two things that
+[00:02:50] we're going to do with this just to
+[00:02:52] showcase how actually powerful this is.
+[00:02:54] And the first of that is just to
+[00:02:56] demonstrate its capability. And to do
+[00:02:58] that, we're going to do something
+[00:03:00] classic, guys. Something that every
+[00:03:01] design video you have ever seen has said
+[00:03:03] the word, it is an orange, it's not
+[00:03:04] banana, it's apple. We are actually
+[00:03:07] going to look at the Apple design system
+[00:03:09] and as an example, show you how you can
+[00:03:12] grab these Apple aesthetics and apply
+[00:03:14] them to anything. And to do so, we're
+[00:03:16] only going to do one very simple thing.
+[00:03:18] These guys are not a sponsor of the
+[00:03:19] video or anything like that. I genuinely
+[00:03:21] found them, thought it was epic, and
+[00:03:23] I'll always just share the stuff with
+[00:03:24] you that crushes it. Oh, by the way, if
+[00:03:26] you are new, my name is Jack. I built
+[00:03:28] and form a last tech startup with like a
+[00:03:29] gazillion customers, and now I'm
+[00:03:31] building my own AI startup, and I
+[00:03:32] actually have a stuff here on the
+[00:03:34] channel that actually works. Beginning
+[00:03:36] with this really cool freaking design
+[00:03:37] thing. So, I want you to head over to
+[00:03:39] Claude, and essentially what you're
+[00:03:40] going to do is the following. You're
+[00:03:41] going to paste this in, and I'm going to
+[00:03:42] give it a prompt like this. Hey there. I
+[00:03:44] want you to use this design architecture
+[00:03:48] to go ahead and build for me a beautiful
+[00:03:50] website selling titanium protein shakes.
+[00:03:54] Make it look gorgeous. And you can
+[00:03:56] generate the images if you need to. Bam.
+[00:03:58] And once we've done that, we're going to
+[00:03:59] hit enter and let it work its magic.
+[00:04:01] Beautiful. And now we've got the website
+[00:04:03] here, which is cool. So, let me go ahead
+[00:04:04] and refresh it. Now, I'm not expecting
+[00:04:06] this to be perfect, but obviously you'll
+[00:04:07] be able to see the design inspiration.
+[00:04:10] The best designs come from iterations.
+[00:04:12] But you can see, and look, it's gone
+[00:04:13] ahead. It's generated the protein
+[00:04:14] bottles. I like this bento style box.
+[00:04:17] It's cool. It's done on two lines. I
+[00:04:19] think that's crisp. This I would improve
+[00:04:20] a little bit. Six fishes, six finishes,
+[00:04:22] one rim. This is really crisp. Bear in
+[00:04:24] mind, I didn't give this a single image.
+[00:04:26] It's done all of this off the prompt.
+[00:04:29] Like chalk, sky, citrus, amber, teal,
+[00:04:31] and graphite. I would probably go for
+[00:04:33] citrus or sky. Let me know what you
+[00:04:35] would think down below. Again, we got a
+[00:04:37] closer look, a bit of a breakdown, four
+[00:04:38] flavors, which is cool. And you can just
+[00:04:40] see the basics of this. I I think this
+[00:04:42] is you know based on the prompt I gave
+[00:04:44] it pretty cool but you can see exactly
+[00:04:46] the kind of effect that this design
+[00:04:48] style has. Now that is cool, but there
+[00:04:50] is a second use case that's going to be
+[00:04:52] even more applicable to you right now.
+[00:04:54] And that is taking your existing
+[00:04:56] website. For example, mine glider, which
+[00:04:59] is the tech start I founded with some of
+[00:05:00] the AI creators. Really hyped about it.
+[00:05:02] And let's say that I like the look of
+[00:05:03] it, right? But maybe I want to level up
+[00:05:06] a little bit. So we've got a full design
+[00:05:08] system behind this. What we can actually
+[00:05:10] do is if we come down here, let's find
+[00:05:12] something like linear. So linear is such
+[00:05:16] a good website. Let me show you this
+[00:05:18] very quickly cuz once you understand how
+[00:05:20] good their website is, it will make
+[00:05:22] perfect sense. It's classic dark mode
+[00:05:24] SAS. Everything just kind of fits. Do
+[00:05:26] you see what I'm saying? Everything's
+[00:05:27] just got this beautiful crisp kind of
+[00:05:29] like well it's well balanced. It's got
+[00:05:31] the right a good color palette. I just
+[00:05:32] think it's really interesting. And um
+[00:05:34] here's the thing. Knowing what's
+[00:05:35] happening is one thing, but being able
+[00:05:37] to articulate it is something else.
+[00:05:39] Sometimes that we just know it looks
+[00:05:41] good, but we can't explain it. And that
+[00:05:43] doesn't help Claude. So, what we're
+[00:05:45] going to do actually now is we're going
+[00:05:47] to go over to this system here and we've
+[00:05:49] got linear and we've got everything.
+[00:05:50] Now, what we're going to do is literally
+[00:05:51] copy this link and then head over to
+[00:05:53] Claude and you're going to give it this
+[00:05:54] prompt. I would like you to use the bel
+[00:05:56] website to look at this page and compare
+[00:05:58] it with mine. I want you to be ruthless.
+[00:06:00] We only like our AI ruthless guys,
+[00:06:02] nothing else. And in understanding the
+[00:06:04] design differences and how I can improve
+[00:06:07] mine based on the aesthetics and
+[00:06:09] everything, I give it my website. I give
+[00:06:11] it the website that I like and then I
+[00:06:13] say, "Hey, this is a design system. You
+[00:06:15] can also go to Line's website directly.
+[00:06:17] Utilize screenshots. I would like the
+[00:06:19] output as a beautiful HTML breakdown.
+[00:06:21] Keep it concise and simplistic." I look
+[00:06:24] at what it gave me, guys. And I'm going
+[00:06:26] to put the link down below for this
+[00:06:27] entire skill so you can do this. Now,
+[00:06:30] look at this. Top left, we have glido
+[00:06:31] and linear. This looks gorgeous. And
+[00:06:32] look, as I scroll down, you see this
+[00:06:34] green line coming up. I love these
+[00:06:35] little details. I'm a king of the little
+[00:06:37] details. I love the details. It found
+[00:06:39] three big gaps. The letter spacing is
+[00:06:42] too loose. There's no elevation ladder.
+[00:06:44] And also, the Hero Art competes with the
+[00:06:46] product. Interesting. Give me more
+[00:06:48] detail. Now, what's so cool, it's even
+[00:06:50] added like an interactive slider to show
+[00:06:52] me the difference. Now, check this out.
+[00:06:55] This is the glider letter spacing. We're
+[00:06:57] over here all by lonesome. But you can
+[00:06:59] drag this along and see this is between
+[00:07:01] the two values. That's where linear is.
+[00:07:03] So, you can see the difference. little
+[00:07:05] small details that it's picked up on
+[00:07:06] because we not we may not be able to
+[00:07:09] articulate [clears throat]
+[00:07:10] what is the difference here like oh it's
+[00:07:12] actually the corner radius. Okay, cool.
+[00:07:13] Oh, it's actually the line height. It's
+[00:07:15] the letter spacing. It's all these small
+[00:07:17] details. It's the amount of white space
+[00:07:19] we have. It is hierarchy. It is um so
+[00:07:22] many different things it could be. And
+[00:07:23] this just breaks down basically section
+[00:07:26] by section shadows, accent, frequency,
+[00:07:29] border, radius, vocabulary, the values
+[00:07:31] side by side, the display weights, and
+[00:07:34] it's incredible. And we've built a
+[00:07:36] design system for Glider that we use on
+[00:07:38] presentations, on our website, on our
+[00:07:39] app, and this is going to be so helpful
+[00:07:41] for us. I literally sent it to my team.
+[00:07:43] I was like, "Guys, we have to look at
+[00:07:45] this immediately when I got this." So,
+[00:07:47] I'm super excited that we can get these
+[00:07:48] insights. You can copy the hex by
+[00:07:50] clicking it. This is the design, the
+[00:07:51] glider design palette. It is incredible
+[00:07:54] and you can do this for your own brands
+[00:07:56] and it's not to say that linear is the
+[00:07:59] peak of design but it is a billiondoll
+[00:08:02] company and their website is gorgeous.
+[00:08:03] So one action step is find the website
+[00:08:06] that you think are fantastic on this
+[00:08:09] website here and run that comparison
+[00:08:11] between just a couple of them. Um you
+[00:08:13] these guys have done a really good job.
+[00:08:14] So I I I think this is a great resource
+[00:08:17] to share and have a little play around
+[00:08:18] with and obviously now they're moving
+[00:08:19] out into different page types profoundly
+[00:08:22] helpful. But obviously websites are just
+[00:08:25] one dimension of design. The second
+[00:08:27] question really becomes how do we use
+[00:08:29] this for other things? Well to do that
+[00:08:31] I'm going to show you one thing and it's
+[00:08:33] using the most powerful cord design
+[00:08:36] technique that I have ever come across.
+[00:08:38] One of the most powerful ones I've seen
+[00:08:39] and it's called I called the design
+[00:08:41] loop. It was called the gauntlet loop by
+[00:08:43] a gentleman who discovered it. I'll put
+[00:08:45] a video link on screen here so you can
+[00:08:46] go and check that out. Such a cool video
+[00:08:48] uh explaining how this works. Now, the
+[00:08:51] idea here is essentially that we get
+[00:08:53] Claude to build something fantastic.
+[00:08:55] Now, this is a resource here which is
+[00:08:57] amazing and it's been shared by a guy
+[00:08:59] called George Harley. So, thank you for
+[00:09:00] that. Who who realistically found all
+[00:09:02] these different beautiful email uh HTML
+[00:09:06] campaigns. Basically, you can see loads
+[00:09:07] of big brands in there like Apple
+[00:09:09] announcing a launch for something.
+[00:09:11] You've got Figma, you got all these
+[00:09:12] different brands, but there's a problem.
+[00:09:14] And the problem is the design is one
+[00:09:17] thing, but how do I get from an image to
+[00:09:19] something that I can actually use? Well,
+[00:09:22] the answer is the design loop. So, what
+[00:09:24] we're going to do here, for example, is
+[00:09:26] find a design that we think is great.
+[00:09:27] So, let's say we like this apple one,
+[00:09:29] for example. You can just literally come
+[00:09:30] down and all we're going to do here is
+[00:09:32] just literally screenshot this. Okay?
+[00:09:33] Like that. Bada boom, bada bum. Come
+[00:09:35] down and grab that one design. Come down
+[00:09:38] and then hit clipboard and just
+[00:09:39] literally copy it. and you can post it
+[00:09:41] in. So here is the Apple one that we
+[00:09:42] selected which we like and I'm just
+[00:09:43] going to say hey use the for/design
+[00:09:46] loop. The way that the design loop works
+[00:09:48] is simple effectively and I'll put the
+[00:09:50] skill as well down below so you can grab
+[00:09:52] it. It basically you provide it with a
+[00:09:54] benchmark which is hey I want you to
+[00:09:56] design like this and what happens is
+[00:09:59] Claude creates a couple of different
+[00:10:01] agents. One is like a critic which
+[00:10:03] essentially goes around in a loop. It
+[00:10:05] goes through various different stages
+[00:10:06] and levels all validating it. So for
+[00:10:09] example, one might say, "Does it hit the
+[00:10:10] brief?" The second critic might say,
+[00:10:12] "Hey, is a design great?" And the third
+[00:10:14] critic might be something like visual
+[00:10:16] impact. So it creates three different
+[00:10:18] sub aents and it basically goes around
+[00:10:20] in a loop until it hits the desired
+[00:10:22] mark. Technique is one thing, output is
+[00:10:24] everything. Go ahead and recreate this
+[00:10:26] product launch for me in HTML such that
+[00:10:28] if I was to paste it into an email, it
+[00:10:29] would look beautiful. This is for the
+[00:10:31] launch of GLD on Windows as you can see.
+[00:10:32] Go ahead and grab this. I want you to
+[00:10:34] pay close attention to the luminosity,
+[00:10:35] the vibe, the energy. So this is what I
+[00:10:37] gave it. This is what it gave me back in
+[00:10:39] one shot. Just like this. I said I went
+[00:10:42] in GWD26 glider windows day November tw
+[00:10:45] November 12, 2026. That is incredible
+[00:10:49] that it did that on one simple shot. And
+[00:10:51] this is HTML which means that we could
+[00:10:53] share that with our audience and do
+[00:10:56] whatever we wanted to. That's how
+[00:10:57] powerful this design loop is. And from
+[00:11:00] this we could build out our own design
+[00:11:02] systems or anything that we like. And
+[00:11:04] then another example of this is actually
+[00:11:07] anthropics. So if you check this one out
+[00:11:08] here, uh this one here, Claude, welcome
+[00:11:10] to Claude platform. So I said, hey, do
+[00:11:11] the same thing with this one. And then
+[00:11:13] we got this cursel, welcome to the cast
+[00:11:15] platform. And it even created for me an
+[00:11:17] anthropicesque
+[00:11:18] um basically orange signal, get your API
+[00:11:21] key. And again, not that the idea isn't
+[00:11:23] to just take this, but you can just see
+[00:11:25] how powerful it is. Like if you say,
+[00:11:26] find out what works about this, but I
+[00:11:28] want change ABC or look at these four
+[00:11:30] things as inspiration and adapt it. You
+[00:11:32] can now have these assets for you built
+[00:11:34] using cord in this new system. But the
+[00:11:37] big issue here is that a HTML email is
+[00:11:39] one thing, but if we can't actually send
+[00:11:41] it, then we have a big problem. So, what
+[00:11:43] I want to do is actually show you how
+[00:11:44] you can actually even action it. Say I
+[00:11:46] wanted to send this to somebody. You're
+[00:11:47] going to shoot it over to cold code. And
+[00:11:48] then effectively, we're going to just
+[00:11:50] draft this and add it to an email very
+[00:11:51] quickly. And by the way, level three, I
+[00:11:53] think, is actually the most powerful of
+[00:11:55] all these systems. And you'll see
+[00:11:56] exactly what I mean in a second. But
+[00:11:57] let's say that I want to go ahead and
+[00:11:58] send this email. I might just say, "Hey
+[00:12:00] there, I want you to use my Zapia
+[00:12:02] connection to basically grab the HTML
+[00:12:05] that we just created and create a draft
+[00:12:08] email to myself or send it to myself,
+[00:12:10] please, and just add a random subject
+[00:12:12] line." Now, the reason why I'm using
+[00:12:14] Zapia for this is my authentication
+[00:12:16] layer. Let me explain what that means.
+[00:12:17] So, you can inside Claude connect to all
+[00:12:20] your tools. But the problem is you need
+[00:12:21] to do this in every single app in Codeex
+[00:12:23] and in anti-gravity. One of the cool and
+[00:12:25] also Hermes agent, right? If you connect
+[00:12:27] to Zapia, you can use all these same
+[00:12:29] things. And the other thing personally
+[00:12:30] that I like is the fact that I can
+[00:12:32] access things like school where my
+[00:12:34] community is. We're doing a meet up, by
+[00:12:35] the way, in Budapest in 2 weeks. Would
+[00:12:38] love to see you there. Grab a beautiful
+[00:12:39] coffee in person. So, what I'm going to
+[00:12:40] do now is use a Zapia integration to
+[00:12:42] send something. And then, guys, I get
+[00:12:44] this email here. And look at that. That
+[00:12:46] is freaking gorgeous. And does the
+[00:12:47] button work? Let's just see if it does.
+[00:12:48] I click on it. And what happens? Bada
+[00:12:50] bing, bada boom. We have the community
+[00:12:51] with lots of incredible stuff happening.
+[00:12:53] I'm really impressed by that. you can
+[00:12:55] build it and you can connect everything.
+[00:12:56] I'll put a link for Zappy down below so
+[00:12:57] you can check that one out as well. But
+[00:12:59] it does take us very nicely onto the
+[00:13:01] third level that I am most excited
+[00:13:04] about. Now, what is level three? Level
+[00:13:06] three effectively ask the question, can
+[00:13:08] we give it an environment to work in?
+[00:13:10] Can we have one engine, one box? And by
+[00:13:12] the way, if this sounds like I'm
+[00:13:13] speaking Spanish, I'll put a link down
+[00:13:15] below for the full Claude Code
+[00:13:16] Masterass. It goes through all this
+[00:13:17] stuff, design systems, building
+[00:13:19] cordling, how to use cord, all its
+[00:13:21] features, websites, memory systems,
+[00:13:23] everything you could possibly imagine,
+[00:13:24] including all the stuff that I just
+[00:13:26] don't share on YouTube. And also, we've
+[00:13:28] got meetups. We got incredible stuff
+[00:13:29] happening. So, it's very, very well
+[00:13:30] worth checking out. Now, this is level
+[00:13:33] three, and that is a design operating
+[00:13:35] system. This is one that I built inside
+[00:13:37] my own cloud operating system.
+[00:13:38] Obviously, we've got our memory systems,
+[00:13:40] we got our chats, we got everything, but
+[00:13:41] the design OS is really cool, and I'll
+[00:13:43] show you why. Because a large part of
+[00:13:45] design is the ability to generate images
+[00:13:47] and videos. And what this lets you do is
+[00:13:49] pick the platform. So Higfield, Kia AI,
+[00:13:51] Open Router, OpenAI, um different
+[00:13:53] sections if you want to and generate
+[00:13:55] images. For example, if I chose one
+[00:13:56] here, I could say something like a
+[00:13:58] beautiful um liver and white Springer
+[00:14:01] spananiel with a protein shake next to
+[00:14:04] them. Okay, I just drop that in there.
+[00:14:05] Let's go down and select something like
+[00:14:08] I don't know 16x9. 2K image is fine.
+[00:14:11] Let's do two. And you can pick
+[00:14:12] whereabouts happening and also the
+[00:14:14] model. So I think go for nano banana 2
+[00:14:16] which is cool. And the way that I built
+[00:14:18] this by the way is actually shows you
+[00:14:19] how many credits or how much it's
+[00:14:21] actually costing you for each one you
+[00:14:23] do. So you can generate it and then it
+[00:14:25] will go ahead and build that. And just
+[00:14:27] like that I have a beautiful spring with
+[00:14:30] a protein shake next to it which I think
+[00:14:31] is really cool. Peakway protein. I think
+[00:14:33] this is so freaking sick. And then got
+[00:14:34] another one here which looks absolutely
+[00:14:36] gorgeous. I love that dog. But let me
+[00:14:38] show you the coolest thing and the
+[00:14:39] reason why this is so important. The
+[00:14:41] idea of the Claude Code operating
+[00:14:42] system, okay, we know it does load cool
+[00:14:44] stuff, right? You can chat with it. You
+[00:14:45] got a dashboard. It shows you your
+[00:14:46] usage, how much money you're spending.
+[00:14:48] It tells you how you can improve because
+[00:14:50] it reviews your chats every day locally
+[00:14:52] and tells you new skills you could use.
+[00:14:54] It's got like a bazillion things. I've
+[00:14:55] covered it a lot on the channel,
+[00:14:56] knowledge graphs, all that sort of
+[00:14:58] stuff. Here's why the design thing is so
+[00:14:59] powerful, right? You have this library
+[00:15:01] here, and this is a feature I wish Apple
+[00:15:04] added, but didn't. If you click on
+[00:15:05] library, you can actually see every
+[00:15:07] single image on your own computer. And
+[00:15:10] what I really love about this is I can
+[00:15:12] come down and type for things. If I type
+[00:15:13] in, for example, burger, right, enter
+[00:15:16] here. It will show me every image of a
+[00:15:18] burger on my computer. Not just like is
+[00:15:22] burger in the metadata, but also I
+[00:15:24] indexed it with like a really cheap
+[00:15:25] model, so I can easily find my stuff.
+[00:15:27] Then these are all the burgers I have.
+[00:15:29] You'd think I love burgers, right? But
+[00:15:30] this is just so freaking helpful. And
+[00:15:32] now I can click on this, for example,
+[00:15:33] and I can just copy for the chat. And
+[00:15:35] now if I paste this into a browser here,
+[00:15:37] I've got it. So I can use this anywhere
+[00:15:38] I want to copy it like this, download
+[00:15:40] it, do anything I want. It is just such
+[00:15:42] a lifesaver. I can filter by images and
+[00:15:45] videos. Magic and magic scan updates it.
+[00:15:47] So this idea of having your own design
+[00:15:50] operating system running locally that
+[00:15:52] has access to all of your images and
+[00:15:53] videos. You don't have to spend hours
+[00:15:55] thinking, dude, where do I find this?
+[00:15:56] Find that is really, really, really
+[00:15:58] helpful. But the other cool thing you
+[00:16:00] can do, so for example, if I go 4K AI
+[00:16:02] here, I've got Nan 2. You can do these
+[00:16:04] design systems and this just makes
+[00:16:06] generating things really cool. So check
+[00:16:07] this out. You see this little thing down
+[00:16:08] here? If you click on this, you can
+[00:16:10] actually create a new style recipe. So
+[00:16:12] let's say that I have my YouTube
+[00:16:14] channel, right? And I want to do a
+[00:16:15] consistent style. And so let's say
+[00:16:16] there's like a format that I like. Let's
+[00:16:18] say I like this uh thumbnail style
+[00:16:20] format. Well, what I can do on design
+[00:16:21] system is explain it. I could say Jack
+[00:16:23] thumbnail, okay? Or Jack design. As you
+[00:16:25] can see, I built one down here. Enter
+[00:16:27] this as a description of what it is. And
+[00:16:29] then you can literally just add images
+[00:16:30] here for any style that you want to,
+[00:16:32] which is really handy. And then you have
+[00:16:34] this thing here. So, for example, if I
+[00:16:36] come off this and show you. If I just
+[00:16:37] come down here and I click on Jack
+[00:16:38] Design, what this is, as you can see, is
+[00:16:41] basically images of me with some
+[00:16:42] descriptions. And I could say, "Hey,
+[00:16:44] replace the thing in the image with a
+[00:16:46] giant protein shake." All right, really
+[00:16:49] easy. Let's do two images, 16x9, 2K.
+[00:16:52] That's going to cost me 12 cents. I just
+[00:16:53] generate that and then it will go ahead
+[00:16:55] and build it for us. Which means that if
+[00:16:57] you have a design style for your
+[00:16:59] business, you want to integrate it into
+[00:17:01] your websites, you want to do anything,
+[00:17:03] this just makes it way easier. I built
+[00:17:04] this for the communities because I I
+[00:17:06] love it and I actually want to go ahead
+[00:17:07] and use this. And then just like that,
+[00:17:08] we see it coming in now. It's got design
+[00:17:10] with the giant protein shake. This is a
+[00:17:12] thumbnail of a video I have coming out
+[00:17:13] in about half an hour, which is just
+[00:17:15] really handy. I just think that's so
+[00:17:16] helpful to do. So, if I'm going to get
+[00:17:18] my consistent thumbnails and if I just
+[00:17:20] want to change one section, I just
+[00:17:21] literally select Jack design or could be
+[00:17:23] Jack thumbnail style one or Jack sky
+[00:17:25] image or whatever I want. And then we
+[00:17:27] have the second design which looks epic.
+[00:17:28] And I just find it so helpful to be able
+[00:17:30] to tag in different services like
+[00:17:32] Hicksfield and OpenAI and being able to
+[00:17:34] access my own current library is so
+[00:17:37] beneficial locally. And I'll put a link
+[00:17:39] down below if you want to grab this OS
+[00:17:41] in the community alongside all the other
+[00:17:43] bells and whistles. And so now we've
+[00:17:44] learned how to turn Claude into a design
+[00:17:46] genius. The next thing that we need to
+[00:17:48] do is learn one of the most powerful
+[00:17:50] skills, and that is the design lip,
+[00:17:52] which we're going to do together in this
+[00:17:53] video right

@@ -1,0 +1,807 @@
+LESSON: 💪 Every level of claude Design (md=b31db0, video 25 min) ====================
+
+DESCRIPTION:
+[v2][{"type":"heading","attrs":{"level":3}},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","text":" Hey, in this video, you're gonna learn:"}]},{"type":"paragraph","content":[{"type":"text","text":"🧭 "},{"type":"text","marks":[{"type":"bold"}],"text":"Understand the seven levels of Claude Design"},{"type":"text","text":" from basic prompt-based UI mockups to reusable design systems, external image and video generation, motion graphics, and full production apps."}]},{"type":"paragraph","content":[{"type":"text","text":"🎨 "},{"type":"text","marks":[{"type":"bold"}],"text":"Use Pinterest, Awwwards, Godly, Mobbin, and Land-book as Claude Design references"},{"type":"text","text":" to give Claude specific visual inspiration instead of relying on generic one-shot prompts."}]},{"type":"paragraph","content":[{"type":"text","text":"🔄 "},{"type":"text","marks":[{"type":"bold"}],"text":"Iterate Claude Design outputs through multiple feedback rounds"},{"type":"text","text":" by refining colors, contrast, interactions, animations, screen layouts, and other UI details instead of accepting the first generated design."}]},{"type":"paragraph","content":[{"type":"text","text":"🧩 "},{"type":"text","marks":[{"type":"bold"}],"text":"Create and export a reusable Claude Design System"},{"type":"text","text":" containing color palettes, typography, logos, assets, visual rules, motion styles, and interface patterns that can be reused across future projects."}]},{"type":"paragraph","content":[{"type":"text","text":"📧 "},{"type":"text","marks":[{"type":"bold"}],"text":"Apply one Claude Design System across websites, slide decks, sponsorship decks, and HTML emails"},{"type":"text","text":" so different business assets maintain consistent branding, typography, colors, and visual language."}]},{"type":"paragraph","content":[{"type":"text","text":"🖼️ "},{"type":"text","marks":[{"type":"bold"}],"text":"Connect Higsfield to Claude Code through the CLI"},{"type":"text","text":" to generate custom logos, brand imagery, website visuals, animations, and video assets using models such as Nano Banana Pro and GPT Image 2."}]},{"type":"paragraph","content":[{"type":"text","text":"🎬 "},{"type":"text","marks":[{"type":"bold"}],"text":"Create HTML animations, 3D objects, interactive graphics, and motion assets with Claude Design"},{"type":"text","text":" that can be used in websites, apps, presentations, videos, and other digital content."}]},{"type":"paragraph","content":[{"type":"text","text":"🗄️ "},{"type":"text","marks":[{"type":"bold"}],"text":"Combine Claude Design, Claude Code, and Superbase to build production apps"},{"type":"text","text":" with signup forms, login pages, admin dashboards, database storage, authentication, user data, and database security checks."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"In this video, we cover:"}]},{"type":"paragraph","content":[{"type":"text","text":"The main problem is that using Claude Design with only basic prompts produces one-off designs that can look generic, require repeated manual work, and cannot easily be reused across an entire business."}]},{"type":"paragraph","content":[{"type":"text","text":"The video introduces a seven-level Claude Design framework: starting with basic “plug and go” prompting, adding design references and iteration, creating reusable design systems, expanding those systems across business assets, adding external image and video generation, introducing motion and 3D graphics, and finally combining design with databases and application functionality."}]},{"type":"paragraph","content":[{"type":"text","text":"Practical implementation includes gathering inspiration from Pinterest, Awwwards, Godly, Mobbin, and Land-book, exporting Claude projects into reusable design systems, creating color palettes, applying the same system to decks and emails, connecting Higsfield through the CLI, generating branded images and videos, creating HTML and 3D animations, and connecting Superbase to Claude to build login systems, database tables, admin dashboards, authentication, and security checks for production applications."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Who this is for:"}]},{"type":"unorderedList","content":[{"type":"listItem","content":[{"type":"paragraph","content":[{"type":"text","text":"🎨 "},{"type":"text","marks":[{"type":"bold"}],"text":"Claude Design and Claude Code users, designers, founders, marketers, and content creators"},{"type":"text","text":" who want a structured progression from simple AI-generated designs to reusable systems for websites, apps, decks, emails, graphics, and motion content."}]}]},{"type":"listItem","content":[{"type":"paragraph","content":[{"type":"text","text":"🛠️ "},{"type":"text","marks":[{"type":"bold"}],"text":"AI builders and automation-focused entrepreneurs"},{"type":"text","text":" who want to combine Claude Design, Higsfield, design systems, HTML animations, 3D graphics, and Superbase to create branded production applications with both strong visual design and functional back-end infrastructure."}]}]}]}]
+
+RESOURCES:
+- ⚡️ Supabase: https://bit.ly/3S9q6ox
+- Resource: https://app.notion.com/p/Supabase-Agent-Skills-Setup-Guide-3b4e8d6bd137812eb2acfc8c97306e2c
+- FILE transcript (Every Level of Claude Design Explained.txt): 40118 chars
+
+--- FILE CONTENT: Every Level of Claude Design Explained.txt ---
+[00:00:00] I have spent hundreds of hours designing
+[00:00:02] in Claude and I'm going to take you
+[00:00:04] through the seven levels of Claude
+[00:00:06] design, what to expect at each level,
+[00:00:09] the exact costly mistakes to avoid, and
+[00:00:12] how to unlock the next one so that you
+[00:00:14] can design anything, websites, graphics,
+[00:00:17] decks, full apps, and turn it into a
+[00:00:20] consistent system that you can reuse in
+[00:00:23] minutes, even if you've never designed
+[00:00:25] in your life. So, with that in mind,
+[00:00:28] grab that beautiful coffee and let's
+[00:00:30] dive straight in. So, there are seven
+[00:00:32] levels to Claude Design. And by the end
+[00:00:34] of the video, your friends will think
+[00:00:35] you're some kind of design genius that
+[00:00:37] you've got a team of designers locked up
+[00:00:39] in your basement pumping this stuff out.
+[00:00:41] We have seven levels. And each level,
+[00:00:43] I'm going to show you exactly what
+[00:00:45] you're going to be saving. And the next
+[00:00:46] one is actually stronger than the
+[00:00:48] previous. So, they all build on each
+[00:00:50] other. Now, level one is what we call
+[00:00:52] the plug and go. At this level, you're
+[00:00:55] actually using claw design. Now, if
+[00:00:57] you're using core design, you're going
+[00:00:58] to open up the claw.ai online. You come
+[00:01:00] to the bottom left and you click design.
+[00:01:03] Now, once you do that, you will see your
+[00:01:04] design command center. Now, a level one
+[00:01:07] user will basically just give it a
+[00:01:08] prompt like, "Hey there, could you go
+[00:01:10] ahead and just create for me a UI markup
+[00:01:12] for a t-shirt company that produces
+[00:01:14] teddy bears." You can click on UI mockup
+[00:01:17] and just do this. No designer system. Go
+[00:01:19] ahead. You pick the model. Again, Fable
+[00:01:21] 5 is the most powerful of all the
+[00:01:23] models. Of course, you can scale it down
+[00:01:25] if you want to, as well as the effort.
+[00:01:27] And then just send that on its way. And
+[00:01:28] by the way, if you're new, I'm Jack. I
+[00:01:30] built and sold my last tech startup with
+[00:01:32] like a gazillion customers. Now, I'm
+[00:01:33] scaling my own AI startup, and I share
+[00:01:36] here the stuff that actually works. And
+[00:01:37] if you love being at the cutting edge of
+[00:01:39] stuff like design, just drop me a like
+[00:01:41] uh and a subscribe down below. It really
+[00:01:43] supports the channel out and helps me
+[00:01:45] build beautiful videos just like this.
+[00:01:47] So if you look at this here for example,
+[00:01:49] we'll always get some questions. So
+[00:01:50] basically in this scenario, you're going
+[00:01:52] to go ahead and and basically describe
+[00:01:54] it. So I could say, "Hey, a t-shirt with
+[00:01:55] teddy bear designs. What kind of UI is
+[00:01:57] this? Decide for me. Desktop web is
+[00:02:00] fine. Of course, you want to be mobile
+[00:02:01] optimized. Who's the target customer?"
+[00:02:03] And again, you know, Claude Design will
+[00:02:05] actually guide you through this process.
+[00:02:08] So brand name, we'll just say this is
+[00:02:10] Teddy, which is a beautiful name. As you
+[00:02:12] can see, I'm wearing a beautiful teddy.
+[00:02:13] I love my teddy bears. And you just
+[00:02:15] answer the questions. But what is cool
+[00:02:16] is that you can add Legos if you wish.
+[00:02:18] We're just going to go through click and
+[00:02:20] use this like a typical individual, warm
+[00:02:22] and cuddly. Um, and we're going to say
+[00:02:24] this is going to be exploring the idea.
+[00:02:26] And when you're done, you click continue
+[00:02:27] in the bottom right. This is level one.
+[00:02:30] It's basically using the chat interface
+[00:02:32] with no bells and whistles. Extremely
+[00:02:34] basic. But if you're watching this video
+[00:02:36] right now and you're using core design
+[00:02:38] like this, you are still ahead of
+[00:02:41] genuinely 99.9% of people who don't even
+[00:02:44] know that claw design exists, let alone
+[00:02:47] are using it. And as you can see, Claude
+[00:02:49] has come back with a website. It's
+[00:02:51] actually used an existing color palette,
+[00:02:53] but we would all agree that at the
+[00:02:54] moment it needs a little bit of work,
+[00:02:56] but as you can see, it's still better
+[00:02:58] than not using an actual design system
+[00:03:00] at all. And in the bottom left, we can
+[00:03:02] improve this. Now, the key unlock for
+[00:03:04] escaping level one is understanding that
+[00:03:06] the first site it gives you is going to
+[00:03:08] be the same as everybody else if you're
+[00:03:10] using the same systems and the same
+[00:03:12] prompts. You're going to get generic
+[00:03:14] purple gradient slop unless you give it
+[00:03:16] specifics. Now, I've already shown what
+[00:03:17] that looks like, but just so you know,
+[00:03:19] you can still save hundreds of dollars
+[00:03:21] if you went onto Upwork to buy this
+[00:03:22] website or anything like that. People
+[00:03:24] are selling websites for hundreds,
+[00:03:26] thousands of dollars that you can build
+[00:03:28] with Claude Design. So, you're already
+[00:03:30] saving money if you're using the system.
+[00:03:32] But if you actually want to build like a
+[00:03:34] designer, you need to leverage the
+[00:03:35] system inside level two. Now in level
+[00:03:37] two, the whole idea is that we actually
+[00:03:39] brief this like our design direct. We
+[00:03:42] give it not only a very specific brief,
+[00:03:45] but we're going to give it design
+[00:03:47] inspiration that's going to be specific
+[00:03:49] for our project. Think of it like having
+[00:03:51] a designer, which is going to be our guy
+[00:03:52] here. Instead of saying, "Hey, just
+[00:03:54] build me this thing." We're going to
+[00:03:55] give it really specific instructions and
+[00:03:58] we're going to show him beautiful
+[00:04:00] designs that we found elsewhere so he
+[00:04:02] can use that to build something
+[00:04:03] incredible. So in this example, let's
+[00:04:05] say that we were going ahead and
+[00:04:06] building a mobile app design. I click on
+[00:04:08] this. I'm going to remove this system
+[00:04:10] for the moment and remove it. And let's
+[00:04:11] say the prompt is a habit tracking app
+[00:04:14] kind of like notion and something that
+[00:04:17] looks gorgeous. Now before we actually
+[00:04:20] go ahead and begin the prompt, what we
+[00:04:21] can do is search different websites for
+[00:04:23] inspiration. So, for example, Pinterest
+[00:04:25] is a brilliant one that can show you
+[00:04:27] loads of different apps and you can find
+[00:04:29] one that you think really resonates with
+[00:04:31] your style. I mean, you go even further.
+[00:04:33] Look at these beautiful designs. I mean,
+[00:04:34] this is so slept on. It really is crazy.
+[00:04:37] Look how beautiful these designs are.
+[00:04:39] So, I really like the look of this one,
+[00:04:40] for example. And again, I can just go
+[00:04:42] through, click on the images, and get
+[00:04:44] inspiration. So, let's say we like the
+[00:04:45] look of this. You can maybe take a
+[00:04:47] screenshot of that, come back over to
+[00:04:48] Claw Design, and drop it in. Great. And
+[00:04:51] then you can check other websites like
+[00:04:52] awards is beautiful for basically
+[00:04:55] award-winning websites. This is great
+[00:04:56] for websites. You have Godly um which is
+[00:04:59] really cool. Godly is fantastic for
+[00:05:00] different designs that you think are
+[00:05:02] really crisp. Again, it all really
+[00:05:03] depends on the thing that you're
+[00:05:04] building. Mobin is another really good
+[00:05:06] one as you can see. Beautiful designs.
+[00:05:08] And also uh Landbook. I'll put a link
+[00:05:10] down below for you so you can go ahead
+[00:05:11] and grab these ones. Let's say we like
+[00:05:13] this style here. I'll say use the below
+[00:05:15] uh image as a kind of reference to build
+[00:05:17] this out, please. I just want uh one
+[00:05:19] single page. and then come over and
+[00:05:20] click submit. Now, there are two parts
+[00:05:22] to level two and I'm going to show you
+[00:05:24] them. Level one is a design design
+[00:05:25] inspo, but level two is very
+[00:05:27] interesting. Now, look at this. I can
+[00:05:28] see it before our very eyes building out
+[00:05:31] this thing in front of us. And I love
+[00:05:33] all of this design stuff. Design is the
+[00:05:35] single most underutilized aspect of any
+[00:05:39] creation. It really does affect
+[00:05:41] perception and what people pay for
+[00:05:44] things. And how you do anything is how
+[00:05:46] you do everything. Which is why I think
+[00:05:48] design is so incredible. And if you just
+[00:05:50] look at this, can you see the difference
+[00:05:52] between giving it a prompt suggestion
+[00:05:54] and not? This is with if I come back up
+[00:05:56] here to show you what we get with no
+[00:05:58] reference. And this is something that we
+[00:06:00] get with a reference, which is
+[00:06:01] incredible. Now the second part of level
+[00:06:03] two, the individual at level two is
+[00:06:06] somebody that understands that just one
+[00:06:08] section is not enough. You have to
+[00:06:11] iterate as with anything. So I might
+[00:06:13] come down and give it some further
+[00:06:14] feedback. So I could say, for example,
+[00:06:16] again, it's even interactive, right?
+[00:06:17] Which is cool. So I might say, hey, when
+[00:06:19] I've selected all the buttons, I would
+[00:06:21] like there to be confetti. And I would
+[00:06:23] also like to check out different
+[00:06:25] screens. And each screen should have a
+[00:06:27] different color at the top. So yellow
+[00:06:29] might be one, blue could be another, and
+[00:06:31] then green. And come off. And then just
+[00:06:33] send that one off. And for sure, make
+[00:06:35] sure that you go back and forth with
+[00:06:37] cord design in a conversation so you can
+[00:06:39] be super happy with the result. And then
+[00:06:42] momentarily we scroll down. I click on
+[00:06:44] metate. And do I see confetti? I do,
+[00:06:46] which is great. And let's have a look at
+[00:06:47] the different pages. I mean, this is
+[00:06:49] really good. I'm very impressed with it.
+[00:06:51] So, one thing I might do is change the
+[00:06:53] contrast between the black and the blue.
+[00:06:55] But otherwise, I think that this is a
+[00:06:57] really good start. And you can see the
+[00:07:00] core principle here is you need to keep
+[00:07:01] on iterating. And it just sounds like
+[00:07:03] I'm speaking Spanish. I'll put a link
+[00:07:05] down below for the full Claude code
+[00:07:07] master class that takes you through
+[00:07:08] design systems, setting up Claude, how
+[00:07:11] you can level up, use power features,
+[00:07:13] build beautiful websites and stuff that
+[00:07:15] I have never shared online, including
+[00:07:17] you get access to the full Claude code
+[00:07:20] agentic system which has as well inside
+[00:07:22] it. I'm launching very soon a design OS.
+[00:07:25] You're not going to want to miss that.
+[00:07:26] It will get you so much further ahead.
+[00:07:27] And the rule for level two is never
+[00:07:29] oneshot it. You direct and then you go
+[00:07:31] ahead and then you can iterate it. And
+[00:07:33] again, this one is going to save you
+[00:07:35] more money just simply because the
+[00:07:36] quality of the design is way better. And
+[00:07:38] if you take anything away from this
+[00:07:40] video, just know that iteration and
+[00:07:42] design reference what are like massively
+[00:07:44] underutilized. But it does bring one
+[00:07:47] problem to the table. And that's idea
+[00:07:49] that building these oneoff is not only
+[00:07:51] slow, but it's not replicable, which is
+[00:07:53] why at level three, we begin the process
+[00:07:56] of a design system. Now, think of it
+[00:07:59] like this. If you don't have a design
+[00:08:01] system, it's like having a different
+[00:08:02] design contractor for every project you
+[00:08:05] do. Think of how timeconuming and
+[00:08:07] wasteful this would be. With a design
+[00:08:09] system, we have one designer with one
+[00:08:11] really clear set way of doing things,
+[00:08:13] which saves you time and makes
+[00:08:15] everything so consistent. Now, let's say
+[00:08:17] for example that we have an app that we
+[00:08:19] really like the look of. I mean, look at
+[00:08:20] this. We've got a month of wins. I think
+[00:08:22] this is looking really sharp and we did
+[00:08:24] that just with one prompt. What I can do
+[00:08:26] is come down to share. Now, cool little
+[00:08:28] hack. I can publish this as an artifact.
+[00:08:30] If I do this, it will give me a public
+[00:08:32] URL that I can share with my team and
+[00:08:34] say, "Hey, what do you guys think about
+[00:08:35] that?" You publish it to basically the
+[00:08:37] web and then you can copy and share
+[00:08:38] that. What I want you to do is connect
+[00:08:40] to share. Come down here and do
+[00:08:41] project.html for me and just download
+[00:08:44] that as a project archive and click on
+[00:08:46] export and then save this. And then when
+[00:08:48] you come back to the homepage, scroll
+[00:08:50] down and click on create a design system
+[00:08:52] at the bottom like so. And then you can
+[00:08:54] go ahead and say I'm going to go create
+[00:08:55] here. And here we're going to explain
+[00:08:56] what we're doing. We are a productivity
+[00:08:59] tracking app. Beautiful. Come down and
+[00:09:02] then it says add fonts, logos or assets.
+[00:09:04] Just come down here and click on
+[00:09:05] basically uh any files you want to
+[00:09:06] upload. And then just select the file
+[00:09:08] you just downloaded. And then once
+[00:09:10] you've done that, you've added any of
+[00:09:11] the notes, just come down and click on
+[00:09:12] continue to generation. Come down here
+[00:09:14] and then click on generate. And this
+[00:09:16] will now build out a design system. Now
+[00:09:18] at this point you can add in logos. You
+[00:09:20] can do anything you want to. If you're
+[00:09:22] working with clients, grab their logos,
+[00:09:24] grab their typography. One very cool
+[00:09:26] website is cool.co. So with my first
+[00:09:28] tech startup, the top 100 UK one. What
+[00:09:30] we did is we when I got a brand palette
+[00:09:32] is we used the generator and you can
+[00:09:34] literally just say we hit enter for
+[00:09:35] example spacebar and it keeps doing
+[00:09:37] different colors and you can come down
+[00:09:38] and you can actually go ahead and lock
+[00:09:40] it and then you do a bit more. You come
+[00:09:41] down here locker. It's a completely free
+[00:09:43] tool. Very very cool and just good for
+[00:09:45] getting inspiration. But the real hack
+[00:09:47] is finding existing color palettes that
+[00:09:49] already exist and using and leveraging
+[00:09:51] those because they're very complimentary
+[00:09:54] and you don't need to reinvent the
+[00:09:55] wheel. And then you'll see something
+[00:09:57] that looks like this. And this is the
+[00:09:59] entire streak line design system. It's
+[00:10:01] got sources, content fundamentals,
+[00:10:03] visual transformations, handdrawn marks.
+[00:10:05] It has literally gone ahead and included
+[00:10:07] everything. We've got a color palette.
+[00:10:09] It's literally beautiful. And you can
+[00:10:10] see it's even got motions on there. I
+[00:10:12] mean, it is really beautiful. And the
+[00:10:13] cool thing is if I want to change it, if
+[00:10:15] I want to add additional images, I can
+[00:10:17] just drop it in the bottom left. Now,
+[00:10:20] every business needs this. This is
+[00:10:21] something that businesses would spend
+[00:10:22] thousands of dollars to get right. And
+[00:10:24] you can produce designer level quality
+[00:10:26] with just a couple of prompts and the
+[00:10:28] right systems. Now, what I want you to
+[00:10:30] do after you've gone back and forth and
+[00:10:32] had your conversations, come over to
+[00:10:34] share in the top right. And what I want
+[00:10:36] you to do is come down and just have
+[00:10:37] this on your computer and get it out of
+[00:10:39] this environment. So, you're going to go
+[00:10:40] to project.html HTML and you're going to
+[00:10:42] come down and project archive is fine
+[00:10:44] and just click export. And so now you
+[00:10:46] have this beautiful design system. The
+[00:10:48] cool thing is that every output is going
+[00:10:49] to match your taste. It's now one file
+[00:10:52] that you can use everywhere. But the big
+[00:10:53] issue here by only having this design
+[00:10:56] system is that it only really applies to
+[00:10:58] our website or the app that we designed.
+[00:11:00] And this is how you can progress to
+[00:11:02] level four in our sevenle system here,
+[00:11:04] which is actually using the system for
+[00:11:07] your entire business. Now imagine we
+[00:11:09] have this universal design system. We
+[00:11:11] have many things that we do. We write
+[00:11:12] emails. We do presentations. We have
+[00:11:15] CVs. We interview people. The cool thing
+[00:11:17] here is we can take this design system
+[00:11:19] and replicate it. Spread like locusts in
+[00:11:23] the wild. So it's in our YouTube, it's
+[00:11:25] in our Instagram, and it's instantly
+[00:11:27] recognizable, but it's your design
+[00:11:29] system. Now we have it. We can
+[00:11:31] physically do that. So for example, if
+[00:11:33] we come back over to Claude, check this
+[00:11:34] out. I'm going to come down here, click
+[00:11:35] on Streakline design system. What's
+[00:11:37] really cool is they've kind of given you
+[00:11:38] ideas about how to use the product. So I
+[00:11:41] could for example come down and say
+[00:11:43] click on color and type pairing and I
+[00:11:44] might say explore col type pairings for
+[00:11:47] this design system. Please go ahead and
+[00:11:49] improve them and then we can go ahead
+[00:11:51] and send that one off. The other thing
+[00:11:52] that we could do if we wanted to is just
+[00:11:54] think about all the things that you may
+[00:11:56] want to do in your business. The big one
+[00:11:58] here I'm going to show you what this all
+[00:11:59] looks like. We could do presentations,
+[00:12:01] right? So for example, we could do
+[00:12:02] slides. I could say make a slide deck
+[00:12:03] about productivity. Beautiful. And then
+[00:12:06] also come down and see. And you can even
+[00:12:08] do emails. Let me show what this looks
+[00:12:09] like. All I said was design me an email.
+[00:12:11] Let's check this out. First one here.
+[00:12:13] This is a sponsorship deck. And look at
+[00:12:15] this guys for a one shot. How crazy is
+[00:12:17] this? It's understood the color the
+[00:12:19] color scheme. Um and it's basically gone
+[00:12:21] ahead and built out these decks in one
+[00:12:23] single shot. But we may want to move
+[00:12:24] this around a little bit. So I might
+[00:12:25] say, hey, on each slide, make sure that
+[00:12:27] the height of the color is consistent.
+[00:12:30] And also I want things to be no more
+[00:12:32] than two sentences long. So keep that up
+[00:12:35] there. And there should be something
+[00:12:36] visually beautiful on every slide. So
+[00:12:38] for example, on the first slide, the
+[00:12:39] yellow is too low. So we would then go
+[00:12:41] back and forth. And again, we're
+[00:12:42] building out the template. Remember
+[00:12:44] level two. It's iteration. Now check
+[00:12:46] this one out. I come over here. This is
+[00:12:48] a welcome email. This is freaking cool.
+[00:12:50] All I said is, look, go ahead and build
+[00:12:51] it for me. It asks you a few questions
+[00:12:53] and it's gone ahead and built this for
+[00:12:55] us. Now obviously we can improve this
+[00:12:57] massively. But look how on brand this
+[00:12:59] has actually been by doing that. And we
+[00:13:01] can go back and forth. We can add a
+[00:13:03] logo. we can do anything. And then
+[00:13:04] finally, I've got here what I talked
+[00:13:06] about in terms of the design system
+[00:13:07] about the color typing. And look at the
+[00:13:08] detail of this, you know, the system
+[00:13:11] behind the streak. And we have various
+[00:13:12] different levels. After I pour my
+[00:13:14] coffee, I will write one sentence. I
+[00:13:15] love that. And then we got color and
+[00:13:17] type. Again, I think this yellow circle
+[00:13:19] thing needs to be improved a little bit,
+[00:13:20] but you get the idea of the types of
+[00:13:22] things that you can build when we
+[00:13:23] iterate and have those conversations.
+[00:13:25] And the blue light behind me has
+[00:13:27] mysteriously returned because we're on a
+[00:13:29] blue page right now, which is quite
+[00:13:30] interesting. But look, I come back over
+[00:13:32] to here on the sponsorship deck and you
+[00:13:33] can see already it's taking in my
+[00:13:36] feedback. And essentially, you're
+[00:13:37] looking for consistency. You're looking
+[00:13:39] probably, you know, at least don't be
+[00:13:41] afraid to have like five to 10 different
+[00:13:42] back and forths with this to get it to
+[00:13:44] the point where you're really happy with
+[00:13:46] it. So now you've got your entire system
+[00:13:49] locked and loaded, your entire design
+[00:13:50] system. You've built it once and now
+[00:13:52] essentially whenever you're doing a deck
+[00:13:53] or whenever you're doing an email, you
+[00:13:55] have that beautiful system locked in.
+[00:13:56] And you can start to see the value. I
+[00:13:58] just spent I think it was like $4,000
+[00:14:00] specifically on an email sequence. And
+[00:14:02] so now in level four, you have your
+[00:14:03] entire system. And I have personally
+[00:14:05] spent thousands and thousands of dollars
+[00:14:07] in the past in my businesses for
+[00:14:08] building me out an email design
+[00:14:10] sequence, building me out what the
+[00:14:11] visuals look like. Claw design is giving
+[00:14:13] you credible design skills uh in the
+[00:14:16] hand of people who haven't really
+[00:14:17] designed before, which is incredible.
+[00:14:19] But it does have one sort of limitation
+[00:14:22] that is solved only by level five. Level
+[00:14:25] five is where we introduce and we bring
+[00:14:27] in what I would call outside firepower
+[00:14:30] and this is beyond simply inspiration.
+[00:14:33] This is actually creating something
+[00:14:35] beautiful. So imagine for example we had
+[00:14:37] a designer and this designer basically
+[00:14:39] could only really replicate what is
+[00:14:40] seen. It would be great but if we wanted
+[00:14:42] something unique and really fit our
+[00:14:44] brand we'd be severely limited. But with
+[00:14:47] this skill what we're actually able to
+[00:14:49] do is create something beautiful and
+[00:14:50] unique. And I'm talking about image and
+[00:14:52] video generation. Now, what that looks
+[00:14:54] like in reality, you can use any
+[00:14:55] platform you like to. I personally
+[00:14:57] really enjoy using Higfield because it's
+[00:14:58] just a brilliant UI and it just seems to
+[00:15:00] do a great job. So, I could come down
+[00:15:02] here and say, "Hey, go ahead and design
+[00:15:04] for me a logo for my productivity app.
+[00:15:07] Make it look beautiful." You do this.
+[00:15:09] I'd highly recommend I like Nanob Pro.
+[00:15:11] Basically, GPT image 2 is also good. You
+[00:15:14] can do any. I've got unlimited at the
+[00:15:15] moment. Pick the ratios that you want.
+[00:15:17] Um 4K is a little overkill. I like 2K on
+[00:15:19] this one. and then just get four
+[00:15:21] different variations from Higsfield
+[00:15:23] here. But we can take it one step
+[00:15:25] further and this actually is one of the
+[00:15:27] places I do all of my generation. Now
+[00:15:29] I'm going to duplicate this. Check this
+[00:15:31] out. Come over to the MCPN CLI. What you
+[00:15:33] can do is basically copy this and build
+[00:15:35] this directly within cloud code. I'll
+[00:15:38] put a link down below so you can grab
+[00:15:39] this, but basically say, "Hey, go ahead
+[00:15:41] and connect to the Higsfield CLI." Opens
+[00:15:44] a new page. You sign in and then you're
+[00:15:45] ready to go and connect. Then you can
+[00:15:47] say, "Hey, use the CLI. go ahead build
+[00:15:49] me five different designs. And look at
+[00:15:51] this. All I did, guys, I uploaded the
+[00:15:53] design system and it's come back over
+[00:15:54] here and you can see I've got five
+[00:15:56] different things that I think are cool.
+[00:15:58] What do I think is the coolest one? I
+[00:15:59] think this is clearly the winner. So,
+[00:16:01] I'm going to come down here and I'm
+[00:16:02] literally going to save this image. And
+[00:16:03] now we have this. And this is the whole
+[00:16:05] benefit of using external systems to
+[00:16:08] supercharge your own design systems.
+[00:16:10] Now, this is for a logo, but in reality,
+[00:16:12] it could be done for anything. I also
+[00:16:14] like this bear, by the way. I'm going to
+[00:16:15] go ahead and save this image as well
+[00:16:17] because maybe I want to bring in I find
+[00:16:19] actually that having an animal on a
+[00:16:20] brand really helps with branding and
+[00:16:22] marketing. And then the cool thing is
+[00:16:24] you can build beautiful websites that
+[00:16:26] look like this using Higsfield or AI
+[00:16:28] image and video generation. And all of
+[00:16:30] this was done in one prompt to get these
+[00:16:33] beautiful animations and as you can see
+[00:16:34] it's scroll stopping and we can mobile
+[00:16:36] optimize them as well. It got a unique
+[00:16:38] font and it just takes cool design to a
+[00:16:41] new level. Here's another example of
+[00:16:42] this. You can see in this monolith
+[00:16:44] website here, and I'm going to mute it
+[00:16:45] right now because it has some sound to
+[00:16:47] it. But you can see it's the exact same
+[00:16:49] process, this beautiful thing. And you
+[00:16:51] can literally come in and scroll and
+[00:16:53] just create assets and create websites
+[00:16:55] and videos and images that just take the
+[00:16:58] actual feel to it to a completely new
+[00:17:01] level. This is another example of the
+[00:17:03] kind of thing that you can build. And I
+[00:17:04] built this using Higsfield using their
+[00:17:06] video generation. And you can see it
+[00:17:08] just follows this nice, crisp, different
+[00:17:10] website design style. And you can do all
+[00:17:12] of that inside Claude. And so by
+[00:17:14] combining literally these design systems
+[00:17:16] with external firepower, you get access
+[00:17:18] to designs and like this beautiful
+[00:17:20] imagery that you don't get if you're
+[00:17:22] just using Claude alone. But it does
+[00:17:24] take us very nicely onto level six. Now
+[00:17:26] level six is something that opens up an
+[00:17:29] entire world of possibilities in
+[00:17:31] content. And this is the idea by giving
+[00:17:33] it motion. This could be beautiful HTML
+[00:17:37] graphics. This could be um 3D spheres.
+[00:17:40] It is really really powerful to access
+[00:17:41] it just come over to core design here
+[00:17:43] select your system and what we could do
+[00:17:45] we can create a 3D object. This could be
+[00:17:47] really cool to have on our website. We
+[00:17:50] could then also if we want to and this
+[00:17:51] is one of my favorite ones is the
+[00:17:52] animations is just give it something to
+[00:17:54] animate. So you could say hey there I
+[00:17:56] want you to create for me a beautiful
+[00:17:58] HTML animation explaining the power of
+[00:18:01] habits and how they change over time.
+[00:18:03] Now once you've done that come down and
+[00:18:05] click go. For example this is something
+[00:18:07] that I built earlier. I'm going to come
+[00:18:08] down and show what this looked like.
+[00:18:09] This is all complete one shot. Small
+[00:18:11] actions every day. Drink water, read
+[00:18:12] pages, move 20 minutes. Basically, you
+[00:18:14] get 1% better every single day. This is
+[00:18:16] really cool. But it compounds, which is
+[00:18:18] decent. And again, this is all just one
+[00:18:20] shot. And look at this. It's built a
+[00:18:21] really cool graph. And obviously, we can
+[00:18:24] move this in any direction that we want
+[00:18:25] to. 37% better in a year. There's your
+[00:18:28] streak. I mean, it's great just for a
+[00:18:29] one shot. I just said, "Hey, go ahead
+[00:18:30] and build me something random." It's
+[00:18:32] gone ahead and done that. And then we
+[00:18:34] have a really simple HTML graphic and
+[00:18:36] animation. And then it's gone ahead and
+[00:18:37] actually built me a 3D mockup for
+[00:18:39] something I could use. Now, this could
+[00:18:40] be like a cool 3D thing to build in. You
+[00:18:42] can do spheres. You can do anything. And
+[00:18:44] this is another example. It went ahead
+[00:18:46] and designed for me a hypersphere, which
+[00:18:48] is really cool. And again, it's just
+[00:18:49] something interactive. And then you
+[00:18:50] could you could if you want to just put
+[00:18:52] this onto your website or if we had like
+[00:18:54] check marks that was 3D and when
+[00:18:56] somebody hit a certain number of tracks,
+[00:18:57] that could appear in the app. We can do
+[00:18:59] all of these with the claw design
+[00:19:01] systems. And the reason why I like using
+[00:19:03] for like image generation for example
+[00:19:04] the whole um using claude is cuz we
+[00:19:07] combine claude and image generation
+[00:19:09] together and it just does a better job
+[00:19:11] of thinking better job of prompting.
+[00:19:12] That's why I really like using claude as
+[00:19:15] the kind of design intelligence engine
+[00:19:17] and then using something like Higsfield
+[00:19:18] to go ahead and make those images and
+[00:19:20] those videos. And this is another
+[00:19:21] example of motion something I designed
+[00:19:23] yesterday. You can see it shows it can
+[00:19:24] do 3D animation. It just really helpful
+[00:19:27] and nice to see the graphics. loads of
+[00:19:29] different styles all really depending on
+[00:19:31] the thing that you want to build. And so
+[00:19:32] by giving it motion, we can make
+[00:19:33] websites, videos, content that feels
+[00:19:36] alive, just like you see now in my
+[00:19:38] content with these beautiful animations.
+[00:19:40] But there is one final level. Now, most
+[00:19:42] people don't really ever get past level
+[00:19:44] one or even start this journey. But
+[00:19:46] level seven is the pinnacle and it's
+[00:19:48] where it really takes it from looking
+[00:19:50] nice to being something that's actually
+[00:19:52] usable. And this are full production
+[00:19:55] apps using everything we've covered here
+[00:19:57] in claude design. Now what we can do
+[00:19:59] with this is combine claw design with
+[00:20:02] the power of claude code to build
+[00:20:04] production apps that look absolutely
+[00:20:07] beautiful and have databases where
+[00:20:09] clients can create accounts. We can send
+[00:20:11] them emails. We can essentially do
+[00:20:13] anything that we imagine. Now to do this
+[00:20:15] we're going to be using two things. One
+[00:20:17] is claude and the second is superbase.
+[00:20:20] Now, Superbase is all of the stuff that
+[00:20:22] actually enables you to build projects.
+[00:20:24] Now, the cool thing is you don't need to
+[00:20:26] be a master of SQL and it's really
+[00:20:28] simple because we can connect Claude to
+[00:20:30] this and let Superbase and Claude
+[00:20:33] essentially build out our entire storage
+[00:20:35] back end. And I genuinely use this for
+[00:20:37] example with this software that I built
+[00:20:39] for my community like this kind of road
+[00:20:40] map where you essentially select
+[00:20:41] characters, you can come down, it
+[00:20:43] analyzes your profile, builds out loads
+[00:20:45] of cool, incredible stuff. I have it for
+[00:20:47] essentially all the things that I use
+[00:20:49] when chatting to all of my YouTube
+[00:20:50] videos. Or maybe you want to use many
+[00:20:52] different things. It is effortless to
+[00:20:54] actually use. And the cool hack here is
+[00:20:56] we're going to use something called
+[00:20:57] agent skills by Superbase. Let me show
+[00:21:00] you what I mean. Now, you can grab this
+[00:21:01] link down below. This is the prompt and
+[00:21:03] the guide I wish I had when I first
+[00:21:05] started using Superbase. All you're
+[00:21:07] going to do is come down, literally copy
+[00:21:08] all of this like so, and head over to
+[00:21:10] Claude. Then literally come over and hit
+[00:21:12] enter. Now, what you can also do is
+[00:21:14] connect to Superbase inside Claude. Let
+[00:21:16] me show you where that is. And honestly,
+[00:21:18] you need to have a database system
+[00:21:19] inside Claude if you're going to build
+[00:21:21] anything to production. And I'm going to
+[00:21:22] blow your mind with how easy this
+[00:21:24] actually is. Now, if you come down here
+[00:21:26] to the plus and click on connectors like
+[00:21:28] so, and click on manage connectors. Then
+[00:21:30] here, what I want you to do is go ahead
+[00:21:31] and just search for Superbase like so
+[00:21:33] under connectors. And then you can
+[00:21:35] actually go ahead and it will literally
+[00:21:37] open up in a new browser and you can
+[00:21:38] connect it. And you can see it
+[00:21:40] essentially gives cord the ability to do
+[00:21:42] everything it wants to inside Superbase
+[00:21:44] that you may need for a project. Then
+[00:21:46] let's give it a prompt. I want to go
+[00:21:47] ahead and create for me a login page
+[00:21:49] with an admin dashboard using Superbase.
+[00:21:51] Follow the below design system. Set up a
+[00:21:53] new Superbase table. Build a website
+[00:21:55] with a login section. Add a form for
+[00:21:57] users to submit name, email, income,
+[00:21:59] additional information, and everything
+[00:22:01] should be accessible once I sign in. Now
+[00:22:03] the cool thing about these Superbase
+[00:22:05] skills is essentially what it is and the
+[00:22:07] reason why we installed that scum is
+[00:22:09] what it lets us do is it basically
+[00:22:10] describes how Superbase works to Claude
+[00:22:14] which means that Claude is no longer
+[00:22:16] guessing. It actually has an
+[00:22:17] understanding of all of the
+[00:22:18] infrastructure inside Superbase, meaning
+[00:22:21] that it can spin up like apps that
+[00:22:23] remember things in literally one prompt.
+[00:22:26] And then of course here all we're going
+[00:22:27] to do is upload our design system. And
+[00:22:29] then we have a very cool actual like
+[00:22:32] signup page using the teddy that I found
+[00:22:34] using the logo and we can enter this
+[00:22:36] information. So maybe this is a weight
+[00:22:38] list. So let's fill this out. For
+[00:22:39] example, Alex streak. I'm going to say
+[00:22:40] that my income range is 250k plus.
+[00:22:43] Occupation could be chief coffee
+[00:22:45] officer. Beautiful. Uh country is can be
+[00:22:48] United Arab Emirates. Uh anything else?
+[00:22:51] Yes. The habit I'm trying to keep the
+[00:22:52] most is the habit of daily gratitude and
+[00:22:56] thankfulness. Cool. And then we're going
+[00:22:57] to go down and pick a password. And once
+[00:22:58] we've done that, let's click on save my
+[00:23:00] spot. Beautiful. We are on the list.
+[00:23:02] Now, let's see if we can actually login.
+[00:23:03] So, I'm going to come down here and
+[00:23:04] login for example. Login or sign up.
+[00:23:06] Again, we got a login and a signup page.
+[00:23:08] Guys, this is crazy. Enter an email. I'm
+[00:23:10] going to enter in the password that I
+[00:23:11] had right there. Then click in login.
+[00:23:13] Awesome. And this has come back invalid
+[00:23:15] because by default, what happens when
+[00:23:17] you create a form is it asks you to
+[00:23:18] basically confirm the email. Now, this
+[00:23:21] is a setting in Superbase. You can turn
+[00:23:23] this off in claw by saying, "Hey, turn
+[00:23:25] off auto confirmations." It's really
+[00:23:27] helpful when you're testing. Um, and it
+[00:23:28] basically it's a safety feature. It
+[00:23:30] means that when somebody signs up to
+[00:23:31] your servers, they have to validate that
+[00:23:33] they were the person who did it. Dead
+[00:23:35] easy to turn off. You can ask claw to do
+[00:23:36] it. Or for example, if you want to come
+[00:23:38] there yourself, you can click on streak
+[00:23:39] line. And I'll just show you how this
+[00:23:40] works. It's a really good one to know.
+[00:23:42] So in base once you've started the
+[00:23:43] project, click on authentication on the
+[00:23:45] left hand side. Then once you've done
+[00:23:46] that, click on sign in and providers.
+[00:23:47] And as you can see, you've got all
+[00:23:49] providers email. Um, this is basically
+[00:23:51] if they want to do that. Now you got
+[00:23:52] confirm email. You're just going to
+[00:23:53] remove that. Then click on save changes.
+[00:23:56] And that's it. Just wanted to show you
+[00:23:57] what the platform looks like. Although
+[00:23:58] with Claude, you don't really need to
+[00:23:59] touch it. So we can come back again and
+[00:24:01] log in with the details. Let's come over
+[00:24:02] here and click login. And there we go.
+[00:24:04] Your signups. Very, very cool. Chief
+[00:24:06] Coffee Officer, United Admirate. Here's
+[00:24:08] my note. And I've got everything there.
+[00:24:09] And this is all done using these superb
+[00:24:12] skills, which is incredible. But then,
+[00:24:14] for example, where we can really
+[00:24:15] leverage the superbase skills because
+[00:24:17] design and functionality in apps are one
+[00:24:19] thing, but the ability to make it safe
+[00:24:21] is something completely different. And
+[00:24:22] then the other cool skill we can do here
+[00:24:24] is actually run the superbase database
+[00:24:26] advisor and show them what they flag. So
+[00:24:28] this is another part of the superbase
+[00:24:29] skill and it just helps you protect
+[00:24:32] what's inside superbase again using the
+[00:24:34] skill inside claude with claude design.
+[00:24:36] And look at this security warning leaked
+[00:24:38] password protection disabled performance
+[00:24:40] onele note. And look at this. No rowle
+[00:24:42] security gaps but this gives you the
+[00:24:44] ability to do it. And then you can say
+[00:24:46] awesome walk me through step by step
+[00:24:47] exactly how to fix this and anything
+[00:24:49] else that I might miss. And again, it
+[00:24:51] just gives Claude the ability to
+[00:24:53] understand how this works. Now, this
+[00:24:54] could be a signup form for your business
+[00:24:56] with your brand, with your design,
+[00:24:58] everything that you would like. But now,
+[00:24:59] we've covered the seven levels of Claude
+[00:25:01] design. That doesn't mean anything
+[00:25:03] unless we have an agentic operating
+[00:25:06] system that runs our business, our
+[00:25:08] personal life. And we're going to learn
+[00:25:09] exactly how to set that up in this video
+[00:25:12] right

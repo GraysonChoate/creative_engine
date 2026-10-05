@@ -1,0 +1,1234 @@
+LESSON: 🚀 $10K/Month Claude Workflows (md=df5c1d, video 25 min) ====================
+
+DESCRIPTION:
+[v2][{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Hey, in this video, you're gonna learn:"}]},{"type":"paragraph","content":[{"type":"text","text":"🚀 Leverage "},{"type":"text","marks":[{"type":"bold"}],"text":"Claude Co-work"},{"type":"text","text":" to act as a world-class marketing team that grows your business on autopilot using specific \"insane\" skills."}]},{"type":"paragraph","content":[{"type":"text","text":"🔍 Use "},{"type":"text","marks":[{"type":"bold"}],"text":"X (formerly Twitter)"},{"type":"text","text":" for \"Trend Intelligence\" to get real-time signals and news without paying for expensive $800/month social listening APIs."}]},{"type":"paragraph","content":[{"type":"text","text":"📊 Create a "},{"type":"text","marks":[{"type":"bold"}],"text":"prioritization matrix"},{"type":"text","text":" to score trending signals based on recency (within 7 days), authority, and velocity."}]},{"type":"paragraph","content":[{"type":"text","text":"🕵️ Connect "},{"type":"text","marks":[{"type":"bold"}],"text":"Apify"},{"type":"text","text":" as a custom connector to scrape competitive intelligence, likes, and comments from Instagram, TikTok, and Google Maps."}]},{"type":"paragraph","content":[{"type":"text","text":"🧠 Integrate "},{"type":"text","marks":[{"type":"bold"}],"text":"NotebookLM"},{"type":"text","text":" with Claude to perform deep research, extracting storytelling frameworks from top creators like MrBeast or Cleo Abram."}]},{"type":"paragraph","content":[{"type":"text","text":"📈 Build a "},{"type":"text","marks":[{"type":"bold"}],"text":"\"Mission Control\" dashboard"},{"type":"text","text":" that unifies data from Google Analytics, HubSpot, and your bank to make informed decisions daily."}]},{"type":"paragraph","content":[{"type":"text","text":"⚖️ Deploy a "},{"type":"text","marks":[{"type":"bold"}],"text":"Contract Review skill"},{"type":"text","text":" to automatically scan legal documents for \"red flags\" like uncapped liabilities, non-competes, and auto-renewals."}]},{"type":"paragraph","content":[{"type":"text","text":"🎨 Batch-create "},{"type":"text","marks":[{"type":"bold"}],"text":"branded social media designs"},{"type":"text","text":" in minutes by connecting Claude to "},{"type":"text","marks":[{"type":"bold"}],"text":"Canva"},{"type":"text","text":" to generate quotes and tips at scale."}]},{"type":"paragraph","content":[{"type":"text","text":"📅 Automate your productivity by turning emails and calendar invites into a structured "},{"type":"text","marks":[{"type":"bold"}],"text":"Notion project board"},{"type":"text","text":" with a priority matrix."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"In this video, Jack covers:"}]},{"type":"paragraph","content":[{"type":"text","text":"Jack Roberts explains that while many people use AI for basic \"setup,\" the real power lies in using "},{"type":"text","marks":[{"type":"bold"}],"text":"Claude Co-work"},{"type":"text","text":" to execute high-level agency skills worth over $10,000."}]},{"type":"paragraph","content":[{"type":"text","text":"The tutorial demonstrates "},{"type":"text","marks":[{"type":"bold"}],"text":"agent-to-agent communication"},{"type":"text","text":", showing how Claude can talk to "},{"type":"text","marks":[{"type":"bold"}],"text":"Grok"},{"type":"text","text":" on X to gather and summarize breaking news."}]},{"type":"paragraph","content":[{"type":"text","text":"You'll see a walkthrough on adding "},{"type":"text","marks":[{"type":"bold"}],"text":"custom connectors"},{"type":"text","text":" for tools that aren't pre-approved in the ecosystem, such as Apify for web scraping."}]},{"type":"paragraph","content":[{"type":"text","text":"Jack highlights the importance of "},{"type":"text","marks":[{"type":"bold"}],"text":"Revenue Attribution"},{"type":"text","text":" and "},{"type":"text","marks":[{"type":"bold"}],"text":"Content ROI"},{"type":"text","text":", showing how a single prompt can build a functional revenue dashboard."}]},{"type":"paragraph","content":[{"type":"text","text":"The session concludes with an invitation to a "},{"type":"text","marks":[{"type":"bold"}],"text":"community meetup in LA"},{"type":"text","text":" (around the 20th) to network and discuss AI automation in person."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Who this is for:"}]},{"type":"paragraph","content":[{"type":"text","text":"Entrepreneurs, marketers, and non-technical business owners who want to outpace competitors by automating deep research, legal reviews, and content creation."}]},{"type":"paragraph"}]
+
+RESOURCES:
+- FILE transcript (Claude Cowork Skills = Your $10,000mo Marketing Team.txt): 41932 chars
+- FILE NotebookLMSkill (NotebookLMSkill - Community (1).md): 15575 chars
+
+--- FILE CONTENT: Claude Cowork Skills = Your $10,000mo Marketing Team.txt ---
+[00:00:00] Imagine if Claude Co-work could be a
+[00:00:02] world-class marketing team that grows
+[00:00:04] your business on autopilot. But the
+[00:00:07] reality is that 99% of people will never
+[00:00:09] see this because they don't use the
+[00:00:12] correct skills. Which is why in this
+[00:00:14] video, I'm going to show you exactly how
+[00:00:16] to build seven insane [music] marketing
+[00:00:18] skills step by step that will save you
+[00:00:20] time, make you more money, and get you
+[00:00:22] light years ahead of your competitors,
+[00:00:24] even if you're not technical. And I'm
+[00:00:26] giving them all away completely for free
+[00:00:28] down below. And if you don't know who I
+[00:00:29] am, my name is Jack Roberts. I built and
+[00:00:31] sold my last tech startup [music] for
+[00:00:32] over 60,000 customers. And now I run
+[00:00:34] several AI businesses and teach
+[00:00:36] thousands of entrepreneurs this stuff
+[00:00:37] all day, every day. [music] So if you
+[00:00:39] haven't already, grab that coffee and
+[00:00:41] let's dive straight in. So how do you
+[00:00:43] get Claude to be so powerful that your
+[00:00:45] competitors think that you're actually
+[00:00:46] cheating? Well, you need to use the
+[00:00:48] correct skills. And I'm going to give
+[00:00:50] you my top seven for marketing in this
+[00:00:52] video. Now, agencies of various
+[00:00:54] different sizes charge over $10,000 at
+[00:00:57] least for the skills and principles that
+[00:00:58] you can now do literally within co-work
+[00:01:01] by yourself. But you have to understand
+[00:01:04] one thing and that one thing is that
+[00:01:06] most tutorials online for new
+[00:01:08] technologies and various different
+[00:01:09] things are basically just setup. It will
+[00:01:12] be something like, hey, look at my org
+[00:01:14] chart. Here's my head of marketing. This
+[00:01:15] is my head of sales, etc., etc. In
+[00:01:18] reality, they're just MD files. And
+[00:01:20] often times they just massively over
+[00:01:22] complicate things. Now them just being
+[00:01:24] MD files is fine. That's cool. But
+[00:01:26] realistically the best tool is the one
+[00:01:28] that you actually use. Now Claude is
+[00:01:29] simpler and Claude is actually easier to
+[00:01:31] use to get started to start making some
+[00:01:33] progress in your business. Now remember
+[00:01:34] you plus the correct skills equals
+[00:01:37] winning. Now what you talk about in your
+[00:01:38] business and what you focus on creating
+[00:01:40] is more important than how you do it.
+[00:01:42] Which is why the very first use case is
+[00:01:44] going to be leveraging one of the
+[00:01:46] strongest principles and features that
+[00:01:47] Claude Co actually has. And this is
+[00:01:49] Claude Co's ability to use services like
+[00:01:52] X to go ahead and get signal. So you can
+[00:01:55] use X for what we call trend
+[00:01:56] intelligence without the cost of any
+[00:01:58] expensive APIs. You don't have to spend
+[00:02:01] $800 a month in social listening tools.
+[00:02:03] Claude can open up X, have conversations
+[00:02:05] with Gro and bring back signal from the
+[00:02:08] entirety of X. And that is literally
+[00:02:10] where news breaks. News breaks on X. Now
+[00:02:12] we can get Claude Co to go ahead and do
+[00:02:14] that for us. What can we do with this?
+[00:02:16] We can monitor any trends in any
+[00:02:18] industry. What is the latest thing
+[00:02:19] happening in finance right now? We can
+[00:02:21] find all that stuff out in AI. Get
+[00:02:23] competitive intelligence and also
+[00:02:24] content angles that you want to. This
+[00:02:26] can save you hours a day and often times
+[00:02:28] if you look at YouTube for example, the
+[00:02:30] news breaks on X and then it appears on
+[00:02:32] YouTube several days later so we can get
+[00:02:34] all this information to feed all of our
+[00:02:35] campaigns on X. So let's try it out. All
+[00:02:37] you're going to do first of all is you
+[00:02:38] need to make sure you are signed in to X
+[00:02:41] on Google Chrome. Once you've done that,
+[00:02:42] you can give it a prompt that looks
+[00:02:43] something like this. Hey there, I would
+[00:02:45] like you to do me a favor. I want you to
+[00:02:46] head over to X. I want you to chat with
+[00:02:49] Grock and what I'd like you to do is the
+[00:02:51] following. I want you to have a
+[00:02:52] conversation about finding all Claude
+[00:02:55] related news, any new tools that have
+[00:02:57] dropped, any interesting or rising
+[00:02:59] GitHub repos. I want you to use a
+[00:03:01] four-step framework for this. We're
+[00:03:03] going to weight it based on premisy. So,
+[00:03:04] it must be within the last 7 days. There
+[00:03:07] needs to be an authority factor. So, it
+[00:03:09] needs to be basically we're going to
+[00:03:10] prioritize accounts that have higher
+[00:03:12] followings cuz that's a signal of value.
+[00:03:14] There needs to be a velocity factor,
+[00:03:16] which is how quickly is that actually
+[00:03:19] growing up. And factor four can be
+[00:03:21] anything that you think is relevant.
+[00:03:23] First thing I'd like to do is confirm
+[00:03:24] with you a prioritization matrix for
+[00:03:26] scoring trending signals. My stated
+[00:03:29] objective is to understand trends that
+[00:03:31] are catching fire that people are
+[00:03:32] finding valuable and then bring them
+[00:03:34] over and create content on them. First
+[00:03:36] of all, the end purpose and the kinds of
+[00:03:37] content that we want to cover is going
+[00:03:39] to be things like claude code, any new
+[00:03:41] training tools, design softwares. You
+[00:03:43] can go ahead and take in my YouTube
+[00:03:44] channel, Jack Roberts, get a sense of
+[00:03:46] what it is that I talk about. So,
+[00:03:48] effectively, you're going to give Claude
+[00:03:49] a prompt just like that. So, it's
+[00:03:50] basically come back now. It's found my
+[00:03:52] YouTube channel. It's done the research.
+[00:03:53] Obviously, you just substitute this for
+[00:03:54] your channel or your particular social
+[00:03:56] media platforms, Instagram, LinkedIn,
+[00:03:58] you name it. Here's the proposed trend
+[00:03:59] signal scoring matrix. Each factor
+[00:04:01] scored 1 to 5 out of 20. Premacy must be
+[00:04:04] posted, released within 7 days. Um,
+[00:04:06] anything old is disqualified. Authority,
+[00:04:08] velocity, growth rate, content, f. So,
+[00:04:11] I'm going to adjust the waiting slightly
+[00:04:12] and I'm going to say awesome. I think
+[00:04:15] authority should be slightly lower.
+[00:04:17] Realistically, we're looking for
+[00:04:19] velocity. So, how much it's actually
+[00:04:21] gotten within a period of time. Like, I
+[00:04:22] don't want something that's old. Like,
+[00:04:24] if it's older than 7 days, I'm not
+[00:04:25] interested. And also, it needs to be at
+[00:04:27] a certain minimum threshold. With that
+[00:04:28] in mind, go ahead and do what you think
+[00:04:30] would be the best. And so, now we've got
+[00:04:31] the actual formula matrix it's going to
+[00:04:33] be using to go ahead and fire it. Now,
+[00:04:35] it's going to fire up Grock. And then,
+[00:04:36] crucially, once this is done, we're
+[00:04:37] going to enshrine this into a skill.
+[00:04:39] Then I'm going to turn this into
+[00:04:39] downloadable school for you. So you can
+[00:04:41] just throw it in literally just describe
+[00:04:43] what your things are and you can be
+[00:04:44] ready to rock and roll. And as you can
+[00:04:46] see guys, it's actually got gro open
+[00:04:48] which is wonderful. It's asking
+[00:04:49] questions and Grock of course has access
+[00:04:51] to everything in X. You could do a paid
+[00:04:53] API for this but the point is you know
+[00:04:54] you can just set it off do its things
+[00:04:56] and whilst it's doing that you can be
+[00:04:58] doing other work and other tasks and we
+[00:05:00] can make this a recurring task and look
+[00:05:01] at this edgeclaw open claw is basically
+[00:05:04] grabbing all this data and information
+[00:05:06] which is wonderful. And now we have
+[00:05:08] agentto agent communication working for
+[00:05:10] your business. So essentially if our
+[00:05:12] claude agent which has full context by
+[00:05:14] the way of our business is not satisfied
+[00:05:16] what it's getting well guess what it
+[00:05:18] comes back and asks further questions.
+[00:05:20] Now why is this so cool? Computer use
+[00:05:23] fundamentally doesn't feel like an API
+[00:05:25] call. It's acting with the environment
+[00:05:27] and service as a human would do which
+[00:05:30] basically gives us more capabilities and
+[00:05:32] access to different things because
+[00:05:33] understandably X wants to shut down
+[00:05:36] unauthorized chats to the database but
+[00:05:38] we can use claw to connect now to Grock
+[00:05:40] which is a wonderful connection that we
+[00:05:42] can drive and you can even see here
+[00:05:44] grock second response is complete. I can
+[00:05:46] see the second response starting. Let me
+[00:05:47] use a page text called capture
+[00:05:49] everything. And it's literally getting
+[00:05:50] multiple responses from grock. And we
+[00:05:52] can just work with this now to improve
+[00:05:53] it. And just like that, it's got the
+[00:05:55] three top signals by matrix called the
+[00:05:56] claude code lick itself, the Codex
+[00:05:58] plugin for cla code, and Boris Chney's
+[00:06:00] hidden feature thread. And actually
+[00:06:02] guys, this is completely accurate cuz
+[00:06:03] these are the top three trending things
+[00:06:05] now for cla code. Then guys, if I click
+[00:06:07] in here, for example, you can see it's
+[00:06:08] given me everything there. And these
+[00:06:10] these are literal all growing trends.
+[00:06:12] And now what they recommend that you do
+[00:06:14] is spar back and forth with this. So
+[00:06:15] give it further questions, further
+[00:06:17] feedback just to make sure that it's
+[00:06:19] actually everything that you want. Was
+[00:06:20] like, "Yes, that's the exact feedback
+[00:06:22] breakdown that I'm most interested in."
+[00:06:24] And once you've done that, you're
+[00:06:25] basically going to come back over here
+[00:06:26] and you're going to say, "Awesome. I'd
+[00:06:28] now like you to turn this into a
+[00:06:29] scheduled task, and I want this to run
+[00:06:31] every day for me at 9:00 a.m. without
+[00:06:34] fail." Once you've done that, send it
+[00:06:35] off, and then this will become a
+[00:06:37] scheduled task. And of course, guys, we
+[00:06:39] can also tell Claude to go onto our
+[00:06:41] YouTube channel, to go onto our social
+[00:06:42] media platforms, to every day when it
+[00:06:44] does it in the morning, look at the kind
+[00:06:46] of content you're creating, and
+[00:06:48] dynamically search for related content
+[00:06:50] based on the stuff that you're talking
+[00:06:51] about. So, what happens here is that
+[00:06:53] Claude itself has this dynamic
+[00:06:55] connection built in. So, as the content
+[00:06:57] that you talk about changes, so does the
+[00:06:59] content that Claude actually looks for.
+[00:07:01] How incredible is that? Now, our next
+[00:07:03] marketing skill is something that's
+[00:07:05] going to give you the opportunity and
+[00:07:07] access to essentially any data that you
+[00:07:10] want whenever you want it. And the level
+[00:07:12] of access you're going to get from this
+[00:07:13] is going to blow your mind if you've
+[00:07:15] never seen it before. I'm talking about
+[00:07:16] leveraging Appify to get competitive
+[00:07:18] intelligence data or just data on what
+[00:07:21] is trending right now. So, think of
+[00:07:22] Appify as Willy Wonker's emporium for
+[00:07:25] scrapers. You can scrape Instagram, uh,
+[00:07:27] Facebook, Google Maps, Tik Tok, you
+[00:07:29] literally name it. You can get started
+[00:07:30] completely for free. So, we're going to
+[00:07:32] go ahead and create an account or login
+[00:07:34] first of all. And within court itself,
+[00:07:35] what we need to do is click on the plus,
+[00:07:37] click on connectors, click on manage
+[00:07:40] connectors. Now, you'll notice that when
+[00:07:41] we search for this, we will not see it.
+[00:07:43] And we won't see it because it's not a
+[00:07:45] pre-approved within the ecosystem. If I
+[00:07:46] type in ampify, it isn't there. What we
+[00:07:48] can do is add a custom connector. And
+[00:07:50] then what you're going to do, guys, is
+[00:07:51] come down here to plus going to click on
+[00:07:53] add custom connector. And you're going
+[00:07:55] to type in appy. And then just enter in
+[00:07:57] this text. Once you've done that, going
+[00:07:59] to click on add. And then essentially
+[00:08:02] what will happen is it will appear here
+[00:08:03] down below in customs and then you're
+[00:08:05] going to click on connect. It'll open up
+[00:08:08] a browser for you and you're going to
+[00:08:09] sign in via oorthth which is incredible.
+[00:08:11] We say yeah yep that's fantastic. That's
+[00:08:13] all good. Come down click allow access
+[00:08:15] and you don't even need to use or share
+[00:08:17] your API key. That's how freaking cool
+[00:08:19] this thing is. That's how simple they've
+[00:08:21] made the whole journey. So now when I
+[00:08:22] come back over to co-work uh full screen
+[00:08:25] my page right now. I'm going to say
+[00:08:26] something like, "Hey there dude. I'm
+[00:08:28] thinking of scraping information from
+[00:08:29] Instagram. I've got competitors in my
+[00:08:31] niche. I would love to know things like
+[00:08:33] their likes, their comments, what
+[00:08:35] content is popping off. Could you just
+[00:08:37] tell me um if I was trying to do that?
+[00:08:38] What kind of scrapers could I use? Okay.
+[00:08:41] Now, interestingly, I can say I have a
+[00:08:43] Okay, so it knows what I'm talking
+[00:08:45] about. Hit enter. Now, what we can do
+[00:08:46] now is use the appy connector just to
+[00:08:48] validate that it's actually working. And
+[00:08:50] as you can see, it's coming down. It
+[00:08:51] wants to search for actors. We say,
+[00:08:53] "Hey, we're always going to allow that."
+[00:08:54] And so now ampify is now working for us
+[00:08:56] within CoWork. How cool is that? By the
+[00:08:59] way, this also works within Claude Code
+[00:09:01] if you like. Cloud Codework is just the
+[00:09:03] userfriendly version of Claude Code. So
+[00:09:06] if you ever find that you run out of
+[00:09:07] credits, just hop over to Claude Code,
+[00:09:09] which you can do very easily, by the
+[00:09:10] way, by just clicking this button here.
+[00:09:12] And there you go. So now that's done,
+[00:09:13] why don't we give it an example test. So
+[00:09:15] I could say something along these lines,
+[00:09:16] right? Hey there, what I would like you
+[00:09:18] to do for me is go and find two of the
+[00:09:20] top performing accounts in the AI
+[00:09:23] automation niche that talk about things
+[00:09:24] like claude code and I want you to find
+[00:09:26] for me their past five Instagram reels.
+[00:09:29] I want you to grab me the likes, the
+[00:09:31] comments and the shares of those reels
+[00:09:33] and then also the description and then
+[00:09:35] throw that for me in a table on the
+[00:09:36] right hand side. Awesome. Send that one
+[00:09:38] off and let Claude work its magic. Funny
+[00:09:40] story by the way. I have right here this
+[00:09:42] coffee. There's a video where this
+[00:09:44] basically the camera kept zooming in.
+[00:09:46] and it was behind me. You couldn't see
+[00:09:47] it. This was given to me by somebody in
+[00:09:48] LA when we did a community meetup. I
+[00:09:50] bring that up because we're doing a
+[00:09:51] community meetup literally in 2 or 3
+[00:09:54] weeks in LA around the 20th. So, if
+[00:09:55] you're in LA, if you want to swing by,
+[00:09:57] you want to have some delicious coffee,
+[00:09:58] some good times, meet people, maybe
+[00:10:00] create some deals. I warmly welcome you
+[00:10:02] to come. We do these community community
+[00:10:04] meetups. So cool to meet you in person,
+[00:10:06] have a great time. So, I want to put
+[00:10:07] that on your radar. We're doing them in
+[00:10:08] a lot of different places. Last month,
+[00:10:09] we did London. This is LA. Then, we've
+[00:10:12] got Japan, I think, coming up next
+[00:10:13] month. So it's cool to meet people in
+[00:10:15] person and have a rock and roll and a
+[00:10:16] good time. There's always great stuff
+[00:10:18] that comes out of those sessions. So
+[00:10:19] what's happening now in the background
+[00:10:20] here is Appify is using the rag web
+[00:10:22] browser which is cool. It's getting me
+[00:10:23] different results. As you can see top
+[00:10:25] five AI automation niche called code
+[00:10:27] 2025 2026. It's doing certain searches
+[00:10:29] for us and then we can start to get our
+[00:10:31] results. Wonderful. And so knowify has
+[00:10:33] gone ahead and grabbed that stuff for
+[00:10:34] us. I should say called co-work in
+[00:10:36] conjunction with ampify. I click on the
+[00:10:37] file here and what do I see? I've got
+[00:10:39] these links here in Instagram
+[00:10:40] competitive real analysis Brad Gaines
+[00:10:42] Ninja Tools. Here's what he's done.
+[00:10:44] Likes, comments, links, come down. This
+[00:10:46] one's getting a few more views. In
+[00:10:47] reality, we want to strip out the
+[00:10:49] competitive research process ourselves.
+[00:10:51] And you can't really be grabbing your
+[00:10:53] own firm and actually searching out
+[00:10:55] pretty much for the keywords that you
+[00:10:56] think your audience would be looking
+[00:10:58] for. Um, because again, if you let AI,
+[00:11:00] if you say, hey, you know, make me a
+[00:11:01] million dollars, make no mistakes, you
+[00:11:03] know, in 2026 that doesn't work. One day
+[00:11:05] it might do, but right now it doesn't.
+[00:11:06] So, we want to guide it all the way
+[00:11:08] through. So, my strong recommendation is
+[00:11:09] that you actually give it your
+[00:11:10] competitors and the specifics that you
+[00:11:12] want. But I like how this physically
+[00:11:14] looks. And what we can do actually is
+[00:11:16] get transcripts. We can get likes. We
+[00:11:17] get comments. Obviously, if you want to
+[00:11:18] blow this to the moon, that's when you
+[00:11:20] start moving into code territory where
+[00:11:22] we programmatically set this up to
+[00:11:24] scrape insane databases. But you can see
+[00:11:26] the potential this now. There's no I
+[00:11:28] just reached over to Instagram. Think of
+[00:11:30] all the things you can do on Appify. It
+[00:11:31] is literally crazy. And Appify itself
+[00:11:34] has over 20,000 pre-built scrapers,
+[00:11:37] competitor pricing, reviews, social
+[00:11:38] jobs, job listings. You literally name
+[00:11:40] it. There should be no reason why you're
+[00:11:42] not not only gainfully employed, but you
+[00:11:44] should be the most profitable person
+[00:11:45] that you know because these tools exist.
+[00:11:47] That's where we're at right now. What
+[00:11:49] can we script? We can do competitive
+[00:11:50] pricing. Uh monitor price changes across
+[00:11:53] your market weekly and instantaneously.
+[00:11:55] All all automated reviews, Google
+[00:11:57] reviews, social profiles, essentially
+[00:11:59] anything that you want. Here's an
+[00:12:00] example. Compare pricing from our top
+[00:12:02] five competitors. It does a lot better,
+[00:12:04] I think, for social media scraping,
+[00:12:07] Google map scraping, reviews, you name
+[00:12:09] it, you can probably scrape it. Now,
+[00:12:11] imagine if we could combine Cloud
+[00:12:12] Co-work with the world's number one
+[00:12:14] research and intelligence platform,
+[00:12:16] Notebook LM. Well, it turns out not only
+[00:12:19] can we do this, but when you do actually
+[00:12:21] connect them, you unlock capabilities
+[00:12:23] that are actually outrageous. Now,
+[00:12:25] Notebook LM is a research powerhouse. if
+[00:12:28] there's any topic you ever want to learn
+[00:12:31] more about. Now, Notebook isn't just a
+[00:12:33] place where we store information. It's a
+[00:12:34] place that can literally enrich that
+[00:12:36] information with the very most accurate
+[00:12:38] information using all of Google's AI
+[00:12:40] systems. So, it's not just storage, it's
+[00:12:42] actually depth and accuracy. On top of
+[00:12:45] that, here's the thing to consider
+[00:12:46] about, right? And when I think about
+[00:12:47] what we could use this for skill
+[00:12:49] building, you can extract frameworks
+[00:12:50] from top creators in your niche. We can
+[00:12:51] do content research, find 50 videos to
+[00:12:53] get your unique angle fast, and
+[00:12:55] knowledge base. Now, if you haven't
+[00:12:56] connected Notebook Alam, click the video
+[00:12:59] I've got on screen. I did a full video
+[00:13:01] showing you not only how to connect it
+[00:13:03] with free skills to do that, but actual
+[00:13:05] capabilities that are going to blow your
+[00:13:06] mind and co-work. Now, once you've got
+[00:13:08] that set up, cuz I'll be waiting for you
+[00:13:09] right here. Welcome back if you haven't
+[00:13:10] gone already. I'm going to show you a
+[00:13:11] really cool use case for this. Okay, so
+[00:13:13] say for example, we want to create
+[00:13:14] content on email marketing or LinkedIn
+[00:13:16] nurture sequences or emails. Now, one
+[00:13:18] skill that we could learn, right, is the
+[00:13:20] ability to create great scripts. And
+[00:13:21] there are some people who are awesome at
+[00:13:22] that. So when I give it the following
+[00:13:24] prompt, hey there, I want to become a
+[00:13:26] better communicator and script writer
+[00:13:28] for my YouTube videos. I know this could
+[00:13:30] apply for Instagram, LinkedIn, Tik Tok,
+[00:13:33] you name it. What I would like you to do
+[00:13:34] is create a new notebook on notebook and
+[00:13:37] I want you to fill that with 50 plus
+[00:13:39] resources or as many resources as we
+[00:13:41] think are relevant. Don't add it in for
+[00:13:43] the sake of him. of experts like
+[00:13:44] Callaway on YouTube. All of his content,
+[00:13:47] just literal best storytelling
+[00:13:49] frameworks that capture attention, that
+[00:13:52] add value, and keep people watching and
+[00:13:54] intrigued as long as possible. My stated
+[00:13:56] objective with this prompt is to improve
+[00:13:58] my storytelling ability both in the way
+[00:14:01] that I communicate and how I do videos
+[00:14:03] so that I can actually add more value to
+[00:14:05] my audience and keep them interested for
+[00:14:07] longer. First thing I'm going to do is
+[00:14:08] create the strategy based on everything
+[00:14:10] you know about me and then create the
+[00:14:12] notebook. And once that notebook is full
+[00:14:14] and has all the resources imported, let
+[00:14:16] me know. Awesome. So what have I done
+[00:14:18] now is I've given all this information
+[00:14:19] and as you can see it's running the
+[00:14:20] skill the notebook LM skill that we
+[00:14:22] created in our last video. And just like
+[00:14:24] that it's come back and grabbed some
+[00:14:25] interesting insights for us. So it's
+[00:14:27] gotten everything we need to. It's
+[00:14:28] storytelling mastery YouTube scripts
+[00:14:30] hooks and retention with 204 ready
+[00:14:33] sources across eight deep research
+[00:14:35] trends. Let's look what we've got. We've
+[00:14:36] got adopting a dance structure which is
+[00:14:38] hook setup hook set. It's giving us all
+[00:14:41] this information. So the TDR is you find
+[00:14:42] the stuff you want to talk about and
+[00:14:43] effectively just get notebook LM to do
+[00:14:45] incredibly deep research. And I've also
+[00:14:48] upgraded the notebook LM skill from my
+[00:14:51] last video to save you on token usage
+[00:14:53] and make it faster. They'll be fully
+[00:14:54] updated in the resources which you can
+[00:14:56] grab when you check out the video. And
+[00:14:57] as you can see guys, look at all these
+[00:14:59] resources on the left hand side that
+[00:15:01] effectively is crushing it. Like even
+[00:15:03] this the Ben strategy increasing
+[00:15:04] retention with the Ben strategy which
+[00:15:06] has which is a known framework for
+[00:15:08] basically you want it to be uh big easy
+[00:15:10] new and safe. This is exceptional level
+[00:15:13] of detail that we get here. Now the best
+[00:15:14] marketing strategy in the world is
+[00:15:16] nothing unless we actually understand
+[00:15:18] the data and can leverage those insights
+[00:15:20] to make effective decisions. Which is
+[00:15:22] why the fourth skill is mission control
+[00:15:25] for your business. Your business needs a
+[00:15:27] mission control powered by AI and the
+[00:15:30] data. You have to connect your
+[00:15:32] business's core numbers. That could be
+[00:15:34] your financial information from your
+[00:15:35] bank. It could be the website visits on
+[00:15:38] WordPress. Whatever it is, we want it
+[00:15:40] all in one beautiful location called
+[00:15:42] mission control. All with a purpose to
+[00:15:45] enable you to a understand what's going
+[00:15:46] on and b to make informed decisions
+[00:15:49] easier. It's to reduce your cognitive
+[00:15:51] load. What do I mean by that? It's every
+[00:15:53] tool you use in one dashboard updated
+[00:15:56] daily. Okay? The thing that you're going
+[00:15:57] to see every morning. No more asking
+[00:15:59] Steve from accountant, hey dude, can I
+[00:16:00] just get the No, it's all there for you
+[00:16:02] to make decisions. This is so important
+[00:16:03] that you set this up. What is it going
+[00:16:04] to connect? Here's the idea with the
+[00:16:05] dashboard. We're going to connect
+[00:16:07] everything. Google Analytics, YouTube,
+[00:16:09] HubSpot, Salesfor, your Gmail, anything
+[00:16:11] you want to. Even Zappia, notion, you
+[00:16:12] name it. We want to connect anything
+[00:16:14] that's important for you. It doesn't
+[00:16:16] mean that we dilute it. It doesn't mean
+[00:16:17] that we just have information for its
+[00:16:19] own sake, but we want to bring your
+[00:16:20] universe into one individual place. What
+[00:16:22] does this look like? You know, morning
+[00:16:24] briefing. Hey, what changed overnight?
+[00:16:25] What metrics moved that I need to be
+[00:16:27] aware of? Well, did you know, Jack, that
+[00:16:28] your number one article that's been
+[00:16:30] bringing in 80% of your traffic, we know
+[00:16:31] from the power law that usually is how
+[00:16:33] it works, you dropped a few places.
+[00:16:34] Wouldn't it be wonderful to know that
+[00:16:36] instantaneously without having to open
+[00:16:38] up all the dashboards or have to guess
+[00:16:39] and find out weeks later? That's how
+[00:16:41] great this is. Revenue attribution, find
+[00:16:44] out realistically where is the money
+[00:16:46] going, where where's income coming, and
+[00:16:48] then content ROI, all these wonderful
+[00:16:50] things. Let me show what that looks like
+[00:16:51] in practice. This revenue dashboard is
+[00:16:53] just something that I built in one
+[00:16:55] prompt. I'm going to put the link for
+[00:16:56] you down below as a skill that's going
+[00:16:57] to include all this HTML so you can just
+[00:16:59] grab this and use it. It is really
+[00:17:01] freaking cool. We can switch by revenue,
+[00:17:02] by members, by insights. The core idea
+[00:17:04] here is that we feed it in with all of
+[00:17:07] our connectors. So the step one has to
+[00:17:08] be come down on the right hand side
+[00:17:10] literally add plus and I want you to add
+[00:17:11] in all your connectors and all your data
+[00:17:13] sources. And actually what happens after
+[00:17:15] that is that if you don't have a
+[00:17:16] connector, we can just use cloud co-work
+[00:17:18] to open up in the browser and grab that
+[00:17:20] data for us manually. Meaning any data
+[00:17:23] that you access on your computer or that
+[00:17:25] can be accessed via an API call can now
+[00:17:27] be placed into this dashboard that you
+[00:17:29] can view with your beautiful cup of
+[00:17:31] coffee in the morning. Maybe you've got
+[00:17:32] these beans here. Fun if I never tried
+[00:17:33] these ones. I had too much momento.
+[00:17:35] Maybe they're fantastic. I'll try them
+[00:17:36] later. But you can drink your coffee and
+[00:17:37] get the key data. Now, the next skill is
+[00:17:39] something that almost everybody
+[00:17:41] neglects. And yet, it's something that
+[00:17:43] you're going to be doing almost every
+[00:17:44] single month in your business. And if
+[00:17:46] you get this wrong, the actual cost can
+[00:17:48] be significant, which is why this is so
+[00:17:50] important. And I'm talking about a
+[00:17:52] contract review skill in your business.
+[00:17:54] So, let's be really honest for 2
+[00:17:56] seconds. Last contract you get, what did
+[00:17:58] you do? Did you read every page of it,
+[00:17:59] I'll know if you're lying to me. The
+[00:18:01] answer is you probably threw it into
+[00:18:02] Claude and you probably said, "Hey, tell
+[00:18:04] me what you think." And it probably gave
+[00:18:05] you some answers. That's fine. The only
+[00:18:07] problem with that is Claude can make
+[00:18:08] mistakes cuz it's not perfect as great
+[00:18:10] as it is. So, what's the idea of the
+[00:18:11] contract abuse scum? 60 to 70% of small
+[00:18:13] businesses sign contracts without legal
+[00:18:15] review. It's just the nature of
+[00:18:16] business. Time is important. If you had
+[00:18:19] to read every single clause, maybe you
+[00:18:20] wouldn't have time to do business. But
+[00:18:22] AI can help and support. It's not
+[00:18:23] perfect. Obviously, this is not legal
+[00:18:25] advice, but the idea is if we're going
+[00:18:26] to use AI, we may as well use it in a
+[00:18:28] better way than a worse way. So, a
+[00:18:30] lawyer lawyer charges $25 per contract.
+[00:18:32] Actually, can be a lot more than that.
+[00:18:33] That's an hourly rate. The skill cost
+[00:18:35] $0. What is the catch? IP ownership
+[00:18:37] perhaps, non-competes, auto renewal,
+[00:18:38] uncap liabilities. These are the kind of
+[00:18:39] things that it looks for. Let me show
+[00:18:40] you what I mean. Now, this was a skill
+[00:18:42] pulled together by a gentleman called
+[00:18:43] Zabir. He's got a YouTube channel called
+[00:18:45] AI Workshop. So, shout out to Zabir for
+[00:18:47] pulling this together. He sat down and
+[00:18:48] said, "Look, there's lots of different
+[00:18:50] things I'm going to check out. Let's
+[00:18:51] pull together a skill that will go
+[00:18:52] through this and it's completely free to
+[00:18:54] use." So, we're going to use this one
+[00:18:55] because he took the time to build it.
+[00:18:56] So, let's have a look at what it covers.
+[00:18:57] Average legal review cost, basic
+[00:18:59] contract review, freelancer contract,
+[00:19:00] 82% is pretty absolutely wild. So,
+[00:19:03] basically what we can do here is grab
+[00:19:05] this over here. Click on the code. Click
+[00:19:07] and copy this. Then head straight over
+[00:19:08] to Claude. Then within co-work on the
+[00:19:10] left hand side again, we're looking for
+[00:19:11] projects. I'm going to click on business
+[00:19:13] project cuz this is something that we
+[00:19:14] want to do in our business. And then
+[00:19:15] we're going to say this. Hey there. This
+[00:19:16] is a repository for contract review. It
+[00:19:19] effectively enables us to assess
+[00:19:20] contracts with more detail to make sure
+[00:19:22] that we're not we're making less
+[00:19:24] mistakes. I'd like you to go to this
+[00:19:25] GitHub repo and create a skill for me
+[00:19:27] based on the information of this and
+[00:19:29] give me a quick t of everything that it
+[00:19:31] does, please. Beautiful. And then
+[00:19:32] literally all you're going to do is come
+[00:19:33] down and throw that URL in from the
+[00:19:35] GitHub like so. And then just going to
+[00:19:36] fire off. Now, Claude will go and review
+[00:19:39] contracts if you given them. But think
+[00:19:40] about all the deals that you do, right?
+[00:19:42] There have been so many times where one
+[00:19:44] small detail can make a big big
+[00:19:46] difference. And so it's better to
+[00:19:48] actually start using more legal
+[00:19:49] intelligence as a superpower in your
+[00:19:51] business. I can do a full video on this.
+[00:19:54] There's some very interesting things
+[00:19:55] that I've actually uncovered that are
+[00:19:57] pretty amazing in the legal process. So
+[00:19:58] if you're interested in that, let me
+[00:19:59] know down below. It's always good if you
+[00:20:00] tell me, Jack, I want to hear more about
+[00:20:02] this. I'm here to serve you. So you tell
+[00:20:03] me what you want to know about. But it's
+[00:20:05] very, very interesting. So what Claus's
+[00:20:06] going to do now is grab the repo, do
+[00:20:07] some interesting checks. Once it's done
+[00:20:09] that, we can actually then start to use
+[00:20:10] it and leverage it to protect you and
+[00:20:12] protect your business. Obviously, I
+[00:20:13] always recommend that you do bring a
+[00:20:15] legal professional. Actually, what you
+[00:20:17] find is that most businesses don't bring
+[00:20:19] it in until they have some kind of
+[00:20:21] really negative legal situation.
+[00:20:22] Remember, an ounce of prevention is
+[00:20:24] worth a pound of cure as the old wives
+[00:20:26] always used to tell us, which is crazy.
+[00:20:28] So, we've got down here, what does it
+[00:20:29] do? 14 command legal review of core
+[00:20:31] code, contract analysis, document
+[00:20:32] generation, compliance and reporting for
+[00:20:34] sock 2, all those wonderful things. Now,
+[00:20:36] we come down here. Do you want me to
+[00:20:38] consolidate this into a single unified
+[00:20:39] skill? I recommend that you do. Do you
+[00:20:40] want to build it? Yep. Go ahead. Now,
+[00:20:42] here's the thing. If you click run
+[00:20:43] evals, effectively what this will do is
+[00:20:46] test this skill to see if it beats what
+[00:20:48] code could do automatically. And if it
+[00:20:50] doesn't, it won't use it. This
+[00:20:51] absolutely should. So, we click on run
+[00:20:53] emails. And as you can see, cloud run
+[00:20:54] through everything for us to make sure
+[00:20:56] the skill is correct. Then, whenever you
+[00:20:58] want to review a contract, you can now
+[00:20:59] throw it on co-work. Use this skill to
+[00:21:01] test it. Remember, always come to your
+[00:21:03] own determination and consult a legal
+[00:21:05] professional when it comes down to
+[00:21:07] matters of the law. But the idea is if
+[00:21:09] we can find and make any margin to
+[00:21:10] improve our review process, I think
+[00:21:12] that's great cuz the reality is most of
+[00:21:14] us probably just use lawyer GPT.com. And
+[00:21:17] by that I mean chat GPT or Claude as
+[00:21:19] your lawyer. Number six skill is one of
+[00:21:20] the greatest time save. It's about
+[00:21:22] taking something that you do that you
+[00:21:23] think is fantastic and making it
+[00:21:25] something that is going to be a
+[00:21:26] replicable process but doesn't require
+[00:21:28] any additional time or overhead to you
+[00:21:30] but keeps the same level of quality. And
+[00:21:33] of course, I'm talking about designs
+[00:21:34] that we build for Instagram, for Tik
+[00:21:36] Tok, for presentations, you name it. So,
+[00:21:38] we can do 10 designs, multiple designs
+[00:21:40] in minutes. And when I say minutes, you
+[00:21:42] don't even have to be the computer. It
+[00:21:44] can do all for you instantaneously. We
+[00:21:46] can set up a brand kit once, give Claude
+[00:21:47] a list of questions or topics and it can
+[00:21:50] create branded designs at scale. So for
+[00:21:52] example, what do I mean by that? Well,
+[00:21:53] think about the workflow. First thing is
+[00:21:55] we set up brand kit. We can create a
+[00:21:57] master template, give Claude 10 quotes,
+[00:21:59] headlines or topics and it can batch
+[00:22:01] create all that stuff for us without us
+[00:22:02] even need to touch Canva. Could be quote
+[00:22:05] graphics, article insights, or even add
+[00:22:07] variations. Let me show you what that
+[00:22:08] means. We'll head back over to Claude
+[00:22:09] and create a window. Now, if you haven't
+[00:22:10] already to come down here onto
+[00:22:12] connectors and just make sure that
+[00:22:13] you're connected to Canva. Okay. Now,
+[00:22:15] what I'm going to do is something really
+[00:22:16] simple. I'm going to say, "Hey, now I've
+[00:22:17] got a typical style that I do like I did
+[00:22:19] the presentations at the beginning of
+[00:22:21] this video. I'm going to give it a
+[00:22:22] following prompt, which is this." Hey
+[00:22:23] there, I'd like to go into my latest
+[00:22:25] canvas slides and I want you to make for
+[00:22:26] me 10 fresh slides, all with a different
+[00:22:29] header. And let's just call it 10 hacks,
+[00:22:31] no more than seven words per slide, put
+[00:22:33] it in the middle, and let's just make it
+[00:22:35] 10 brief tips on how to grow your
+[00:22:38] LinkedIn. And then once that's done, I
+[00:22:40] want you to basically just alert me of
+[00:22:41] that and tell me it's complete. Awesome.
+[00:22:43] Send that one off. And just like that,
+[00:22:44] it's already pulled through the latest
+[00:22:46] file that we used in Canvas. So it knows
+[00:22:47] exactly what we're talking about. And as
+[00:22:49] you can see guys, I now got all the
+[00:22:50] different text on there. And this could
+[00:22:52] be used for anything. So if I wanted to
+[00:22:53] edit this particular presentation, I
+[00:22:55] could just say, "Hey, go and write out
+[00:22:56] the different headers for me." And they
+[00:22:57] can go and do that for me now
+[00:22:58] programmatically within Cloud Co-work.
+[00:23:01] And so now we've covered everything in
+[00:23:02] the operation and using these skills to
+[00:23:04] accelerate your marketing. The last
+[00:23:06] thing that we need to do is tie
+[00:23:07] everything together to make you
+[00:23:09] incredibly more productive. And that's
+[00:23:10] by building out a notion productivity
+[00:23:12] system using cold code and all this
+[00:23:14] context. So the idea here is use notion
+[00:23:16] to create a project board. But we can
+[00:23:18] drop in voice notes if we want to and
+[00:23:20] turn all of that into a wonderful
+[00:23:22] project board. What does that look like
+[00:23:23] in practice? Well, some of the things
+[00:23:25] that we can do here realistically, it
+[00:23:26] can grab to-do lists from anything
+[00:23:28] because it has access to our emails, our
+[00:23:32] calendars, any conversation, and we can
+[00:23:34] actually manage this all as a project
+[00:23:36] management system within notion or any
+[00:23:38] project management software that we want
+[00:23:40] to. I could say, for example, hey there,
+[00:23:42] what I'd like you to do for me is create
+[00:23:44] for me a notion project to-do list. I
+[00:23:47] would like you to include, for example,
+[00:23:48] go through my la my emails that I've had
+[00:23:50] today. Go through my calendar and all
+[00:23:52] the appointments that I've got and all
+[00:23:54] the conversations that we had in our
+[00:23:55] memory. And what I want you to do is
+[00:23:56] create for me a series of tasks that I
+[00:23:58] need to do based on all that
+[00:23:59] information. Have a priority matrix,
+[00:24:01] have a due date, and then also have any
+[00:24:03] actions and when they need to be done
+[00:24:05] by. Don't add too much information, but
+[00:24:06] make it specific to what I need to do
+[00:24:08] and make document look beautiful. And
+[00:24:09] you can see now Cloud Co's built up this
+[00:24:11] full database in Notion, which is
+[00:24:13] crucially powered by all of our data.
+[00:24:15] And check this out. We've got the task
+[00:24:17] with the action required, the due date,
+[00:24:18] who's owning it, priority, and by the
+[00:24:20] way, we can sync this up with anybody
+[00:24:22] else in our team. And it doesn't have to
+[00:24:24] be notion. It could be any project
+[00:24:26] management software. But the key thing
+[00:24:27] that everyone misses here is the fact
+[00:24:28] that everything links to Claude emails,
+[00:24:32] literal calendars, all your financial,
+[00:24:34] whatever the thing is. And now we can
+[00:24:36] link that to a project management
+[00:24:37] software, enabling you to manage the
+[00:24:39] orchestration of your entire marketing
+[00:24:41] department. Now, understanding Claude
+[00:24:43] skills to grow the marketing function of
+[00:24:45] your business is one thing, but if you
+[00:24:47] don't understand some of the intricacies
+[00:24:49] of Claude code, you're not going to get
+[00:24:50] the most out of the software. Which is
+[00:24:52] why the next thing we need to do is
+[00:24:53] watch this video right
+
+--- FILE CONTENT: NotebookLMSkill - Community (1).md ---
+---
+name: notebooklm
+description: Complete API for Google NotebookLM - full programmatic access including features not in the web UI. Create notebooks, add sources, generate all artifact types, download in multiple formats. Activates on explicit /notebooklm or intent like "create a podcast about X", "install notebooklm", "add notebooklm to cowork"
+---
+<!-- notebooklm-py v0.3.4 -->
+
+# NotebookLM Automation
+
+Complete programmatic access to Google NotebookLM—including capabilities not exposed in the web UI. Create notebooks, add sources (URLs, YouTube, PDFs, audio, video, images), chat with content, generate all artifact types, and download results in multiple formats.
+
+## Step 0: Setup (Run Automatically on First Use)
+
+When this skill is triggered and `notebooklm` is not yet installed or authenticated, complete setup first.
+
+### Pre-flight: Check Python Version
+
+`notebooklm-py` requires **Python 3.10+**. Check the available version before installing:
+
+```bash
+python3 --version
+```
+
+If Python is below 3.10 (e.g. 3.9.x which is the macOS default), install a compatible version:
+
+**macOS (Homebrew):**
+```bash
+brew install python@3.12
+```
+Then use `/opt/homebrew/bin/python3.12` (Apple Silicon) or `/usr/local/bin/python3.12` (Intel) for the venv below.
+
+**Linux (apt):**
+```bash
+sudo apt update && sudo apt install -y python3.12 python3.12-venv
+```
+
+### Install the CLI
+
+Always use a virtual environment to avoid "externally-managed-environment" errors and PATH issues.
+
+Determine which Python to use — if the system `python3` is 3.10+, use it directly. Otherwise use the one you just installed (e.g. `python3.12`):
+
+```bash
+# Set PYTHON to the correct binary (adjust if needed)
+PYTHON=$(command -v python3.12 2>/dev/null || command -v python3.11 2>/dev/null || command -v python3.10 2>/dev/null || command -v python3)
+
+# Verify it's 3.10+
+$PYTHON -c "import sys; assert sys.version_info >= (3,10), f'Python {sys.version} is too old — need 3.10+'; print(f'Using Python {sys.version}')"
+
+# Create venv and install
+$PYTHON -m venv ~/.notebooklm-venv
+source ~/.notebooklm-venv/bin/activate
+pip install "notebooklm-py[browser]"
+playwright install chromium
+```
+
+Then symlink so it's always on PATH:
+```bash
+mkdir -p ~/bin
+ln -sf ~/.notebooklm-venv/bin/notebooklm ~/bin/notebooklm
+export PATH="$HOME/bin:$PATH"
+```
+
+Verify the CLI works:
+```bash
+notebooklm --help
+```
+
+### Authenticate
+
+**IMPORTANT:** The built-in `notebooklm login` command requires interactive terminal input (pressing Enter after sign-in). Claude Code's bash tool does NOT support interactive input, so `notebooklm login` will fail — the browser opens and closes instantly. Instead, use this custom login script.
+
+Tell the user:
+
+> I'm going to open a browser window — just sign into your Google account and navigate to notebooklm.google.com. Take your time, I'll wait for you to confirm before closing it.
+
+Then write and run this login script:
+
+```bash
+cat > /tmp/nlm_login.py << 'PYEOF'
+import json, os, time
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+
+STORAGE_PATH = Path.home() / ".notebooklm" / "storage_state.json"
+PROFILE_PATH = Path.home() / ".notebooklm" / "browser_profile"
+SIGNAL_FILE = Path("/tmp/nlm_save_signal")
+
+SIGNAL_FILE.unlink(missing_ok=True)
+STORAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+print("Opening browser for Google login...")
+print("Sign in to Google and navigate to notebooklm.google.com")
+
+with sync_playwright() as p:
+    browser = p.chromium.launch_persistent_context(
+        user_data_dir=str(PROFILE_PATH),
+        headless=False,
+        args=["--disable-blink-features=AutomationControlled"],
+    )
+    page = browser.pages[0] if browser.pages else browser.new_page()
+    page.goto("https://notebooklm.google.com/")
+
+    print("Browser is open. Waiting for save signal...")
+    while not SIGNAL_FILE.exists():
+        time.sleep(1)
+
+    print("Save signal received! Capturing session...")
+    storage = browser.storage_state()
+    with open(STORAGE_PATH, "w") as f:
+        json.dump(storage, f)
+
+    cookie_names = [c["name"] for c in storage.get("cookies", [])]
+    print(f"Saved {len(cookie_names)} cookies: {cookie_names}")
+    browser.close()
+
+SIGNAL_FILE.unlink(missing_ok=True)
+print(f"Authentication saved to: {STORAGE_PATH}")
+PYEOF
+
+# Run the login script in the background
+source ~/.notebooklm-venv/bin/activate
+python3 /tmp/nlm_login.py > /tmp/nlm_login_output.txt 2>&1 &
+echo "Login started (PID=$!). Browser should open in a few seconds..."
+```
+
+Wait ~10 seconds for the browser to open, then ask the user if they can see the browser and are signed in.
+
+Once the user confirms they are on the NotebookLM homepage, save the session:
+
+```bash
+touch /tmp/nlm_save_signal
+sleep 8
+cat /tmp/nlm_login_output.txt
+```
+
+Then verify authentication:
+
+```bash
+export PATH="$HOME/bin:$PATH"
+notebooklm auth check
+notebooklm list
+```
+
+If auth passes (SID cookie present), confirm to the user that NotebookLM is set up and ready. Clean up the temp script:
+
+```bash
+rm -f /tmp/nlm_login.py /tmp/nlm_login_output.txt /tmp/nlm_save_signal
+```
+
+If auth fails (SID cookie missing), the user may not have fully signed in. Delete the browser profile and retry:
+
+```bash
+rm -rf ~/.notebooklm/browser_profile ~/.notebooklm/storage_state.json
+```
+
+Then run the login script again from the top.
+
+---
+
+## Adding NotebookLM to Co-work
+
+When the user asks to "add this to Co-work", "use this in Co-work", or "make this work in Co-work":
+
+### Step 1: Check auth exists
+
+```bash
+cat ~/.notebooklm/storage_state.json > /dev/null 2>&1
+```
+
+If it doesn't exist, run the install and authenticate steps above first.
+
+### Step 2: Generate the Co-work skill file
+
+Read the contents of this skill file you are currently using. Then read the contents of `~/.notebooklm/storage_state.json`.
+
+**IMPORTANT — Strip cookies before embedding:** Co-work is sandboxed and can't read local files, so cookies must be inlined. But the full storage_state.json contains duplicate cookies across multiple Google domains (.google.ae, .google.co.uk, .youtube.com, etc.) that are NOT needed. Strip them to save ~55% of tokens.
+
+Run this to generate the minimal auth JSON:
+```bash
+python3 << 'PYEOF'
+import json
+
+with open("$HOME/.notebooklm/storage_state.json") as f:
+    data = json.load(f)
+
+# Only these domains are needed for NotebookLM auth
+essential_domains = {".google.com", "notebooklm.google.com", "accounts.google.com"}
+# Skip analytics/tracking cookies
+skip_names = {"_gcl_au", "_ga", "_ga_W0LDH41ZCB", "OTZ", "ACCOUNT_CHOOSER"}
+
+stripped = {
+    "cookies": [c for c in data["cookies"] if c["domain"] in essential_domains and c["name"] not in skip_names],
+    "origins": [o for o in data.get("origins", []) if "notebooklm" in o.get("origin", "")]
+}
+print(json.dumps(stripped, separators=(',',':')))
+PYEOF
+```
+
+Create a MODIFIED copy of this skill file where you replace the entire "Step 0: Setup" section and "Adding NotebookLM to Co-work" section with this:
+
+```markdown
+## Auto-Authentication (Co-work)
+
+This skill runs in a sandboxed Co-work environment. Before running ANY notebooklm command, run these setup commands:
+
+\`\`\`bash
+pip install notebooklm-py 2>/dev/null
+export NOTEBOOKLM_AUTH_JSON='<STRIPPED MINIMAL AUTH JSON FROM ABOVE>'
+\`\`\`
+
+Then verify:
+\`\`\`bash
+notebooklm auth check
+notebooklm list
+\`\`\`
+
+If auth fails, the cookies may have expired. Ask the user to re-run `notebooklm login` in Claude Code and regenerate this file.
+```
+
+### Step 3: Save and instruct
+
+Save the file to the user's Desktop as `NotebookLMSkill-Cowork.md`.
+
+Tell the user:
+
+> Done! I've saved the Co-work skill to your Desktop as `NotebookLMSkill-Cowork.md`. Upload it as a skill in Claude Co-work and you'll have full NotebookLM access there too.
+>
+> I've stripped the cookies down to only the 21 essential ones (~1,400 tokens instead of ~3,100). When they expire, just come back to Claude Code and say "regenerate my Co-work NotebookLM skill" and I'll make a fresh one.
+
+---
+
+## When This Skill Activates
+
+**Explicit:** User says "/notebooklm", "use notebooklm", "install notebooklm", or mentions the tool by name
+
+**Intent detection:** Recognize requests like:
+- "Create a podcast about [topic]"
+- "Summarize these URLs/documents"
+- "Generate a quiz from my research"
+- "Turn this into an audio overview"
+- "Create flashcards for studying"
+- "Generate a video explainer"
+- "Make an infographic"
+- "Create a mind map of the concepts"
+- "Download the quiz as markdown"
+- "Add these sources to NotebookLM"
+- "Add this to Co-work" / "Make this work in Co-work"
+
+## Autonomy Rules
+
+**Run automatically (no confirmation):**
+- `notebooklm status` - check context
+- `notebooklm auth check` - diagnose auth issues
+- `notebooklm list` - list notebooks
+- `notebooklm source list` - list sources
+- `notebooklm artifact list` - list artifacts
+- `notebooklm language list` - list supported languages
+- `notebooklm language get` - get current language
+- `notebooklm language set` - set language (global setting)
+- `notebooklm artifact wait` - wait for artifact completion
+- `notebooklm source wait` - wait for source processing
+- `notebooklm research status` - check research status
+- `notebooklm research wait` - wait for research
+- `notebooklm use <id>` - set context
+- `notebooklm create` - create notebook
+- `notebooklm ask "..."` - chat queries (without `--save-as-note`)
+- `notebooklm history` - display conversation history (read-only)
+- `notebooklm source add` - add sources
+
+**Ask before running:**
+- `notebooklm delete` - destructive
+- `notebooklm generate *` - long-running, may fail
+- `notebooklm download *` - writes to filesystem
+- `notebooklm ask "..." --save-as-note` - writes a note
+- `notebooklm history --save` - writes a note
+
+## Quick Reference
+
+| Task | Command |
+|------|---------|
+| List notebooks | `notebooklm list` |
+| Create notebook | `notebooklm create "Title"` |
+| Set context | `notebooklm use <notebook_id>` |
+| Show context | `notebooklm status` |
+| Add URL source | `notebooklm source add "https://..."` |
+| Add file | `notebooklm source add ./file.pdf` |
+| Add YouTube | `notebooklm source add "https://youtube.com/..."` |
+| List sources | `notebooklm source list` |
+| Wait for source processing | `notebooklm source wait <source_id>` |
+| Web research (fast) | `notebooklm source add-research "query"` |
+| Web research (deep) | `notebooklm source add-research "query" --mode deep --no-wait` |
+| Check research status | `notebooklm research status` |
+| Wait for research | `notebooklm research wait --import-all` |
+| Chat | `notebooklm ask "question"` |
+| Chat (specific sources) | `notebooklm ask "question" -s src_id1 -s src_id2` |
+| Chat (with references) | `notebooklm ask "question" --json` |
+| Chat (save answer as note) | `notebooklm ask "question" --save-as-note` |
+| Show conversation history | `notebooklm history` |
+| Save all history as note | `notebooklm history --save` |
+| Get source fulltext | `notebooklm source fulltext <source_id>` |
+| Generate podcast | `notebooklm generate audio "instructions"` |
+| Generate video | `notebooklm generate video "instructions"` |
+| Generate report | `notebooklm generate report --format briefing-doc` |
+| Generate quiz | `notebooklm generate quiz` |
+| Generate flashcards | `notebooklm generate flashcards` |
+| Generate infographic | `notebooklm generate infographic` |
+| Generate mind map | `notebooklm generate mind-map` |
+| Generate slide deck | `notebooklm generate slide-deck` |
+| Revise a slide | `notebooklm generate revise-slide "prompt" --artifact <id> --slide 0` |
+| Check artifact status | `notebooklm artifact list` |
+| Wait for completion | `notebooklm artifact wait <artifact_id>` |
+| Download audio | `notebooklm download audio ./output.mp3` |
+| Download video | `notebooklm download video ./output.mp4` |
+| Download slide deck (PDF) | `notebooklm download slide-deck ./slides.pdf` |
+| Download slide deck (PPTX) | `notebooklm download slide-deck ./slides.pptx --format pptx` |
+| Download report | `notebooklm download report ./report.md` |
+| Download mind map | `notebooklm download mind-map ./map.json` |
+| Download data table | `notebooklm download data-table ./data.csv` |
+| Download quiz | `notebooklm download quiz quiz.json` |
+| Download flashcards | `notebooklm download flashcards cards.json` |
+| List languages | `notebooklm language list` |
+| Set language | `notebooklm language set zh_Hans` |
+
+## Generation Types
+
+All generate commands support:
+- `-s, --source` to use specific source(s) instead of all sources
+- `--language` to set output language (defaults to 'en')
+- `--json` for machine-readable output
+- `--retry N` to automatically retry on rate limits
+
+| Type | Command | Options | Download |
+|------|---------|---------|----------|
+| Podcast | `generate audio` | `--format [deep-dive\|brief\|critique\|debate]`, `--length [short\|default\|long]` | .mp3 |
+| Video | `generate video` | `--format [explainer\|brief]`, `--style [auto\|classic\|whiteboard\|kawaii\|anime\|watercolor\|retro-print\|heritage\|paper-craft]` | .mp4 |
+| Slide Deck | `generate slide-deck` | `--format [detailed\|presenter]`, `--length [default\|short]` | .pdf / .pptx |
+| Slide Revision | `generate revise-slide "prompt" --artifact <id> --slide N` | `--wait`, `--notebook` | *(re-downloads parent deck)* |
+| Infographic | `generate infographic` | `--orientation [landscape\|portrait\|square]`, `--detail [concise\|standard\|detailed]` | .png |
+| Report | `generate report` | `--format [briefing-doc\|study-guide\|blog-post\|custom]`, `--append "extra instructions"` | .md |
+| Mind Map | `generate mind-map` | *(sync, instant)* | .json |
+| Data Table | `generate data-table` | description required | .csv |
+| Quiz | `generate quiz` | `--difficulty [easy\|medium\|hard]`, `--quantity [fewer\|standard\|more]` | .json/.md/.html |
+| Flashcards | `generate flashcards` | `--difficulty [easy\|medium\|hard]`, `--quantity [fewer\|standard\|more]` | .json/.md/.html |
+
+## Common Workflows
+
+### Research to Podcast
+1. `notebooklm create "Research: [topic]"`
+2. `notebooklm source add` for each URL/document
+3. Wait for sources: `notebooklm source list --json` until all status=READY
+4. `notebooklm generate audio "Focus on [specific angle]"`
+5. Check `notebooklm artifact list` for status
+6. `notebooklm download audio ./podcast.mp3` when complete
+
+### Document Analysis
+1. `notebooklm create "Analysis: [project]"`
+2. `notebooklm source add ./doc.pdf` (or URLs)
+3. `notebooklm ask "Summarize the key points"`
+4. Continue chatting as needed
+
+## Output Formats (--json)
+
+```json
+// notebooklm list --json
+{"notebooks": [{"id": "...", "title": "...", "created_at": "..."}]}
+
+// notebooklm source list --json
+{"sources": [{"id": "...", "title": "...", "status": "ready|processing|error"}]}
+
+// notebooklm artifact list --json
+{"artifacts": [{"id": "...", "title": "...", "type": "Audio Overview", "status": "in_progress|pending|completed|unknown"}]}
+```
+
+## Error Handling
+
+| Error | Cause | Action |
+|-------|-------|--------|
+| Auth/cookie error | Session expired | Re-run `notebooklm login` |
+| "No notebook context" | Context not set | Run `notebooklm use <id>` |
+| Rate limiting | Google throttle | Wait 5-10 min, retry |
+| Download fails | Generation incomplete | Check `artifact list` for status |
+
+## Known Limitations
+
+- Audio, video, quiz, flashcard, infographic, and slide deck generation may fail due to Google rate limits
+- Generation times: audio 10-20 min, video 15-45 min, quiz/flashcards 5-15 min
+- This is an unofficial API — Google can change things without warning
+

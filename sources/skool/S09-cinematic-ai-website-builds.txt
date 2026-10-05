@@ -1,0 +1,481 @@
+LESSON: 🎬 Cinematic AI Website Builds (md=fc8a23, video 13 min) ====================
+
+DESCRIPTION:
+[v2][{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Hey, in this video, you're gonna learn:"}]},{"type":"paragraph","content":[{"type":"text","text":"🎬 Create cinematic and high-end websites using "},{"type":"text","marks":[{"type":"bold"}],"text":"Claude Code"},{"type":"text","text":" and "},{"type":"text","marks":[{"type":"bold"}],"text":"Seedance 2.0"},{"type":"text","text":" that look professional enough to sell for thousands of dollars."}]},{"type":"paragraph","content":[{"type":"text","text":"🚀 Build a gorgeous, functional website in under five minutes using pre-made GitHub templates or custom prompt builders."}]},{"type":"paragraph","content":[{"type":"text","text":"🌀 Master the "},{"type":"text","marks":[{"type":"bold"}],"text":"Claude Code looping skill"},{"type":"text","text":" to generate perfectly repeating video animations that flow seamlessly without looking \"cranky\"."}]},{"type":"paragraph","content":[{"type":"text","text":"🎨 Generate high-fidelity product images with specific brand logos using "},{"type":"text","marks":[{"type":"bold"}],"text":"Nano Banana 2"},{"type":"text","text":" and "},{"type":"text","marks":[{"type":"bold"}],"text":"Midjourney"},{"type":"text","text":" integration."}]},{"type":"paragraph","content":[{"type":"text","text":"🎥 Use "},{"type":"text","marks":[{"type":"bold"}],"text":"Seedance 2.0"},{"type":"text","text":" with start and end frames to create smooth, 360-degree product rotations that act as stunning hero backgrounds."}]},{"type":"paragraph","content":[{"type":"text","text":"🛠️ Fix website loading errors instantly by pasting browser inspection logs directly into Claude for automated troubleshooting."}]},{"type":"paragraph","content":[{"type":"text","text":"🌐 Deploy your finished \"cinematic\" site to the web for free using "},{"type":"text","marks":[{"type":"bold"}],"text":"GitHub"},{"type":"text","text":" and "},{"type":"text","marks":[{"type":"bold"}],"text":"Vercel"},{"type":"text","text":" via simple terminal commands."}]},{"type":"paragraph","content":[{"type":"text","text":"📈 Implement professional wireframes and structures to ensure your flashy animations actually convert viewers into paying customers."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"In this video, Jack covers:"}]},{"type":"paragraph","content":[{"type":"text","text":"Jack Roberts explains why Seedance 2.0 is a game-changer for AI video, moving beyond low-quality renders to truly cinematic visuals for web design."}]},{"type":"paragraph","content":[{"type":"text","text":"The tutorial provides a step-by-step walkthrough of using "},{"type":"text","marks":[{"type":"bold"}],"text":"Anti-gravity"},{"type":"text","text":" and "},{"type":"text","marks":[{"type":"bold"}],"text":"Claude Code"},{"type":"text","text":" to download repos and reskin them for any brand, like a pink-themed coffee shop."}]},{"type":"paragraph","content":[{"type":"text","text":"You'll see how to leverage the "},{"type":"text","marks":[{"type":"link","attrs":{"class":"link","href":"http://Kia.ai","rel":"noopener noreferrer nofollow","target":"_blank"}},{"type":"bold"}],"text":"Kia.ai"},{"type":"text","text":" or "},{"type":"text","marks":[{"type":"bold"}],"text":"Higgs Field"},{"type":"text","text":" platforms to turn static AI images into high-resolution 2K video assets."}]},{"type":"paragraph","content":[{"type":"text","text":"Jack demonstrates a \"hacker trick\" for darkening video edges in the code to make AI-generated animations blend perfectly into a website's UI."}]},{"type":"paragraph","content":[{"type":"text","text":"The video covers the final deployment phase, showing how to connect your local IDE to a GitHub repository and launch a live site via Vercel."}]},{"type":"paragraph"},{"type":"heading","attrs":{"level":3},"content":[{"type":"text","marks":[{"type":"bold"}],"text":"Who this is for:"}]},{"type":"paragraph","content":[{"type":"text","text":"Web designers, AI entrepreneurs, and creative agencies who want to produce premium-quality, video-centric websites without expensive builders or manual editing software."}]},{"type":"paragraph"}]
+
+RESOURCES:
+- FILE transcript (Claude Code + SeedDance 2.0 = Cinematic $10k Websites.txt): 23593 chars
+- FILE Claude Looping.skill (Claude Looping.skill): 5106 chars
+
+--- FILE CONTENT: Claude Code + SeedDance 2.0 = Cinematic $10k Websites.txt ---
+[00:00:00] You can now build beautiful and
+[00:00:01] cinematic websites using Claude code and
+[00:00:04] the brand new Seedance 2.0 that clients
+[00:00:07] will pay thousands of dollars for. And
+[00:00:09] as somebody who's actually sold this, in
+[00:00:12] this video I'm going to show you exactly
+[00:00:14] why this is a big deal, exactly how to
+[00:00:16] build these cinematic websites, and
+[00:00:18] avoid the big mistake that 99% of people
+[00:00:21] are going to make with this. And it's
+[00:00:23] something you can set up in a couple of
+[00:00:24] [music] minutes even if you've never
+[00:00:26] touched it before. And if you don't know
+[00:00:27] who I am, my name is Jack Roberts. I
+[00:00:29] built a on my last tech startup with
+[00:00:31] over 60,000 customers and now I'm
+[00:00:33] running my own profitable AI automation
+[00:00:34] businesses. So, if you haven't already,
+[00:00:37] go ahead, grab that coffee, and let's
+[00:00:39] dive in together. Beautiful websites.
+[00:00:41] Now, I have to be honest, bit of a mini
+[00:00:42] confession, I actually didn't want to
+[00:00:44] make this video until I played around
+[00:00:45] with Seedance and I was like, I kind of
+[00:00:48] have to show you because I was really
+[00:00:49] impressed with it. I've been sending
+[00:00:50] videos like all day cuz it's so cool.
+[00:00:52] But the thing about these beautiful
+[00:00:53] websites is this. So, if you think
+[00:00:55] you've got Claude code plus this
+[00:00:58] Seedance 2.0, the brand new one, and
+[00:01:00] it's something that we can build
+[00:01:01] together in like 5 minutes. That's
+[00:01:03] straightforward. And what we can do with
+[00:01:04] Seedance 2.0 is actually now lift things
+[00:01:07] up to be more cinematic because the
+[00:01:09] biggest problem that videos always had,
+[00:01:11] and I don't know if you've ever
+[00:01:12] experienced this, but I'll I'll render a
+[00:01:13] video and it just won't look good. It'll
+[00:01:15] look a bit cranky. It won't quite flow
+[00:01:17] as well. Seedance 2.0, and all the times
+[00:01:20] I've used it, fixes this and just makes
+[00:01:22] it feel way more cinematic. Video's
+[00:01:24] getting crazy right now. And the cool
+[00:01:25] thing is you need no editing software
+[00:01:29] and no expensive website builder. We can
+[00:01:31] build all of this inside Claude code and
+[00:01:33] using Seedance 2.0. And we're going to
+[00:01:34] be showing you in this video something
+[00:01:36] that I call the Claude code looping
+[00:01:37] skill that I built completely for free.
+[00:01:40] I'm going to put it for you down below
+[00:01:41] in the description so you can just use
+[00:01:42] that and abuse that. And then I'm also
+[00:01:43] going to show you how we can build in
+[00:01:44] this video a website with a beautiful
+[00:01:47] cinematic animation with any logo you
+[00:01:49] want. And finally, I'm also going to
+[00:01:50] show you how you can integrate yourself
+[00:01:51] into the video. This was like the only
+[00:01:53] photo I had on my laptop, but of course
+[00:01:55] at the same time, guys, we never want to
+[00:01:56] miss bicep day. So, with that in mind,
+[00:01:58] let's jump straight in. And the number
+[00:01:59] one thing that we're going to do after
+[00:02:00] drinking our delicious coffee, of
+[00:02:02] course, is actually build the website
+[00:02:04] that we want. Now, there's only three
+[00:02:05] really simple steps in this process and
+[00:02:07] it's dead straightforward. The first of
+[00:02:08] which is getting the base structure for
+[00:02:11] our websites. I'm going to do two dead
+[00:02:12] straightforward ideas. One is this
+[00:02:14] website that I built previously, which
+[00:02:15] I'm going to give you down below. I'll
+[00:02:16] put a link where literally you can just
+[00:02:18] copy and grab this whole thing. It's
+[00:02:20] very, very good um website. It's got
+[00:02:22] like a sign-in thing. It's very, very
+[00:02:24] decent. What you can do is grab a GitHub
+[00:02:26] link, which I'm going to put for you
+[00:02:27] down below in the resources. So, if I
+[00:02:28] come here, all you're going to do is
+[00:02:30] come down, click on gorgeous website,
+[00:02:31] you come through to this, click on code,
+[00:02:33] click on copy, and then you're going to
+[00:02:35] head over to anti-gravity or Claude code
+[00:02:38] or your IDE of choice. That sounds like
+[00:02:40] Spanish. Watch this video on screen and
+[00:02:42] I'll wait for you to get back. Welcome
+[00:02:44] back. Then what we're going to do is
+[00:02:45] open up Claude like so, click on new
+[00:02:46] terminal, and then I'll just summon
+[00:02:48] Claude up real quick. And then I'm going
+[00:02:49] to say
+[00:02:50] uh once I trust the folder, that's fine.
+[00:02:52] I'm going to come down and say something
+[00:02:53] like, "Hey there, dude. I would like you
+[00:02:55] to go ahead and download this um GitHub
+[00:02:58] repo, please. And I want you to redo the
+[00:03:00] whole thing, but I want you to make it
+[00:03:01] for beautiful, delicious coffee. There's
+[00:03:04] going to be pink themed." How cool is
+[00:03:06] that? By the way, this is from LA. We're
+[00:03:07] doing a meet-up there next week. Going
+[00:03:08] to be very, very cool. Hit enter on that
+[00:03:10] and then we're going to put in the
+[00:03:11] GitHub repo, of course, like so. And
+[00:03:13] then they're ready to rock and roll. I'm
+[00:03:14] going to right click this and I'm just
+[00:03:15] going to put the panel position on the
+[00:03:16] right-hand side because I'm a savage for
+[00:03:19] things like that. So, this is way one.
+[00:03:21] You can literally grab this and do this
+[00:03:22] exact same process if you want to do
+[00:03:23] that. The other thing that we can do,
+[00:03:25] and I found this really easy, is I built
+[00:03:27] a and I'm going to pull this one up for
+[00:03:28] you right now, and it is a website
+[00:03:30] builder. So, if I come down and just
+[00:03:31] grab this file, I'm just find a website
+[00:03:33] builder. So, what I'm using here is a
+[00:03:36] website thing that I built for my
+[00:03:37] community, which is basically just lets
+[00:03:39] me grab loads of cool resources and I'll
+[00:03:41] put this again for you down down below
+[00:03:42] so you can grab it. And the one that
+[00:03:43] we're looking for here is this prompt
+[00:03:45] builder. And the cool thing about the
+[00:03:46] prompt builder is that we can enter
+[00:03:48] whatever we want. So, I think what we
+[00:03:50] should do is build something that like
+[00:03:52] is very visually gorgeous. So, what if
+[00:03:54] we built like a really sick like a race
+[00:03:56] car or something? So, I could say, "This
+[00:03:58] is for a luxury car company, a beautiful
+[00:04:01] luxury car company, high-end and
+[00:04:03] premium." Okay? So, I'll enter in the
+[00:04:04] prompt. And then I'm going to say, "We
+[00:04:06] can what type of business is it?" I'll
+[00:04:07] say it is a car company, a luxury car
+[00:04:10] company. I'll pick a style. I think
+[00:04:12] probably clean and modern's going to be
+[00:04:13] good or we could bold and dark. I think
+[00:04:14] it'd be quite tasty. Build your page.
+[00:04:16] So, let's go for hero, social proof,
+[00:04:18] features, footer. I think that's fine.
+[00:04:20] Um maybe we don't do pricing, right?
+[00:04:21] Lamborghini don't do pricing. So, you
+[00:04:23] can pick all the bits you want. You can
+[00:04:24] move these around if you like. It's It's
+[00:04:25] really handy for stuff like that. What
+[00:04:26] should the button say? How about unlock
+[00:04:28] your test drive? Okay, cool. I'm going
+[00:04:30] to come down and then your prompt is
+[00:04:31] decent. And all we're going to do,
+[00:04:32] literally, I'll give you the prompt.
+[00:04:33] It's like optimized for all this sort of
+[00:04:35] stuff. You just come down and copy the
+[00:04:36] prompt and then you're ready to go. So,
+[00:04:38] we can then actually come over to
+[00:04:39] anti-gravity and I'll just open a second
+[00:04:42] environment so you can see both of them
+[00:04:43] unfold at the same time. Cool. And in
+[00:04:45] alternative environment, I'm just going
+[00:04:46] to give it this prompt. Just so you can
+[00:04:47] see what the difference looks like in
+[00:04:49] the websites and how cool it is. And
+[00:04:50] then hit enter. We're ready to rock and
+[00:04:51] roll. Wonderful. So, now we've got both
+[00:04:53] the websites. We have the car one here,
+[00:04:55] which is cool. Again, and what's really
+[00:04:56] cool is just kind of exactly stuck to
+[00:04:58] the template that we gave it. Really
+[00:05:00] decent, a good baseline. If I come over
+[00:05:02] to the one that we got for the coffee.
+[00:05:04] Now, if it ever comes up black, and this
+[00:05:06] will happen sometimes with this, all you
+[00:05:08] ever have to do is right click, come
+[00:05:09] down to inspect, and it'll tell you
+[00:05:12] exactly what the issue is. And as you
+[00:05:13] can see here, the issue is this. So, all
+[00:05:15] you do is you just simply copy this,
+[00:05:17] control and C, come back over to
+[00:05:19] anti-gravity, come over here and say,
+[00:05:21] "Hey, it hasn't loaded. Here is the
+[00:05:22] error." And then literally just paste
+[00:05:24] that in right there. And if you're
+[00:05:24] wondering how I'm talking to my laptop,
+[00:05:26] I use Glider. It's a startup that we
+[00:05:28] made to be the fastest and safest app on
+[00:05:30] I'll link down below so you can check it
+[00:05:31] out if you want to use that. Uh free to
+[00:05:33] do so. Now, I think it's really
+[00:05:34] important as well to bear in mind with
+[00:05:35] this stuff is that it is a pretty easy
+[00:05:37] fix if it doesn't load up. So, we'll
+[00:05:39] just change it. Uh we'll reload it right
+[00:05:40] now and check it out. So, let's come
+[00:05:42] over and give this a little bit of a
+[00:05:44] refresh. And there we go. It is rocking
+[00:05:45] and rolling. Beautiful, delicious
+[00:05:47] coffee. Explore the menu. Loads of
+[00:05:48] stuff. It's basically turned into pink,
+[00:05:50] which is cool. So, now we've got the
+[00:05:51] basic website. We are ready to rock and
+[00:05:54] roll. So, now we have a baseline of a
+[00:05:55] website that we like and we can go very
+[00:05:57] deep into that. The next thing that
+[00:05:58] we've got to do though is actually
+[00:06:00] generate this beautiful video animation
+[00:06:02] that will just turn it into something
+[00:06:04] spectacular. And to do that, I want you
+[00:06:05] to come down and grab this Seedance
+[00:06:08] skill. Again, I'll put this link down
+[00:06:09] below for you so you can grab this for
+[00:06:10] free. And what I want you to do is
+[00:06:11] literally come over and download this
+[00:06:13] thing and put it onto your desktop. Now,
+[00:06:16] once you've got that, you can either do
+[00:06:17] this in anti-gravity or Claude, pretty
+[00:06:19] much whatever you like. Cool. So, I've
+[00:06:21] downloaded the Claude app and I've got
+[00:06:22] it in this environment and I'm just on
+[00:06:24] code. And all you're going to do is come
+[00:06:25] down, click on the plus, and essentially
+[00:06:27] upload the skill that I just gave you.
+[00:06:29] So, once you've installed the skill, you
+[00:06:30] can do {forward slash} Seedance and give
+[00:06:32] it the following prompt. You just come
+[00:06:33] down and hit on enter and this will fire
+[00:06:34] up the whole thing. Now, I'm using this
+[00:06:37] in um Claude. It can be any one that you
+[00:06:39] want to. It doesn't really make too much
+[00:06:41] of a difference. You could do this in
+[00:06:42] anti-gravity. I've just downloaded the
+[00:06:44] Claude app and I'm using Claude code to
+[00:06:46] build this. So, let's give it a prompt,
+[00:06:47] which is going to be, "I would love you
+[00:06:49] to create an image prompt for me for a
+[00:06:52] beautiful bag of coffee beans and I want
+[00:06:55] the color scheme to be pink and black.
+[00:06:58] And I want you to make that look
+[00:06:59] gorgeous and cinematic." When we do
+[00:07:01] create a video, I'm going to have it
+[00:07:02] rotate on its axis. I want a logo on it.
+[00:07:04] Once that's done, going to send this one
+[00:07:05] off. And the cool thing with this is it
+[00:07:07] will actually ask you what you want it
+[00:07:09] for. So, what's your vision? Is it going
+[00:07:10] to be on your website? Where's it going
+[00:07:12] to be? So, you can get that context to
+[00:07:13] understand what is going to be the best
+[00:07:15] type of image to create for you. So,
+[00:07:16] once we've got that, we're literally
+[00:07:17] going to copy it and then shoot straight
+[00:07:19] over to Higgs Field. And once you're on
+[00:07:20] Higgs Field, come down to images and
+[00:07:22] then click on create image. And just to
+[00:07:23] show you, I've played around earlier
+[00:07:24] with Homeland the Coffee, which I think
+[00:07:26] is amazing. And if you've seen The Boys,
+[00:07:27] it's definitely something that he would
+[00:07:29] do. But we're going to do it slightly
+[00:07:30] different one. So, we're going to paste
+[00:07:31] in this prompt. Now, if you're doing
+[00:07:33] this for, let's say, a brand, you'll
+[00:07:35] want to add in their logo. So, let's
+[00:07:37] just grab a fictitious logo for the
+[00:07:39] purposes of this. So, I'm just going to
+[00:07:40] come over to Midjourney to find coffee.
+[00:07:42] Again, you can just type in a logo. In
+[00:07:43] reality, you would just use the one that
+[00:07:45] your brand's got cuz it is very freaking
+[00:07:46] cool. And you just come down and find a
+[00:07:48] logo that you like. Say you like the
+[00:07:49] look of this one here. I mean, it's just
+[00:07:51] an example. Actually, I think this one
+[00:07:52] looks even better. So, say we wanted
+[00:07:54] this one. I'm just going to come down
+[00:07:55] and command shift five. I'm going to
+[00:07:57] copy this little bad boy here and we'll
+[00:07:59] show this as our logo so we can get
+[00:08:01] logos on it.
+[00:08:02] Cool. And then I'm going to come back
+[00:08:03] over to Nano Banana. And then I'm going
+[00:08:05] to paste it in there and I'm going to
+[00:08:07] say, "I would like this logo to be
+[00:08:08] visible on the bag, please." And then
+[00:08:11] once you've done that, make sure that
+[00:08:12] you've got the following. It's going to
+[00:08:13] be Nano Banana 2, 16 by 9, 2K, and do
+[00:08:17] four out of four images. What's
+[00:08:19] interesting here is based on the
+[00:08:20] website, you may want to do landscape or
+[00:08:22] you may want to do square. So, if you've
+[00:08:24] got a website, for example, where you
+[00:08:26] have, let's say, this. This would be
+[00:08:28] more of a square type of thing. Um you
+[00:08:31] know, you don't want it to be too wide
+[00:08:32] cuz it's got something on the left-hand
+[00:08:33] side. Whereas like this one here, you
+[00:08:35] may want something that's just in the
+[00:08:36] middle or behind the image at the top.
+[00:08:38] Beautiful. And look at this, guys. Neon
+[00:08:40] brew. This is fantastic. So, we picked
+[00:08:42] the one that we like. This one stayed
+[00:08:43] true to the actual thing. So, let's come
+[00:08:45] down. I'm going to copy this image, head
+[00:08:47] back over now to Claude. Then within
+[00:08:48] Claude, we're going to drop it in and
+[00:08:50] say, "Image looks great. Now, I'd like
+[00:08:51] an animation prompt for it basically
+[00:08:53] spinning on its axis as it kind of
+[00:08:55] rotates and ends in the same place." You
+[00:08:57] can, if you want to, just say, "Hey, I
+[00:08:58] want to animate it." And this prompt
+[00:08:59] will give you some instructions about
+[00:09:01] how best to do that. Of course, download
+[00:09:02] this image if you haven't already. If
+[00:09:04] you right click and save it, it won't be
+[00:09:05] high quality. So, we just want to make
+[00:09:07] sure you've got the highest quality.
+[00:09:08] Now, to turn these images into video,
+[00:09:10] I'm going to come over and use Kia.ai.
+[00:09:12] Now, the reason we're not using Higgs
+[00:09:13] Field for this is because in Higgs
+[00:09:15] Field, if I come back over to video,
+[00:09:17] you'll see that you cannot actually use
+[00:09:19] a start frame and an end frame when
+[00:09:22] you're using Seedance. You can do that
+[00:09:24] with a different model. So, for example,
+[00:09:25] if you come down and select Kling 3.0,
+[00:09:27] you can do start frame and end frame,
+[00:09:29] but you cannot do that with Seedance.
+[00:09:31] And hence why we're going to a different
+[00:09:32] platform. So, if I come down here and
+[00:09:33] select it, for example, you can see
+[00:09:35] there's no way to do that. Now, the cool
+[00:09:36] thing about using Kia.ai is actually the
+[00:09:38] cheapest way that I've found to actually
+[00:09:40] generate videos. So, when you come up to
+[00:09:42] Seedance here, go to
+[00:09:43] Kia.ai/seedance-2-0.
+[00:09:46] Obviously, you can use um Higgs Field if
+[00:09:48] you want to and you want to use the
+[00:09:50] previous model, but that's absolutely
+[00:09:51] fine. Um whatever you want to do,
+[00:09:53] whatever's your preference. So, when you
+[00:09:54] hit, you're going to upload the first
+[00:09:56] frame URL, which is going to be the
+[00:09:57] image we uploaded with the coffee. Then
+[00:09:59] do the exact same thing with the last
+[00:10:00] frame. And once you've done that, we're
+[00:10:01] going to shoot back and grab now the
+[00:10:03] prompt from Claude, which is this
+[00:10:05] beautiful puppy. And we simply copy this
+[00:10:07] and shoot back over to Kia. Then drop
+[00:10:09] this all here in the prompt. Now, what's
+[00:10:11] really cool here is you can give
+[00:10:12] reference image URLs, reference video
+[00:10:14] URLs, reference audios. So, it is really
+[00:10:17] cool. So, you could record yourself
+[00:10:18] saying something, overlay it, do like a
+[00:10:20] million things. Resolution 720, aspect
+[00:10:22] ratio 16 by 9, definitely. Duration I
+[00:10:25] found 7 seconds to be a nice little
+[00:10:26] sweet spot, but obviously up and down it
+[00:10:28] as you prefer. Web search, no, fine. Not
+[00:10:30] safe for work, that's fine. And what we
+[00:10:31] can do then is click on run to run this
+[00:10:33] bad boy. Now, there's a small chance
+[00:10:34] that it may be done. And using Kia API
+[00:10:36] when I'm using it right now, they're not
+[00:10:38] letting me do it cuz they've said
+[00:10:39] they've taken it temporarily offline,
+[00:10:41] which is known as not very convenient,
+[00:10:43] but these things happen. So, you got a
+[00:10:45] couple of options. You can go to a
+[00:10:46] couple of different websites to do it
+[00:10:47] right now if you want the start frame
+[00:10:49] end frame. You can go to something like
+[00:10:51] this, which is C dance 2.0. And there
+[00:10:53] are a few websites you can use. And of
+[00:10:54] course, another option is Clink 3.0, but
+[00:10:57] does have that feature within side
+[00:10:58] Hexcode if that's one that you'd like to
+[00:11:00] use. And when they're ready, all you can
+[00:11:01] literally do is click on it and click on
+[00:11:02] this download button, and then we're
+[00:11:03] ready to add it into our website. And
+[00:11:05] you come back over to environment
+[00:11:06] anti-gravity and give it the following
+[00:11:08] prompt, which is this. "Hey there, I've
+[00:11:09] just downloaded a video. I would like
+[00:11:11] this video to be the first thing in the
+[00:11:13] hero section as the background running
+[00:11:15] on repeat, and I want there to be
+[00:11:17] sufficient contrast between that and the
+[00:11:20] text in front of it. Add that to the
+[00:11:21] website and make sure that it has right
+[00:11:23] dimensions and it works beautifully."
+[00:11:25] So, you just basically tell it, "I want
+[00:11:27] you to throw it in there." And you can
+[00:11:28] also say, because it has access to
+[00:11:29] computer, "It was the last thing I
+[00:11:31] downloaded called coffee." And once
+[00:11:32] you've given those videos to Claude
+[00:11:34] Code, that brings on to the final step
+[00:11:36] of the process, which is optimizing and
+[00:11:38] then publishing it onto your website.
+[00:11:39] And as you can see, guys, this is our
+[00:11:41] beautiful neon blue and look at this.
+[00:11:44] One little hack here, by the way, the
+[00:11:45] way I got this to work this way is we
+[00:11:47] have the logo on both sides, but you can
+[00:11:49] darken the edges so it feels like it
+[00:11:51] blends in beautifully. This is just
+[00:11:53] spectacular. I think that's absolutely
+[00:11:54] gorgeous. this one out, for example,
+[00:11:56] this is Jack's Lamborghini. Very cool.
+[00:11:58] We've got this on rotation. As you can
+[00:11:59] see, you can build out the full website.
+[00:12:01] And effectively now, you just go back
+[00:12:03] and forth chatting with Claude to
+[00:12:04] develop it in exactly the way that you
+[00:12:06] want to. And then when you're happy with
+[00:12:07] how everything looks, we can just push
+[00:12:09] it to GitHub. And then from GitHub, we
+[00:12:11] push it to Vercel. And you can generate
+[00:12:13] all these images, for example, within
+[00:12:15] anti-gravity using Claude Code. You can
+[00:12:17] use the Nano Banana within anti-gravity,
+[00:12:19] or you can even use an API if you like.
+[00:12:21] And then simply to publish it, you're
+[00:12:22] just going to say, "Hey, I want you to
+[00:12:23] create a new GitHub repo, please, and
+[00:12:24] publish this website there." And if
+[00:12:26] you're not connected to GitHub, you can
+[00:12:27] just say, "Hey, I need to connect with
+[00:12:28] the CLI." And you literally paste this
+[00:12:30] into the terminal, follow these
+[00:12:31] instructions, and you're ready to go.
+[00:12:32] Then once you're in Vercel, you can do
+[00:12:34] this via anti-gravity or Claude Code if
+[00:12:36] you want to. If not, you basically link
+[00:12:37] it with your GitHub, click on project.
+[00:12:39] Then once you're on the project, you can
+[00:12:40] find the last thing we created, which is
+[00:12:42] coffee co. And then we can literally
+[00:12:43] just import that, and that will enable
+[00:12:45] us then to have that live and ready to
+[00:12:47] go. Typically speaking, it will find the
+[00:12:49] application preset standard. You come
+[00:12:51] down, you click on deploy, and the
+[00:12:53] environmental variables is just a
+[00:12:54] section where you can put things like if
+[00:12:56] there's a chat button on the website or
+[00:12:57] anything like that, then it goes fully
+[00:12:59] live. But this then leads on to the
+[00:13:00] biggest problem, and that's that we
+[00:13:02] don't want a website that just looks
+[00:13:03] good and flashy. We need a website that
+[00:13:05] actually converts, that will turn
+[00:13:06] viewers into buyers. And to do that, we
+[00:13:08] need to use the correct wireframes and
+[00:13:10] structures, which we're going to learn
+[00:13:11] in this video right here.
+
+--- FILE SKIPPED (binary, not opened): Claude Looping.skill ---
