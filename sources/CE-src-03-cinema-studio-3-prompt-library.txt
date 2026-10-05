@@ -1,0 +1,77 @@
+# Higgsfield Cinema Studio 3.0 - Full Prompt Library
+
+Source: Notion (video 3 Cinema Studio 3.0 prompt library)
+
+💡 Try it Here: Higgsfield Cinema Studio 3.0
+This tutorial covers all the prompts behind the Cinema Studio 3.0 intro video — one by one.
+🎬Fight Scene - Part 1:
+Consistent character throughout all shots: male, mid 30s, short dirty blonde hair slicked back, blue eyes, sharp angular face, lean muscular build. Black crew-neck t-shirt, dark charcoal slim trousers, black leather belt, black leather shoes. Consistent location throughout all shots: dim hotel corridor, dark wood wainscoting, striped wallpaper, amber wall sconces, dark blue carpet with gold pattern, red-brown vintage armchairs by the walls, oil paintings in dark frames on walls, smoky haze in the air.
+@character reference @location reference
+Shot 1: Medium shot, slow push-in. @character reference @location reference The man in the black t-shirt stands in the middle of the dim corridor, striped wallpaper and amber wall sconces on both sides. He clenches his fists and assumes a fighting stance.
+Shot 2: Close-up. @character reference The man in the black t-shirt slightly squints his eyes. Amber wall sconce glow softly visible in background.
+Shot 3: Handheld medium shot, from behind. @character reference @location reference The man in the black t-shirt stands with his back to camera in the dim corridor. Three security guards in suits run toward him along the dark blue carpet with gold pattern.
+Shot 4: Handheld dynamic medium shot. @character reference @location reference The first guard throws a punch. The man in the black t-shirt ducks under it and knocks him down with a right hook. Striped wallpaper and amber wall sconces visible in background.
+Shot 5: Side medium shot. @character reference @location reference The second guard rushes in. The man in the black t-shirt grabs him by the collar and throws him onto the red-brown vintage armchair by the wall. The chair collapses.
+Shot 6: Frontal medium shot. @character reference @location reference The man in the black t-shirt pulls an oil painting in a dark frame off the wall and smashes it over the third guard's head. The guard's head rips through the canvas.
+Shot 7: Wide shot. @character reference @location reference The man in the black t-shirt looks around at the three guards lying on the dark blue carpet. Amber wall sconces glow along the striped walls on both sides. He turns and walks toward the door at the end of the corridor.
+Shot 8: Side medium shot. @character reference @location reference The man in the black t-shirt stands in front of the door in the dim corridor. Amber wall sconce light illuminates him from the side. He is about to open the door.
+
+​
+🎬Fight Scene - Part 2:
+Cinematic multi-shot hotel suite dialogue sequence.
+Male character consistent throughout all shots: male, mid 30s, short dirty blonde hair slicked back, blue eyes, sharp angular face, lean muscular build. He wears a fitted black crew-neck t-shirt, dark charcoal slim trousers, black leather belt, black leather shoes. This outfit does not change across any shot.
+Female character consistent throughout all shots: female, mid 20s, long wavy deep black hair falling over shoulders, large green eyes, thick dark eyebrows, full lips, fair skin. She wears a black spaghetti strap fitted ankle-length dress with a side slit, gold bow bracelet on right wrist, gold flower ring on finger, black high heels. This outfit does not change across any shot.
+Consistent location throughout all shots: luxury hotel suite living room, warm golden lighting, cream-colored walls with white wainscoting trim, large arched window with beige sheer curtains letting in soft daylight, dark wood furniture, classic style sofa with patterned cushions, dark wood coffee table, decorative table lamps with fabric shades casting warm yellow light, gold-framed oil paintings on walls, round side table with books and a vase, Persian-style rug on the floor, dark wood double doors as the entrance.
+@male character reference @female character reference @location reference
+Shot 1: Medium-wide, static camera facing the entrance. @location reference @male character reference The dark wood double doors push open from outside. The man in the black t-shirt walks into the room, the doors slowly close behind him. Warm table lamp light illuminates his figure.
+Shot 2: Medium shot, facing the window. @female character reference The woman in the black strap dress is standing in front of the arched window, soft daylight filtering through the sheer curtains outlines her silhouette. She hears the door, turns around, and looks toward the entrance.
+Shot 3: Wide shot, side angle, both figures in profile. @male character reference @female character reference @location reference The man in the black t-shirt walks from the doorway toward the window, approaching the woman in the black strap dress standing by the window. The distance between them gradually closes.
+Shot 4: Medium shot, frontal favoring the woman. @female character reference @male character reference The woman in the black strap dress faces the camera. The man in the black t-shirt walks up to her. She says in a soft voice "Where have you been?" while raising her right hand and gently placing it on his shoulder.
+Shot 5: Close-up, man's face. @male character reference The man in the black t-shirt answers with a sarcastic smile "I met some old friends".
+Shot 6: Close-up, woman's face. @female character reference The woman in the black strap dress slightly raises her chin and answers in a low seductive voice "All right, now pay attention to me too".
+Shot 7: Medium shot, slow dolly out. @female character reference @male character reference @location reference The woman wraps her arms around the man. The camera slowly pulls back, the frame gradually expands from a medium shot of the two into a wide shot of the entire suite living room. Warm table lamp light and soft daylight from the window surround their figures.
+
+​
+💡 Try it Here: Higgsfield Cinema Studio 3.0
+🎬Building Demolition:
+A demolition crew detonates a skyscraper in a dense city at dawn. The building folds inward floor by floor in a cascade of glass and concrete dust, debris clouds billow outward in slow motion, pigeons scatter across the orange sky. Shot from street level on a handheld camera behind a safety barrier, crowd reactions visible in foreground. Realistic shockwave dust rolling toward camera.
+
+​
+💡 Try it Here: Higgsfield Cinema Studio 3.0
+🎬Product ADS - Pizza Commercial:
+0–4 seconds: The guy from @image_1 shuffles sleepily into the kitchen in pajamas, hair messy, eyes half-closed. He pulls the fridge open — completely empty. He stares blankly, sighs. He pulls out his phone. Cut to close-up of the phone screen — a food delivery app is open, a large bright button reads "Order Food". His thumb hovers, then taps it decisively. Camera stays tight on the screen, button animates as pressed. No scrolling, no other interactions.
+4–9 seconds: Cut to exterior — bright daylight, modern apartment building. A delivery drone flies into frame from above carrying a pizza box. It descends in a smooth cinematic arc toward the balcony, gently places the pizza box on the railing, and lifts away. Wide-angle, slightly heroic drone shot, clean blue sky background.
+9–15 seconds: Packshot. The guy is positioned on the left side of the frame, holding an open pizza box, taking a satisfied bite, eyes closed with joy. The right side of the frame is intentionally left clean and empty — neutral background, no objects, no clutter. Warm soft lighting. Static composition, camera does not move. Close-up on face left, right third of frame completely open for logo placement.
+
+​
+💡 Try it Here: Higgsfield Cinema Studio 3.0
+🎬Motion Design - Version 1:
+Design a logo animation for @Image1. Specific requirements: The logo's appearance from nothing must be creative and well-designed, employing techniques such as particle aggregation, brushstrokes, light sweeping, and geometric decomposition and recombination. The logo's appearance should feature smooth, undulating curves and elastic animation effects, with a strong overall rhythm and professional commercial advertising standards. Light effects sweeping across the logo's surface should create highlights and a metallic texture. The background should be clean and simple, highlighting the logo itself. The color scheme should be completely consistent with the original logo in @Image1. At the end of the animation, the logo should remain stable in the center of the screen with a slight breathing-like looping motion effect.
+
+​
+🎬Motion Design - Version 2:
+Create an elegant dynamic logo reveal animation for the logo in Image 1. The overall visual style should follow a Liquid Glass aesthetic. Detailed requirements: The logo material should present a highly transparent liquid glass texture, featuring realistic refraction, transmission, and reflection effects. Inside the glass, flowing liquid light and subtle air bubbles move organically. The edges display characteristic glass dispersion, splitting light into a subtle rainbow spectrum. The logo should emerge from nothing through a transformation process where liquid glass material floats and flows in midair, then gradually solidifies into the final logo shape. Surface tension effects must be visibly realistic during the formation process. The overall animation rhythm should be extremely dynamic and powerful. The camera should switch angles multiple times throughout the sequence — from extreme close-up detail shots to full wide shots, from low-angle to high-angle views, including 360-degree orbital rotations around the logo. The camera movement enhances spatial depth and dimensionality, showcasing how refraction and internal light flow change from different perspectives. Transitions between shots should be smooth and fluid. Light passing through the glass logo should create caustic effects and colorful projections. The pacing should feel impactful and energetic, supported by fast, precise editing. The background should remain clean and dark to emphasize the glass material. At the end of the animation, the logo stabilizes in the center of the frame, with the glass surface maintaining a subtle, breathing-like liquid motion loop.
+
+​
+💡 Try it Here: Higgsfield Cinema Studio 3.0
+🎬3 Men and a dog
+3 men sitting in foldable chairs against a sun-scorched concrete wall @image_1. Dry ground, blinding light, air trembling from heat. A small dog nearby. Sweat on his @image_3 forehead, squinting, he says casually: “Man, it’s burnin’ up out here, huh?”. Then close up of a @image_2 as he says: "I know, right?". Then a wide shot, @image_3 says: "Oh this is nothing, you haven't been to Tashkent yet" 
+and then close up of dog barking.
+
+​
+💡 Try it Here: Higgsfield Cinema Studio 3.0
+🎬Motion control:
+0–4 seconds: The guy from @image_1 shuffles sleepily into the kitchen in pajamas, hair messy, eyes half-closed. He pulls the fridge open — completely empty. He stares blankly, sighs. He pulls out his phone. Cut to close-up of the phone screen — a food delivery app is open, a large bright button reads "Order Food". His thumb hovers, then taps it decisively. Camera stays tight on the screen, button animates as pressed. No scrolling, no other interactions. 
+4–9 seconds: Cut to exterior — bright daylight, modern apartment building. A delivery drone flies into frame from above carrying a pizza box. It descends in a smooth cinematic arc toward the balcony, gently places the pizza box on the railing, and lifts away. Wide-angle, slightly heroic drone shot, clean blue sky background. 
+9–15 seconds: Packshot. The guy is positioned on the left side of the frame, holding an open pizza box, taking a satisfied bite, eyes closed with joy. The right side of the frame is intentionally left clean and empty — neutral background, no objects, no clutter. Warm soft lighting. Static composition, camera does not move. Close-up on face left, right third of frame completely open for logo placement.
+
+​
+💡 Try it Here: Higgsfield Cinema Studio 3.0
+🎬Animation:
+2D hand-drawn anime style with top-tier cinematic production quality. A surreal urban transformation action scene set in a modern city at night, with neon lights reflecting on rain-soaked streets. Suddenly, the entire city begins to slowly move and reorganize under the control of someone’s psychic power. Giant skyscrapers rotate and tilt like building blocks. Roads rise from horizontal to vertical, transforming into massive walls, while former walls flip over to become new floors. The direction of gravity constantly shifts.
+Two warriors continue an intense, relentless battle within this continuously transforming geometric space. One hangs completely upside down in midair, launching a fierce attack toward the opponent below. The other uses a moving building façade as a springboard to propel upward in counterattack. Both fighters instantly perceive and exploit the evolving spatial structure around them.
+An impossible-architecture aesthetic runs throughout the scene: staircases lead into the void, corridors bend into loops, and building cross-sections simultaneously display contradictory perspectives from multiple angles. The camera rotates and rolls at extreme speed, following the two warriors through the chaotic environment, rapidly switching from overhead shots to low-angle views to side perspectives.
+Fragments of buildings float in the air, slowly rotating like a frozen asteroid belt. Shattered neon tubes scatter pink and blue glowing particles drifting throughout the space. Glass curtain walls explode, with shards floating in zero gravity. The warriors’ clothing and hair are pulled simultaneously by gravitational forces from multiple directions. The space feels extremely chaotic yet internally coherent, creating a psychedelic and awe-inspiring visual impact. Cel-shaded coloring style, hand-drawn line texture, strong depth-of-field effects, and cinematic widescreen composition.
+
+​
+💡 Try it Here: Higgsfield Cinema Studio 3.0

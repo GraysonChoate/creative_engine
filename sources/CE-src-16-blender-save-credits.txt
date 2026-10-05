@@ -1,0 +1,1010 @@
+# This Blender + Higgsfield AI Workflow Changes How You Make AI Video
+
+@adilinthewild
+/
+This Blender + Higgsfield AI Workflow Changes How You Make AI Video
+This Blender + Higgsfield AI Workflow Changes How You Make AI Video
+@adilinthewild
+Aug 28, 2026
+26.4K
+34
+
+In this tutorial, we'll walk through the new AI video workflow of 2026 — the Higgsfield plugin inside Blender — and exactly how we used it to direct cinematic AI videos with Seedance 2.5: camera, actors and timing locked down before spending a single credit. Five use cases that will completely change your AI video creation process: a cinematic one-take, a dialogue scene, crazy camera movements, a hypermotion ad, and a full car commercial. And you don't need to be a 3D artist — Claude builds the blocking for you.
+
+Before You Start
+
+The core idea: block the scene in 3D first, then generate. Claude connects to Blender through the Higgsfield plugin and builds the blocking for you — the viewport render then drives Seedance 2.5, locking camera, cuts and timing before you spend a single credit. Every use case below follows the same loop: the final blocking, the assets, and the copy-ready generation prompt.
+
+Setup takes two minutes: grab the Higgsfield Bridge connector and the Blender plugin from Higgsfield, connect the Bridge to Claude, then drag the plugin into Blender and sign in.
+
+
+
+
+Download the Higgsfield plugin and Bridge connector  
+
+Use Case 1 — The One-Take Fight
+The Blocking
+
+What it does: Builds the final 30-second one-take previz in Blender through Higgsfield Bridge: a textured corridor, a proxy character, and a continuously animated camera — one smooth take, no cuts.
+
+
+
+
+
+
+
+
+Connect to Blender through Higgsfield Bridge and build a 30-second previz in a single shot: a corridor with textured walls, a box-person walks down it. Bring the camera alive — different framings, and animate the lens: it moves continuously on its own route, with accelerations and accents on the pauses. Everything smooth, no cuts, the hero always in frame. Save a backup copy of the file after every stage.
+The Assets
+
+Render the final blocking as a video file (1920x1080, 24fps, MPEG-4 viewport render) and attach it together with the character and location references.
+
+
+ASSETS 
+
+The Generation Prompt — Torii Tunnel One-Take
+
+What it does: Generates the full 30-second one-shot fight as a video-to-video pass over the blocking render. The previz drives the entire camera path 1:1 while the references dress the world — six attackers, six timed falls, one continuous take.
+
+
+
+
+# HERO VS SIX WHITE NINJA — TORII TUNNEL, ONE TAKE (30s, video-to-video)
+
+A 30-second ONE-SHOT fight: the Hero, hooded in black, walks into a tunnel of vermilion torii gates. SIX white-clad ninja in total: FIVE wait on the path ahead of him; the SIXTH crouches on a gate lintel above and drops down LAST, for the longest duel of the scene. They attack ONE AT A TIME; he beats them one by one, always moving forward. Video-to-video pass driven by @Video 1 · 30s. No weapons, no blood. Photoreal feature-film craft. Original, no IP.
+
+ACTIVE REFERENCES
+
+@Video 1 · 30s = the previz (30s, 720 frames, frame-aligned) — the motion and layout input: defines the ENTIRE camera path (trajectory, framing, lens feel, rotations, timing), the tunnel dimensions, and the Hero's blocking beat-for-beat. The monolith = the Hero in every frame: RED face = the direction he faces, BLACK = his back, GREEN = his sides and top. Nothing else is inherited.
+
+@Image 2 = the Hero — defines his face, hair and full black shinobi outfit. The HOODED panel applies only to 0–7.0s and 27.5–30s, with his face PARTIALLY VISIBLE inside the hood's shadow — dim, darkened, never a black void. The UNHOODED panels apply to 7.0–27.5s. Identity 100% consistent at every distance and through every motion blur; background, lighting and poses not inherited.
+
+@Image 2 = the White Ninja — defines the uniform of ALL SIX attackers: white shinobi wraps and mask. Six distinct bodies (different heights, builds, eyes); background, pose and lighting not inherited.
+
+@Image 1 = the Torii Tunnel — defines location geometry, look and grade: vermilion gates on dark stone bases, packed-earth path, forest walls, light shafts, glowing depth. Tunnel proportions match the @Video 1 · 30s corridor exactly. Camera angle and any people not inherited.
+
+LOOK — photoreal feature-film martial arts: grounded stunt choreography, real weight, practical cloth and dust. Grade and light exactly as @Image 1; the Hero a black silhouette, the ninjas flaring white in the shafts; in 0–7s a faint cool light reaches under his hood so his face reads dimly.
+
+CAMERA — strictly follow the motion and camera work of @Video 1 · 30s, 1:1 and frame-aligned for all 30 seconds. One continuous take, no cuts. Any deviation from the path = failure.
+
+RULES
+
+1. SIX ninjas and ONLY six — Ninja 1 to Ninja 6. FIVE (Ninja 1–5) stand on the path; ONE (Ninja 6) crouches on a gate lintel deeper ahead, motionless, until his drop at 20.5s. Never a seventh figure: no extras, no duplicates, no distant silhouettes, no half-bodies at frame edges. At every second: standing + fallen + on the lintel = 6.
+
+2. ALL six stay IN FRONT of the Hero for all 30 seconds — between him and the far mouth of the tunnel, facing him. Nobody is ever behind his back, nobody enters frame from his rear. The fight is a forward push: he advances, they give ground.
+
+3. THEY ATTACK ONE BY ONE, in order, and that is all. One man fights the Hero; the other standing men wait a full gate-span ahead, separated, one per gate gap, never overlapping in frame, never converging. The next man commits ONLY after the previous man is on the ground.
+
+4. SIX falls, one per man, each only from the Hero's hit on HIM: 12s Ninja 1 · 13s Ninja 2 · 14s Ninja 3 · 16s Ninja 4 · 20s Ninja 5 · 26s Ninja 6. One strike never drops two men. Blocks, misses, feints, dodges and landings drop nobody — a man stays on his feet until his own hit lands. The downed stay down, exactly where they fell.
+
+5. THE ONLY ENTRANCE — at 20.5s, right after the fifth man falls, Ninja 6 drops alone from his lintel AHEAD of the Hero and lands CLEANLY ON HIS FEET in a stable crouch — a controlled, athletic landing, never a fall — upright a beat later. He goes down only from the Hero's finishing hit at 26s. Nobody else ever enters frame, from anywhere.
+
+6. BODIES ONLY BEHIND HIM — each man falls at arm's reach of the Hero, and the Hero walks PAST him; the body stays behind. The path AHEAD of the Hero is always clear: no body ever lies ahead of him. Bodies on the ground count exactly: 0 before 12s → 1 → 2 → 3 → 4 at 12/13/14/16s → 5 at 20s → 6 at 26s. Never more.
+
+7. HOOD & AURA — hood up 0–7.0s with his face dim but visible inside it; at 7.0s he sweeps it off in one motion and is BARE-HEADED until 27.5s, when he pulls it back up. He never rushes, never panics — the attackers carry the emotion, he carries the gravity.
+
+8. Empty hands only — no weapons, no blood, no bystanders, no on-screen text.
+
+ACTION TIMING
+
+0–8s — THE APPROACH (camera per @Video 1 · 30s: frontal retreat, then arcing behind him):
+
+The Hero walks out of the night dark into the tunnel, hood up, face dim inside it, passing under the first gate at 5s. Behind him — empty; the path — clear. Ahead, FIVE white figures wait across the path, one per gate gap, upright, prowling in place; higher and deeper, Ninja 6 crouches on a gate lintel, motionless, watching. At 7.0s the Hero sweeps the hood back without breaking stride — head bare. At 7.6s Ninja 1 alone sprints at him; the other four hold. END 8s: bodies 0 · standing N1–N5 ahead · lintel N6.
+
+8–12s — THE SWEEP (per @Video 1 · 30s: elevated rear push, swinging to profile by 12s):
+
+Ninja 1 fights alone: two fast strikes → slipped, parried; he stays on his feet. At 11.7s he overcommits a lunge → the Hero drops low and SWEEPS his standing leg → Ninja 1 hits the earth at 12s at the Hero's feet, dust jumping. END 12s: bodies 1 (behind him as he steps past) · standing — N2, N3, N4, N5 ahead, holding · lintel N6.
+
+12–17s — THE CHAIN (per @Video 1 · 30s: lateral side-on profile tracking):
+
+One at a time, the Hero stepping forward past each fallen man. Ninja 2 rushes in → rising ELBOW into his stomach → folds, drops at 13s. Only now Ninja 3 → one clean strike to the face → drops at 14s. Ninja 4 comes in at 15s → a fast combination on him alone — body, ribs, jaw → drops at 16s. END 17s: bodies 4, all behind him · standing N5 ahead · lintel N6, still motionless above.
+
+17–21s — GOD-VIEW: THE KICK & THE DROP (per @Video 1 · 30s: camera rolls and rises into a straight-down top-down hold):
+
+Ninja 5 alone presses him from ahead, feinting; at 19.5s he commits → the Hero meets him with a KICK to the midsection → Ninja 5 flies back and goes down at 20s, sliding to a stop beneath the top-down frame. THE FIFTH MAN IS DOWN — and at 20.5s Ninja 6 drops alone from his lintel ahead of the Hero, one white shape plunging into the top-down frame — and LANDS CLEANLY ON HIS FEET in a stable crouch, dust rising, upright a beat later; the landing is controlled, he does not go down. He squares up and backs toward the far mouth. END 21s: top-down — the Hero at center, five bodies behind him, only Ninja 6 standing ahead, fresh.
+
+21–26s — THE LAST DUEL (per @Video 1 · 30s: dive down behind him into a low rear chase):
+
+The path ahead is clear except Ninja 6 — the strongest of them, just landed, giving ground between the gates, probing. At 22.5s he turns and commits — the longest duel of the scene, 22.5–26s: a real two-way exchange, his fast strikes blocked and slipped, his kick checked, the Hero's answers walking him backward gate by gate, N6 staggering but standing — until the finishing takedown lands at 26s → Ninja 6 down. END 26s: bodies — all six, strung out along the path BEHIND the Hero in the order they fell · standing — none. The mouth ahead open to the night.
+
+26–30s — WALK-OUT (per @Video 1 · 30s: rear close follow to the tunnel mouth):
+
+The Hero steps past the last fallen man and walks on without looking back, breath even; nothing lies ahead of him. At 27.5s he pulls the hood back up, face dim inside it. He passes the last gate into the dark. END 30s: his black back fills the frame at the tunnel mouth. HOLD the final frame.
+
+AUDIO
+
+[Sound design] wind through the gates, footfalls on packed earth, cloth snaps, heavy body impacts; no music, no dialogue.
+
+[Timed accents] 7.0s hood cloth · one body-fall impact each at 12 / 13 / 14 / 16 / 20 / 26s · 20.5s a single clean foot-landing from the lintel · 22.5–26s the rapid trade of the final duel · 27.5s hood cloth · 28–30s wind only.
+
+HOLD FOR THE FULL TIMELINE
+
+@Video 1 · 30s camera path 1:1 — any deviation = failure.
+
+Six and ONLY six ninjas — five on the path, the sixth on his lintel until 20.5s — always in FRONT of the Hero; bodies only BEHIND him; the path ahead always clear.
+
+One attacker at a time; six falls at 12 / 13 / 14 / 16 / 20 / 26s, one man per fall, only from the Hero's own hit; the lintel landing is never a fall; the downed stay down.
+
+@Image 2 identity constant; bare-headed 7.0–27.5s, hooded face dim but visible outside that window.
+
+The @Image 1 tunnel in every frame; no subtitles, no watermarks.
+
+Copy
+Recreate
+Use Case 2 — The Dialogue Scene
+The Blocking
+
+What it does: Builds the final dialogue previs in one brief: six seat-locked color-coded proxies around a table (the color is the identity), a four-cut camera plan on spline rails, and slow realistic handheld.
+
+
+
+
+
+
+
+
+
+
+
+
+Create a new Blender project. Blocking: a round single-leg table and 6 people sitting around it on chairs. 24fps, 21:9, 30 seconds. The people are simple seated proxies: just sitting, hands on the table. Don't animate the heads. Give them contrasting colors — that's their identity: red, green, blue, yellow, purple, cyan. So the viewport instantly reads who is who. Remember them, they'll be separate characters. Add a floor and a round wall so the interior reads, everything neutral grey, one light.
+
+Now the camera. All movement on spline rails, the camera targets a null, everything floats. The orbit on a wider lens, the dialogue cuts closer, and the zoom doesn't jump a single frame on the cuts. 4 cuts for 30 seconds: 1 — about half the video: a slow orbit around the table, camera slightly above the table. We only pass behind red at the start and cyan in the middle. The target hands off across the table, face to face: yellow → blue → green, slowing on each but never stopping. 2 — about three seconds: cyan over blue's shoulder. Camera below shoulder height, barely crawling sideways. 3 — 2–3 seconds: red over yellow's shoulder, camera crawling the same way. 4 — the rest, long: purple over green's shoulder, halfway through the gaze slides along the eyeline to cyan without a cut, and it ends on him. Green stays the near mass the whole cut, and nobody blocks cyan at the end.
+
+Add handheld — but real, slow handheld, not wiggle: a lazy body sway in long waves on the camera plus a very small tremor. On the target — slow drift and breathing: a bit livelier during the orbit, completely lazy in the OTS cuts. No fast jitter. And check the cuts between shots: camera, target and zoom change strictly on the cut, not a single transition frame. Save a backup copy of the file after every stage.
+The Assets
+
+Attach the blocking render and the character and location references. 
+
+
+ASSETS
+
+The Generation Prompt — The Diner Dialogue
+
+What it does: Generates the full 30-second six-person dialogue scene in one block: four cuts with exact timings, seat-locked characters, Claude-written dialogue that lands on whoever is in frame, and per-character acting tasks.
+
+— REFERENCE DEFINITIONS —
+
+@Image 9: 55-year-old heavyset white American boss, grey-streaked slicked-back hair, crimson dress shirt under black suit jacket — character appearance only. Reference.
+
+@Image 5: 32-year-old wiry Latino man, buzz cut, scar through one eyebrow, olive-green bomber jacket over white tee — character appearance only. Reference.
+
+@Image 6: 42-year-old broad-shouldered Black American man, short cropped hair, boxed beard, royal-blue shirt under navy suit — character appearance only. Reference.
+
+@Image 10: 36-year-old lanky pale European man, shoulder-length dark blond hair, stubble, mustard-yellow knitted sweater — character appearance only. Reference.
+
+@Image 7: 48-year-old lean gaunt man, receding combed-back hair, greying goatee, deep violet shirt with black waistcoat — character appearance only. Reference.
+
+@Image 8: 24-year-old slim Korean American young man, messy black hair over forehead, teal-cyan windbreaker over grey hoodie — character appearance only. Reference.
+
+@Image 4: winter-morning vintage American diner — pale blue walls, red vinyl booths, chrome-rimmed round table with ketchup bottle and napkin dispenser, long counter with stacked plates and a glowing neon sign, door haloed with cold light, milk-white winter windows with bare trees outside — location and mood reference. Reference.
+
+@Video 3 · 30s: greybox previz of the full 30s edit — camera path, cut timing and blocking reference ONLY, do not use for character or environment design; colored blockout figures correspond to characters by color (red=@Image 9, green=@Image 5, blue=@Image 6, yellow=@Image 10, purple=@Image 7, cyan=@Image 8). Reference.
+
+— TECHNICAL BLOCK —
+
+Cinematic. 21:9. 30s. SFX only, no music. Kodak 500T film grain, natural grain, organic color, soft contrast, filmic look, cold winter palette with warm practicals. Four shots cut exactly as in @Video 3 · 30s: one long dolly, two short over-the-shoulder setups, and one long merged OTS whose gaze pans mid-shot from one face to another; all below shoulder height, slow rail glides. Handheld character: slow organic drift — lazy 4–6 second sway waves plus a gentle breathing float, micro-tremor barely perceptible; match the slow camera micro-movement of @Video 3 · 30s exactly; NEVER fast jitter, wobble or snap corrections. Warm interior air — NO visible breath vapor from mouths. NO CGI. NON-IP.
+
+— PROMPT —
+
+Interior winter morning diner @Image 4, six men seated around the chrome-rimmed round table mid-argument about tomorrow's departure — steam curling off their coffee cups (from the coffee only — no visible breath, the diner is warm inside), milk-white light flooding from the big window, bare trees ghosted outside, red vinyl booths behind them, neon sign glowing weakly over the counter. The diner is quietly alive around them: a tired middle-aged waitress in a pale uniform works the room with a glass coffee pot, a couple murmurs over pancakes in a red window booth, a lone old man turns newspaper pages at the counter, a cook slides plates through the service window. Follow the camera language and cut timing of @Video 3 · 30s exactly. Shot one (0–14s) — one continuous slow dolly at seated-chest height. TABLE GEOGRAPHY — do not deviate: the camera is NOT parked behind red — only in the very first seconds does @Image 9's dark shoulder hang at the near frame RIGHT edge, and it slides OUT of frame as the camera travels LEFT; the true near-foreground of this shot is @Image 8: the camera crosses directly behind HIS back mid-shot and his head wipes the frame once. After the opening seconds red is gone from the foreground, and the camera never travels behind anyone except cyan. Across the table, facing camera: @Image 10 dead center, @Image 7 far left, @Image 6 and @Image 5 to the right. The shot opens holding on @Image 10 leaning over the table, jabbing a finger into the tabletop, arguing across the table straight AT @Image 9 — whose back is to camera at frame right, so Yellow speaks almost into the lens: "Six a.m. sharp. The van leaves with or without you." As he talks the gaze glides across to @Image 6, leaning back unimpressed, stirring his coffee without looking up: "Nobody's human at six. Make it seven — we skip the traffic." The waitress drifts in behind the men and tops up @Image 5's cup from the glass pot — the whole table goes politely quiet until she moves off — and only then the low gravel voice of @Image 9 cuts through from off-screen (he stays OUT of frame — never show him, never pull him into the foreground), flat and final: "It's not a vote." The camera drifts on and settles on @Image 5, who smirks across the table toward the boss, still chewing his toast, and mutters: "Told you he'd say that." Shot two (14–17s) — cut, over the shoulder of @Image 6 onto @Image 8, the youngest, fidgeting with a key ring; @Image 6 — his dark shoulder already filling the near frame — asks without turning, voice coming from that near mass: "Kid — you got the keys?"; @Image 8 nods too fast, lifting the keys: "Yeah— yeah. Six works." Shot three (17–19.5s) — cut, over the shoulder of @Image 10 onto @Image 9, the boss, motionless against the glowing counter, both hands flat on the table, starting slow and quiet so everyone leans in: "Doors locked, engine warm, phones off—" Shot four (19.5–30s) — cut: the near foreground now belongs to @Image 5 — his dark shoulder anchors the frame (NOT red, NOT blue); across the table sits @Image 7, center frame, while @Image 9 finishes the sentence off-screen: "—we do this once." @Image 7 narrows his eyes, glass paused mid-air: "And if the gate's shut?" — off-screen — still never shown — @Image 9 answers dry as dust: "Then we wait." @Image 7 exhales through his nose: "Quietly. I know." Then, without a cut, the camera keeps its slow glide, crossing directly behind @Image 5 so his head wipes the frame once during the move — green stays the only near-frame mass, red and blue never enter the foreground — and the gaze pans across the table and settles on @Image 8, framed against the milk-white window; @Image 5 — his back to camera in the near frame — tosses it over his shoulder without turning, a cup clacking down somewhere off-frame: "Fine. Six. But I'm not carrying anybody's coffee." Low chuckles ripple around the table — and @Image 8, caught by every pair of eyes at once, holds the look for the first time, lifts the keys a little higher and answers the room quietly: "Five-thirty. I'll warm her up myself." The chuckles settle into one beat of quiet respect as the frame rests on him; far behind him, soft-focus, the waitress clears the window booth, unhurried. Cold soft winter daylight throughout, warm tungsten practicals over the counter, faint haze, steam rising only from the coffee cups — never from anyone's mouth, near shoulders as dark soft masses framing each face.
+
+OFF-SCREEN VOICES RULE: a line marked off-screen must STAY off-screen — never show the speaker, never move him into frame, never route the camera behind him because he spoke. If a speaker's back or shoulder is already in frame as a near dark mass, his voice comes from that mass and the camera does not turn to him.
+
+ONGOING BUSINESS (small continuous physical actions — keep every man alive whenever he is in frame, foreground or background; nobody freezes during other men's lines):
+
+@Image 9 — turns a brass lighter over and over in his fingers; when he speaks, the lighter stops and both hands go flat on the table.
+
+@Image 5 — keeps eating: folds a slice of toast, chews slowly, wipes his fingers on a napkin.
+
+@Image 6 — stirs his coffee without hurry, drinks it down across the scene, the empty cup becomes his exclamation point.
+
+@Image 10 — counts his points off on his fingers, taps the tabletop on the numbers.
+
+@Image 7 — rotates his glass a quarter-turn at a time on the tabletop between sips.
+
+@Image 8 — worries the key ring, spins it once around a finger and catches it — until his final line, when his hands go still for the first time.
+
+BACKGROUND LIFE (soft-focus, low contrast, never pulls attention, never crosses in front of a speaking face): the waitress works the room slowly — refills at the far booths, wipes the counter, one single pass behind the main table timed to the pause before the boss's first line; the couple in the red window booth talks silently; the old man at the counter turns a page now and then; the cook appears in the service window once. All background figures stay dimmer and softer than the six men, and the table's conversation dips whenever the waitress is within earshot.
+
+SCENE EVENT (all six play it, nobody names it): the last calm check before a dangerous job — every man quietly inspecting every other man for cracks, disguised as an argument about a departure time. The fear of tomorrow does not exist at this table; the breakfast is the terrain, the inspection is the event. The inspection ends on the newest man — and he passes: the final frame is the table silently accepting him.
+
+ACTING TASK — @Image 10 (fully invested in his tactic; the work happens in his eyes):
+
+SCENE DIRECTION (shared, unspoken): keep tomorrow sounding like a fishing trip.
+
+MOTIVE (his fuel): the schedule is the only part of tomorrow he can control — while the table argues minutes, nobody argues the job.
+
+GOAL: hear every man at this table give him "six" back.
+
+OBSTACLE: his own doubt about tomorrow — one crack and the argument stops being about time.
+
+TACTIC: pins the plan into one man at a time; after each point checks both eyes of the listener — did the number land or is he being humored; counts agreement like inventory.
+
+Moment to moment:
+
+— "Six a.m. sharp. The van leaves with or without you." — plants the number in Blue's eyes, hunting for push-back before the sentence even ends
+
+(Safety: gaze always engaged in the task — never a frozen, glassy, unfocused stare; natural blink cadence.)
+
+ACTING TASK — @Image 6 (fully invested in his tactic; the work happens in his eyes):
+
+SCENE DIRECTION (shared, unspoken): keep tomorrow sounding like a fishing trip.
+
+MOTIVE (his fuel): winning one small thing is how he keeps tomorrow from owning him.
+
+GOAL: concede the time but never the last word.
+
+OBSTACLE: he actually agrees with six — showing it too early loses the only game left to win.
+
+TACTIC: keeps his eyes down in the coffee to make Yellow work for his attention; lifts his gaze only to price an offer; hands his concession over like a tip, not a surrender.
+
+Moment to moment:
+
+— "Nobody's human at six. Make it seven — we skip the traffic." — makes the offer into the cup, then flicks up once to check whether Yellow bit
+
+— "Kid — you got the keys?" (his shoulder in frame, he does not turn) — audits the kid instead of conceding out loud: checking the plan is his way of joining it; his actual surrender is silent — he drains the coffee and lets the argument go
+
+(Safety: gaze always engaged in the task — never a frozen, glassy stare; natural blink cadence.)
+
+ACTING TASK — @Image 9 (fully invested in his tactic; the work happens in his eyes):
+
+SCENE DIRECTION (shared, unspoken): keep tomorrow sounding like a fishing trip.
+
+MOTIVE (his fuel): panic starts wherever the boss's eyes run first — if his voice stays level, the table stays level.
+
+GOAL: end the meeting before anyone names what tomorrow can cost.
+
+OBSTACLE: Purple's question drags the failure scenario toward the table.
+
+TACTIC: rations words; holds the table with stillness, hands flat; when he speaks he moves his eyes man to man collecting nods — measuring who returns the look clean and who blinks away.
+
+Moment to moment:
+
+— "It's not a vote." (off-screen) — closes Blue's auction without raising his voice
+
+— "Doors locked, engine warm, phones off—" (on camera) "—we do this once." (finished off-screen after the cut) — hands each clause to a different pair of eyes around the table; the sentence does not pause for the edit
+
+— "Then we wait." (off-screen) — then, on the cut to him earlier, he holds whoever stares one beat longer than comfortable until the other man finishes the thought himself
+
+(Safety: stillness is active watching, not a frozen stare; natural blink cadence.)
+
+ACTING TASK — @Image 5 (silent most of the scene; his listening is a real task):
+
+SCENE DIRECTION (shared, unspoken): keep tomorrow sounding like a fishing trip.
+
+MOTIVE (his fuel): he has watched a crew talk itself into a grudge the night before a job — a laugh now is cheaper.
+
+GOAL: keep this a breakfast, not a war council.
+
+OBSTACLE: the joke must not touch the boss's authority.
+
+TACTIC: follows the Yellow–Blue exchange like a tennis rally, timing the room; when the boss's verdict lands he waits half a beat and drops the line.
+
+Moment to moment:
+
+— "Told you he'd say that." — sells the line across the table, eyes jumping to Blue first, then stealing a check at the unseen boss: did it split the tension or step on it
+
+— "Fine. Six. But I'm not carrying anybody's coffee." (tossed over his shoulder, back to camera, while every eye is on the kid) — concedes on behalf of the losing side the only way he knows, as a joke; the coffee line is him covering Blue's retreat
+
+(Safety: gaze engaged, natural blink cadence.)
+
+ACTING TASK — @Image 8 (fully invested; the work happens in his eyes and hands):
+
+SCENE DIRECTION (shared, unspoken): keep tomorrow sounding like a fishing trip.
+
+MOTIVE (his fuel): the newest man at the table — prove he is not the weak link.
+
+GOAL: read as ready without reading as eager.
+
+OBSTACLE: the key ring in his hands — his proof of readiness keeps threatening to look like nerves.
+
+TACTIC: answers before the question fully lands; searches the older men's faces off-screen for a nod he can bank; uses the keys as evidence, then forces his hands quiet.
+
+Moment to moment:
+
+— "Yeah— yeah. Six works." — lifts the keys as proof, throws the proof toward the dark shoulder that asked, then pins his own hands to the table
+
+— (finale, the gaze of the room lands on him during the chuckles) — this is where his line breaks UPWARD: he stops hunting for the nod and, for the first time, returns the look instead of dodging it — measuring the older eyes back, one pair at a time
+
+— "Five-thirty. I'll warm her up myself." — hands the room his answer like a receipt, holds the silence that follows without checking whether it worked
+
+(Safety: gaze engaged in the search for the nod, never glassy; natural blink cadence.)
+
+ACTING TASK — @Image 7 (fully invested in his tactic; the work happens in his eyes):
+
+SCENE DIRECTION (shared, unspoken): keep tomorrow sounding like a fishing trip.
+
+MOTIVE (his fuel): he has been burned before by "we'll just wait" — he probes plans for holes the way other men count money.
+
+GOAL: hear the boss say the fallback out loud.
+
+OBSTACLE: probing one question too hard reads as doubting the boss in front of the table.
+
+TACTIC: asks with the glass paused mid-air — a question dressed as bookkeeping; files the answer, measuring the boss's eyes for one flicker of improvisation.
+
+Moment to moment:
+
+— "And if the gate's shut?" — lays the question flat, watches both of the boss's eyes for the difference between a plan and a reflex
+
+— "Quietly. I know." — closes his own file: shows the table he was checking, not doubting, and lowers the glass
+
+(Safety: gaze engaged in the measuring, never glassy; natural blink cadence.)
+
+SFX only: quiet winter diner room tone, heater hum, coffee machine hiss, coffee refill pour, soft waitress footsteps on linoleum, faint murmur from the booths, occasional griddle sizzle, cutlery clinks, ceramic cups on table, key ring jingle, cup set down hard, chair creaks on linoleum, low chuckles, snow-muffled silence outside.
+
+Copy
+Recreate
+Use Case 3 — Crazy Camera Moves
+The Blocking
+
+What it does: Builds the final camera-move blocking in one brief: three orbit passes across three scenes, three vertical floor rises, and a robo-arm rooftop finale — seven moves in one unbroken flow.
+
+
+
+
+
+
+
+
+
+
+Give me a cinematic orbital camera move: the camera circles the scene smoothly, accelerating and decelerating, lingering on the key moments. Repeat the same orbit across three scenes, and between them the camera transitions seamlessly, diving through a surface. Scene one — a car with people sitting in and around it. Scene two — a court mid-basketball game. Scene three — night, a car drifting around the artist with its headlights on.
+
+Then three shots back to back with a floors effect: the camera flies straight up with smooth acceleration and a slowdown in the middle, rising through floors with different locations. Three takes cut together with an identical move. In the middle of each pass — the hero in the center frame: the red block. Pure upward movement only, no rotation.
+
+Then the camera exits onto the roof and stops. The camera acts like a robo-arm: punches through the floor vertically and brakes hard. Then it throws itself to a new point around the hero — a fast flight along a smooth arc, a dead stop, another flight. Points from different sides and heights, every stop a distinct frame. Zero drift at the stops. On the last one, freeze until the end. Make a separate invisible target so the head stays in frame but framing varies. The hero's head turns to follow with a slight delay after each jump.
+The Assets
+
+Attach the blocking render and the character and location references. 
+
+ASSETS
+
+The Generation Prompt — Seven Locations, One Take
+
+What it does: Generates the full 30-second continuous shot as a video-to-video pass: three orbits, three floor rises, and the robo-arm rooftop finale — the same hero threading seven locations while the greybox drives every camera move 1:1.
+
+
+
+
+— REFERENCE DEFINITIONS —
+
+@Video 4 · 30s: the 30-second 1920x1080 24fps greybox viewport render of the whole edit — grey box people, one red box hero, a boxed-out car, black-and-white checkerboard surfaces, seven camera moves in one unbroken flow. SOLE authority for camera and timing — trajectory, speed, easing, camera height, angle, framing and the position and role of every figure all come from here and from nowhere else. Do NOT take any material, texture, colour, lighting or set design from it. Where a location still and @Video 4 · 30s disagree about the angle, @Video 4 · 30s always wins. Reference.
+
+@Image 11: the hero of the video — a yakuza. Japanese man in his thirties, buzz-cut black hair, short stubble, heavy unreadable stare; traditional irezumi tattoos climbing out of his collar up the neck and onto the backs of his hands; black double-breasted suit with peaked lapels worn over a black shirt buttoned to the throat, no tie, black leather loafers. Identity and wardrobe reference ONLY — take his face, build, tattoos and outfit exactly from this sheet; do not take pose, camera or background from it. He is the protagonist of EVERY cut — the same man threads the whole video: greeting a friend in the yard, on the phone at the court, smoking in the centre of the drift, at the clan meeting, on the date, at the card table, and standing alone on the rooftop — where he loads a pistol step by step and fires one shot without moving from his spot. Keep his identity absolutely consistent in all of them. Reference.
+
+@Image 4: deserted back service courtyard behind contemporary housing blocks under flat overcast light, enclosed by rear brick elevations with a steel fire escape and an alley mouth, patched concrete ground with no road markings, one unbranded dark metallic sport sedan parked at an angle, wheelie bins, pallets, parcel locker, dropped e-scooter, fresh tags on the brickwork. DESIGN reference only — materials, décor, palette, practicals and mood. Do NOT copy the camera angle, camera height, framing or composition from this still; the camera comes exclusively from @Video 4 · 30s. Active for 00:00–00:03.3 only. Reference.
+
+: present-day courtyard streetball court seen from a high angle, resurfaced blue and green acrylic surface with bright white lines, acrylic backboard on a powder-coated post with a white nylon net, new galvanised mesh fence, LED floodlight mast, contemporary mural, and a big textured sky of layered broken grey and white cloud above the rooftops. DESIGN reference only — materials, décor, palette, practicals and mood. Do NOT copy the camera angle, camera height, framing or composition from this still; the camera comes exclusively from @Video 4 · 30s. Active for 00:03.3–00:06.7 only. Reference.
+
+: large empty present-day retail parking lot, dark asphalt, crisp thermoplastic bay lines and arrows, EV charging posts, concrete wheel stops and bollards, LED area-light masts, corrugated retail rear wall. DESIGN reference only — materials, décor, palette, practicals and mood. Do NOT copy the camera angle, camera height, framing or composition from this still; the camera comes exclusively from @Video 4 · 30s. Active for 00:06.7–00:10 only. Reference.
+
+: mid-sized formal Japanese clan meeting room at night — a washitsu of about ten mats, low black-lacquered table seating six at most, a few zabuton, gold folding screen behind the head of the room, two paper pendants low over the table, one standing paper lamp, cool blue shoji night, bright warm exposure. DESIGN reference only — materials, décor, palette, practicals and mood. Do NOT copy the camera angle, camera height, framing or composition from this still; the camera comes exclusively from @Video 4 · 30s. Active for 00:10–00:13.3 only. Reference.
+
+: private dining room of a Japanese restaurant at night — low table set for two with steaming kaiseki dishes and sake, dark wood and tatami, woven lattice screens, indigo noren, paper lantern low over the table, one wide window with out-of-focus city lights, warm and intimate, bright warm exposure. DESIGN reference only — materials, décor, palette, practicals and mood. Do NOT copy the camera angle, camera height, framing or composition from this still; the camera comes exclusively from @Video 4 · 30s. Active for 00:13.3–00:16.7 only. Reference.
+
+: private underground gambling room in a Japanese city — one oval casino card table with deep green baize and a plain painted layout with no readable characters, chip stacks and fanned cards, a low wide-shaded pendant dropping a hot cone onto the felt, dark wood-panelled walls, bottle-shelf glow, cigarette haze, warm readable half-light. DESIGN reference only — materials, décor, palette, practicals and mood. Do NOT copy the camera angle, camera height, framing or composition from this still; the camera comes exclusively from @Video 4 · 30s. Active for 00:16.7–00:20 only. Reference.
+
+: a real Tokyo rooftop at night, exactly as in the still — dark wet waterproofed deck holding warm reflections, a low parapet lined with weathered advertising banners, a white stair-house wall with an OPEN doorway glowing warm from inside, concrete steps behind a metal gate, a small lamp beside the door, an air-conditioning unit against the wall, a rusty water tank to the right of the doorway, tangles of overhead power lines crossing the frame; beyond the roof, white residential towers full of lit windows, and further back high-rises with red-glowing crowns and red aircraft beacons; the near foreground edge falls into deep soft blur. Keep the signage exactly as the still shows it — do not invent new readable text anywhere. Film-grain night image; take the palette from the still itself. DESIGN reference only — materials, décor, palette, practicals and mood. Do NOT copy the camera angle, camera height, framing or composition from this still; the camera comes exclusively from @Video 4 · 30s. Active for 00:20–00:30 only. Reference.
+
+— TECHNICAL BLOCK —
+
+Cinematic, photoreal, music-video grade. 16:9. 30s. SFX only, no music, no dialogue. Kodak Vision3 500T film look, natural 35mm grain, organic colour, soft highlight roll-off, anamorphic lens character with oval bokeh and gentle barrel distortion at the edges. NO CGI, NON-IP, no brand badges or logos anywhere, no text, no watermark. Every location well exposed — night interiors bright and readable, open shadows, no crushed blacks, no murk. One continuous take — no camera cuts, no reframing, no added camera moves. Preserve source timing frame for frame.
+
+— PROMPT —
+
+Video-to-video pass over @Video 4 · 30s. Preserve the exact camera trajectory, camera height, angle, framing, speed, easing and timing of @Video 4 · 30s frame for frame — and keep every figure in the position and role it holds in the blocking. The camera plan is fixed and countable: EXACTLY THREE vertical orbit passes in the whole video, one per street location (yard 00:00–00:03.3, court 00:03.3–00:06.7, parking 00:06.7–00:10), each a single revolution; after 00:10 the camera NEVER orbits again — only three straight vertical rises through the rooms, then the robotic snap relocations on the roof. No fourth orbit exists anywhere. The location map is absolute — SEVEN locations, each appearing EXACTLY ONCE, in this exact order: 1) yard 00:00–00:03.3, 2) basketball court 00:03.3–00:06.7, 3) parking drift 00:06.7–00:10, 4) clan meeting room 00:10–00:13.3, 5) restaurant private room 00:13.3–00:16.7, 6) gambling room 00:16.7–00:20, 7) rooftop 00:20–00:30. No location ever appears twice, the drift happens exactly once, and the three interiors are three COMPLETELY DIFFERENT rooms — different walls, furniture, people and light — never the same room repeated. Whenever the source frame dips dark for a split second (at 00:03.3, 00:06.7, 00:10) the camera is passing through the ground — each dark dip is a doorway into the NEXT location on the map, never back to a previous one. At 00:13.3 and at 00:16.7 the source hard-resets to the bottom of the shaft — each reset means a NEW different room begins, never a replay. Two more rules about the orbits: when an orbit passes overhead through its highest point and the frame fills with nothing but the ground below, that is NOT a cut and NOT a new location — the same location continues until the next underground dip; and every frame belongs to exactly ONE location — if any stray object from another set appears at the edge of the source frame, ignore it completely, never blend two locations into one shot. The camera is never taken from a location still: the stills only say what the world is made of, @Video 4 · 30s says where the camera is and when. Inside their blocked positions the performances must be fully alive — weight shifting, breathing, gesturing, talking, reacting, small continuous movement at all times; nobody freezes, nobody stands like a mannequin, and nobody looks at the lens — with ONE deliberate exception: @Image 11 on the rooftop, who keeps finding the lens with his eyes as he walks — but he never speaks. Replace only the design of the world: grey blockout boxes become real people in contemporary streetwear, the boxed-out car becomes a real unbranded contemporary sport sedan — low, wide-hipped, quad exhausts, big alloys, no badges — and the hero threads every cut: wherever a figure is named as @Image 11 below, render him exactly from the reference — same face, buzz cut, neck and hand irezumi, black double-breasted suit over a black shirt — one and the same man in all seven locations; on the rooftop the red box-with-sphere-head figure is him. Every black-and-white checkerboard surface is replaced by the real materials of whichever location is active at that moment — the checkerboard must never survive into the final image. The grey table blockout standing in each interior becomes that room's real table: the long low black-lacquered meeting table in the washitsu, the low dinner table for two in the restaurant, the round green-felt casino table in the gambling room. The small dark block that appears in the hero's hand on the roof IS the pistol. From 00:00 to 00:03.3 the world is @Image 4: the camera makes the FIRST of the three orbit passes — one single revolution around the parked sport sedan and the crew hanging off it, no more — and the crew is loose and warm and moving — two on the boot bobbing their heads and rocking their shoulders to a beat, one on the roof stepping side to side and throwing a lazy dance move with his arms, and at the front wing @Image 11 is greeting a friend — a clasped-hand dap pulled into a quick half-hug with a pat on the back, then the handshake held a beat longer while they talk face to face, @Image 11 giving one short laugh and a nod, his black double-breasted suit against the friend's streetwear; two others stand apart deep in conversation, one of them shoving the other's shoulder, someone drumming a rhythm on the car roof, everyone catching the same groove without anyone leaving their spot; overcast daylight, and at the end of the orbit the camera dives down through the asphalt. From 00:03.3 to 00:06.7 it surfaces into  for the SECOND orbit pass — again exactly one revolution, around a jumpshot — and the game belongs to the players, not to the hero: a young player in streetwear dribbles once, gathers, sinks into a crouch and explodes into a full jumpshot, the defender leaps to contest with an arm stretched high, the ball arcs, hits the rim, bounces twice, a third player sprints in and runs it down, a fourth throws his arms up. @Image 11 does NOT play — he stands just off the play in his black double-breasted suit with a phone pressed to his ear, mid-conversation: talking calmly, a small gesture with his free hand, taking two slow paces and turning back, glancing up once to follow the arc of the ball and then returning to the call, unbothered and unreadable while the game explodes around him. From 00:06.7 to 00:10 the camera passes through the ground into  for the THIRD AND FINAL orbit pass — one last single revolution, the last orbit in the entire video — and @Image 11 stands dead centre of it, smoking — a cigarette between two tattooed fingers, one hand in his trouser pocket, taking a slow drag, the ember flaring, then tipping his head back slightly to let the smoke out while the drift wind rips it away; he does not flinch as the car passes within arm's reach, does not follow it with his body, only flicks the ash once and lets his head turn slowly with one full pass, calm and immovable, while the sport sedan drifts a full circle around him with its headlight beams sweeping across his black suit and the smoke on every pass. At 00:10 the orbiting is OVER for good — the move changes to a straight vertical rise with no circling at all, and the world becomes . Ignore the framing of the room still completely — the camera keeps the corner-looking angle of @Video 4 · 30s and climbs straight up past the floor, the walls and the ceiling exactly as blocked, and the room is simply dressed into the box it passes. Inside it a small yakuza meeting is in session in a mid-sized washitsu — exactly five men around a low table seating six at most: the silver-haired oyabun motionless at the head before the gold screen, and kneeling at his right hand is @Image 11 — back straight, hands on his thighs, jaw set, the ink at his collar catching the lamp light — two men kneeling along one side, one young man bowed low over the tatami mid-report, sake being refilled, a cigarette tapped out, smoke curling up through the lamp pools — tense, formal, close, alive in small movements, nobody looking at camera, no extra people. At 00:13.3 the source hard-resets to the bottom of the shaft — this is the arrival of the SECOND interior, , a completely different room from the meeting (different walls, different light, different people — a restaurant, not a tatami hall), same rise, angle from @Video 4 · 30s and not from the still: a private restaurant room mid-date — a young woman in a dark dress leaning in over the low table, laughing softly with a hand near her mouth, and the broad-shouldered man opposite her is @Image 11 — seen mostly from behind and in three-quarter, the irezumi climbing out of his black collar unmistakable, jacket still buttoned, pouring sake into her cup with unexpected care; dishes steaming between them, a waitress in kimono sliding the door shut in the background, warm, intimate and alive. At 00:16.7 the source hard-resets one last time — the THIRD and final interior, , again a completely different room (a gambling den, not a restaurant and not a tatami hall), same rise, angle from @Video 4 · 30s: an underground gambling room mid-hand — the dealer in waistcoat and armbands sliding a card across the green felt, and seated centre at the rail is @Image 11, pushing a tall bet forward with two tattooed fingers, eyes down on the felt, unreadable; two other men in dark suits flank him, one exhaling smoke up into the lamp cone, one tapping his chip stack, a hostess setting down a drink, cigarette haze curling through the hot pendant light — quiet, tense, alive in small gestures. From 00:20 to 00:30 the world is  and the camera becomes a robotic arm. It bursts up through the roof deck from below in one fast straight vertical rise and brakes hard at head height, then WHIPS to a completely new position around the man five more times — at roughly 00:21.6, 00:23.2, 00:24.8, 00:26.4 and 00:28.0 — each relocation a violent third-of-a-second flick along a curved arc that slams into an absolute dead stop and a visibly different angle on him: the framing changes hard with every snap, six distinct camera positions in total, exactly as keyed in @Video 4 · 30s. Through the first five positions the camera is never still for longer than about a second — but after the FINAL snap at 00:28.0 everything locks: the camera goes completely dead-still for the last two seconds, a full locked-off stop for the shot itself. And @Image 11 STANDS: he holds one spot dead centre of the roof for the ENTIRE finale — feet planted, weight settled, never taking a single step, never wandering — buzz cut, irezumi rising out of his black collar and over the backs of his hands, black double-breasted suit buttoned over a black shirt, the wind working the hem of his jacket the only thing moving on him besides his hands. All the movement belongs to the camera, snapping around his stillness exactly as in @Video 4 · 30s. Across those six holds he performs ONE weapon ritual — strictly linear, six steps in fixed order, each step happening EXACTLY ONCE and never repeating; once a step is done it is done for good, and the gun only ever moves FORWARD through the sequence, never backward. HOLD 1 (≈00:20.4–00:21.6) — a last drag on his cigarette, then he flicks it away across the deck; the cigarette is gone and never comes back. HOLD 2 (≈00:22.0–00:23.2) — his right hand slides under the jacket and draws a black pistol from his waistband, muzzle kept low; the pistol has no magazine in it yet, and from this moment it stays in his right hand — it is never holstered, lowered away or swapped hands. HOLD 3 (≈00:23.5–00:24.8) — his left hand takes ONE magazine from his jacket pocket, the ONLY magazine in the whole video, and brings it toward the gun without inserting it yet. HOLD 4 (≈00:25.1–00:26.4) — he seats that magazine into the grip with one hard palm-tap, ONE clean metallic click; the magazine is now inside the gun permanently — it is NEVER ejected, re-seated, tapped again or touched again. HOLD 5 (≈00:26.7–00:28.0) — he racks the slide ONE time: one pull, one release, the slide snaps forward once; the gun is now loaded and stays loaded — it is never charged, checked, cocked or reloaded again for the rest of the video. HOLD 6 (≈00:28.3–00:30.0) — he ONLY raises the already-loaded pistol and levels it straight ahead down the roof, dead still in a locked-off frame; no inserting, no racking, no clicking happens in this hold — and on the final beat around 00:29.5 he FIRES exactly ONE shot: one muzzle flash, one sharp recoil his arm absorbs, and the video ends frozen on the after-beat — no second shot, no reload after the shot, nothing. Count of weapon events in the entire video: one draw, one magazine insertion, one slide rack, one shot. Every manipulation is precise, practiced, unhurried — a routine, not a drama. He never leaves his spot; between the actions his eyes keep finding the lens with the half-second lag — arriving on each new camera position a beat late and locking on, calm, heavy, unreadable; he glances down only for the magazine seat and the slide rack, and from HOLD 6 his eyes go forward with the gun, down the line of fire. He says NOTHING the entire finale — no dialogue, no mouthing; just the walk, the smoke, the metal sounds of the ritual, and the single shot. Around and below him the Tokyo night exactly as in : the dark wet deck holding warm reflections under his feet, weathered advertising banners along the low parapet, the white stair-house with its open warm-lit doorway and the rusty water tank beside it sliding past as he walks, power lines crossing overhead, white residential towers full of lit windows behind him and red-crowned high-rises with blinking beacons in the distance, thin night haze over the roofline — keep all signage exactly as the reference shows it, invent no new readable text. Keep the light motivated by whatever practicals the active location still contains, keep faces and hands anatomically clean, and keep the whole thing one unbroken flow with no editorial cuts.
+
+SFX only: low city room tone, distant traffic, overlapping street chatter and laughter, palms drumming on car sheet metal, trainers scuffing and stepping on asphalt, a basketball bouncing on painted asphalt and rattling through a rim, tyres scrubbing and an engine loading up in the drift with a slow cigarette drag and a long exhale underneath it, a low formal murmur with one voice reporting and sake being poured, a lighter click, then restaurant chatter with soft laughter, dishes set down and a sliding door, then a hushed gambling room — chips clicking and being stacked, a card sliding on felt, ice turning in a glass, a low murmur and a slow ceiling fan, then rooftop night: wind gusts over a parapet, low city hum with distant traffic and one far-off siren, air-conditioning condensers droning, suit fabric flapping in the wind, one shoe scuff as he settles his stance, a last cigarette drag and the flick of the butt skittering away, a pistol sliding from a waistband, a magazine seated with a hard click, a slide racked and snapping forward, and at the very end ONE single gunshot cracking across the rooftops with a long city echo, then only wind.
+
+Copy
+Recreate
+Use Case 4 — The Hypermotion Soda Ad
+The Blocking
+
+What it does: Builds the final hypermotion ad blocking in one brief: 13 scenes with per-scene cameras, commercial speed-ramp motion, and black gaps left for the liquid-sim generations. The can is a cylinder, the ice is cubes, the fruit is spheres — pure camera work and timing.
+
+
+
+
+Build me a scene in Blender: 30 seconds, 24fps, a hypermotion CGI ad for a canned soda. The can, the fruit and the ice are just spheres and cubes as blocking. Every scene gets its own camera through markers, the moves sharp and commercial. Between some of the scenes leave black gaps a couple of seconds long — that's where the liquid-sim generations will drop in later. The story scene by scene:
+1 — the hook: a ball drops from above like a bullet, hits the water, the can shoots up out of the impact point with a couple of fruits around it, everything freezes — the can splits into three horizontal slices, the fruits crack in half, then it all snaps back together and the can does one sharp full turn at a tilt.
+2 — the camera spirals up around the can from the water, berries floating up around it.
+3 — the camera holds at the lid, then travels down along the can.
+4 — wide shot: the camera arcs around the can, five colored clone cans fan out from behind it one by one and get sucked back in.
+5 — close-up: the can spins slowly in the right half of the frame, ice cubes float up on the left, in front and behind it.
+6 — view from inside a translucent glass, looking up: the can hangs almost horizontal above it, like it's pouring.
+7 — GAP.
+8 — the camera circles the can and the glass from above; put a grid on the floor.
+9 — balls fall from below upward and freeze like they've hit water.
+10 — the clones come down from the sky and hang in a ring around the main can; the camera flies low between the cans, touching nothing.
+11 — macro cut: lemons, limes and ice fly up through the frame in an endless stream at different depths, almost all in blur; the frame must never be empty for a second.
+12 — the reveal: the can lifts off and spins, five clones bloom around it one by one. The camera slowly circles.
+13 — packshot: the can levitates on the left, a couple of berries next to it, and on the right a white "Higgs" wordmark bounces up letter by letter with a spring, font bold and rounded.
+In every scene the camera should snap in hard, sag in the middle and accelerate into the cut — like a speed ramp. Check that nothing intersects anywhere: the clones with the can, the ice with the can, the letters with each other. Make the end text bigger, but so it fits in the frame whole, and balance the composition — can on the left, wordmark on the right.
+The Assets
+
+Render the blocked 3D preview as one clip and attach it with the can design sheets and the three environment references. 
+
+ASSETS
+
+The Generation Prompt — The Higgs Commercial
+
+What it does: Generates the full 30-second hypermotion ad as a re-skin of the blocking: every camera move, cut and object trajectory locked to the render, with the location map, flavor clone colors and liquid effects layered on top — including the two black gaps the AI fills with liquid simulation.
+
+
+
+
+— REFERENCE DEFINITIONS —
+
+@Video 6 · 30s: Blocking render of the full 30s Higgs commercial — a pale neutral hero can, colored clone cans, whole fruit spheres that split in half, a translucent glass tumbler, glassy ice cubes and red sphere stand-ins on a pale blue floor. THE FLAT BLACK BACKGROUND everywhere in @Video 6 · 30s is a PLACEHOLDER — replace it in every shot with the location assigned in the LOCATION MAP below; the pale blue mottled floor is calm matte water reflecting the tones of that location; in CUT 8 the floor carries a thin dark grid — that grid is a motion-tracking aid, render it as delicate caustic ripple lines on the water surface, never as wireframe or tiles. FRUIT MAP: the falling hook sphere and the green spheres beside the hero can are whole LIMES, the yellow sphere is a whole LEMON; every small red sphere elsewhere in the film is a ripe berry; in the macro fly-up cut the yellow spheres are LEMON HALVES with glistening pulp, the green spheres are whole LIMES, the cubes are crystal-clear ice. CLONE COLOR MAP: the blue-label clone is @Image 17, red is @Image 20, green is @Image 16, orange is @Image 15, yellow is @Image 18, pink is @Image 14; the pale neutral hero can is @Image 14 (except CUT 1, where it wears the @Image 16 design). MANDATORY MOTION SOURCE — replicate every camera move, camera angle, framing, cut point, shot duration and object trajectory from this video one-to-one, frame-accurate. Nothing about the motion or editing may deviate from it. Do NOT copy its flat placeholder materials — product visuals come from the design sheets. Reference.
+
+@Image 13: Surreal berry-candy hills — giant velvet domes of green and deep cherry-red, pink flower meadows, a winding turquoise stream, pastel turquoise-pink cloudy sky. Environment for CUT 2, CUT 3 and CUT 4. Environment look only. Reference.
+
+@Image 19: Lush green meadow hills with small puddles, floating water droplets in the air, bright blue sky with soft clouds. Environment for the CUT 1 world-ignition, CUT 6, CUT 8 and the CUT 13 packshot — the film opens and closes in this world. Environment look only. Reference.
+
+@Image 21: Violet-blue fuzzy dreamscape — soft furry lilac hills, pastel blue flowers, purple-pink sky — the blueberry world. Environment for CUT 5, CUT 10, CUT 11 and CUT 12. Environment look only. Reference.
+
+@Image 14: Higgs Raspberry v2 can design sheet — hero flavor. Product appearance for the main can throughout the film. Reference.
+
+@Image 17: Higgs Blueberry v2 can design sheet. Clone can appearance in multi-can beats. Reference.
+
+@Image 20: Higgs Cherry v2 can design sheet. Clone can appearance in multi-can beats. Reference.
+
+@Image 16: Higgs Lime v2 can design sheet. Clone can appearance in multi-can beats. Reference.
+
+@Image 15: Higgs Orange v2 can design sheet. Clone can appearance in multi-can beats. Reference.
+
+@Image 18: Higgs Pineapple v2 can design sheet. Clone can appearance in multi-can beats. Reference.
+
+— TECHNICAL BLOCK —
+
+Polished digital CGI product commercial — hyperclean 3D aesthetic, flawless surfaces, perfect gradients, designed render look. 16:9. 30s. SFX only, no music. 8K, ultra glossy, crisp specular highlights, high-detail fluid simulation look, caustics, refraction, vibrant colors. LOCATION MAP — the flat black background of @Video 6 · 30s is a placeholder; replace it per cut: CUT 1 lives in @Image 19 from its very first frame; CUT 2, CUT 3 and CUT 4 live in @Image 13; CUT 5 in @Image 21; CUT 6 in @Image 19; CUT 8 in @Image 19; CUT 10 in @Image 21; CUT 11 in @Image 21; CUT 12 in @Image 21; CUT 13 in @Image 19. The water floor always reflects the tones of the active location; underwater gaps (CUT 7, CUT 9) need no location. FULL LENS REALISM: physically accurate camera — chromatic aberration creeping in at the frame edges, natural motion blur on every fast move, shallow depth of field with creamy bokeh and visible rack-focus shifts, subtle barrel distortion on the wide lenses, faint bloom on hot speculars, fine photographic grain. STRICT MOTION LOCK: reproduce the camera motion, lens feel, shot angles, cut timing and object blocking of @Video 6 · 30s EXACTLY, one-to-one, frame by frame — same shot order, same shot durations, same framing, same speed-ramp rhythm (fast in, slow middle, fast out on every cut). OBJECT LOCK: every object trajectory — can, slices, fruits, clones, berries, ice, glass — matches @Video 6 · 30s one-to-one; do not add, remove, re-time or re-path any object; fruits and berries exist only where blocking spheres exist and move exactly as they move. Do not invent new camera moves, do not reframe, do not add or drop cuts, do not improvise extra elements. @Video 6 · 30s defines 100% of the motion, editing and object choreography; the text below only defines look, materials, locations and liquid effects layered onto that motion. NON-IP (original Higgs brand from the design sheets).
+
+— PROMPT —
+
+Recreate @Video 6 · 30s shot for shot — this is a re-skin of @Video 6 · 30s, not a new edit. Each cut lives in its mapped location world; the floor is always calm matte water reflecting that world. CUT 1 (0.0-4.0), the hook — we open already inside @Image 19, green meadow hills and bright sky over calm water: one glossy whole lime drops through the frame like a bullet and strikes the water with a sharp crown of spray, a thin ring racing outward across the surface; out of the impact point the can ROCKETS upward — wearing the @Image 16 design for this opening cut — flanked by a lemon and two limes bursting up beside it, everything freezing weightless at the apex; then the money moment, exactly as in @Video 6 · 30s: the can carves itself into THREE clean horizontal slices that drift apart with a slight tilt — all three slices @Image 16, and their cross-sections are juicy sliced-lime flesh with glistening pulp, as if the can itself was cut like a fresh lime — while the lemon and the limes split clean in half in the same instant, their juicy cut faces tilting toward the lens, every piece hovering open in one suspended exploded-view breath — then the whole composition SNAPS back together and the can rips a full 360 spin on a tilt, micro-bubbles sparkling around it. CUT 2 (4.0-6.0) — in the berry-candy hills of @Image 13: the camera spirals up from water level around the can — now @Image 14 — condensation drops sliding down the label, ripe raspberries and blueberries rising slowly around it, each berry exactly on its blocking-sphere path, the red velvet dome echoing in the water. CUT 3 (6.0-8.0) — same @Image 13 world, a three-quarter drift above the lid: the pull tab snaps open with a metallic CRACK and a sharp PSSHT, and in that instant the condensation bubbles clinging across the ENTIRE surface of the can, from base to shoulder, tear off at once and burst radially outward in a single shockwave, joined by a ring of icy vapor off the lid — the camera dives down along the wall through the scattering bubbles. CUT 4 (8.0-10.0) — still in the berry-candy hills of @Image 13: on a wide bending lens the camera arcs 45 degrees left to right around the hero as five cans burst out from behind it one after another, each matching its blocking color — blue = @Image 17, red = @Image 20, green = @Image 16, orange = @Image 15, yellow = @Image 18 — fanning out with a staggered delay over the turquoise stream — hold, then snap back into the hero and vanish. CUT 5 (10.0-12.5) — the violet blueberry world of @Image 21: macro, the can fills the right half of frame, slowly turning, heavy condensation beads racing down the label; small ice cubes drift up in slow motion — one or two crossing in front of the lens in soft focus, one passing behind the can, the rest floating up on the left — every cube on its exact blocking path, lilac hills melting in the bokeh. CUT 6 (12.5-14.5) — the green meadows of @Image 19: worms-eye from inside a frosted glass tumbler, its rim a soft halo around the frame: high above, the can hangs almost horizontal against the bright meadow sky and POURS — a thick sparkling rope of raspberry-red soda twisting down at the lens, foam blooming, the pour flooding the frame until the screen is pure liquid. CUT 7 (14.5-17.0, black gap in @Video 6 · 30s) — fully submerged: bubbles spiral in slow turbulence, carbonation columns swirling around the lens in a hypnotic vortex. CUT 8 (17.0-19.5) — the green meadows of @Image 19: a high 120-degree orbit around the can and the frosted glass standing side by side on the water, the glass now full of red soda; mid-orbit a single ice cube drops in with a crisp plunk, a crown splash leaping, rings rippling across the water; everything stays crisp in deep focus — no defocus in this shot. CUT 9 (19.5-21.5, black gap) — underwater: plump blueberries plunge down fast and brake to a slow drift, silver gas bubbles instantly sheathing every berry, juice wisps curling like smoke. CUT 10 (21.5-23.5) — the violet skies of @Image 21, open air, no floor in frame: five flavor cans descend from above one after another and stop LEVITATING in mid-air on a wide circle around the hero — @Image 17, @Image 20, @Image 16, @Image 15, @Image 18 — nothing ever lands, everything floats weightless against the purple-pink sky, while the wide camera sweeps low between the levitating cans in one clean arc — no collisions, no pass-through, just a straight cut into the next shot. CUT 11 (23.5-25.5) — the violet dreamscape of @Image 21, the macro lens beat: on a long telephoto with razor-thin focus, an ENDLESS upward stream — lemon halves with glistening juicy pulp, whole limes and crystal-clear ice cubes sail through frame on many depth layers without a single empty moment, from the first frame of the cut to the last the composition stays full, new fruit and ice continuously entering from below as others leave above — most melting into creamy bokeh discs while one ice cube and a lime cross the razor-sharp focus plane in crisp detail, all weightless against the violet-pink sky, exactly on the trajectories of @Video 6 · 30s. CUT 12 (25.5-28.0) — the violet dreamscape of @Image 21: the reveal — the hero can rises and spins as liquid resolves into it from bottom to top — swirling raspberry soda with berries orbiting inside the flow crystallizing into metal, label and logotype while it turns; the lens breathes with a focal shift as five flavor cans bloom outward around it one after another — @Image 17, @Image 20, @Image 16, @Image 15, @Image 18 — and then the hero itself glides sideways into the sixth slot of the constellation, completing the circle of six flavors as the camera arcs gently around. CUT 13 (28.0-30.0) — home to @Image 19, the same green world where it all began: final packshot — the hero @Image 14 can levitates on the left third above its soft reflection, a few raspberries floating lazily beside it on their exact blocking paths, meadow hills and blue sky filling the frame — and the clean white "Higgs" headline builds itself letter by letter — H, i, g, g, s rising from below one after another, each with a springy elastic overshoot exactly as in @Video 6 · 30s — a gentle light sweep crossing the label and the letters as everything stills into premium calm. Every camera and object trajectory in this film matches @Video 6 · 30s one-to-one — fruits and berries replace the blocking spheres exactly where and when they move; nothing is added, re-timed or improvised.
+
+SFX only: bright meadow ambience, bullet-drop whistle, crown-splash thump with a racing spray ring, rocket-rise whoosh freezing to weightless silence, three crisp slice-slides with metallic shings and soft juicy fruit-half slices, satisfying snap-back, whip-spin whoosh, spiral air sweep with droplet trickle, sharp tab crack and icy psssht with a full-body bubble-scatter impulse, staggered whip-whooshes for the clone fan, macro fizz and soft ice knocks, thick pouring gurgle flooding into muffled underwater fizz, swirling bubble turbulence, orbital sweep with a crisp cube plunk and splash, fast berry plunges braking into soft fizz, descending whooshes per levitating can, airy slow risers with soft whooshes as fruit and ice sail upward, liquid vortex churn resolving into crystalline snaps, focal-breath hum with the hero gliding into formation, five springy letter pops building the headline, serene meadow ambience fading to silence.
+
+Copy
+Recreate
+Use Case 5 — The Car Commercial
+
+The biggest build: 19 shots, 30 seconds, all blocked in Blender first. The blocking master file is reusable — the structural lock (cuts, camera, timing) never changes, and the style layer defines what the world looks like. Below is the same edit rendered in four different worlds, each with its own full prompt.
+
+The Assets
+
+Four assets: two characters, the car, and the blocking video. 
+
+ASSETS
+
+Style 1 — Realism: The Night Chase
+
+What it does: Generates the 19-shot commercial as live-action photorealism: a post-rain waterfront night, teal-and-amber grade, full drift physics, and a police pursuit finale — every shot a one-to-one re-dress of the blocking.
+
+
+
+
+ACTIVE REFERENCES
+
+@Video 8 · 30s = Blender blocking previz (30s, 24fps) — the MASTER for everything that moves and everything that stands. It defines the FULL edit one-to-one: every cut point, every camera position, angle, move and framing, the car's state of motion at every moment — its exact pace, from slow creep to burnout to full drift — screen direction, hand, foot and body motion, all action timing, AND the geometry of the world: every lamppost, guardrail, road and terrain mass visible in the previz exists in the output in the same place, at the same scale, in the same position in frame. FRAME BY FRAME: each generated shot is a one-to-one re-render of its @Video 8 · 30s counterpart — the same footage re-dressed, never re-imagined; no invented shots, no invented camera angles, no invented actions or beats exist anywhere. In THIS dressing ALL the previz's environment masses keep the world of the approved generation: the tall block masses flanking the opening road (0-6.0s) are dressed as OLD DARK-BRICK WAREHOUSE FACADES of a night industrial backstreet — weathered brick walls, tall shuttered windows with one warm amber-lit window, an iron gate in a brick arch — NOT modern buildings, NOT storefronts with signage; the roadside terrain masses beyond the guardrails are the WATERFRONT: a low concrete parapet and rail, the dark river, and the glowing city skyline across the water — a dense field of lit towers with one tall landmark tower rising above the rest, and a distant suspension bridge drawing a chain of lights across the horizon; the rocky masses of the finale are the city's tower walls as the road runs in toward them. The entire film lives in this one waterfront world — brick backstreet, then the riverside bridge highway, then the tower corridor; the skyline stays far across the water, never close to the road. Every generated shot replicates the corresponding @Video 8 · 30s shot exactly — same composition, same blocking, same camera behavior, same motion state, same duration. NOTHING happens on screen that does not happen in @Video 8 · 30s: the car moves only when and as fast as the previz car moves; if only the camera moves, only the camera moves. Nothing in @Video 8 · 30s is skipped, shortened or reordered. The edit contains EXACTLY the cuts of @Video 8 · 30s: no extra shots inserted, no neighboring shots merged. If any text in this prompt appears to disagree with @Video 8 · 30s on camera, framing, direction, motion, timing or object placement, @Video 8 · 30s wins. The reference's untextured grey-box surfaces, flat colors and viewport grid are NOT inherited — every grey proxy is dressed into a real photoreal object in the exact position the previz puts it. Where the previz uses stand-in proxy shapes (the car body's front/rear, the blocky human figures and limbs), this prompt's descriptions define the real object — proxies give position, angle, scale and motion only, never surface, shape detail or design.
+
+@Image 23 = DRIVER — defines face, hair, jacket and gloves only. 100% matches the reference in every interior shot. Pose, expression and lighting are not inherited.
+
+@Image 24 = PASSENGER — defines face, hair and wardrobe only. 100% matches the reference in every interior shot. Pose, expression and lighting are not inherited.
+
+@Image 25 = HERO CAR — two-panel reference sheet (left: side profile, right: front three-quarter). Defines the car's body, black paint, widebody kit, hood vents, front bumper with intercooler, and bronze multi-spoke wheels only. 100% matches the reference at every distance and angle. The reference's grey sky, wet lot and lighting are not inherited.
+
+@Image 22 = ATMOSPHERE MASTER — NOT a keyframe, NOT a location to reproduce, NOT a frame that ever appears in the film: its corner store, its intersection, its framing are never seen in any shot. It defines ONLY the weather, light, color, atmosphere and consistency of the world: deep clean night just after the rain has stopped — wet asphalt turned into a soft dark MIRROR carrying long stretched reflections of every light; cool white-cyan streetlamps as the ambient keys; dark heavy night sky; the distant city as scattered warm and cool window lights in the haze; still air, no falling rain; a rich teal-and-amber cinematic grade, deep clean blacks. Every shot of the film — whatever geometry @Video 8 · 30s stages in it — is lit, colored and graded exactly in this regime for all 30 seconds.
+
+STYLE
+
+Live-action photorealism, 35mm anamorphic car-chase cinematography, 1990s action-film texture: fine grain, deep contrast, clean deep blacks, practical lighting, no CGI gloss. Real asphalt, real spray, real metal, real brick.
+
+LIGHTING
+
+One continuous post-rain night for all 30 seconds, exactly the regime of @Image 22: dark sky with no moon and no dawn, cool white-cyan lamps as the key sources — in the backstreet (0-6.0s) sparse cool lamps and one warm amber window pooling light on the wet asphalt between the brick facades; on the riverside highway, tall paired cool lamps marching along the deck, their glows haloed by thin haze and their reflections stretched long across the wet mirror; the glowing skyline across the water as a field of soft distant lights; headlight beams carve through the haze and double in the wet road. From 22.9s, red-and-blue police strobes join the palette exactly where staged, doubled in the wet deck. The rain has already stopped: NO falling rain, NO drizzle, NO rain streaks in any light beam, NO drops on the windshield, the windows or the lens — glass is clear; the road is wet after the rain, puddles still, every surface glistening like a dark mirror. Cabin interiors lit by warm dash glow and cool lamp strobes sweeping through. The light regime never changes between cuts: the final second is as dark and wet as the first.
+
+COLOR
+
+The @Image 22 palette across the entire timeline: deep teal-cyan night, dark weathered brick, black wet asphalt carrying long cyan and amber reflections, the skyline's scattered warm-and-cool window lights across the dark water, yellow double lane lines on the highway deck; red tail-light accents doubled in the wet road; red-and-blue police light accents only at 22.9-30s. @Image 25 stays the darkest mass in every frame — black paint drinking the night, cyan lamp lines sliding along its body, bronze rims glinting.
+
+CAMERA
+
+Duration 30s, one pass, 19 shots. All framing, angles, lens feel, cuts, moves and screen direction are governed by @Video 8 · 30s one-to-one, frame by frame. Where a timeline line below names a camera position or move, it is a restatement of what @Video 8 · 30s already does at that timestamp — a disambiguation, never a new instruction. Natural 180-degree shutter; motion blur only where @Video 8 · 30s actually moves fast.
+
+PHYSICS
+
+The car's pace always matches the previz exactly: the opening builds from a slow creep into a standing burnout and a hard launch; full-speed driving and drifts carry full vehicle weight — suspension compression, body roll, tire deformation, tire smoke and water spray kicked from the wheels on the wet deck, spray glowing in the lamp light. LATERAL G IN THE CABIN: in every drift the occupants' bodies obey the slide — thrown toward the OUTSIDE of the corner; when the car drifts with its right side outward, the woman is pressed toward her door and window, shoulder and hair against the glass, while the driver braces against the wheel. The woman's grip on the overhead grab handle is her anchor: her arm stretches taut and her body swings on it with every weight transfer. Bodies, hair and jackets lean and recover with every transition. Cloth and hair react to cabin vibration and hard cornering. The helicopter's rotor wash tears the haze and ripples standing water.
+
+RULES
+
+1. @Video 8 · 30s is the single source of truth for action, editing, motion state and world geometry — frame by frame, the previz re-dressed, never re-imagined. Every shot replicates its @Video 8 · 30s counterpart one-to-one — no added events, no removed events, no invented camera moves, no invented shots, no extra passes or vehicles beyond those the previz stages. The car moves only when and as fast as it moves in @Video 8 · 30s. Every mass the previz shows is dressed and kept in place — its opening blocks as dark-brick warehouse facades, its roadside masses as the waterfront skyline across the river, its finale rocks as the city's tower walls, at the same positions and silhouettes; nothing is deleted, and no structure is invented where the previz shows none. NO storefronts, NO signage, NO houses near the road anywhere. The cut count and cut points match @Video 8 · 30s exactly.
+
+2. Exactly one hero car (@Image 25) for the full timeline; identical in every shot at every distance.
+
+3. LEFT-HAND DRIVE, locked for the entire timeline and for EVERY shot where the occupants are visible — inside the cabin or through any window or glass: the steering wheel, pedals and driver's seat are on the LEFT side of the cabin; the front passenger seat is on the RIGHT; this layout never mirrors or flips. When a camera faces BACKWARD into or through the car (through the windshield or over the hood), screen sides mirror naturally: the driver reads on the RIGHT of frame, the woman on the LEFT — that is correct LHD, not a swap. @Image 23 — the MAN — is the ONLY person who drives, ALWAYS in the LEFT driver's seat with his hands on the wheel; @Image 24 — the WOMAN — is ALWAYS in the RIGHT front passenger seat and NEVER touches the wheel, the shifter or the pedals. They never swap seats or roles anywhere in the timeline. The shifter sits on the center console to the RIGHT of the driver; he shifts with his RIGHT hand; the pedals belong to his feet alone. Occupants are visible at 9.3-10.3s, 10.3-11.3s, 14.3-15.3s, 17.3-19.9s, 22.9-25.1s, and through the windshield at 25.1-30s. The road is empty of pedestrians and civilian traffic.
+
+4. The ENTIRE timeline is one continuous post-rain night under the @Image 22 light regime, in ONE waterfront world matching the approved generation. The sky stays dark in every shot; no dawn, no daylight, no time-of-day change anywhere. The world moves exactly as @Video 8 · 30s stages it: the slow-creep-to-burnout opening in the dark-brick industrial backstreet, then the wide riverside bridge highway — yellow double lines on the wet deck, tall paired cool lamps, low concrete parapet, the skyline with its landmark tower and the distant suspension bridge glowing across the water — ending as the road runs into the tower corridor of the city. Same night, same lamps, same wet asphalt, same skyline throughout.
+
+5. The weather is calm after recent rain for the entire timeline: no falling rain, no drizzle, no rain streaks in any light beam, no drops on any glass anywhere — only wet mirror asphalt, still puddles and thin haze left behind by the rain. Water in motion exists only where the wheels kick it up; tire smoke exists only where the tires burn it.
+
+6. Pursuers exist only where @Video 8 · 30s stages them: one dark pursuit helicopter with a searchlight visible through the car windows at 22.9-25.1s; red-and-blue police strobes reflected in the RIGHT side mirror at 22.9-25.1s; and exactly TWO police cars with flashing red-and-blue light bars chasing the hero car at 25.1-30s. No pursuer appears anywhere else; no third police car ever exists.
+
+7. No subtitles, no watermarks, no on-screen text anywhere; road markings read as generic lines, never legible words.
+
+CHARACTERS
+
+@Image 23 DRIVER — a crazy adrenaline junkie behind the wheel: danger feeds him, speed makes him laugh; the wilder the slide, the brighter his grin. Total car control underneath the madness — the face is unhinged, the hands are surgical. Her fear genuinely amuses him. He never speaks words: his voice is laughter and whoops only.
+
+@Image 24 PASSENGER — dragged into this ride against every instinct: screaming at the driver to stop, then clenching shut and holding on with everything she has; thrown around by the g-forces, always anchored to the grab handle. Her voice exists only as her two screamed word-events defined in [Dialogue] and wordless screaming — nothing else.
+
+ACTING TASKS
+
+All hand, foot and body actions below already exist in @Video 8 · 30s — perform them exactly as staged there, with these qualities. Faces are alive: engaged eyes, natural blinks, never frozen or glassy.
+
+9.3-10.3s: the driver's gloved RIGHT hand grabs the shifter and slams it into gear exactly as staged in @Video 8 · 30s — one clean motion, no hesitation.
+
+10.3-11.3s: the driver's foot presses the gas pedal down in one decisive push and holds it, exactly on the previz's timing.
+
+14.3-15.3s: hands cross on the wheel in a fast countersteer matching the @Video 8 · 30s hand motion — effort readable in the forearms.
+
+17.3-19.9s (the cabin take): THE DRIVER is laughing like a MADMAN — head thrown back, mouth wide open, cackling uncontrollably mid-drift, wild eyes flashing between the road and the screaming woman, her terror making him laugh even harder, a delighted glance at her, back to the road — unhinged laughing face, surgical hands; laughter and a whoop only, he never speaks other words. THE WOMAN plays her fear in TWO PHASES: PHASE 1 (17.3-18.6s) — she SCREAMS at the driver, one long drawn-out "STOOOOOP!!", mouth wide open, eyes huge, right hand clamped on the grab handle above her window as the g presses her into her door — a scream AT him, begging him to stop, which only makes him laugh harder. PHASE 2 (18.6-19.9s) — the scream breaks off: she SHUTS her eyes tight and CLOSES her mouth, her left hand flies up and BOTH hands clamp side by side on the grab handle, knuckles white, head ducked, body braced. Scream, then brace — never one frozen open mouth.
+
+22.9-25.1s: the woman catches the strobes flashing in the RIGHT mirror beside her window, her head snaps to it, and she screams ONLY her scripted line "You crazy!" — no other words exist; the driver's eyes flick right for one beat, the grin sharpens into a laugh (no words), and he locks back on the road.
+
+25.1-30s (through the windshield): PURE PANTOMIME — zero speech, zero lines, zero voices; the camera is outside the car and NO voice from inside the car is ever heard. The woman twists to look back, whips forward, mouth open in a visible wordless shout, sharp gestures, hand clamped on the grab handle, hair flying; the driver leans into the wheel laughing silently behind the glass, the wild grin wide.
+
+ACTION TIMING
+
+Shot boundaries, framing, camera, ALL motion states and ALL world geometry come from @Video 8 · 30s one-to-one, frame by frame. Every "—" line below is ONE shot ending in a hard cut at its last timestamp; the line dresses the previz's grey shapes into real objects in their exact positions — it never adds motion, objects, shots or events.
+
+0-1.0s — SHOT 1 — A STREETLAMP in the foreground, exactly where @Video 8 · 30s places it: a tall curved steel cobra-head lamppost close against the dark sky — a rigid metal pole with a hard bent arm and a rectangular lamp head, painted metal, bolted joints, fixed and motionless, its cool glow haloed by thin post-rain haze. Behind and below it, the glowing city SKYLINE stretches across the water in the far distance — a dense field of lit towers with one tall landmark tower rising above the rest, dissolving into the night haze. The lamp is a man-made steel structure — NOT an animal, NOT a snake, NOT any living or organic shape; nothing in this shot moves except the camera.
+
+1.0-2.0s — SHOT 2 — Top-down as in @Video 8 · 30s: @Image 25 rolling SLOWLY along the empty wet brick backstreet, framed by the weathered warehouse facades the previz stages as its blocks, one warm amber window glowing above; cool lamp and amber reflections pooling long on the wet asphalt around it.
+
+2.0-3.0s — SHOT 3 — @Image 25 seen from the FRONT three-quarter, exactly as @Video 8 · 30s frames it: the front end — headlights, grille and the intercooler bumper — faces the camera as the car rolls slowly along the backstreet between dark brick facades and the iron gate standing exactly where the previz stands its blocks, its headlight beams doubling in the wet surface. The rear and tail lights are NOT the face of this shot — the front is.
+
+3.0-4.0s — SHOT 4 — The front wheel of @Image 25 close, in a racing-style STANDING BURNOUT on the previz's wheel motion: the wheel SPINS VIOLENTLY — spokes blurring into a bronze ring, far too fast for the car's crawl — while the car itself barely holds its place; rubber burning against the wet asphalt, tire smoke boiling up from the contact patch and glowing in the cool lamp light and the warm amber window spill against the dark brick, water mist and rubber grit flicking off the arch. Maximum wheel speed, minimum car movement — the launch is loading. Hard cut at 4.0s.
+
+4.0-5.0s — SHOT 5 — @Image 25 from behind, rolling down the brick corridor, weathered warehouse walls rising on both sides exactly where the previz stands its blocks, exhaust shimmering, a thin veil of tire smoke from the burnout drifting low around the rear of the car, tail lights glowing through it and doubling red in the wet asphalt.
+
+5.0-6.0s — SHOT 6 — @Image 25 head-on from the FRONT: the car LAUNCHES toward the camera exactly at the previz's pace — a hard fast start out of the burnout, headlights, grille and the intercooler bumper facing the lens, beams flaring through the haze between the brick facades, spray lifting off the wet asphalt, the last of the tire smoke whipped aside by the launch. The rear of the car and its tail lights are NOT visible in this shot.
+
+6.0-7.0s — SHOT 7 — The road curving out of the backstreet onto the wide riverside BRIDGE HIGHWAY, exactly the previz geometry: @Image 25 now at speed, receding along the curve — yellow double lines on the wet deck, tall paired cool lamps marching ahead, low concrete parapet at the edges, its reflection chasing it in the wet mirror; beyond, the glowing skyline with its one tall landmark tower stretches across the dark water, the distant suspension bridge drawing a chain of lights on the horizon.
+
+7.0-7.8s — SHOT 8 — TOP-DOWN, straight over the highway deck as in @Video 8 · 30s: @Image 25 sideways in the long curve, drifting across the yellow lines, tire smoke glowing under the lamps, its reflection smeared beneath it on the wet mirror deck, the dark water and skyline lights at the frame edges. Hard cut at 7.8s.
+
+7.8-9.3s — SHOT 9 — Low and close at the front wheel and fender of @Image 25 mid-drift, wheel angled under load, smoke and water spray erupting and catching the cool lamp light, the paired lamps and the landmark-tower skyline glowing across the water soft in the haze behind where the previz places its masses.
+
+9.3-10.3s — SHOT 10 — Interior over the center console as in @Video 8 · 30s: the shifter for a beat, then the driver's gloved RIGHT hand entering from the LEFT seat, grabbing it and slamming it into gear; in the same frame, exactly as the previz stages it, the WOMAN's legs rest on the RIGHT passenger seat side of the console — her jeans and boots readable in the warm dash glow and cool lamp strobes. Hard cut at 10.3s.
+
+10.3-11.3s — SHOT 11 — Interior footwell insert: the DRIVER'S FOOT on the gas pedal. From @Video 8 · 30s this shot takes ONLY the camera angle, the foot and pedal position in frame and the timing of the push — the previz's blocky low-poly leg is a stand-in and must NOT be replicated. Generate a fully realistic human leg and foot: the driver's real leather boot with visible stitching, creases and worn texture, a real trouser leg above it, correct human ankle and foot anatomy at this exact camera angle. The boot presses the real metal gas pedal down in one decisive push and holds it, exactly on the previz's timing; pedal arm, rubber pad and floor mat all photoreal, lit by warm dash glow, cool lamp strobes flickering through the footwell shadow. Hard cut at 11.3s.
+
+11.3-14.3s — SHOT 12 — One continuous tracking arc, exactly as @Video 8 · 30s moves it: the camera travels around @Image 25 as it runs the riverside deck — from the rear three-quarter, along the full side profile, to the front three-quarter — spray curling behind and glowing in the lamps, cool cyan reflections and the passing skyline lights sliding across the black bodywork as the angle changes, parapet and lamp chain wheeling past over the dark water, the suspension bridge lights far on the horizon. No internal cut.
+
+14.3-15.3s — SHOT 13 — The steering wheel as its own separate shot: the driver's gloved hands crossing in a hard countersteer, wheel rim catching passing cool lamp light, warm dash glow behind. Hard cut at 15.3s.
+
+15.3-17.3s — SHOT 14 — Exterior drift arc, exactly as staged: the camera sweeps around the drifting @Image 25 — rear three-quarter through the changing angles — lamp-lit smoke trailing, the paired light poles and the landmark-tower skyline crossing the frame, the drift's wet arc shining on the yellow-lined deck. No internal cut.
+
+17.3-19.9s — SHOT 15 — One continuous interior take with no internal cut, exactly as @Video 8 · 30s drifts it: the camera flies into and moves through the cabin — @Image 23, the MAN, at the wheel in the LEFT driver's seat, and @Image 24, the WOMAN, beside him in the RIGHT passenger seat — ending over the rear bench, cool lamp strobes and the drifting skyline lights sliding through the clear dry windows. THE DRIVER is laughing like a MADMAN: head thrown back, mouth wide open, cackling uncontrollably mid-drift — the crazy laugh of a man high on speed and danger; wild eyes flashing between the road and the screaming woman, her terror making him laugh even harder, a delighted glance at her, a whoop, back to the road — unhinged laughing face, surgical hands feeding the wheel; laughter only, he never speaks other words. THE WOMAN plays her fear in TWO PHASES, real and physical, never one frozen face: PHASE 1 (17.3-18.6s) — she SCREAMS at the driver, one long drawn-out "STOOOOOP!!", mouth wide open, eyes huge, her RIGHT hand clamped on the GRAB HANDLE above her side window as the lateral g presses her into her door, shoulder and hair against the glass — a scream AT him, begging him to stop, which only makes him laugh harder. PHASE 2 (18.6-19.9s) — the scream breaks off: she SHUTS her eyes tight and CLOSES her mouth, bracing hard — her LEFT hand flies up to join the right, BOTH hands now clamped side by side on the same grab handle, knuckles white, head ducked into her shoulders, body clenched against the next snap of the drift. Scream, then brace — never a mouth held open through the whole shot. The man drives, the woman rides — never the other way.
+
+19.9-20.9s — SHOT 16 — Static camera at the deck's edge, exactly as in @Video 8 · 30s: @Image 25 in full profile at speed enters the frame, crosses it and exits, spray washing toward the lens, the paired lamps hanging in the haze and the skyline glowing across the water beyond, the car's reflection racing it in the wet mirror. The camera does not follow — it holds as the car passes. Hard cut at 20.9s.
+
+20.9-22.9s — SHOT 17 — The front wheel as its own separate shot, under drift load: suspension working, sidewall flexing, spray hammering the fender liner and glowing in the lamps, bronze rim glinting. Hard cut at 22.9s.
+
+22.9-25.1s — SHOT 18 — Interior POV looking RIGHT, out the passenger-side window, exactly as @Video 8 · 30s frames it: the parapet rail and the landmark-tower skyline across the water streaming past beyond the glass, the pillar and dash edge framing the view, glass clear and dry; the dark pursuit helicopter hangs in the night sky over the water exactly where @Video 8 · 30s places it, its searchlight a clean cone in the haze. The RIGHT side mirror is a key element of this frame: in its glass, red-and-blue POLICE STROBES read CLEARLY and unmistakably — two distinct light bars flashing in alternating rhythm, sharp and in focus inside the mirror, bright enough to pulse red and blue glow onto the mirror housing and the door edge around it, growing slightly through the shot. The strobes live only in the mirror reflection; the police cars themselves are never visible in this shot. In frame, the WOMAN in the RIGHT seat snaps her head to the flashing mirror, eyes going wide, and screams ONLY her scripted line at the driver — the exact words "You crazy!" as defined in [Dialogue], nothing else, no invented phrases; before and after the line her voice is only a wordless scream. The camera slides along the flank past the occupants — the man at the LEFT wheel flicking his eyes right for one beat, the grin sharpening into a laugh, no words from him. Hard cut at 25.1s.
+
+25.1-30s — SHOT 19 — One continuous move with no internal cut, exactly as @Video 8 · 30s cranes it: the camera glides over the body of @Image 25 — roof, windshield, hood — then rises and pulls back into a high wide view of the riverside highway sweeping toward the city: the road running into a corridor of lit towers exactly where the previz stages its rock masses, the wet deck threaded with yellow lines and lamp reflections, the suspension bridge glowing far behind. NO PHRASES, NO LINES, NO VOICES in this entire shot: the camera is OUTSIDE the car and the heroes' voices are NEVER heard from inside — the cabin plays in PURE PANTOMIME behind the glass. IN THIS SHOT, seen head-on through the windshield, the DRIVER sits on the RIGHT side of the frame at the wheel and the WOMAN sits on the LEFT side of the frame — this is the correct left-hand-drive car seen from the front, never a swap: the man on frame-right drives, the woman on frame-left reacts. She twists to look back, whips forward, mouth open in a visible wordless shout, sharp gestures, hand clamped on the grab handle, hair flying; he leans into the wheel laughing silently behind the glass, the wild grin wide. As the hero car speeds away down the curve, exactly TWO police cars with flashing red-and-blue light bars appear behind it where the previz stages its two pursuing shapes, chasing in its spray, their strobes doubling in the wet deck. On the soundtrack only engine, sirens, wind and spray. End state: the hero car ahead running into the tower corridor, two police cars in pursuit behind, the city burning across the water — the night as dark and wet as in the first shot.
+
+AUDIO
+
+[Sound design] 0-3.0s: quiet night in the backstreet — low engine burble at creeping pace, slow wet tire roll, distant city murmur, a faint drip from the brick eaves. 3.0-4.0s: engine screaming against the brakes, tires squealing and hissing on the wet asphalt through the burnout, the sound slapping off the brick walls. From 5.0s full driving bed: idle-to-roar dynamics matched to @Video 8 · 30s's speed changes, tire hiss and water spray off the wet deck, wind over the bodywork, the engine rolling open over the water; muffled cabin acoustics during interior spans; wide night air under the final crane — from outside the car, NO cabin voices audible after 25.1s, not a single human sound from inside the car.
+
+[SFX / Timed accents] 3.1s revs spike and tires light up into the burnout squeal; 5.1s launch bark as the tires hook up; 7.0s drift entry screech; 10.1s hard mechanical shifter clack; 10.5s throttle stomp and engine surge into redline; 11.3s sustained drift screech under the arc; 14.5s wheel-spin countersteer screech; 17.3-18.6s inside the cabin: the woman's LOUD drawn-out "STOOOOOP!!" scream — clearly audible, riding ABOVE the engine and tire screech, the loudest sound in the mix for this beat — tangled with the driver's unhinged cackling laughter; 18.6-19.9s her scream cuts off to a sharp held breath while his laughter keeps rolling; no other words from either; 20.3s full-speed pass-by whoosh; 23.0s helicopter rotor fades in and distant police sirens rise beneath it, carrying over the water; 25.3s sirens and engine roar swelling as the camera rises; 29.5s sirens wailing over the tower corridor.
+
+[Dialogue] Exactly TWO vocal word-events in the entire 30 seconds, both by the WOMAN (@Image 24), both screamed, in English, VERBATIM:
+
+1. 17.3-18.6s, inside the cabin: one long drawn-out scream "STOOOOOP!!" — the word "stop" stretched into a scream, begging the driver to stop.
+
+2. 23.4-24.0s, inside the cabin: "You crazy!" — screamed in panic at the driver.
+
+Nothing else is ever spoken. FORBIDDEN — she never says any of these, and no one else says anything: "they are behind us", "they're behind us", "they're right behind us", "cops", "go go go", "are you crazy", "you're insane", or ANY other invented phrase. The driver NEVER speaks words — his voice is laughter and whoops only. All other human voice is wordless screaming or laughing; after 25.1s no voices at all — the camera is outside the car and nothing from the cabin is ever heard.
+
+[Music] None.
+
+HOLD FOR THE FULL TIMELINE
+
+@Video 8 · 30s is the master of action, motion state AND geometry — frame by frame, the previz re-dressed, never re-imagined: every one of its 19 shots matches one-to-one — cuts, framing, camera, screen direction, pace, timing; no invented shots, no invented angles, no invented actions anywhere; the car creeps, burns out, launches and drives exactly where and how the previz does; every mass stands exactly where the previz stands it — the opening blocks as dark-brick warehouse facades, the roadside masses as the waterfront skyline, the finale rocks as the city's tower corridor; nothing added, nothing removed, nothing merged, nothing reordered; the previz's grey surfaces and proxy shapes are never visible.
+
+The ENTIRE film lives in one waterfront world matching the approved generation — the dark-brick industrial backstreet, then the riverside bridge highway with its yellow lines, paired lamps, parapet, the landmark-tower skyline and the distant suspension bridge across the water, ending in the city's tower corridor; no storefronts, no signage, no other worlds, in any shot.
+
+@Image 22 is atmosphere ONLY — its own frame never appears in the film: only its deep teal post-rain night, cool white-cyan lamps, wet-mirror surface with long reflections and clean deep blacks hold in every shot for all 30 seconds; no falling rain, no drops on glass, no dawn, no daylight, in any shot.
+
+@Image 25 identity in every shot; LEFT-HAND DRIVE locked in every shot where the occupants are visible, inside or through glass — wheel on the LEFT, the MAN (@Image 23) always driving in the LEFT seat, the WOMAN (@Image 24) always the passenger in the RIGHT seat, never mirrored, never swapped (backward-facing cameras mirror them on screen: he right of frame, she left); the driver rides the madness, the woman rides the fear — their states never swap either.
+
+Helicopter and mirror strobes only at 22.9-25.1s; exactly two police cars only at 25.1-30s. Exactly TWO screamed word-events in the film — the woman's "STOOOOOP!!" at 17.3-18.6s and "You crazy!" at 23.4-24.0s, both verbatim, no substitutions, no invented phrases by anyone; in the final shot (25.1-30s) NO phrases and NO voices from the car are ever heard — the camera is outside. No music, no subtitles, no watermarks.
+
+Copy
+Recreate
+Style 2 — 2.5D: The Painted Getaway
+
+What it does: Re-renders the exact same 19-shot edit as a hand-painted 2.5D film: a grandpa getaway driver and a knitting grandma in a 1960s saloon at golden hour, driven by a style-master image plus the same blocking video.
+
+ACTIVE REFERENCES
+
+@style_frame = STYLE MASTER — defines the painting and rendering style only: hand-painted 2D look with visible brushstrokes, sculpted painterly volumes, textured matte surfaces, dramatic colored rim light, deep moody shadows. Everything else in the image belongs to the image alone. Painting style and rendering only.
+
+@Video 8 · 30s = the blocking master, 30s, EXACTLY 19 SHOTS. Strictly follow the motion and camera work of @Video 8 · 30s. It is the sole and complete authority for all movement in this film.
+
+VIDEO LOCK — the dominant rule of this prompt:
+
+Every frame of the output corresponds 1:1 to the frame of @Video 8 · 30s at the same timestamp: the same camera position, the same camera movement, the same framing, the same cut, the same object positions and trajectories — repainted into the style below. THE EDIT IS COMPLETE AND FROZEN: the film consists of exactly the 19 shots listed below, at exactly the source cut points, and every frame of the output belongs to one of those 19 shots. The full timeline, from the first frame to the very last, follows @Video 8 · 30s with equal strictness. Wherever the text and the video could be read differently about motion, the video decides — the text describes only how things look.
+
+THE SOURCE IS A PLACEMENT AND MOTION REFERENCE ONLY: its grey surfaces, sphere dummies and placeholder blocks define WHERE things are, WHAT they do and HOW the camera moves. Every placeholder appears in the output as the real, fully rendered object its position implies, and every surface in every frame is fully repainted in the film's style.
+
+ENDING LOCK
+
+The film ends exactly where @Video 8 · 30s ends: the final take (SHOT 19) runs unbroken to its last frame — the hero car small on the winding road, the two police cars behind, the camera high and rising — and that source frame IS the final frame of the film. The last five seconds follow the source exactly as strictly as the first five.
+
+LOCATION CONTINUITY — one journey through four fixed places; each place looks identical in every shot where it appears:
+
+LOC-A, THE TOWN STREET (shots 1-5): one narrow street of low sun-washed storefronts with weathered shutters, cracked grey asphalt, the curved steel streetlamp. The same buildings, the same street in all five shots.
+
+LOC-B, THE MOUNTAIN HIGHWAY (shots 6-13): one curved two-lane highway — dashed center line, steel guardrails both sides, evenly spaced steel lampposts of one design, dry rocky hills behind. The same highway, the same hills silhouette, the same lamppost design in every one of these shots.
+
+LOC-C, THE ROADSIDE PLAIN (shots 14-16): one open dry plain beside the highway — packed earth, sparse dead grass, the same lampposts and guardrail line in the background, the same tan hills on the horizon in every shot.
+
+LOC-D, THE CANYON ROAD (shots 17-19): one winding desert road between dry rocky hills into the low sun. The same road and the same hills throughout the finale.
+
+The world is ONE continuous geography: the car leaves LOC-A, travels LOC-B, passes LOC-C, and finishes on LOC-D — the same evening, the same light, the same country. Every element of a location that appears twice looks the same both times.
+
+STYLE
+
+Every frame is painted exactly in the rendering style of @style_frame — hand-painted textures with visible brushwork, sculpted painterly volumes, matte surfaces, dramatic rim light, deep painted shadows — applied to this film's own world. Purely hand-drawn painterly 2D animation in every single frame: drawn lines, painted light, graphic silhouettes, fine film grain. Motion is drawn: smeared brush streaks for speed, snapping poses.
+
+LIGHTING
+
+Golden-hour sunset, clear dry evening, fully relit: a low blazing sun throwing long hard shadows, warm amber-gold key, orange bounce off the asphalt, deep teal-blue open shadows, the sky burning from gold through rose to deep violet. Sun flicker strobes through guardrail posts and lampposts in driving shots. The car's round headlights are dark until 2.0s, SWITCH ON during SHOT 3 with a warm bloom, and glow for the rest of the film. The cabin is lit by sunset through the glass and the warm glow of the old dashboard. Every light comes from a visible source; the whole film lives in this one dry sunset.
+
+COLOR
+
+Sunset palette: burning golds and ambers, rose and violet sky, long teal-blue shadows. Against it: the aged sea-teal car with cream roof and warm chrome, the grandpa's tweed and olive wool, the grandma's wine-red shawl as the sharpest accent — and in the finale the black-and-white police cars with pulsing red beacons. Thick white-grey tire smoke catches the sunset in the burnout shots.
+
+CAMERA
+
+All camera work comes from @Video 8 · 30s — 19 shots, its exact cut points, its exact moves; lens locked within each cut. STRONG anamorphic lens character: horizontal squeeze and compression, oval elliptical bokeh, horizontally stretched highlights, curved barrel edge distortion, chromatic aberration toward the edges. NO lens flares, NO light streaks, NO floating bokeh circles. Natural 180-degree shutter cadence: fast motion carries directional blur, hold points stay sharp, stable temporal cadence.
+
+PHYSICS
+
+For the first 4 seconds the car is STATIONARY, engine waking then building violence: the driven wheel spins in place, pouring thick tire smoke, the body squatting and trembling with torque. From the launch at ~4.05s the heavy old saloon reads FAST: the world stretches into directional streaks opposite to travel while the body stays relatively sharp; dust and smoke in the wake, heat shimmer, grit in the arches, soft suspension leaning, chrome trembling. Every wheel on screen turns with visible rotational motion blur whenever the car moves or the engine pulls. The grandma's shawl and yarn react to the drive.
+
+RULES
+
+1. VIDEO LOCK, ENDING LOCK and LOCATION CONTINUITY above govern everything.
+
+2. SEATING, LHD: steering wheel on the LEFT. THE GRANDPA occupies the front-LEFT seat behind the wheel for all 30 seconds; THE GRANDMA occupies the front-RIGHT passenger seat for all 30 seconds; the rear bench carries the luggage. The car carries ALWAYS exactly two people, both present in every interior view and behind the glass in every exterior view. When the camera faces BACKWARD into the cabin, screen sides mirror: he reads frame-RIGHT, she frame-LEFT.
+
+3. MOTION STATE: during 1.0-4.0s the car stands perfectly still, doing its burnout in place; from the launch at the start of SHOT 5 to the end it always drives FORWARD, nose-first, wheels rotating forward, exactly along the source trajectory.
+
+4. DUMMY MAPPING: the front-LEFT sphere-head dummy (with its grey arm at the shifter and grey leg at the pedals) is THE GRANDPA; the front-RIGHT sphere-head dummy is THE GRANDMA; a front-seat dummy together with its loose blocks is that ONE whole person. Blocks on the rear bench are the luggage. The low-poly flying model in SHOT 18 is THE HELICOPTER. The two vehicles behind the hero car in SHOT 19 are THE POLICE CARS.
+
+5. PRESENCE: a seated person stays drawn even when partially occluded — in every interior frame some part of each seat's owner is visible: a gloved hand, an arm, a shoulder, a head above the bolster. Every occupied seat visibly holds its person.
+
+6. HANDS AND FEET — whole film: the source shows only WHERE hands and feet are; in the output they are always complete human anatomy — gloved five-fingered hands with natural aged knuckles, a real leg in wool trousers, a real foot in a polished brown leather shoe. THE SHIFT GESTURE at 9.33-10.33s: his right hand travels DOWN from above and lands flat ON TOP of the bakelite knob — palm capping the dome, fingers draping over it — the approach is vertical, from above, the whole way.
+
+7. TEXT-FREE WORLD: every sign is a blank painted shape, every gauge face carries tick marks only, every license plate is a blank plate, the police cars wear plain white roundels.
+
+8. WORLD DRESSING: every roadside vertical is a steel lamppost or a guardrail post; the ground everywhere is asphalt, dirt and dead grass; the source's placeholder blocks appear as the real objects their positions imply — a person's body and clothes, pedals and legs, luggage, crates by the walls.
+
+9. VEHICLE COUNT: shots 1-17 contain exactly one car — the hero car. In SHOT 18 the two POLICE CARS appear ONLY as a reflection inside the wing mirror glass — visible, readable, closing in — while the road ahead holds the hero car alone. In SHOT 19 exactly three vehicles drive on screen: the hero car ahead and the two POLICE CARS behind.
+
+CHARACTERS
+
+THE CAR — a classic 1960s Eastern-European executive saloon, generic design: rounded chrome-heavy body, long hood, gentle tailfins, wide chrome grille of fine vertical bars, two large EXPOSED ROUND CHROME HEADLIGHTS in the front wings (dark before 2.0s, glowing afterwards), chrome hood ornament, chrome bumpers with overriders, oval chrome-trimmed tail lights, single left exhaust. Two-tone: aged sea-teal body, cream roof, softly weathered, gold sunset reflections on the curves. Wheels: painted steel with six ventilation slots, polished chrome hubcaps and trim rings, thin whitewall tires — identical on all four corners in every shot.
+
+THE CABIN — worn burgundy velour bench seats with cream piping and lace antimacassars, a large thin-rimmed ivory-white steering wheel on the LEFT with chrome horn ring, a cream-and-teal painted metal dash with round blank-faced gauges mounted IN the panel (tick marks, thin orange needles, chrome bezels seated in the metal), a floor lever with a black bakelite knob, a round mirror with a wooden rosary and knitted pompom, doilies on the parcel shelf, a wicker basket and strapped suitcases on the rear bench, bare metal pedals with rubber pads, a clear transparent rear window. The same cabin, identical, in every interior shot.
+
+THE GRANDPA (front-left) — a getaway driver of about seventy, painted in the conventions of @style_frame: weathered kind-fierce face, magnificent thick silver moustache, bushy grey brows, sharp pale hawk eyes, silver hair under a grey wool flat cap, gold-rimmed glasses low on the nose. Brown tweed jacket over olive cardigan and checked shirt, wool trousers, polished brown shoes, old brown leather driving gloves. Cap, glasses and moustache present in every shot of his face.
+
+THE GRANDMA (front-right) — a composed elegant woman of about seventy: soft round face, rosy cheeks, bright eyes behind round silver spectacles, silver low bun, pearl earrings. Wine-red knitted shawl over a cream floral dress, cameo brooch, cardigan; in her lap — knitting, two needles and mustard-yellow yarn she works calmly through the whole drive.
+
+THE HELICOPTER — in SHOT 18: a true, fully drawn light patrol helicopter exactly where the source model flies — bulbous glass cockpit glinting sunset, thin tail boom, skids, tail rotor, main rotor as a semi-transparent spinning blur disc, a small red beacon blinking — a complete real aircraft in the painterly style.
+
+THE POLICE CARS — two identical 1960s-era police saloons, clearly distinct from the hero car: boxier bodies in black-and-white livery — white doors and roof, black hood, fenders and trunk — one round pulsing RED ROOFTOP BEACON each, glowing headlights, plain white door roundels, steel wheels, dust streaming off the tires. They first appear in SHOT 18 as a clear reflection inside the wing mirror — both cars readable, beacons pulsing, closing in — and drive fully on screen in SHOT 19 behind the hero car, holding the source trajectories.
+
+ACTION TIMING — 19 shots; every shot is LOCKED to @Video 8 · 30s at its exact timestamps; each span holds exactly the shot described:
+
+SHOT 1 — 0-1.0s — LOCKED, LOC-A: the curved steel streetlamp (dark) against the sunset sky, the town facades behind it giving the orbit parallax; lamp and buildings bolted still; all apparent motion is the camera's slow orbit.
+
+SHOT 2 — 1.0-2.0s — LOCKED, LOC-A: top-down bird's-eye, the saloon standing perfectly still, nose to the bottom of frame, engine off, long shadow on the asphalt; the camera alone moves.
+
+SHOT 3 — 2.0-3.0s — LOCKED, LOC-A: static camera, street level, the parked car front three-quarter; the HEADLIGHTS SWITCH ON with a warm bloom and the engine coughs awake into a burbling idle; the car holds its place.
+
+SHOT 4 — 3.0-4.0s — LOCKED, LOC-A: side macro of the six-slot wheel: BURNOUT IN PLACE — the wheel spins hard with strobing spokes, thick smoke boiling from the arch, a rubber streak forming, the car holding its place the whole shot.
+
+SHOT 5 — 4.0-5.0s — LOCKED, LOC-A: rear view down the street: the car LAUNCHES — biting and snapping violently forward away from camera, smoke swirling, receding fast between the same storefronts.
+
+SHOT 6 — 5.0-6.0s — LOCKED, LOC-A into LOC-B: head-on, the car races nose-first at the low camera, grille and glowing headlights growing, a slight nervous camera shake; the front of the car fills the shot end to end.
+
+SHOT 7 — 6.0-7.0s — LOCKED, LOC-B: the highway curve at golden hour, the car ahead between the guardrails driving forward, the dry rocky hills against the burning sky.
+
+SHOT 8 — 7.0-7.79s — LOCKED, LOC-B: aerial top shot of the same bend, the car sweeping through; the ground reads as real sun-baked asphalt with its dashed line, dirt shoulders and guardrails everywhere in frame.
+
+SHOT 9 — 7.79-9.33s — LOCKED, LOC-B: DRIFT — low macro at the front wheel and nose sliding through the bend at the source angle, the wheel spinning with rotational blur, smoke pouring and trailing, dust spraying, the body leaning.
+
+SHOT 10 — 9.33-10.33s — LOCKED, interior: TOP SHOT straight down over the center console between the two front seats. THE GRANDPA, seated LEFT, shifts gear: his gloved right hand travels DOWN from above, lands flat ON TOP of the bakelite knob — palm capping the dome, fingers draping over it — and slots the gear in one vertical motion. THE GRANDMA sits RIGHT, wine-red shawl and ticking needles beside him. The frame holds exactly: the console, the lever, his arm and hand, the edges of both seats and both people — the complete real cabin.
+
+SHOT 11 — 10.33-11.33s — LOCKED, interior: the footwell, source angle held precisely. The frame holds exactly: the rubber-padded metal pedals, the worn floor mat, a stripe of sunset across the tunnel, and THE GRANDPA's real leg in wool trousers with his polished brown leather shoe PRESSING THE GAS PEDAL flat — the foot on the pedal the entire beat. These listed objects are the entire contents of the frame.
+
+SHOT 12 — 11.33-14.33s — LOCKED, LOC-B, ONE CONTINUOUS TAKE: the camera travels around the speeding car through all the source's angles; through the glass at every angle read exactly TWO PEOPLE — grandpa at the LEFT wheel, grandma in the RIGHT seat, both present the whole take.
+
+SHOT 13 — 14.33-15.33s — LOCKED, interior: the ivory steering wheel close — thin rim, chrome horn ring, THE GRANDPA's two complete gloved hands working a calm correction, sunset sliding over the painted dash.
+
+SHOT 14 — 15.33-17.33s — LOCKED, LOC-C: the car drives forward across the plain, camera circling from side to rear three-quarter exactly as the source, long shadows wheeling past the same lampposts and tan hills; both silhouettes behind the glass.
+
+SHOT 15 — 17.33-19.875s — LOCKED, ONE CONTINUOUS TAKE: the camera FLIES INTO THE CAR THROUGH THE REAR WINDOW — the rear glass fully transparent, the camera passing through it smoothly — then forward through the cabin exactly as the source: the basket and suitcases on the bench, THE GRANDMA reading frame-LEFT, THE GRANDPA frame-RIGHT with gloved hand on the wheel; both people present every frame of the take.
+
+SHOT 16 — 19.875-20.875s — LOCKED, LOC-C: exterior wide, the car sweeps in from frame-left and passes the camera close along the source trajectory, dust curling, exiting frame-right past the same guardrail and hills.
+
+SHOT 17 — 20.875-22.92s — LOCKED: extreme macro of the spinning six-slot wheel and chrome hubcap — turning with strong rotational MOTION BLUR the entire shot, grit flying, sun in the chrome, the camera orbiting exactly as the source.
+
+SHOT 18 — 22.92-25.08s — LOCKED, LOC-D, ONE CONTINUOUS TAKE: driver's POV past the LEFT A-pillar — THE HELICOPTER, a complete drawn aircraft, crosses the burning sky along the source path; the camera drifts right exactly as the source, past THE GRANDMA in her seat, and settles on the WING MIRROR. Inside the mirror's reflection, sharp and readable: THE TWO POLICE CARS on the road behind, closing in — black-and-white saloons, red rooftop beacons pulsing, headlights glowing, a thin dust trail — framed by the mirror's chrome housing, growing slightly larger as they gain, while a siren rises in the distance. The pursuers exist in this shot only inside the mirror glass; the road ahead through the windshield stays clear.
+
+SHOT 19 — 25.08-30s — LOCKED, LOC-D, ONE CONTINUOUS FINAL TAKE, camera motion 100% source: the hero car drives nose-first TOWARD the camera, grille and headlights growing — the camera sweeps up over the hood ornament, hood, windshield and cream roof as they slide beneath — then rises away behind: the hero car receding forward down the winding road with THE TWO POLICE CARS in pursuit exactly where the source places them, red beacons pulsing, dust plumes trailing, all three winding into the hills. End state at 30s: the hero car small on the road, the police behind, the camera high — this source frame is the film's final frame. Hold to the end.
+
+AUDIO
+
+[Sound design] Warm evening air: wind over old bodywork, tires on dry asphalt, chrome rattling faintly, gravel in the arches; muffled hum and knitting-needle ticks in cabin spans; crickets at the wide shots.
+
+[SFX] The old carbureted engine as lead instrument: crickets before 2.0s; at 2.1s the starter churns and the engine CATCHES into a proud idle as the headlights clunk on; from 3.0s revs climb, tires HOWL — burnout squeal and smoke hiss; at 4.05s the LAUNCH — squeal snapping into a hard bark rising through gears; drift tire-scream 7.79-9.33s; at 9.6s the soft clack of the palm landing on the shifter and the long mechanical shift; at 10.6s the deep KICKDOWN — pedal flat, carburetors gulping, the engine roaring up a register.
+
+[Timed accents] 23.2s — rotor thump swelling beyond the glass; 24.3s — a distant siren rising, closing; 25.5-30s — two vintage sirens with doppler bends and beacon whoosh, fading under wind and the receding engine.
+
+Audio holds to SFX and ambience only.
+
+HOLD FOR THE FULL TIMELINE
+
+19 shots, source cuts, source camera, source placement — one hundred percent, from the first frame to the very last; the film consists of these 19 shots and ends on the source's final frame; the long takes at 11.33-14.33s, 17.33-19.875s, 22.92-25.08s and 25.08-30s each play as one unbroken shot.
+
+One continuous world: LOC-A town, LOC-B highway, LOC-C plain, LOC-D canyon road — each place identical in all of its shots, one journey, one sunset.
+
+Every placeholder is its real object; hands and feet are complete human anatomy in gloves and shoes; every surface fully painted in the style of @style_frame.
+
+The car holds still through the burnout (1.0-4.0s), launches at SHOT 5, then always drives forward, nose-first. Headlights dark before 2.0s, glowing from SHOT 3 onward.
+
+LHD, all 30 seconds: grandpa front-LEFT at the wheel, grandma front-RIGHT knitting — always exactly two people (backward camera mirrors them: he right of frame, she left); at 9.33-10.33s the gloved hand lands on the shift knob FROM ABOVE, palm capping it, in one vertical motion.
+
+The rear window in SHOT 15 is transparent and the camera passes through it; the helicopter in SHOT 18 is a complete drawn aircraft; in SHOT 18's wing mirror the two police cars are visible as a sharp reflection closing in; SHOT 19 holds exactly three vehicles — the teal hero ahead, two black-and-white police cars behind.
+
+One clear dry sunset for the whole film; a text-free world of blank signs and plates; SFX and ambience only.
+
+Copy
+Recreate
+Style 3 — 2D: The Ink Chase
+
+What it does: Re-renders the same edit as a moving black-and-white manga page with exactly two colored objects — her red dress and the pink car — every frame locked 1:1 to the blocking.
+
+ACTIVE REFERENCES
+
+@Video 8 · 30s = the blocking master, 30s, EXACTLY 19 SHOTS. Strictly follow the motion and camera work of @Video 8 · 30s. It is the sole authority for all movement.
+
+VIDEO LOCK
+
+Every output frame corresponds 1:1 to the same-timestamp frame of @Video 8 · 30s: same camera position and movement, same framing, same cuts, same object positions and trajectories — only redrawn. Exactly the 19 shots listed below at the source cut points; no shot may be added, dropped, merged or replaced; no improvised shots, no new angles. The camera frames characters only as the source frames them. The source defines only placement and motion, never appearance: every placeholder becomes the real object its position implies — spheres are always people, cabin blocks are always cases and bags, fully drawn. If text and video seem to conflict about motion, the video wins. The film ends on the source's final frame — the final take runs unbroken to the end, with nothing after it.
+
+STYLE
+
+High-contrast BLACK-AND-WHITE INK ILLUSTRATION brought to motion — a moving manga page. ONE PEN DRAWS EVERYTHING: the people, the car, the streets and the sky are all made of the same rough brush linework with thick-to-thin strokes, deep solid black fills, crisp white negative space and fine film grain — every frame reads as drawn on paper, purely hand-drawn 2D animation, flat as a printed page, never 3D, never photoreal, never live-action.
+
+THE PEOPLE ARE DRAWINGS, the same medium as the world: faces built from confident ink OUTLINES on flat paper-white or flat grey — skin is blank flat paper tone with ZERO texture, shaded ONLY by cross-hatching, screentone dots and solid black shadow shapes; eyes are graphic ink shapes with a white catchlight dot; hair is a mass of drawn ink strokes; hands are line-drawn with inked knuckle creases. Every fold of clothing is a drawn line, every shadow on a face is hatching or a hard black fill — flat 2D drawing conventions on every close-up of every person.
+
+Motion is drawn: smeared ink streaks for speed, snapping poses, rigid stable geometry between poses. Shading sits exactly where the source shades. SELECTIVE COLOR — EXACTLY TWO COLORED OBJECTS IN THE FILM: THE GIRL's rich RED dress and lips, and THE CAR's PINK body — both laid as flat printed ink over the drawing. Everything else, including the police cars and their beacons, is black, white and grey. Lighting is one hard monochrome evening: low blazing sun as hard white key, long solid-black shadows, blown white sky, black-white-black sun strobe through posts in driving shots. Tire smoke is white ink wash.
+
+WORLD
+
+One hard-lit monochrome evening, one continuous CITY — the whole film lives inside the city and its limits.
+
+LOC-A, THE DOWNTOWN STREET (shots 1-5): one narrow street of low storefronts with weathered shutters drawn in ink, cracked asphalt, the curved steel streetlamp, power lines overhead. Identical in all five shots.
+
+LOC-B, THE ELEVATED EXPRESSWAY (shots 6-13): one curved two-lane elevated road THROUGH the city — dashed center line, steel guardrails both sides, evenly spaced steel lampposts of one design, and a skyline of inked rooftops, water towers and block buildings behind the rails instead of any hills. Identical in all these shots.
+
+LOC-C, THE INDUSTRIAL LOT (shots 14-16): one open empty paved lot at the city's edge — cracked concrete with faded painted markings, the same lamppost and guardrail line behind, low warehouses and smokestacks on the horizon. Identical in all three shots.
+
+LOC-D, THE OUTSKIRTS DESCENT (shots 17-19): one winding road dropping between inked warehouses and factory walls toward the low white sun, guardrails lining the bends, the city skyline behind. Identical throughout the finale.
+
+No readable text anywhere: blank ink signs, blank plates, tick-mark-only gauges, plain white roundels on the police cars.
+
+THE CAR — a classic 1960s executive saloon, generic design, drawn in ink — the same model in every detail: rounded chrome-heavy body, long hood, gentle tailfins, wide grille of fine vertical bars, two EXPOSED ROUND HEADLIGHTS in the front wings (dark before 2.0s, glowing hard white after SHOT 3), hood ornament, bumpers with overriders, oval tail lights, single left exhaust — the body a flat printed-ink PINK, one of the film's two colors, with white highlights rolling on the curves and grey chrome; steel wheels with six ventilation slots, polished hubcaps, thin whitewall tires — identical in every shot.
+
+THE CABIN — worn dark cloth bench seats in flat greys with hatched shading, a large thin-rimmed steering wheel on the LEFT, a painted metal dash with round blank-faced gauges mounted IN the panel (thin white needles), a floor lever with a round black knob, a round mirror with a small charm on a cord, strapped suitcases on the rear bench, bare metal pedals, transparent rear window. Identical in every interior shot.
+
+THE DRIVER — front-LEFT seat, all 30s: a MANGA-DRAWN young man — a flat 2D ink character, his deep brown skin rendered as an even flat grey tone shaded only with hatching and solid blacks: huge natural AFRO drawn as one bold ink mass, lean face of confident outlines, sharp graphic ink eyes with white catchlight dots, silver ear stud, thin chin beard; open black satin souvenir bomber with an ink dragon across the back, loose white tee, wide-leg black trousers, chunky sneakers, silver rings as small ink shapes. A drawing, never a photograph. Present in every shot of him.
+
+THE GIRL — front-RIGHT seat, all 30s: a MANGA-DRAWN elegant young woman — a flat 2D ink character, her fair skin rendered as blank paper-white shaded only with hatching and screentone: face of clean confident outlines, graphic ink eyes with white catchlight dots, long ink-black hair as a solid drawn mass with white shine strokes, thin bracelet — wearing the film's other color: a fitted RED dress with a deep neckline and side slit, flat printed ink, and red lips as a flat red shape. A drawing, never a photograph. Present in every shot of her.
+
+ALWAYS exactly two people in the car, both behind the glass in every exterior view; when the camera faces backward, he reads frame-RIGHT, she frame-LEFT. His hands and feet are always complete line-drawn anatomy — five ringed fingers, real leg, real sneaker.
+
+THE HELICOPTER (shot 18) — a complete inked light patrol helicopter: glass cockpit, thin tail boom, skids, main rotor as a spinning blur disc — fully monochrome.
+
+THE POLICE CARS (light in the shot-18 mirror; on screen only in shot 19) — two identical boxier 1960s police saloons in black-and-white livery — white doors and roof, black hood and fenders — one round rooftop beacon each pulsing hard WHITE (fully monochrome, like everything but the dress and the pink car), glowing headlights, dust off the tires. Clearly distinct from the hero car. No other vehicles ever.
+
+ACTING — inside the existing shots only. The performance NEVER earns a new shot, a new angle or a closer framing: it is visible only within the 19 listed shots, at exactly the size and distance the source camera gives, and only where the source already shows a face; everywhere else it reads through posture and hands alone.
+
+Shared unspoken game: make this escape look easy — neither will be the first to admit the chase scares them. HE plays for her — every maneuver landed so clean it looks lazy, and where his face is in frame his eyes flick to her for half a beat and snap back to the road. SHE refuses to look rattled — porcelain-calm, hands folded, watching him more than the road, a smile she keeps suppressing; the mirror keeps pulling her eyes. Natural blink cadence, gaze always engaged, never a frozen glassy stare.
+
+SHOTS — timing, angle and camera from @Video 8 · 30s, one hundred percent:
+
+1. 0-1.0s — LOC-A: the streetlamp (dark) against the blown white sky, inked storefronts behind it for parallax; lamp and buildings static; the camera alone orbits.
+
+2. 1.0-2.0s — LOC-A: top-down: the pink saloon STANDS STILL, nose to bottom of frame, engine off, its long solid-black shadow on the asphalt.
+
+3. 2.0-3.0s — LOC-A: static camera, street level, the parked car front three-quarter; HEADLIGHTS SWITCH ON with a hard white bloom and the engine coughs awake into a burbling idle. The car does not move.
+
+4. 3.0-4.0s — LOC-A: wheel macro: BURNOUT IN PLACE — the six-slot wheel spins hard with strobing spokes, thick white ink-wash smoke boiling from the arch, a black rubber streak forming; the car holds its place.
+
+5. 4.0-5.0s — LOC-A: rear view: the car LAUNCHES — biting and snapping forward away from camera, white smoke swirling, the pink body receding fast between the same storefronts.
+
+6. 5.0-6.0s — head-on: the car races nose-first at the low camera, grille and glowing headlights growing, slight camera shake; the pink front fills the shot end to end.
+
+7. 6.0-7.0s — LOC-B: the expressway curve, the car ahead driving forward between the guardrails, inked rooftops and water towers against the white sky.
+
+8. 7.0-7.79s — LOC-B: aerial top shot of the bend, the car sweeping through, inked asphalt with its dashed line, guardrails and rooftop skyline filling the frame — only city, no open land.
+
+9. 7.79-9.33s — LOC-B: DRIFT at the source angle — front wheel and pink nose sliding, wheel spinning with blur, white smoke pouring, dust in ink strokes, the body leaning.
+
+10. 9.33-10.33s — interior TOP SHOT, camera looking STRAIGHT DOWN at the console; the occupants read only as the TOPS OF THEIR HEADS — his afro crown left, her ink-black hair right, faces out of view the entire shot; the acting here lives in the hand alone: THE DRIVER's ringed line-drawn hand travels DOWN from above, lands flat ON TOP of the black knob — palm capping it — and slots the gear in one confident unhurried motion, showing off even in a gesture. The frame holds exactly: console, lever, his arm and hand, seat edges, two hair crowns, the red edge of her dress. This overhead view owns the whole second.
+
+11. 10.33-11.33s — at exactly 10.33s the view CUTS to THE FOOTWELL — a different, darker angle low under the dash: bare metal pedals, a hard slice of white light across the tunnel, and THE DRIVER's drawn leg STOMPING his chunky sneaker INTO THE GAS PEDAL at ~10.6s, holding it flat, the kickdown roaring. The sneaker and pedal are the heroes; this footwell view owns the whole second.
+
+12. 11.33-14.33s — LOC-B, ONE CONTINUOUS TAKE: the camera travels around the speeding car through all the source's angles, the city streaking in ink lines; TWO drawn people visible through the glass at every angle, at glass-and-distance scale only — the afro silhouette steady at the LEFT wheel, the red dress in the RIGHT seat, her face turned toward him.
+
+13. 14.33-15.33s — interior: the thin-rimmed wheel close — HANDS ONLY, no faces in this frame: his two complete line-drawn ringed hands working a calm, easy, unhurried correction — the confidence lives entirely in the relaxed grip; white needles glowing, hard light sliding over the dash.
+
+14. 15.33-17.33s — LOC-C: the car drives forward across the industrial lot, camera circling side to rear three-quarter exactly as the source, long black shadows wheeling past warehouses; both drawn silhouettes behind the glass.
+
+15. 17.33-19.875s — ONE CONTINUOUS TAKE: the camera FLIES INTO the car THROUGH THE TRANSPARENT REAR WINDOW, then forward through the cabin — the faces appear only as this moving camera naturally passes them, never cut to: strapped suitcases on the bench, THE GIRL frame-LEFT — caught mid-look at him, the suppressed smile tugging one corner of her red lips before she turns composed to the windshield — THE DRIVER frame-RIGHT, ringed hand on the wheel, stealing his half-beat glance at her and snapping back to the road; both present every frame, both pure ink drawings with hatched shading and catchlight-dot eyes.
+
+16. 19.875-20.875s — LOC-C: exterior wide, the car sweeps in from frame-left and passes the camera close, dust curling in ink strokes, exiting frame-right past the same guardrail and warehouse line.
+
+17. 20.875-22.92s — LOC-D: spinning six-slot wheel macro — turning with strong rotational MOTION BLUR the whole shot, grit flying, white light flashing in the hubcap, camera orbiting as the source.
+
+18. 22.92-25.08s — LOC-D, ONE CONTINUOUS TAKE: driver's POV past the LEFT A-pillar — THE HELICOPTER, a complete inked aircraft, crosses the white sky between rooftops on the source path; the camera drifts right past THE GIRL — within this same drifting frame her eyes cut from him to the wing mirror, folded hands tightening once — and settles on the WING MIRROR, and THE MIRROR GLASS LIGHTS UP: two pairs of hard white headlights and a pulsing WHITE beacon-glow closing in, brightening as they gain, a siren rising. The pursuit exists here only as light in the mirror.
+
+19. 25.08-30s — LOC-D, ONE CONTINUOUS FINAL TAKE: the car drives nose-first TOWARD the camera, grille and headlights growing — the camera sweeps up over the hood ornament, hood, windshield and roof — then rises away behind: the pink car receding down the winding road between the factory walls, THE TWO POLICE CARS in pursuit exactly where the source places them, white beacons pulsing against the monochrome city, dust plumes trailing, all three winding toward the low sun. End state at 30s: the hero car small on the road, the police behind, the camera high — this source frame is the final frame. Nothing follows.
+
+AUDIO
+
+Warm evening city air as the bed: wind over the bodywork, tires on dry asphalt, faint chrome rattle, distant city hum at the wide shots; muffled hum in cabin spans. The old carbureted engine as lead instrument: starter churn and idle catch at 2.1s as the headlights clunk on; burnout squeal and smoke hiss 3.0-5.0s with the launch bark at 4.05s; drift tire-scream 7.79-9.33s; shifter clack at 9.6s; deep KICKDOWN at 10.6s synced to the sneaker stomp; rotor thump from 23.2s; a distant siren rising from 24.3s; two sirens doppler past in the finale, fading under the wind. No music, no dialogue, no subtitles.
+
+HOLD
+
+19 shots, source cuts, source camera, source placement — one hundred percent, nothing added, no improvised shots, ending on the source's final frame; the long takes at 11.33-14.33s, 17.33-19.875s, 22.92-25.08s and 25.08-30s each play unbroken.
+
+BLACK-AND-WHITE INK ILLUSTRATION in every frame, ONE PEN FOR EVERYTHING: the people are flat 2D manga drawings exactly like the world — outline faces, flat paper-tone skin shaded only by hatching, screentone and solid blacks, graphic ink eyes, drawn-stroke hair — a moving manga page, never 3D, never photoreal, never live-action; EXACTLY TWO COLORED OBJECTS the whole film — the girl's red dress and lips and the car's pink body — everything else monochrome including the police and their white beacons; one hard-lit evening, the whole film inside the city and its limits.
+
+The acting lives only inside the listed shots at source scale: faces perform only in shots 15 and 18 (and through glass at distance in 12); shots 10, 11 and 13 are hands, feet and hair crowns only, faces out of frame; no shot is added, tightened or held to show a face.
+
+At 9.33-10.33s the overhead console shot shows only hair crowns, never faces; at exactly 10.33s the film cuts to the footwell and the sneaker stomping the pedal owns that second.
+
+Two people always: afro driver front-LEFT at the wheel, red-dress girl front-RIGHT (backward camera mirrors them: he right of frame, she left); the car stands still through the burnout (1.0-4.0s), launches at shot 5, then always drives forward, nose-first; headlights glowing from shot 3.
+
+The pursuit is only light in the shot-18 mirror; exactly three vehicles in shot 19. No text, no music, no watermarks.
+
+Copy
+Recreate
+Style 4 — 3D: The Toybox Western
+
+What it does: Re-renders the same edit as a toy stop-motion western: a brick-built canyon world, a wind-up tin robot driver and an amigurumi cat partner, with lip-synced dialogue that never adds a single shot.
+
+ACTIVE REFERENCES
+
+@Video 8 · 30s = the blocking master, 30s, EXACTLY 19 SHOTS. Strictly follow the motion and camera work of @Video 8 · 30s. It is the sole authority for all movement.
+
+VIDEO LOCK
+
+Every output frame corresponds 1:1 to the same-timestamp frame of @Video 8 · 30s: same camera position and movement, same framing, same cuts, same object positions and trajectories — only re-rendered. Exactly the 19 shots listed below at the source cut points; no shot may be added, dropped, merged or replaced; no improvised shots, no new angles. The camera frames characters only as the source frames them. DIALOGUE NEVER CREATES SHOTS: spoken lines happen inside the source's takes exactly as blocked — no cutaways to a speaker, no reverse shots, no new close-ups, no added interior angles; if a line plays while the camera is elsewhere in the source, the line stays off-screen audio. The source defines only placement and motion, never appearance: every placeholder becomes the real object its position implies — spheres are always people, cabin blocks are always cases and bags, fully rendered. If text and video seem to conflict about motion, the video wins. The film ends on the source's final frame — the final take runs unbroken to the end, with nothing after it.
+
+STYLE
+
+TOYBOX WORLD — a child's toybox come alive on a tabletop: the ENVIRONMENT and every vehicle are assembled from generic unbranded plastic construction bricks — visible round STUDS on top surfaces, standard plates, slopes and wedges, thin dark seam lines, satin injection-molded ABS sheen, tiny mold seams, faint fingerprint smudges, stickers with slightly lifting corners — while the TWO CHARACTERS are toys of a completely different kind riding inside the brick world (defined below), each rendered in its own true material. Nothing anywhere is a realistic object: everything reads as a toy at toy scale. Effects are built too: dust and smoke are stacked white and tan translucent bricks and small round plates, light beams are stacks of trans-clear slopes. Filmed like premium toy stop-motion on a real tabletop set: soft warm key light, true miniature depth of field, honest toy-scale shadows. Unmistakably a TOY WORLD RENDER — never live-action, never realistic materials, never smooth organic realism, never any branded toy design or logo.
+
+WORLD
+
+The American West, high noon, one blazing dusty day in one brick-built canyon territory — tan and dark-orange brick mesas, trans-blue brick sky, heat shimmer suggested by shifting trans-clear tiles. Dry throughout; brick dust plumes carry all the energy.
+
+LOC-A, THE TOWN MAIN STREET (shots 1-5): narrow frontier street — brick-built saloon, bank and livery facades in tan, brown and dark-red bricks with printed-tile windows and swinging door elements, wooden-plank sidewalks of brown plates, a water tower on brick legs, one brick-built lamp post. Identical in all five shots.
+
+LOC-B, THE CANYON RAIL ROAD (shots 6-13): one curved dirt road ALONGSIDE a brick railway through the canyon — tan baseplate road with dark-tan dashes, brick-built rail line on brown sleeper plates, evenly spaced telegraph poles, and walls of stepped tan-and-orange brick mesas on both sides instead of any hills. Identical in all these shots.
+
+LOC-C, THE RAIL YARD FLAT (shots 14-16): open brick-plate yard beside the tracks, printed marking tiles, water tower and brick sheds behind. Identical in all three shots.
+
+LOC-D, THE CANYON DESCENT (shots 17-19): winding brick road descending between the tallest stepped mesas toward a brick-built river crossing below. Identical throughout the finale.
+
+One continuous geography, one day. No readable text anywhere: blank tiles, blank stickers, blank signs, tick-mark-only gauges.
+
+THE CAR — a brick-built hot-rod desert runner: a chunky open-topped rod assembled from BLACK and DARK-RED bricks with a silver grille of printed grille tiles, two EXPOSED ROUND HEADLIGHTS as trans-clear round bricks (dark before 2.0s, glowing after SHOT 3), TRANS-ORANGE exhaust flame elements alive from SHOT 3, a brick-built roll bar, twin exhaust pipe elements down the flanks, trans-red tail plates, and big rugged toy wheels with black rubber tires on silver hub elements — visible studs on the hood and rear deck, one slightly lifting sticker on the door, identical in every shot.
+
+THE CABIN — brick-built bench seat in dark-brown, a black steering wheel element on the LEFT, a printed dashboard tile with blank round gauges, a tall lever element as the shifter, a tiny brick horseshoe charm hanging from the mirror element, two brick-built strongboxes and a tan money-sack element on the rear deck, printed pedal tiles on the floor, trans-clear windshield element. Identical in every interior shot.
+
+THE DRIVER — front-LEFT seat, all 30s: a VINTAGE WIND-UP TIN ROBOT, an original design: boxy lithographed tin body in worn black and dark-red with painted-on duster details, visible rivets and folded tin seams, a rectangular tin head with narrow determined shutter-plate eyes that shift and blink, a thin painted mustache above a HINGED TIN JAW that clacks open and shut in visible sync with every syllable he speaks, a tiny black cowboy hat perched on top, a slowly turning WIND-UP KEY in his back, hinged tin arms ending in simple two-finger gripper hands, stiff hinged tin legs; light scratches and paint chips of a loved old toy. His motion is mechanical and hinged — shoulder, elbow, hip, jaw — never fluid. Present in every shot of him.
+
+THE PARTNER — front-RIGHT seat, all 30s: a HAND-KNITTED AMIGURUMI CAT, an original design: soft crocheted yarn body in cream and tan stripes, visible yarn stitches everywhere, black BUTTON eyes that catch light and aim like real eyes, a stitched pink nose and a SOFT FABRIC MOUTH that truly opens, stretches and rounds in visible sync with every word she speaks, floppy yarn ears under a tiny tan felt cowboy hat, a yarn braid down her back, a little felt bandana, soft mitten paws resting on a brick-built rifle element across her lap; a slightly loose thread at one ear. Her motion is soft and floppy, cloth-doll physics. Present in every shot of her.
+
+ALWAYS exactly two toy characters in the car, both visible over the sides in every exterior view; when the camera faces backward, the robot reads frame-RIGHT, the cat frame-LEFT. His hands are always his two-finger tin grippers, her paws always stitched yarn mittens — never human anatomy. Both hold their source-blocked poses at all times; speaking moves only the mouth, the eyes and nothing else.
+
+THE SHERIFF'S AIRSHIP (shot 18) — a complete brick-built scout airship, dark-blue and grey bricks with a rotating brick propeller disc and a searchlight of stacked trans-clear slopes throwing a hard cone through the dust.
+
+THE SHERIFF'S CRUISERS (a blurred reflection in the shot-18 mirror; on screen only in shot 19) — two identical brick-built pursuit rods in WHITE-AND-BLACK brick livery with printed star tiles on the doors, roof beacons strobing TRANS-RED and TRANS-BLUE elements, trans-clear headlight bricks, brick dust plumes off the tires. Clearly distinct from the hero car. No other vehicles ever.
+
+SHOTS — timing, angle and camera from @Video 8 · 30s, one hundred percent:
+
+1. 0-1.0s — LOC-A: the brick-built lamp post against the saloon and bank facades behind it for parallax; post and buildings static, studs catching the sun; the camera alone orbits the set.
+
+2. 1.0-2.0s — LOC-A: top-down: the black-and-dark-red rod STANDS STILL on the tan baseplate street, nose to bottom of frame, engine off, its studded hood and roll bar reading clearly from above.
+
+3. 2.0-3.0s — LOC-A: static camera, street level, the parked rod front three-quarter; HEADLIGHTS SWITCH ON as an impact frame — the trans-clear round bricks light up — trans-orange exhaust flames snap on, the engine wakes. The car does not move.
+
+4. 3.0-4.0s — LOC-A: wheel macro: BURNOUT IN PLACE — the rubber tire spinning, the silver hub strobing, a huge fan of stacked tan and white brick dust elements building outward, small round plates bouncing across the baseplate; the car holds its place.
+
+5. 4.0-5.0s — LOC-A: rear view: the rod LAUNCHES — snapping forward away from camera down the brick street, a roostertail of tan dust bricks, trans-red tail plates receding fast between the plank sidewalks.
+
+6. 5.0-6.0s — head-on: the rod races nose-first at the low camera, grille tiles and lit headlight bricks leading, slight camera shake, dust brick clusters bursting from the rear; the front fills the shot end to end.
+
+7. 6.0-7.0s — LOC-B: the canyon road curve, the rod ahead driving forward beside the brick rail line, stepped mesas walling the road, telegraph poles ticking past.
+
+8. 7.0-7.79s — LOC-B: aerial top shot of the bend, the rod sweeping through, tan baseplate road, dark-tan dash tiles and brick rails filling the frame — no smooth hills, only stepped brick mesas.
+
+9. 7.79-9.33s — LOC-B: DRIFT at the source angle — front wheel and nose sliding, the tire spinning as a blurred rubber ring, sheets of brick dust elements peeling off and scattering toward the lens, a few loose round plates tumbling past.
+
+10. 9.33-10.33s — interior TOP SHOT, camera looking STRAIGHT DOWN at the console; the occupants read only as the TOPS OF THEIR HEADS — his black tin hat and wind-up key left, her tan felt hat and yarn braid right, faces out of view the entire shot. The frame's subject: THE DRIVER's RIGHT tin arm — attached to his own riveted shoulder at the LEFT seat, entering the frame from the LEFT edge — swings inward over the console on its hinge, and his two-finger gripper closes ON TOP of the lever element, capping it, and pulls the gear. The arm stays connected to his tin torso every frame; it never comes from the top of frame, never from the rear of the cabin. EXACTLY TWO CHARACTERS and FOUR ARMS exist in this car; the rear deck holds only the strongboxes and the money sack — nobody sits behind. The frame holds exactly: printed dash tile, lever, his connected tin arm and gripper, bench seat edges, two hat crowns, the edge of her striped yarn body. This overhead view owns the whole second.
+
+11. 10.33-11.33s — at exactly 10.33s the view CUTS to THE FOOTWELL — a different, darker angle low under the dash: printed pedal tiles, a warm glow, and THE DRIVER's stiff tin leg SWINGING DOWN from the hip to press his riveted tin boot INTO THE PEDAL at ~10.6s on an impact frame, holding it flat, the engine roaring. The tin boot and pedal tile are the heroes; this footwell view owns the whole second.
+
+12. 11.33-14.33s — LOC-B, ONE CONTINUOUS TAKE: the camera travels around the speeding rod through all the source's angles, sun raking across studs, seam lines, lithographed tin and yarn stitches, dust bricks trailing; TWO toy characters visible over the sides at every angle — the tin robot at the LEFT wheel, the striped yarn cat in the RIGHT seat, her ears flapping in the wind.
+
+13. 14.33-15.33s — interior: the black wheel element close, his two tin grippers working a calm correction, the printed gauge tile beside them, the wind-up key turning slowly at the edge of frame.
+
+14. 15.33-17.33s — LOC-C: the rod drives forward across the yard's printed marking tiles, camera circling side to rear three-quarter exactly as the source; both toys visible, sheds and water tower sliding behind.
+
+15. 17.33-19.875s — ONE CONTINUOUS TAKE, camera path exactly as the source, no added cuts: the camera FLIES INTO the car OVER THE REAR DECK, then forward through the open cabin: strongboxes and money sack on the deck, THE CAT frame-LEFT in cream-and-tan yarn, THE ROBOT frame-RIGHT in lithographed tin, both present every frame in their source-blocked poses, hard toy shadows sliding across tin and yarn. As the camera passes, they speak WITHOUT changing pose — only mouths and eyes move: THE CAT, button eyes on his profile, fabric mouth shaping every word — "You wind up for this one?" (teasing, pitch climbing, a giggle leaking into the last words); THE ROBOT, eyes on the road, one brief glance her way, tin jaw clacking each syllable — "Three full turns." (slow, deadpan, quiet pride on "full"). The take never cuts.
+
+16. 19.875-20.875s — LOC-C: exterior wide, the rod sweeps in from frame-left and passes the camera close, a burst of dust bricks scattering at the tires, exiting frame-right trailing a plume of stacked plates.
+
+17. 20.875-22.92s — LOC-D: spinning wheel macro — the rugged toy tire turning the whole shot, silver hub flashing, dust bricks and loose round plates pelting past, mold seam and tire tread reading sharply, camera orbiting as the source.
+
+18. 22.92-25.08s — LOC-D, ONE CONTINUOUS TAKE, camera path exactly as the source, no added cuts: driver's POV past the LEFT roll-bar upright — THE SHERIFF'S AIRSHIP crosses the trans-blue brick sky on the source path, its trans-clear searchlight cone sweeping the mesa walls; the camera drifts right past THE CAT — holding her source pose, only her button eyes tracking the airship and her fabric mouth rounding through one word, "Company." (sing-song, almost delighted) — then on to the MIRROR ELEMENT, and IN THE MIRROR GLASS: far behind on the canyon road, ONE SHERIFF'S CRUISER — small, soft and OUT OF FOCUS in the mirror's shallow depth, a blurred white-and-black brick shape with its roof beacon strobing trans-red and trans-blue, twin headlight points beneath, a faint dust plume behind it — and further back a second, fainter beacon glow barely resolving. Each strobe reads as a soft defocused bloom, not a sharp light; the cruiser grows slightly larger and brighter over the take, a rising alarm bell with it. The pursuit exists here only as this blurred reflection in the mirror — never sharp, never outside the mirror glass.
+
+19. 25.08-30s — LOC-D, ONE CONTINUOUS FINAL TAKE, camera path exactly as the source, no added cuts: the rod drives nose-first TOWARD the camera, lit headlight bricks flaring — through the windshield, both in their source poses, THE ROBOT's tin jaw clacks two words, "Hold the boxes." (level, the care audible under the order), and THE CAT's fabric mouth rips wide, "Best ride EVER!" (a laughing whoop, torn by wind and doppler as the car passes) — the camera sweeps up over studded hood, windshield element and roll bar — then rises away behind: the black-and-dark-red rod receding down the winding brick descent toward the river crossing, THE TWO SHERIFF CRUISERS in pursuit exactly where the source places them, trans-red and trans-blue beacons strobing against the tan mesas, dust brick plumes trailing, no more words. End state at 30s: the hero rod small on the descent, the cruisers behind, the camera high over the brick canyon — this source frame is the final frame. Nothing follows.
+
+AUDIO
+
+Dry canyon noon as the bed: wind over rock, cicadas, a distant steam whistle, creaking timber in the town shots; open-air rush in the driving spans; under it all a faint handmade texture — small plastic clicks, tin rattles and a soft clockwork tick from the driver on hard beats. A big V8 with a carburetor snarl: idle catch at 2.1s as the lights come on; burnout squeal and dust roar 3.0-5.0s with the launch bark at 4.05s; slide scream 7.79-9.33s; lever clack at 9.6s; deep KICKDOWN at 10.6s synced to the pedal press; propeller drone from 23.2s; a rising alarm bell from 24.3s; two pursuing engines doppler past in the finale, fading under the wind. DIALOGUE — five short lines, live and breathing, never flat text-to-speech: real breaths, laughter inside words, moving pitch, wind in the voices. HER voice small, woolly, warm; HIS a dry tin resonance with a clockwork burr. Timing: "You wind up for this one?" ~18.2s; "Three full turns." ~19.0s; "Company." ~24.3s; "Hold the boxes." ~25.6s; "Best ride EVER!" ~26.4s. Every line lip-synced; the lines never change the camera. No other speech, no music, no subtitles.
+
+HOLD
+
+19 shots, source cuts, source camera, source placement — one hundred percent, nothing added, no improvised shots, ending on the source's final frame; the long takes at 11.33-14.33s, 17.33-19.875s, 22.92-25.08s and 25.08-30s each play unbroken; DIALOGUE NEVER ADDS COVERAGE — no reverse shots, no speaker close-ups, no new angles for any line.
+
+TOYBOX WORLD in every frame — the environment and all vehicles built from generic unbranded construction bricks with visible studs, seams and satin ABS sheen; the driver always the same lithographed WIND-UP TIN ROBOT with his turning back key, hinged clacking jaw and two-finger grippers, the partner always the same striped AMIGURUMI YARN CAT with button eyes and a soft articulating fabric mouth; every object reads as a toy — never live-action, never realistic materials, never any branded toy design or logo.
+
+Two toy characters always: tin robot driver front-LEFT, yarn cat partner front-RIGHT (backward camera mirrors them: robot right of frame, cat left); never a third character, never a disembodied hand; both hold their source-blocked poses — speech moves only mouths and eyes; the car stands still through the burnout (1.0-4.0s), launches at shot 5, then always drives forward, nose-first; headlights and exhaust flames alive from shot 3.
+
+At 9.33-10.33s the overhead console shot shows only hat crowns and the wind-up key, never faces; at exactly 10.33s the film cuts to the footwell and the tin boot pressing the pedal tile owns that second.
+
+The pursuit in shot 18 exists only as a blurred distant cruiser reflected in the wing mirror — a defocused white-and-black shape with a strobing beacon, never sharp, never outside the mirror; exactly three vehicles in shot 19. No text, no music, no watermarks.
+
+Copy
+Recreate
+Ready To Make Your Own?
+
+That's the whole framework: block it in 3D, lock the camera, and make the AI execute your shot instead of rolling the dice. The blocking is reusable — swap the character, swap the location, keep the exact same moves. 
+
+Grab the Higgsfield Bridge plugin and the blocking master file, build something wild, and show us what you make.
+
+
+
+
+READY TO MAKE YOUR OWN?
+Let's create!
+
