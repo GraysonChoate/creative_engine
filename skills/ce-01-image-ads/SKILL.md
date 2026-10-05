@@ -6,6 +6,7 @@ description: "Run the full static image-ad workflow for any brand: intake, strat
 # CE-01 Image Ads (universal)
 
 Mission: produce a tested, brand-safe set of static ads for [BRAND] / [PRODUCTS] across [PLATFORMS], using the real product images, never redrawn ones. Run each phase in order. STOP at every GATE and wait for a yes. Quote cost before any spend. State your reading of the request in one line first.
+LIBRARY: techniques and exact prompts live at github.com/GraysonChoate/creative_engine (docs/CE-03). Check it before inventing a method.
 
 ## Inputs (ask once for anything missing; otherwise infer)
 [BRAND URL] [FLAGSHIP PRODUCTS, 3 to 5] [GOAL: sales | leads | traffic | awareness] [PLATFORMS + RATIOS] [AUDIENCE] [OFFER] [APPROVED CLAIMS] [BUDGET in credits] [TIER: tame | new direction | spectacular]
@@ -19,11 +20,9 @@ Mission: produce a tested, brand-safe set of static ads for [BRAND] / [PRODUCTS]
 - Keep communication short and plain.
 
 ## Phase 0: Load the harness
-0.1 CONNECTOR Firecrawl: scrape site (markdown + branding format) for logo, colors, fonts, voice, products, prices, reviews.
-0.2 CONNECTOR Apify: pull the brand's top posts/ads and 3 to 5 competitor ads for winning angles, formats, hooks.
-0.3 CONNECTOR public product feed (e.g. /products.json): catalog, prices, images.
-0.4 MANUAL/CODE: pick the 3 to 5 flagships. Download real packshots (transparent PNG preferred). Pull the logo as vector or PNG.
-0.5 Write the BRAND BIBLE (identity, hex codes, fonts, voice, do/don't, approved claims, asset list). Everything below reads it.
+0.1 Load the ce-00 brand bible and asset library. If none exists, run ce-00 first. Do not redo intake here.
+0.2 MANUAL/CODE: pick the 3 to 5 flagships from the asset library. Confirm real packshots (transparent PNG preferred) and the logo (vector or PNG) are APPROVED.
+0.3 Competitor ads and winning angles come from the ce-00 marketing advisor brief. Pull more with Apify only if it is thin.
 GATE 0: show the bible, flagship picks and angle shortlist. Wait.
 
 ## Phase 1: Strategy
@@ -56,14 +55,14 @@ PATH C: TEMPLATED SCALE (Canva)
 GATE 2: show a contact sheet (all concepts, all ratios).
 
 ## Phase 4: Audit (a separate agent, never the producer)
-4.1 BRAND GUARDIAN checks each image: hex colors sampled by pixel, fonts, logo clearspace, label accuracy against the real packshot, claim vs approved source, no fabricated people/reviews, price correct.
+4.1 BRAND GUARDIAN (ce-00 Step 5) checks each image: hex colors sampled by pixel, fonts, logo clearspace, label accuracy against the real packshot, claim vs approved source, no fabricated people/reviews, price correct.
 4.2 SKILL gauntlet-loop: 2+ adversarial critic rounds for "looks AI-generated", clutter, weak hook, contrast, platform rules.
 4.3 Pass/fail table per image. Failures return to Phase 2 with a named fix. Max 2 fix loops.
 4.4 Show me any compliance risk (supplements/health, pricing, "best/#1" claims).
 
 ## Phase 5: Deliver
 5.1 Ad set folder + contact sheet + spec table (ratio, size, file) + A/B test plan (what each pair tests, success metric, runtime, sample size) + UTM naming.
-5.2 Update the brand bible and corrections log. Propagate every correction to every concept.
+5.2 Update the brand bible and corrections log (ce-00 Step 6). Propagate every correction to every concept.
 5.3 Cost report (credits used vs quoted).
 
 ## Failure modes -> fix

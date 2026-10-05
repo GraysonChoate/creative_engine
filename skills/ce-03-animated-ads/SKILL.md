@@ -6,6 +6,7 @@ description: "Run the full animated-ad workflow for any brand: motion strategy, 
 # CE-03 Animated Ads (universal)
 
 Mission: produce animated ads (motion graphics, product loops, hyper-motion, logo animation) for [BRAND] / [PRODUCTS] on [PLATFORMS] that look intentional, keep the real product and logo exact, and read with the sound off. Run each phase in order. STOP at every GATE and wait for a yes. Quote cost before any spend. State your reading of the request in one line first. Keep communication short and plain.
+LIBRARY: techniques and exact prompts live at github.com/GraysonChoate/creative_engine (docs/CE-03). Check it before inventing a method.
 
 ## Inputs (ask once for anything missing; otherwise infer)
 [BRAND URL] [PRODUCT + real packshot] [GOAL] [PLATFORMS + RATIOS] [LENGTH: 6 / 10 / 15s] [AUDIO: none | music | jingle | voiceover] [TIER: tame | new direction | spectacular] [MOTION WORDS: 3 adjectives for speed and feel] [BUDGET in credits]
@@ -22,7 +23,7 @@ Mission: produce animated ads (motion graphics, product loops, hyper-motion, log
 - Never poll in a loop. Never spend without a quote and a yes. use_unlim only if I ask.
 
 ## Phase 0: Harness + motion language
-Reuse the brand bible if one exists (from ce-01 or ce-02). Otherwise: Firecrawl (markdown + branding), Apify (the brand's best-performing videos and 3 to 5 competitor motion ads), public product feed, real packshots and vector logo, then write the BRAND BIBLE. Add a MOTION SECTION: 3 motion words, easing curves, durations, transition style, sound style. Check for an existing motion library and reuse approved styles.
+Load the ce-00 brand bible and asset library. If none exists, run ce-00 first. Do not redo intake here. Competitor motion ads come from the ce-00 marketing advisor brief; pull more with Apify only if it is thin. Then add a MOTION SECTION to the bible: 3 motion words, easing curves, durations, transition style, sound style. Check for an existing motion library and reuse approved styles.
 GATE 0: show bible, motion words, reference motion ads.
 
 ## Phase 1: Strategy
@@ -58,7 +59,7 @@ Cost: quote first. Our earlier note: about 72 credits per 1080p Seedance take, a
 5.1 Frame sheet every 0.25s: pack on surface and not floating; label legible and matches the real packshot; logo clearspace; text inside safe zones (key content in the middle 80% for 9:16); hex colors sampled.
 5.2 Motion QA: easing, speed against the motion words, loop seam invisible, no flicker, no flash above 3 Hz, no judder at 30fps.
 5.3 Sound-off test and phone-size test. Audio levels (about -14 LUFS for social), no clipping.
-5.4 BRAND GUARDIAN: colors, fonts, claims vs approved list, disclosure where needed.
+5.4 BRAND GUARDIAN (ce-00 Step 5): colors, fonts, claims vs approved list, disclosure where needed.
 5.5 SKILL gauntlet-loop: 2+ adversarial rounds for looks-AI-generated, weak hook, clutter, pacing.
 5.6 Pass/fail table. Fix loop max 2, re-rolling only the failing segment.
 GATE 4: show contact sheet and clips.
@@ -68,7 +69,7 @@ GATE 4: show contact sheet and clips.
 - Captions (subtitles skill) only where speech exists; burned callouts come from code.
 - End card with real logo and CTA. Name: [brand]_[product]_[type]_[len]_[ratio]_v[n].
 - Deliver: finals per ratio, clean masters, source project (editable), storyboard, audit table, cost report.
-- Save approved styles to the brand's MOTION LIBRARY. Update the bible and corrections log. Propagate corrections.
+- Save approved styles to the brand's MOTION LIBRARY. Update the bible and corrections log (ce-00 Step 6). Propagate corrections.
 
 ## Failure modes -> fix
 - Label warped or text garbled: use the real pack layer and code-set text.

@@ -13,7 +13,7 @@ Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
 - GOAL: sales | leads | bookings | content | brand. One primary.
 - PLATFORM: Shopify | WordPress | custom code | Higgsfield-hosted | undecided.
 - SCOPE: page count, must-keep URLs, languages.
-- TIER: tame | new-direction | spectacular (spectacular only on homepage + 1-2 hero pages).
+- TIER: tame | new-direction | spectacular. Set per page or per section, as the user chooses. Spectacular can run on any page, including the whole site, if the user wants it. Each page keeps its own weight budget (Phase 7).
 - ACCESS: admin/theme access, analytics, Search Console, DNS owner. If none: prototype only.
 - ASSETS: what exists (packshots, logo, photos, video, copy).
 
@@ -30,7 +30,7 @@ Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
 10. Do not collect or enter credentials. User signs in; Claude never types passwords.
 
 ## PHASE 0: HARNESS + SITE AUDIT
-- Brand bible: load or build (Firecrawl scrape + branding; Apify for socials; /products.json; competitors).
+- Brand bible: load the ce-00 bible. If none exists, run ce-00 first. Do not rebuild it here.
 - Crawl the site: Firecrawl map + scrape (sitemap.xml, all URLs, titles, H1s, word counts, internal links, broken links).
 - Screenshots desktop + phone (Claude in Chrome) of top pages.
 - Pull analytics if given: top pages, traffic sources, conversion path, bounce, device split. If none, say so.
@@ -52,11 +52,12 @@ GATE 1: sitemap, flows, redirect map approved.
 - Tokens: color, type scale, spacing, radius, shadow, motion (3 motion words, durations, easing).
 - Components: nav, hero, product card, grid, accordion, review block, form, footer, buttons, badges.
 - Boards: one per page TEMPLATE (not every page), desktop + phone. Tools: gpt_image_2_5 / nano_banana_pro / flux_3_image (Higgsfield) with real packs composited, or Canva generate-design.
-- Three tiers from same inputs: TAME (clean, fast), NEW DIRECTION (new layout/imagery), SPECTACULAR (scroll film/3D, homepage only).
+- Three tiers from same inputs: TAME (clean, fast), NEW DIRECTION (new layout/imagery), SPECTACULAR (scroll film/3D/shaders; any page or section the user picks).
+- Spectacular assets follow the core asset-request format: loop first frame = last frame; one timed world per scroll section; occlusion transitions between sections; frame-sequence or short video export; mobile weight limits stated up front.
 GATE 2: user picks tier, approves tokens + boards. Lock them.
 
 ## PHASE 3: HOMEPAGE
-- Run ce-04-homepage Phases 1-5 using the locked system. Do not redo the audit.
+- Run ce-04-homepage Phases 1-5 using the locked system. Do not redo the audit or the brand intake.
 GATE 3: homepage approved on phone and desktop.
 
 ## PHASE 4: TEMPLATES + ASSET LOCK
@@ -85,7 +86,7 @@ Critic loop (gauntlet-loop, 2+ rounds, max 2 fix loops):
 - Phone 390px + 768px + desktop. No horizontal scroll. Tap targets 44px.
 - Every link and form works. Cart/checkout path completes on staging.
 - Redirects: no chains, no 404s on old top URLs.
-- Performance: LCP under 2.5s on mid phone; weight budget tame <1.5 MB, new direction <3 MB, spectacular <6 MB initial (homepage).
+- Performance: LCP under 2.5s on mid phone; weight budget per page: tame <1.5 MB, new direction <3 MB, spectacular <6 MB initial. Check every page against its own tier.
 - Accessibility: contrast 4.5:1, alt text, keyboard focus, reduced motion.
 - SEO: unique title/H1 per page, schema valid, sitemap submitted-ready, no noindex left on.
 - Tracking fires once, not twice.
@@ -105,11 +106,11 @@ FAIL = fix and re-run. Never launch on a fail.
 | Scope creep | Templates first. New pages go to a Phase 2 backlog. |
 | Label warps or text garbles | Real pack image only. Never regenerate. |
 | Off-brand drift between pages | Rebuild from tokens, re-run Guardian. |
-| Slow pages | Compress, lazy-load, remove apps/scripts, drop motion tier. |
+| Slow pages | Compress, lazy-load, remove apps/scripts, drop that page's motion tier. |
 | Missing access | Ship prototype + handoff pack, say what is blocked. |
 | Connector missing | Use crawl, screenshots, public feeds. Say so. |
 | Client keeps changing boards | Gate 2 lock. Changes after = new scope, logged. |
 
 ## RUN ORDER SUMMARY
-0 audit > G0 > 1 sitemap > G1 > 2 design system > G2 > 3 homepage (ce-04) > G3 > 4 templates + assets > G4 > 5 build (prototype first) > 6 migrate > 7 audit > 8 launch + handoff.
+0 audit (ce-00 bible) > G0 > 1 sitemap > G1 > 2 design system > G2 > 3 homepage (ce-04) > G3 > 4 templates + assets > G4 > 5 build (prototype first) > 6 migrate > 7 audit > 8 launch + handoff.
 Time: 1-2 weeks small site, 3-5 weeks 30+ pages. Credits: boards low, loops moderate. Always quote first.
