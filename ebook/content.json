@@ -669,6 +669,10 @@
     },
     {
      "t": "note",
+     "x": "Props are elements too. Every object that returns (blender, glass, scoop, kitchen) gets one reference image with a size anchor, tagged in every shot. Invent it once, then it is fixed, even when the camera shows only a piece of it."
+    },
+    {
+     "t": "note",
      "x": "Full vocabulary and a five-shot worked example: docs/DIRECTOR-PASS.md in the repo."
     },
     {

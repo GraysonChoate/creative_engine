@@ -13,7 +13,7 @@ A scene description is not a prompt. The user talks like a client ("she drops fr
 7. **Show the vision, then stop.** Send the user a short table, no long prompts:
    | Scene | What happens | Camera | Effect | Feel |
    One line each. End with: "Approve, or tell me what to change." Adjust and re-show until approved.
-8. **Next phase: elements and references.** After approval, list what must be locked (character, product pack, kitchen/location, outfit, logo), get or make each as an image, show them, then storyboard frames, then the frame check, then video.
+8. **Next phase: elements and references.** After approval, make an ELEMENT LIST: everything seen in 2+ shots (character, product pack, outfit, logo, AND props and places: blender, glass, scoop, counter, kitchen). Make or get each as a reference image with a size anchor (e.g. blender 14 in tall, glass 6 in, next to her hand). Tag each in every prompt, get or make each as an image, show them, then storyboard frames, then the frame check, then video.
 
 Order: brief > world rules > director pass > VISION (user approves) > elements and references (user approves) > storyboard frames + frame check > video.
 
@@ -47,3 +47,6 @@ Full moves with real causes: `docs/PLAYBOOK-shots-effects.md`.
 
 ## Check before showing
 Does every prompt name: shot size, angle, lens, camera start/move/end, light, and the effect with its cause? If any is missing, add it. Then run the frame check on the images (START-HERE rule 9).
+
+## Props are elements too
+Any object that returns gets locked like a product. Blender in shot 1 and glass in shot 5: both get a reference sheet first. The agent may invent the design, but after it is chosen it is fixed. Close-ups show a piece of it, so the reference must still match that piece. Add a size line to the prompt ("the same 14-inch blender as image 3, next to a 6-inch glass"). If a shot shows a different size or shape, that shot fails the frame check; re-run with the reference attached.
