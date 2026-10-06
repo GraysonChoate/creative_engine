@@ -628,6 +628,47 @@
     },
     {
      "t": "h3",
+     "x": "Director pass: you describe, the agent directs"
+    },
+    {
+     "t": "note",
+     "x": "A plain scene is not a prompt. The agent must act as the cinematographer: for every beat, name shot size, angle, lens, camera start/move/end, speed, light, and the effect with its real cause, inside the prompt."
+    },
+    {
+     "t": "code",
+     "x": "Style > Subject and action > Camera (start, move, end, lens) > Light > Effect > Locks"
+    },
+    {
+     "t": "table",
+     "head": [
+      "You say",
+      "The agent writes"
+     ],
+     "rows": [
+      [
+       "Fruit dropped in the blender, dynamic",
+       "Inside-the-jar, low angle looking up, 24mm, slow motion 120fps, fruit falls toward the lens, slight push-in"
+      ],
+      [
+       "Pouring collagen, product behind",
+       "Medium close-up, 50mm, slow arc left around the blender, backlit powder cloud, rack focus from scoop to powder, pack soft behind"
+      ],
+      [
+       "Inside view, dynamic swirl",
+       "ECU inside the jar, macro 100mm, orbit the vortex 90 degrees, liquid starts at the blades, caustics on glass"
+      ],
+      [
+       "Payoff zoom out, she sips",
+       "Start tight on the glass, pull-back dolly to wide, speed ramp slow on the sip, golden light, pack with contact shadow"
+      ]
+     ]
+    },
+    {
+     "t": "note",
+     "x": "Full vocabulary and a five-shot worked example: docs/DIRECTOR-PASS.md in the repo."
+    },
+    {
+     "t": "h3",
      "x": "Prompt order, same every shot"
     },
     {
