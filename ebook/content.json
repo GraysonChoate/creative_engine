@@ -631,6 +631,18 @@
      "x": "Prompt order, same every shot"
     },
     {
+     "t": "h3",
+     "x": "Shot card: write this for every shot"
+    },
+    {
+     "t": "code",
+     "x": "OBJECTS: where each thing is and what it rests on (blender upright on the counter, lid off)\nPEOPLE: who is where, doing what\nCAMERA: starts [where], moves [how], ends [where]\nIN FRAME: only what this beat needs\nCARRIES OVER: outfit, hair, props, light, time of day from the last shot"
+    },
+    {
+     "t": "note",
+     "x": "Example: CAMERA starts inside the blender jar looking up. Fruit drops from above toward the lens. Cut to her hands pouring collagen into the same upright blender."
+    },
+    {
      "t": "code",
      "x": "[STYLE HEADER]\n[REFERENCE ROLES] image 1 = hero identity, image 2 = location, image 3 = pack label\n[SPACE] left / right, door counts, where the camera starts\n[BEATS] 3 sentences or fewer each\n[CAMERA] one move\n[COUNT LOCKS] exactly 3 riders\n[KEEP-LIST] what must not change"
     },
@@ -768,6 +780,43 @@
    "lede": "Smallest fix first: one-line change, then simplify the shot, then rewrite from the best frame.",
    "blocks": [
     {
+     "t": "h3",
+     "x": "Check every frame before you show it"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fail if",
+      "Example"
+     ],
+     "rows": [
+      [
+       "Physics: floats, on its side, wrong way up, no cause",
+       "Blender turned on its side in mid-air; fruit thrown into it"
+      ],
+      [
+       "Continuity: differs from the locked sheet or last shot",
+       "Sweater changes every scene"
+      ],
+      [
+       "Clutter: more than the beat needs",
+       "All products in the background at once"
+      ],
+      [
+       "Camera: not where the shot card says",
+       "Should start inside the jar looking up"
+      ],
+      [
+       "Logic: nobody would do this here",
+       "Mixing electrolytes on a rock in a lake"
+      ]
+     ]
+    },
+    {
+     "t": "note",
+     "x": "Check the actual images, not the prompts. Every medium: ads, cartoons, animation, websites. List each fail with a one-line fix, then re-check."
+    },
+    {
      "t": "table",
      "head": [
       "Problem",
@@ -823,9 +872,9 @@
    ],
    "try": "Take your worst take and write one one-line change for it.",
    "short": [
+    "Check the images against the shot card and the locked sheet.",
     "One-line change, everything else word for word.",
-    "Max 4 rounds per scene, then change the shot design.",
-    "Hook, payoff and pack shot first. If those fail, the film fails."
+    "Max 4 rounds per scene, then change the shot design."
    ]
   },
   {

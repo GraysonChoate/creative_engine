@@ -25,3 +25,6 @@ Pick world (REAL / STYLIZED REAL / INVENTED), write 3 to 5 rules + where/when/wh
 
 ## Ebook (2026-10-06)
 `ebook/content.json` is the single source for the ebook "Directing the Engine" (8 tabs: Start, World, Camera, Effects, Higgsfield, Say It, Fix, Briefs). Edit the JSON, run `python3 ebook/build.py`, republish. It merges the creative Playbook with the operating chapters of the earlier "Directing Higgsfield" book (connect and first-video chapters dropped). Open question: test lens-number camera phrases (FOV degrees) against Cinema Studio, which has no numeric camera fields.
+
+## Shot card and frame check (2026-10-06)
+Added to START-HERE items 7 and 8. Trigger: a cinematic ad had the blender on its side in mid-air, all products in the background, and the outfit changing each scene. Rule: write a shot card before any image; check the actual frames (physics, continuity, clutter, camera, logic) in EXPLORE and BUILD, every medium. Also in the ebook (Fix and Say It tabs). Skills point to START-HERE, so no skill edit is needed.

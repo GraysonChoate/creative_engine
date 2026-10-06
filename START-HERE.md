@@ -6,8 +6,16 @@
 4. **Anchors, effects, camera.** Anchors (people, product, place, reason) fit the world. Effects may be fantasy but need a real cause and return to the real. Camera is free.
 5. **Real labels.** Text comes only from the real source. Check every result against the real image. If wrong, put the real label back or re-run.
 6. **Lock first.** Make each recurring thing (character, product, location) once as an image, then reuse it.
-7. **Fix small.** One-line change first. Rewrite last.
-8. **Pick the skill:** ce-00 brand setup (first, once per brand) | ce-01 image ads | ce-02 UGC | ce-03 animated ads | ce-04 homepage | ce-05 full website | ce-06 cinematic ad.
-9. **Lookup (do not read all):** `docs/PLAYBOOK-shots-effects.md` for camera moves and effects. `docs/CE-0*.md` for techniques and exact prompts.
-10. **After Effects** is available on the user's computer for compositing real packs and logos, type, transitions, grade, and web exports. See `docs/AE-route.md`.
-11. **Talk to the user** in simple words, as few as possible.
+7. **Shot card, before any image.** For every shot write: (a) where every object is and what it rests on (blender upright on the counter, lid off); (b) who is where and doing what; (c) where the camera starts and where it goes (starts inside the jar looking up); (d) what is in frame (only what this beat needs); (e) what carries over from the last shot (outfit, hair, props, light, time of day).
+8. **Check every frame before you show it.** Look at the actual images, not the prompts. A separate pass, in EXPLORE and BUILD, for every medium (ad, cartoon, animation, website imagery). Fail the frame if any of these is true:
+   - **Physics:** an object floats, sits on its side, or is used the wrong way up. Nothing rests on a surface. A motion has no cause (fruit lands in a blender nobody could reach).
+   - **Continuity:** outfit, hair, props, product, location or light differs from the locked sheet or the previous shot.
+   - **Clutter:** more products, people or props than the beat needs. One hero per shot unless the beat says otherwise.
+   - **Camera:** it does not start or end where the shot card says.
+   - **Logic:** the person is doing something in a place where nobody would.
+   List each fail with a one-line fix. Fix, re-check, then show.
+9. **Fix small.** One-line change first. Rewrite last.
+10. **Pick the skill:** ce-00 brand setup (first, once per brand) | ce-01 image ads | ce-02 UGC | ce-03 animated ads | ce-04 homepage | ce-05 full website | ce-06 cinematic ad.
+11. **Lookup (do not read all):** `docs/PLAYBOOK-shots-effects.md` for camera moves and effects. `docs/CE-0*.md` for techniques and exact prompts.
+12. **After Effects** is available on the user's computer for compositing real packs and logos, type, transitions, grade, and web exports. See `docs/AE-route.md`.
+13. **Talk to the user** in simple words, as few as possible.
