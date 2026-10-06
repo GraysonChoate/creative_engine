@@ -13,6 +13,13 @@ Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL], [IDEA].
 - EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real.
 - BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner.
 
+## WORLD RULES (always on, EXPLORE and BUILD)
+Before any image or video prompt:
+1. Pick the world: REAL (live-action brand ad), STYLIZED REAL (painted, anime: real-world logic in a set look) or INVENTED (cartoon, new world).
+2. Write 3 to 5 world rules, plus one line: where, when, and why the person is here doing this. Nothing random.
+3. Three layers. ANCHORS (people, product, place, reason) stay true to the world. EFFECTS may be fantasy, but each starts from a real cause in the anchors (she opens the bottle, the liquid swirls) and returns to the real. CAMERA is free (macro zoom, sky drop, thread-level close-up).
+4. Check every storyboard frame against the rules. If the place cannot hold the action, change the action.
+
 Core method (Higgsfield Academy, "Make a Cinematic Ad End-to-End"): ASSETS -> PROMPTING FRAMEWORK -> SCENES -> EDIT. Iteration is the skill: the final film is the best few seconds cut from many takes.
 LIBRARY: exact prompts and techniques live at github.com/GraysonChoate/creative_engine (docs/CE-03). Check it before inventing a method.
 

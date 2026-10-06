@@ -19,3 +19,6 @@ AI may copy label text from a real reference. Text comes only from the real sour
 - Repo snapshot: ce-04, ce-05, ce-06 updated.
 - Still to do: ce-00 (light intake in EXPLORE), ce-01 to ce-03 (mode + label rule).
 - Live skills in Claude: pending save of proposals.
+
+## World Rules (added 2026-10-06)
+Pick world (REAL / STYLIZED REAL / INVENTED), write 3 to 5 rules + where/when/why. Anchors fit the world; effects need a real cause and return to the real; camera is free. In ce-00, ce-04, ce-05, ce-06 and START-HERE.md.

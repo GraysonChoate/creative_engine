@@ -9,6 +9,10 @@ Run once per brand. Every other workflow (ce-01 image ads, ce-02 UGC, ce-03 anim
 If a brand bible already exists: load it, check it is current (see REFRESH), skip intake.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE].
 
+## MODE (pick first; default EXPLORE)
+- EXPLORE: experiments, demos, pitches. Light intake only: real packshots and logo, plus a 5-line brand look. Skip Steps 2 to 5. ALWAYS ON: credit quote; no real person's likeness without consent; no fake reviews or claims shown as real; WORLD RULES below.
+- BUILD: full harness below. Use when I say "build", "ship", "client", or pick a winner.
+
 ## WHERE THINGS LIVE
 One home per brand (a claude.ai Project named [BRAND], or a folder). Four files:
 1. `brand-bible.md`: identity, voice, palette, fonts, claims, legal, audience, competitors.
@@ -17,14 +21,21 @@ One home per brand (a claude.ai Project named [BRAND], or a folder). Four files:
 4. `outputs-log.md`: every finished output (workflow, date, file, tier, credits, result).
 The workflow skills live in the Creative Engine project. Brand facts live in the brand's home. Never mix.
 
-## HARD RULES
-1. Real packs, logos, photos always go in as images. AI never redraws labels, logos, on-pack text, real people's faces, or testimonials.
+## HARD RULES (BUILD; in EXPLORE only the ALWAYS ON items apply)
+1. Real packs, logos and photos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image; if it fails, put the real label back or re-run. Never invent text, logos or products for a real brand. Never redraw real people's faces. No fake testimonials or before/after proof. Prefer real images as references for new renders over flat cutouts; keep the cutout as backup when the label must be exact.
 2. No invented claims, reviews, customers, numbers, endorsements. A claim is allowed only if it is on the APPROVED CLAIMS list with a source.
 3. Health, supplement, finance and kids' categories: flag regulated claims. Mark them REVIEW BY CLIENT. Never guess.
 4. Real people (founder, ambassador, creators): written consent and likeness scope recorded in the bible before use.
 5. Public scraping only. Never enter passwords or use accounts the user did not provide. Respect robots/terms; use the official feed or ask the client for files.
 6. Mark unknowns as UNKNOWN. Do not fill gaps with guesses.
 7. Quote before any paid step. Never poll.
+
+## WORLD RULES (always on, EXPLORE and BUILD)
+Before any image or video prompt:
+1. Pick the world: REAL (live-action brand ad), STYLIZED REAL (painted, anime: real-world logic in a set look) or INVENTED (cartoon, new world).
+2. Write 3 to 5 world rules, plus one line: where, when, and why the person is here doing this. Nothing random.
+3. Three layers. ANCHORS (people, product, place, reason) stay true to the world. EFFECTS may be fantasy, but each starts from a real cause in the anchors (she opens the bottle, the liquid swirls) and returns to the real. CAMERA is free (macro zoom, sky drop, thread-level close-up).
+4. Check every storyboard frame against the rules. If the place cannot hold the action, change the action.
 
 ## STEP 1: INTAKE (ask once: URL, socials, any files)
 | What | How |
@@ -51,6 +62,7 @@ Save raw pulls in a `raw/` folder. Never edit raw.
 9. COMPETITORS: 3-5, what they do well, where this brand can beat them.
 10. PROOF: real reviews, press, numbers (each with source).
 11. GOALS + CONSTRAINTS: goal, budget, deadline, must-keep items, no-go items.
+12. WORLD: world type (real / stylized real / invented) and 3 to 5 world rules. Every workflow reads these.
 Output: brand-bible.md. Show the user a 10-line summary and the UNKNOWN list.
 GATE A: user confirms the bible. Fill or accept UNKNOWNs.
 
