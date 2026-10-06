@@ -1,0 +1,111 @@
+<title>Directing the Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* One page, sticky tab bar, one job per tab. "Try it now" and "In short" close every tab. */
+:root{
+  --bg:#F2F4F7; --panel:#FFFFFF; --ink:#12161C; --muted:#586170; --line:#D9DEE6;
+  --accent:#D63B1F; --accent-ink:#FFFFFF; --soft:#FBE9E5; --code:#EAEEF3; --good:#2E9B5B;
+  --f-display:'Archivo',system-ui,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1217; --panel:#161C23; --ink:#E9EDF2; --muted:#9AA5B4; --line:#2A333E;
+  --accent:#FF6A4A; --accent-ink:#0E1217; --soft:#2A1A17; --code:#1F2730; --good:#47C07A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1217; --panel:#161C23; --ink:#E9EDF2; --muted:#9AA5B4; --line:#2A333E;
+  --accent:#FF6A4A; --accent-ink:#0E1217; --soft:#2A1A17; --code:#1F2730; --good:#47C07A; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:17px/1.55 var(--f-body);padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:880px;margin-inline:auto}
+header.top{padding-block:28px 14px}
+h1{font:800 clamp(30px,6vw,44px)/1.05 var(--f-display);margin:0;letter-spacing:-.01em;text-wrap:balance}
+header.top p{margin:8px 0 0;color:var(--muted);max-width:60ch}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:6px;overflow-x:auto;padding-block:10px;border-bottom:1px solid var(--line);margin-inline:-16px;padding-inline:16px;scrollbar-width:thin}
+nav.tabs button{flex:0 0 auto;font:600 15px var(--f-display);padding:9px 14px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;cursor:pointer}
+nav.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+section.tab{padding-block:22px 0}
+h2{font:800 28px/1.1 var(--f-display);margin:0 0 4px;text-wrap:balance}
+.lede{color:var(--muted);margin:0 0 20px;max-width:62ch}
+h3{font:700 13px var(--f-display);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:28px 0 10px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.grid>*{min-width:0}
+.go{display:block;text-align:left;width:100%;font:inherit;color:inherit;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px}
+.go b{display:block;font:700 17px var(--f-display);margin-bottom:2px}
+.go span{color:var(--muted);font-size:15px}
+.go:hover{border-color:var(--accent)}
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.steps .n{font:800 15px var(--f-display);background:var(--ink);color:var(--bg);width:28px;height:28px;border-radius:50%;display:grid;place-items:center}
+.steps b{font-family:var(--f-display)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font:700 12px var(--f-display);text-transform:uppercase;letter-spacing:.07em;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.nm{font:700 15px var(--f-display)}
+.phrase{display:flex;gap:8px;align-items:flex-start}
+.p{font:400 13.5px/1.5 var(--f-mono);background:var(--code);border-radius:5px;padding:6px 8px;display:block;white-space:pre-wrap;overflow-wrap:anywhere;flex:1;min-width:0;margin:0}
+.cp{flex:0 0 auto;font:600 12px var(--f-display);padding:6px 10px;border-radius:5px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer}
+.cp.ok{background:var(--accent);color:var(--accent-ink)}
+.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.two>*{min-width:0}
+.good,.bad{border-radius:8px;padding:14px;border:1px solid var(--line);background:var(--panel)}
+.good{border-left:5px solid var(--good)}.bad{border-left:5px solid var(--accent)}
+.good b,.bad b{font:700 13px var(--f-display);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:4px}
+.try{margin-top:24px;border:1px dashed var(--accent);border-radius:8px;padding:12px 14px}
+.try b{font:800 13px var(--f-display);text-transform:uppercase;letter-spacing:.09em;color:var(--accent);margin-right:6px}
+.short{margin-top:14px;background:var(--soft);border:1px solid var(--accent);border-radius:8px;padding:16px}
+.short h4{margin:0 0 6px;font:800 13px var(--f-display);text-transform:uppercase;letter-spacing:.09em;color:var(--accent)}
+.short ul{margin:0;padding-left:20px}.short li{margin:3px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:15px}
+.chip b{font-family:var(--f-display)}
+.note{color:var(--muted);font-size:15px;margin:12px 0 0}
+details.acc{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin-bottom:10px}
+details.acc summary{cursor:pointer;padding:14px 16px;font:700 18px var(--f-display);list-style:none;display:flex;justify-content:space-between;gap:10px}
+details.acc summary::after{content:"+";color:var(--accent);font-size:22px;line-height:1}
+details.acc[open] summary::after{content:"–"}
+details.acc summary::-webkit-details-marker{display:none}
+.accbody{padding:0 16px 16px;display:grid;gap:10px}
+.accbody h5{margin:8px 0 0;font:700 12px var(--f-display);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.accbody ul{margin:0;padding-left:20px}.accbody li{margin:3px 0;font-size:16px}
+.accbody p{margin:0}
+@media (prefers-reduced-motion:no-preference){section.tab{animation:in .18s ease-out}@keyframes in{from{opacity:.4}to{opacity:1}}}
+</style>
+<div class="wrap">
+<header class="top"><h1>Directing the Engine</h1><p>How to tell Claude and Higgsfield what you see in your head. Pick a tab, copy a phrase, use it.</p></header>
+<nav class="tabs" role="tablist" aria-label="Sections"></nav>
+<main id="main"></main>
+</div>
+<script>
+const DATA=__DATA__;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const phrase=t=>'<div class="phrase"><code class="p">'+esc(t)+'</code><button class="cp">Copy</button></div>';
+function table(b){let h='<div class="tablewrap"><table><tr>'+b.head.map(x=>"<th>"+esc(x)+"</th>").join("")+"</tr>";
+ b.rows.forEach(r=>{h+="<tr>"+r.map((c,i)=>i===b.phrase?"<td>"+phrase(c)+"</td>":(i===0?'<td class="nm">'+esc(c)+"</td>":"<td>"+esc(c)+"</td>")).join("")+"</tr>"});return h+"</table></div>";}
+function block(b){switch(b.t){
+ case "h3":return "<h3>"+esc(b.x)+"</h3>";
+ case "note":return '<p class="note">'+esc(b.x)+"</p>";
+ case "card":return '<div class="card">'+b.x+"</div>";
+ case "code":return '<div class="phrase">'+'<pre class="p">'+esc(b.x)+'</pre><button class="cp">Copy</button></div>';
+ case "table":return table(b);
+ case "cards":return '<div class="grid">'+b.items.map(c=>'<div class="card"><b>'+esc(c[0])+"</b><br>"+esc(c[1])+"</div>").join("")+"</div>";
+ case "chips":return '<div class="chips">'+b.items.map(c=>'<span class="chip"><b>'+esc(c[0])+"</b> "+esc(c[1])+"</span>").join("")+"</div>";
+ case "two":return '<div class="two"><div class="good"><b>Works</b>'+esc(b.good)+'</div><div class="bad"><b>Breaks</b>'+esc(b.bad)+"</div></div>";
+ case "steps":return '<ol class="steps">'+b.items.map((s,i)=>'<li><span class="n">'+(i+1)+'</span><div><b>'+esc(s[0])+"</b> "+esc(s[1])+" <i>("+esc(s[2])+")</i></div></li>").join("")+"</ol>";
+ case "map":return '<div class="grid">'+DATA.tabs.slice(1).map(t=>'<button class="go" data-id="'+t.id+'"><b>'+esc(t.label)+"</b><span>"+esc(t.desc)+"</span></button>").join("")+"</div>";
+ case "acc":return '<details class="acc"><summary>'+esc(b.title)+'</summary><div class="accbody"><p>'+esc(b.what)+"</p><h5>Say this</h5>"+b.say.map(phrase).join("")+"<h5>Common mistakes</h5><ul>"+b.mistakes.map(m=>"<li>"+esc(m)+"</li>").join("")+'</ul><p class="try" style="margin:6px 0 0"><b>Try it now</b>'+esc(b.try)+"</p><details><summary style=\"cursor:pointer;color:var(--muted);font-size:15px\">Under the hood (tool names)</summary><p class=\"note\">"+esc(b.under)+"</p></details></div></details>";
+ }return "";}
+$("#main").innerHTML=DATA.tabs.map(t=>'<section class="tab" id="'+t.id+'" hidden><h2>'+esc(t.label)+'</h2><p class="lede">'+esc(t.lede)+"</p>"+t.blocks.map(block).join("")+'<div class="try"><b>Try it now</b>'+esc(t.try)+'</div><div class="short"><h4>In short</h4><ul>'+t.short.map(s=>"<li>"+esc(s)+"</li>").join("")+"</ul></div></section>").join("");
+function copyBtn(btn,el){btn.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(el.textContent)}catch(e){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)}btn.textContent="Copied";btn.classList.add("ok");setTimeout(()=>{btn.textContent="Copy";btn.classList.remove("ok")},1400)})}
+document.querySelectorAll(".phrase").forEach(p=>{const b=p.querySelector(".cp"),c=p.querySelector(".p");if(b&&c)copyBtn(b,c)});
+const nav=$("nav.tabs");
+DATA.tabs.forEach(t=>{const b=document.createElement("button");b.textContent=t.label;b.setAttribute("role","tab");b.dataset.id=t.id;b.addEventListener("click",()=>show(t.id));nav.appendChild(b)});
+document.querySelectorAll(".go").forEach(b=>b.addEventListener("click",()=>show(b.dataset.id)));
+function show(id,skip){if(!DATA.tabs.some(t=>t.id===id))id="start";document.querySelectorAll("section.tab").forEach(s=>s.hidden=s.id!==id);nav.querySelectorAll("button").forEach(b=>{const on=b.dataset.id===id;b.setAttribute("aria-selected",on);if(on&&!skip)b.scrollIntoView({inline:"center",block:"nearest"})});try{history.replaceState(null,"","#"+id)}catch(e){}try{localStorage.setItem("de-tab",id)}catch(e){}window.scrollTo(0,0)}
+let st=(location.hash||"").slice(1);if(!st){try{st=localStorage.getItem("de-tab")||""}catch(e){}}
+show(st||"start",true);
+</script>

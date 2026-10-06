@@ -22,3 +22,6 @@ AI may copy label text from a real reference. Text comes only from the real sour
 
 ## World Rules (added 2026-10-06)
 Pick world (REAL / STYLIZED REAL / INVENTED), write 3 to 5 rules + where/when/why. Anchors fit the world; effects need a real cause and return to the real; camera is free. In ce-00, ce-04, ce-05, ce-06 and START-HERE.md.
+
+## Ebook (2026-10-06)
+`ebook/content.json` is the single source for the ebook "Directing the Engine" (8 tabs: Start, World, Camera, Effects, Higgsfield, Say It, Fix, Briefs). Edit the JSON, run `python3 ebook/build.py`, republish. It merges the creative Playbook with the operating chapters of the earlier "Directing Higgsfield" book (connect and first-video chapters dropped). Open question: test lens-number camera phrases (FOV degrees) against Cinema Studio, which has no numeric camera fields.
