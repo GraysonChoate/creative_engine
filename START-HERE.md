@@ -9,4 +9,5 @@
 7. **Fix small.** One-line change first. Rewrite last.
 8. **Pick the skill:** ce-00 brand setup (first, once per brand) | ce-01 image ads | ce-02 UGC | ce-03 animated ads | ce-04 homepage | ce-05 full website | ce-06 cinematic ad.
 9. **Lookup (do not read all):** `docs/PLAYBOOK-shots-effects.md` for camera moves and effects. `docs/CE-0*.md` for techniques and exact prompts.
-10. **Talk to the user** in simple words, as few as possible.
+10. **After Effects** is available on the user's computer for compositing real packs and logos, type, transitions, grade, and web exports. See `docs/AE-route.md`.
+11. **Talk to the user** in simple words, as few as possible.

@@ -397,6 +397,43 @@
     },
     {
      "t": "h3",
+     "x": "After Effects: when to use it"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Job",
+      "Why After Effects"
+     ],
+     "rows": [
+      [
+       "Real pack and logo over a generated plate",
+       "Exact label, tracked to the surface"
+      ],
+      [
+       "Type and logo animation",
+       "Set from real files, never generated"
+      ],
+      [
+       "Scroll transitions",
+       "Hand off through a physical object; loop first frame = last"
+      ],
+      [
+       "One grade across scenes",
+       "Same look clip to clip"
+      ],
+      [
+       "Website export",
+       "Frame sequence or short video, sized for phones"
+      ]
+     ]
+    },
+    {
+     "t": "note",
+     "x": "An agent builds the comp with a script, runs it, then renders from the command line. Needs a session linked to your computer. Details: docs/AE-route.md in the repo."
+    },
+    {
+     "t": "h3",
      "x": "Look and light"
     },
     {
