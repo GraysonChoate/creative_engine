@@ -10,6 +10,7 @@ A reusable "brain and nervous system" for creative production. One shared core (
   - `CE-04-skool-merge.md`: Skool Vault lessons (10), entries #93-163, rule conflicts C1-C6, WEB gap status
   - docs/CE-05-explore-build-mode.md
   - START-HERE.md (read first), docs/PLAYBOOK-shots-effects.md
+  - ebook/Directing-the-Engine.html (tabbed playbook, open in a browser)
 - `sources/` saved prompt pages from each video (plain text)
 - `raw/` original research doc (17 YouTube video breakdowns)
 - `skills/` current ce-00 to ce-06 skill files (snapshot)

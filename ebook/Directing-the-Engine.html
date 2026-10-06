@@ -1,0 +1,299 @@
+<title>Directing the Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one page, sticky tab bar, one job per tab, "In short" box closes every tab. */
+:root{
+  --bg:#F2F4F7; --panel:#FFFFFF; --ink:#12161C; --muted:#586170; --line:#D9DEE6;
+  --accent:#D63B1F; --accent-ink:#FFFFFF; --soft:#FBE9E5; --code:#EAEEF3;
+  --f-display:'Archivo',system-ui,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1217; --panel:#161C23; --ink:#E9EDF2; --muted:#9AA5B4; --line:#2A333E;
+  --accent:#FF6A4A; --accent-ink:#0E1217; --soft:#2A1A17; --code:#1F2730; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1217; --panel:#161C23; --ink:#E9EDF2; --muted:#9AA5B4; --line:#2A333E;
+  --accent:#FF6A4A; --accent-ink:#0E1217; --soft:#2A1A17; --code:#1F2730; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:17px/1.55 var(--f-body);padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:880px;margin-inline:auto}
+header.top{padding-block:28px 14px}
+h1{font:800 clamp(30px,6vw,44px)/1.05 var(--f-display);margin:0;letter-spacing:-.01em;text-wrap:balance}
+header.top p{margin:8px 0 0;color:var(--muted);max-width:60ch}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:6px;overflow-x:auto;padding-block:10px;border-bottom:1px solid var(--line);margin-inline:-16px;padding-inline:16px;scrollbar-width:thin}
+nav.tabs button{flex:0 0 auto;font:600 15px var(--f-display);padding:9px 14px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;cursor:pointer}
+nav.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+section.tab{padding-block:22px 0}
+h2{font:800 28px/1.1 var(--f-display);margin:0 0 4px;text-wrap:balance}
+.lede{color:var(--muted);margin:0 0 20px;max-width:62ch}
+h3{font:700 13px var(--f-display);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:28px 0 10px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.grid>*{min-width:0}
+.go{display:block;text-align:left;width:100%;font:inherit;color:inherit;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px}
+.go b{display:block;font:700 17px var(--f-display);margin-bottom:2px}
+.go span{color:var(--muted);font-size:15px}
+.go:hover{border-color:var(--accent)}
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.steps .n{font:800 15px var(--f-display);background:var(--ink);color:var(--bg);width:28px;height:28px;border-radius:50%;display:grid;place-items:center}
+.steps b{font-family:var(--f-display)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font:700 12px var(--f-display);text-transform:uppercase;letter-spacing:.07em;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.nm{font:700 15px var(--f-display);white-space:nowrap}
+.phrase{display:flex;gap:8px;align-items:flex-start}
+code.p,pre.p{font:400 13.5px/1.5 var(--f-mono);background:var(--code);border-radius:5px;padding:6px 8px;display:block;white-space:pre-wrap;overflow-wrap:anywhere;flex:1;min-width:0;margin:0}
+.cp{flex:0 0 auto;font:600 12px var(--f-display);padding:6px 10px;border-radius:5px;border:1px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer}
+.cp.ok{background:var(--accent);color:var(--accent-ink)}
+.block{margin-bottom:12px}
+.block .phrase{margin-top:8px}
+.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.two>*{min-width:0}
+.good,.bad{border-radius:8px;padding:14px;border:1px solid var(--line);background:var(--panel)}
+.good{border-left:5px solid #2E9B5B}.bad{border-left:5px solid var(--accent)}
+.good b,.bad b{font:700 13px var(--f-display);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:4px}
+.short{margin-top:28px;background:var(--soft);border:1px solid var(--accent);border-radius:8px;padding:16px}
+.short h4{margin:0 0 6px;font:800 13px var(--f-display);text-transform:uppercase;letter-spacing:.09em;color:var(--accent)}
+.short ul{margin:0;padding-left:20px}
+.short li{margin:3px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:15px}
+.chip b{font-family:var(--f-display)}
+.note{color:var(--muted);font-size:15px}
+@media (prefers-reduced-motion:no-preference){section.tab{animation:in .18s ease-out}@keyframes in{from{opacity:.4}to{opacity:1}}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <h1>Directing the Engine</h1>
+  <p>How to tell Claude and Higgsfield what you see in your head. Pick a tab, copy a phrase, use it.</p>
+</header>
+<nav class="tabs" role="tablist" aria-label="Sections"></nav>
+
+<!-- START -->
+<section class="tab" id="start">
+  <h2>Start</h2>
+  <p class="lede">Three steps for any shot. Each tab below does one of them.</p>
+  <ol class="steps">
+    <li><span class="n">1</span><div><b>Pick the world.</b> Real, painted, or invented. Write its rules. <i>(World tab)</i></div></li>
+    <li><span class="n">2</span><div><b>Pick the camera move and the effect.</b> Copy the phrase. <i>(Camera, Effects)</i></div></li>
+    <li><span class="n">3</span><div><b>Write the prompt in the model's words.</b> Fix it with one-line changes. <i>(Say It, Fix)</i></div></li>
+  </ol>
+  <h3>Five rules that matter</h3>
+  <div class="grid">
+    <div class="card"><b>The world makes sense.</b><br>Where, when, and why. Nothing random.</div>
+    <div class="card"><b>Effects need a real cause.</b><br>The bottle opens, then the liquid swirls.</div>
+    <div class="card"><b>The camera is free.</b><br>Sky to ant. Hands to shoe threads.</div>
+    <div class="card"><b>Real labels stay real.</b><br>Text comes from the real source. Check every result.</div>
+    <div class="card"><b>Fix small.</b><br>One-line change first. Rewrite last.</div>
+    <div class="card"><b>Quote credits first.</b><br>Always, before any spend.</div>
+  </div>
+  <h3>Where each tab takes you</h3>
+  <div class="grid" id="map"></div>
+  <div class="short"><h4>In short</h4><ul>
+    <li>World first, then camera, then words.</li>
+    <li>Experiments (EXPLORE): no gates. Client work (BUILD): full checks.</li>
+    <li>Say "build", "ship" or "client" to switch to BUILD.</li></ul></div>
+</section>
+
+<!-- WORLD -->
+<section class="tab" id="world" hidden>
+  <h2>World</h2>
+  <p class="lede">Decide what kind of world this is before any image. Then keep to its rules.</p>
+  <h3>Pick one</h3>
+  <div class="tablewrap"><table>
+    <tr><th>World</th><th>Use for</th><th>Rule</th></tr>
+    <tr><td class="nm">Real</td><td>Liv Body, XGT, any live-action brand ad</td><td>People, places, actions match real life. Camera and light can do impossible things.</td></tr>
+    <tr><td class="nm">Stylized real</td><td>Anime, painted looks (Nikomachia)</td><td>Real-world logic in a set look. Buildings, clothes, geography fit the culture and era. Fighting can be elevated but follows the world's own physics.</td></tr>
+    <tr><td class="nm">Invented</td><td>Wild cartoon, a brand-new world</td><td>Make up the rules, write them down, never break them.</td></tr>
+  </table></div>
+  <h3>Three layers</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Layer</th><th>Rule</th><th>Example</th></tr>
+    <tr><td class="nm">Anchors</td><td>Always true to the world: people, product, place, reason.</td><td>Runner, bottle, her kitchen, morning.</td></tr>
+    <tr><td class="nm">Effects</td><td>Fantasy allowed. Each starts from a real cause, then returns to the real.</td><td>She opens the bottle, liquid rises around her, she drinks.</td></tr>
+    <tr><td class="nm">Camera</td><td>Free. Goes anywhere.</td><td>Drop from the sky into the kitchen. Zoom into shoe threads.</td></tr>
+  </table></div>
+  <p class="note"><b>Test:</b> "What real thing triggers this?" If nothing does, cut it or give it a trigger. If the place cannot hold the action, change the action, not the physics.</p>
+  <h3>Right and wrong</h3>
+  <div class="two">
+    <div class="good"><b>Works</b>Mix electrolytes in the kitchen on waking. Run. Come back. Robots fighting on real Manhattan streets.</div>
+    <div class="bad"><b>Breaks</b>Mixing electrolytes on a rock in the middle of a lake. Upside-down buildings in Manhattan.</div>
+  </div>
+  <h3>Fill this in first</h3>
+  <div class="block"><div class="phrase"><pre class="p">WORLD: [real / stylized real / invented]
+RULES: 1) … 2) … 3) …
+WHERE / WHEN / WHY: …
+ANCHORS: people, product, place, reason
+EFFECTS (each with its real cause): …
+CAMERA: …</pre><button class="cp">Copy</button></div></div>
+  <div class="short"><h4>In short</h4><ul>
+    <li>Pick the world type, write 3 to 5 rules, add where, when, why.</li>
+    <li>Anchors fit the world. Effects need a real cause. Camera is free.</li>
+    <li>Check every storyboard frame against the rules.</li></ul></div>
+</section>
+
+<!-- CAMERA -->
+<section class="tab" id="camera" hidden>
+  <h2>Camera</h2>
+  <p class="lede">Find the move. Copy the phrase. Give it a real subject.</p>
+  <div class="tablewrap"><table id="t-camera"></table></div>
+  <h3>Basic words the model knows</h3>
+  <div class="chips" id="chips"></div>
+  <p class="note">One camera move per shot. Use numbers, not adjectives: degrees, seconds, counts.</p>
+  <div class="short"><h4>In short</h4><ul>
+    <li>One move per shot. Name it with the exact phrase.</li>
+    <li>Say lens numbers (29° to 107°), not "wide-ish".</li>
+    <li>Slow and purposeful unless the tone is action.</li></ul></div>
+</section>
+
+<!-- EFFECTS -->
+<section class="tab" id="effects" hidden>
+  <h2>Effects</h2>
+  <p class="lede">Impossible things that still start from something real in the shot.</p>
+  <div class="tablewrap"><table id="t-effects"></table></div>
+  <h3>Look and light</h3>
+  <div class="card">Write a <b>style header</b> once (under 80 words): lens and format, light, color grade, film grain, acting style, sound rule. Paste it at the start of every prompt.<br><br>Put film grain and the anamorphic look in <b>locations and video prompts</b>. Keep character and prop sheets plain: gray background, flat light, no grain.</div>
+  <div class="short"><h4>In short</h4><ul>
+    <li>Name the real source of every effect.</li>
+    <li>Loops: last frame equals first frame.</li>
+    <li>Real logo and real label. Never generated.</li></ul></div>
+</section>
+
+<!-- SAY IT -->
+<section class="tab" id="sayit" hidden>
+  <h2>Say It</h2>
+  <p class="lede">Your words on the left. The words the model understands on the right.</p>
+  <div class="tablewrap"><table id="t-words"></table></div>
+  <h3>Prompt order, same every shot</h3>
+  <div class="block"><div class="phrase"><pre class="p">[STYLE HEADER]
+[REFERENCE ROLES] image 1 = hero identity, image 2 = location, image 3 = pack label
+[SPACE] left / right, door counts, where the camera starts
+[BEATS] 3 sentences or fewer each
+[CAMERA] one move
+[COUNT LOCKS] exactly 3 riders
+[KEEP-LIST] what must not change</pre><button class="cp">Copy</button></div></div>
+  <h3>Writing rules</h3>
+  <div class="grid">
+    <div class="card"><b>Short beats.</b><br>3 sentences or fewer. Overloaded beats drift.</div>
+    <div class="card"><b>Numbers over adjectives.</b><br>Counts, distances, seconds.</div>
+    <div class="card"><b>Behavior, not feelings.</b><br>"Smiles, eyes stay the same", not "feels happy".</div>
+    <div class="card"><b>Tag, don't re-describe.</b><br>"@hero" plus what changes: clothes, action.</div>
+  </div>
+  <h3>Director notes that work</h3>
+  <div class="block"><div class="phrase"><pre class="p">Same shot. Change one thing: he runs forward, natural smile, eyes stay the same.
+Same shot. The camera starts wide and ends inside the shoe's threads.
+Same shot, but exactly 3 riders and an empty background.</pre><button class="cp">Copy</button></div></div>
+  <div class="short"><h4>In short</h4><ul>
+    <li>Use the same order every time.</li>
+    <li>Say what each reference image is for.</li>
+    <li>Give notes as a director would. Claude makes the edit.</li></ul></div>
+</section>
+
+<!-- FIX -->
+<section class="tab" id="fix" hidden>
+  <h2>Fix</h2>
+  <p class="lede">Smallest fix first: one-line change, then simplify the shot, then rewrite from the best frame.</p>
+  <div class="tablewrap"><table id="t-fix"></table></div>
+  <div class="short"><h4>In short</h4><ul>
+    <li>One-line change, everything else word for word.</li>
+    <li>Max 4 rounds per scene, then change the shot design.</li>
+    <li>Hook, payoff and pack shot first. If those fail, the film fails.</li></ul></div>
+</section>
+
+<!-- BRIEF -->
+<section class="tab" id="brief" hidden>
+  <h2>Briefs</h2>
+  <p class="lede">Paste one of these to start an agent. Fill the brackets.</p>
+  <h3>Liv Body cinematic scroll experiment</h3>
+  <div class="block"><div class="phrase"><pre class="p">Read START-HERE.md at github.com/GraysonChoate/creative_engine first.
+Mode: EXPLORE. Experiment, not a client build. No gates or audits.
+Use skills ce-04 and ce-06. World: REAL.
+Goal: a cinematic scroll experience for Liv Body. Show the brand's feel with impossible camera moves and effects, grounded in the real products and world.
+Tier: spectacular.
+Real packshots and logos are references. Text comes only from the real source and is checked against it.
+Quote credits before any spend.
+Give me 3 concepts first, one paragraph each. I pick one.
+Then lock assets (product, location, style header) and test one scroll section before the rest.</pre><button class="cp">Copy</button></div></div>
+  <h3>Any new project</h3>
+  <div class="block"><div class="phrase"><pre class="p">Read START-HERE.md at github.com/GraysonChoate/creative_engine first.
+Mode: [EXPLORE / BUILD]. World: [real / stylized real / invented].
+Project: [what it is]. Skill: [ce-01 to ce-06].
+World rules: [3 to 5]. Where, when, why: […].
+Effects with their real cause: […].
+Budget: up to [N] credits. Quote first.
+Give me 3 concepts, then wait.</pre><button class="cp">Copy</button></div></div>
+  <h3>What to hand the agent</h3>
+  <div class="card">Real packshots (front and 3/4) for 2 or 3 hero products. Logo file. Brand colors and fonts. One line on the feel, plus any photos or videos you like. A credit budget.</div>
+  <div class="short"><h4>In short</h4><ul>
+    <li>Link the repo, set the mode, set the world.</li>
+    <li>Ask for 3 concepts before any generation.</li>
+    <li>Test one section before building the rest.</li></ul></div>
+</section>
+</div>
+
+<script>
+const TABS=[["start","Start","Three steps and five rules"],["world","World","Pick the world and its rules"],["camera","Camera","Moves with copy-ready phrases"],["effects","Effects","Swirls, dust, loops, logos"],["sayit","Say It","Your words to model words"],["fix","Fix","Problem, then the fix"],["brief","Briefs","Paste-and-go agent briefs"]];
+const CAMERA=[
+["Macro zoom","Fly from wide into a tiny detail","the lens zooms in; FOV widening gradually and evenly from 29° to 107°","Follow her hands tying a shoe, end inside the thread weave","Same shoe and light start to end"],
+["Optical zoom only","Camera stays put, only the lens changes","The camera holds one fixed spot the whole time; only the lens focal length changes","Zoom on the bottle cap from across the kitchen","Do not also move the camera"],
+["Dolly zoom","Background warps behind a still subject","the lens zooms in while the camera pulls away","Runner stops at the trailhead, world stretches","Use once per ad"],
+["Fly-through","One unbroken shot passing through objects","ONE continuous shot with no cuts: all transitions are camera moves through physical occlusions","Pass through steam, a door, a swinging towel","Each hand-off needs a real object that fills the frame"],
+["Follow an object","Camera whips onto a thing and rides it","the camera whips onto the @cap and FLIES WITH IT","Camera rides the cap as it spins off the bottle","One object, one path"],
+["Robo-arm punch","Hard vertical push, then brake","The camera acts like a robo-arm: punches through the floor vertically and brakes hard.","Drop from rooftop to her kitchen window","Brake before the cut"],
+["Speed ramp","Snap in, sag in the middle, accelerate out","the camera should snap in hard, sag in the middle and accelerate into the cut","Each product reveal","Not every shot"],
+["Real handheld","Slow body sway plus tiny tremor","real, slow handheld: a lazy body sway in long waves plus a very small tremor","Morning run follow shot","Not a wiggle"],
+["Deep parallax","Near, middle, far move at different speeds","foreground leaves rush past, midground trunks slide by, the far canopy and sky shift slowly behind","Trail run, leaves in front","Name all three layers"]];
+const EFFECTS=[
+["Liquid swirl","Liquid moves in impossible shapes","hypermotion CGI commercial of our product; the liquid rises from the open bottle and swirls around her","She opens the bottle","Starts at the bottle, ends in the glass or bottle. Leave liquids black in the blockout, then fill."],
+["Dust or powder burst","Particles carry the camera into the next shot","the shot ends inside the dust, which sets up the seamless transition","Scoop of powder hits the shaker","Last frame of shot A matches first frame of shot B"],
+["Seamless loop","Last frame equals first frame","Same first and last frame; the mirror is an open doorway into an exact mirrored copy of the room","Hero background loop","Check the loop with numbers, not by eye"],
+["Pack shot push-in","Final product hero","dolly-in to the pack on the counter, light matches scene 1; logo added in post","Bottle on the kitchen counter, morning light","Contact shadow. Product sits on a surface."],
+["Logo reveal","Real logo animates in","elegant dynamic logo reveal animation for the logo in Image 1, Liquid Glass aesthetic","End card","Use the real logo file"],
+["Screen in scene","Real UI on a device inside the shot","The screen reads as a real physical panel being filmed, not a clean digital overlay","Her phone showing the app","Match duration, add glare"]];
+const WORDS=[
+["Zoom into the threads","Macro zoom with start and end focal length"],
+["Fly through it","Occlusion transition: one continuous shot through physical objects"],
+["Make it swirl","Hypermotion with a named real source (the open bottle)"],
+["Feels shaky and real","Real handheld: slow sway plus a very small tremor"],
+["Looks deep","Parallax with three named layers"],
+["Starts and ends the same","Seamless loop: first frame equals last frame"],
+["Smooth and slow","One slow dolly-in, 5 seconds"],
+["Make it faster","Speed ramp: snap in, sag, accelerate into the cut"],
+["Same person every time","Tag the locked sheet (@hero). Do not re-describe the face."],
+["Don't change anything else","One-line change, everything else word for word"]];
+const FIX=[
+["Face or outfit drifts","Re-lock the character sheet. Use it as a reference every time. Do not re-describe the face."],
+["Plastic or flat look","Fix the location still first. Add film grain and anamorphic to the style header (not to sheets)."],
+["Label warps or text garbles","Use the real pack image as reference. Check against it. Put the real label back or re-run. Text added in post."],
+["Place or action makes no sense","Re-check the world rules. Change the action, not the physics."],
+["Runs backwards or wrong action","State direction and anchors. One-line fix. Shorten the beat."],
+["Transformation falls flat","Ask for continuous motion plus macro impact shots (parts locking in). Cut together."],
+["Pack shot is static","Add dolly-in or pullback. Match scene 1 light. Add logo in post."],
+["Styles differ across scenes","Paste the same style header on every prompt."],
+["Extra people or objects","Count lock (\"exactly 3\") and spell out the background."],
+["Product floats","Measure the surface line. Add a contact shadow."],
+["Credits burning","Hook, payoff and pack shot first. Stop at 4 rounds. Test at low resolution."]];
+const CHIPS=[["Wide","whole scene"],["Medium","waist up"],["Close-up","face or object"],["Macro","tiny detail"],["Low angle","looking up"],["High angle","looking down"],["Overhead","straight down"],["Dutch","tilted horizon"],["Over-the-shoulder","behind one person"],["Push-in / dolly-in","move toward"],["Pull-back","move away"],["Orbit","circle the subject"],["Pan / tilt","turn left-right / up-down"],["Whip pan","very fast pan"],["Tracking","move beside the subject"],["Rack focus","focus jumps near to far"]];
+const $=s=>document.querySelector(s);
+function copyBtn(btn,el){btn.addEventListener("click",async()=>{const t=el.textContent;try{await navigator.clipboard.writeText(t);}catch(e){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);}btn.textContent="Copied";btn.classList.add("ok");setTimeout(()=>{btn.textContent="Copy";btn.classList.remove("ok")},1400);});}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function table(id,head,rows,phraseCol){const t=$(id);let h="<tr>"+head.map(x=>"<th>"+x+"</th>").join("")+"</tr>";rows.forEach(r=>{h+="<tr>"+r.map((c,i)=>{if(i===0)return '<td class="nm">'+esc(c)+"</td>";if(i===phraseCol)return '<td><div class="phrase"><code class="p">'+esc(c)+'</code><button class="cp">Copy</button></div></td>';return "<td>"+esc(c)+"</td>"}).join("")+"</tr>"});t.innerHTML=h;}
+table("#t-camera",["Move","Plain words","Prompt phrase","Real cause example","Watch out"],CAMERA,2);
+table("#t-effects",["Effect","Plain words","Prompt phrase","Real cause","Watch out"],EFFECTS,2);
+table("#t-words",["You say","Tell the model"],WORDS,-1);
+table("#t-fix",["Problem","Fix"],FIX,-1);
+$("#chips").innerHTML=CHIPS.map(c=>'<span class="chip"><b>'+c[0]+"</b> "+c[1]+"</span>").join("");
+document.querySelectorAll(".phrase").forEach(p=>{const b=p.querySelector(".cp"),c=p.querySelector(".p");if(b&&c)copyBtn(b,c);});
+const nav=$("nav.tabs");
+TABS.forEach(([id,label])=>{const b=document.createElement("button");b.textContent=label;b.setAttribute("role","tab");b.dataset.id=id;b.addEventListener("click",()=>show(id));nav.appendChild(b);});
+$("#map").innerHTML=TABS.slice(1).map(([id,l,d])=>'<button class="go" data-id="'+id+'"><b>'+l+"</b><span>"+d+"</span></button>").join("");
+document.querySelectorAll(".go").forEach(b=>b.addEventListener("click",()=>show(b.dataset.id)));
+function show(id,skip){if(!TABS.some(t=>t[0]===id))id="start";document.querySelectorAll("section.tab").forEach(s=>s.hidden=s.id!==id);nav.querySelectorAll("button").forEach(b=>{const on=b.dataset.id===id;b.setAttribute("aria-selected",on);if(on&&!skip)b.scrollIntoView({inline:"center",block:"nearest"});});try{history.replaceState(null,"","#"+id)}catch(e){}try{localStorage.setItem("de-tab",id)}catch(e){}window.scrollTo(0,0);}
+let start=(location.hash||"").slice(1);if(!start){try{start=localStorage.getItem("de-tab")||""}catch(e){}}
+show(start||"start",true);
+</script>
