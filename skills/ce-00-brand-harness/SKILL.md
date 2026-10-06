@@ -8,6 +8,7 @@ description: "Run first, once per brand, before any ce-01 to ce-06 workflow: bra
 Run once per brand. Every other workflow (ce-01 image ads, ce-02 UGC, ce-03 animated ads, ce-04 homepage, ce-05 website rebuild, ce-06 cinematic ad) loads this output instead of redoing intake.
 If a brand bible already exists: load it, check it is current (see REFRESH), skip intake.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE].
+LIBRARY: github.com/GraysonChoate/creative_engine. Read START-HERE.md there first.
 
 ## MODE (pick first; default EXPLORE)
 - EXPLORE: experiments, demos, pitches. Light intake only: real packshots and logo, plus a 5-line brand look. Skip Steps 2 to 5. ALWAYS ON: credit quote; no real person's likeness without consent; no fake reviews or claims shown as real; WORLD RULES below.
@@ -64,7 +65,7 @@ Save raw pulls in a `raw/` folder. Never edit raw.
 11. GOALS + CONSTRAINTS: goal, budget, deadline, must-keep items, no-go items.
 12. WORLD: world type (real / stylized real / invented) and 3 to 5 world rules. Every workflow reads these.
 Output: brand-bible.md. Show the user a 10-line summary and the UNKNOWN list.
-GATE A: user confirms the bible. Fill or accept UNKNOWNs.
+GATE A (BUILD only): user confirms the bible. Fill or accept UNKNOWNs.
 
 ## STEP 3: ASSET LIBRARY
 - Download/collect: logo (SVG/PNG, light + dark), packshots (front, 3/4, back), lifestyle, video, fonts.
@@ -73,15 +74,15 @@ GATE A: user confirms the bible. Fill or accept UNKNOWNs.
 - Status each: APPROVED / DRAFT / BANNED. Note resolution, rights, source.
 - Packshot completeness check: every flagship has front + 3/4. If missing, ask the client. Do not generate a pack from nothing.
 - Higgsfield: create brand + products (ads_studio_create_brand, add_product) and Elements (manage_reference_elements) for locked packs, people, locations.
-GATE B: asset list reviewed. Gaps sent to client as a checklist.
+GATE B (BUILD only): asset list reviewed. Gaps sent to client as a checklist.
 
 ## STEP 4: MARKETING ADVISOR (recommend what to make first)
 - Read: competitors' ads and sites, the brand's best social posts, reviews (what customers praise), any performance data.
 - Output a one-page brief: top 3 angles, top 3 formats, what competitors overuse, 5 recommended outputs ranked (workflow + why + cost), what to test first.
 - Map to workflows: static angles > ce-01; creator proof > ce-02; motion > ce-03; site fixes > ce-04/05; brand film > ce-06.
-GATE C: user picks what to run.
+GATE C (BUILD only): user picks what to run.
 
-## STEP 5: BRAND GUARDIAN (checklist every workflow's audit step runs)
+## STEP 5: BRAND GUARDIAN (BUILD; checklist every workflow's audit step runs)
 A separate pass, not the maker. Each item pass/fail:
 - Palette: only bible hex values (sampled from output).
 - Fonts: only bible fonts.
@@ -113,7 +114,7 @@ Re-run intake for changed items when: new products or prices, rebrand, a new cam
 | ce-04 homepage | full bible, asset library, analytics, competitors |
 | ce-05 website rebuild | full bible, asset library, site crawl, analytics, redirects |
 | ce-06 cinematic ad | bible, packshots, people/consent, voice, legal/music rights |
-If a needed field is UNKNOWN, the workflow stops and asks. It does not guess.
+In BUILD, if a needed field is UNKNOWN, the workflow stops and asks. It does not guess. In EXPLORE, use the light intake and note what is UNKNOWN.
 
 ## DONE WHEN
-Bible confirmed (Gate A), asset library reviewed (Gate B), advisor brief delivered (Gate C), logs created. Then hand off: "Harness ready. Which workflow first?"
+EXPLORE: real packshots, logo and 5-line look in hand, world rules written. BUILD: bible confirmed (Gate A), asset library reviewed (Gate B), advisor brief delivered (Gate C), logs created. Then hand off: "Harness ready. Which workflow first?"

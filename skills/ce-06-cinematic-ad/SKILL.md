@@ -10,7 +10,7 @@ Short loops and kinetic graphics? Use ce-03. Talking creator clips? Use ce-02.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL], [IDEA].
 
 ## MODE (pick first; default EXPLORE)
-- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real.
+- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real; WORLD RULES below.
 - BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner.
 
 ## WORLD RULES (always on, EXPLORE and BUILD)
@@ -19,9 +19,10 @@ Before any image or video prompt:
 2. Write 3 to 5 world rules, plus one line: where, when, and why the person is here doing this. Nothing random.
 3. Three layers. ANCHORS (people, product, place, reason) stay true to the world. EFFECTS may be fantasy, but each starts from a real cause in the anchors (she opens the bottle, the liquid swirls) and returns to the real. CAMERA is free (macro zoom, sky drop, thread-level close-up).
 4. Check every storyboard frame against the rules. If the place cannot hold the action, change the action.
+Camera moves and effects: see docs/PLAYBOOK-shots-effects.md in the library.
 
 Core method (Higgsfield Academy, "Make a Cinematic Ad End-to-End"): ASSETS -> PROMPTING FRAMEWORK -> SCENES -> EDIT. Iteration is the skill: the final film is the best few seconds cut from many takes.
-LIBRARY: exact prompts and techniques live at github.com/GraysonChoate/creative_engine (docs/CE-03). Check it before inventing a method.
+LIBRARY: exact prompts and techniques live at github.com/GraysonChoate/creative_engine (docs/CE-03). Read START-HERE.md there first. Check it before inventing a method.
 
 ## INPUTS (ask once, only what is missing)
 - BRAND: URL or brand bible (from ce-00). PRODUCT: real packshot(s).
@@ -87,8 +88,8 @@ GATE 3 (BUILD only): user approves the style header and shot list.
 ## PHASE 4: SCENES (Step 3)
 - Model: Seedance 2.x via Higgsfield generate_video / generate_video_batch. 9:16 for vertical, 16:9 for master. Use locked images as references (omni_reference). Quote first; roughly 70 credits per 1080p take, so test at lower res where possible.
 - Order: most important scenes first (the hook, the transformation, the payoff, the pack shot). If those fail, the film fails.
-- Batches: 3-4 takes per scene. Frozen-frame QA on every take (first/mid/last): face stable, label intact, hands correct, product on surface, direction of motion right.
-- Failure loop: describe what is wrong as a director ("he runs forward, natural smile, eyes stay the same"), Claude applies rule 7 (one-line change first, rewrite last). Max 4 rounds per scene, then change the shot design.
+- Batches: 3-4 takes per scene. Check every take (first/mid/last frame; in EXPLORE by eye): face stable, label intact, hands correct, product on surface, direction of motion right.
+- Failure loop: describe what is wrong as a director ("he runs forward, natural smile, eyes stay the same"). Claude applies rule 7 (one-line change first, rewrite last). Max 4 rounds per scene, then change the shot design.
 - Trim the first and last half-second of every clip before cutting.
 - Reuse leftovers: unused good moments from one scene can fill another.
 - Pack shot (last, must be perfect): product enters (drop, reveal, push-in), light matches scene 1, camera moves (dolly-in / slow pullback). Brand name and tagline added in post from the real logo file, not generated. Optional logo sting: ce-03 Route D.
@@ -125,6 +126,7 @@ FAIL = fix and re-run. Never ship on a fail.
 | Face or outfit drifts between scenes | Re-lock character sheet, use as reference every time, one face per sheet, do not re-describe the face in the prompt. |
 | Plastic or flat look | Fix the location still first; add film grain + anamorphic to style header (not to sheets). |
 | Label warps or text garbles | Real pack image reference; check against the real image; add text in post or put the real label back. |
+| Place or action makes no sense | Re-check WORLD RULES; change the action, not the physics. |
 | Character runs backwards / wrong action | Director note: state direction and anchors; one-line fix; shorten the beat. |
 | Transformation falls flat | Ask for continuous motion plus macro impact shots (parts locking in), cut together. |
 | Pack shot static | Add dolly-in/pullback, match scene 1 light, assemble logo in post. |
@@ -134,6 +136,6 @@ FAIL = fix and re-run. Never ship on a fail.
 | Story too long | Collapse scenes; one idea only. |
 
 ## RUN ORDER SUMMARY
-EXPLORE: story > assets > shots > scenes > quick edit. Judge by eye, show me, iterate.
+EXPLORE: world rules > story > assets > shots > scenes > quick edit. Judge by eye, show me, iterate.
 BUILD: 0 harness (ce-00) > G0 > 1 story > G1 > 2 assets > G2 > 3 style header + shot list > G3 > 4 scenes > G4 > 5 edit + sound > 6 audit > 7 deliver.
 Time: 30s film 2-4 days, 60-90s film 5-10 days. Credits: assets low, scenes high (budget 15-25 takes per minute). Always quote first.

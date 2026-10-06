@@ -9,7 +9,7 @@ Run this when the job is the WHOLE site (audit -> design -> code -> QA -> handof
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
 
 ## MODE (pick first; default EXPLORE)
-- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real; no touching a live site or DNS; no credentials.
+- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real; no touching a live site or DNS; no credentials; WORLD RULES below.
 - BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner.
 
 ## WORLD RULES (always on, EXPLORE and BUILD)
@@ -18,13 +18,14 @@ Before any image or video prompt:
 2. Write 3 to 5 world rules, plus one line: where, when, and why the person is here doing this. Nothing random.
 3. Three layers. ANCHORS (people, product, place, reason) stay true to the world. EFFECTS may be fantasy, but each starts from a real cause in the anchors (she opens the bottle, the liquid swirls) and returns to the real. CAMERA is free (macro zoom, sky drop, thread-level close-up).
 4. Check every storyboard frame against the rules. If the place cannot hold the action, change the action.
+Camera moves and effects: see docs/PLAYBOOK-shots-effects.md at github.com/GraysonChoate/creative_engine. Read START-HERE.md there first.
 
 ## INPUTS (ask once, only what is missing)
 - SITE: current URL (or none for a new site).
 - GOAL: sales | leads | bookings | content | brand. One primary.
 - PLATFORM: Shopify | WordPress | custom code | Higgsfield-hosted | undecided.
 - SCOPE: page count, must-keep URLs, languages.
-- TIER: tame | new-direction | spectacular. Set per page or per section, as the user chooses. Spectacular can run on any page, including the whole site, if the user wants it. Each page keeps its own weight budget (Phase 7).
+- TIER: tame | new-direction | spectacular. EXPLORE defaults to spectacular. Set per page or per section, as the user chooses. Spectacular can run on any page, including the whole site, if the user wants it. In BUILD each page keeps its own weight budget (Phase 7).
 - ACCESS: admin/theme access, analytics, Search Console, DNS owner. If none: prototype only.
 - ASSETS: what exists (packshots, logo, photos, video, copy).
 
@@ -41,7 +42,7 @@ Before any image or video prompt:
 10. Do not collect or enter credentials. User signs in; Claude never types passwords.
 
 ## PHASE 0: HARNESS + SITE AUDIT
-- Brand bible: load the ce-00 bible. If none exists, run ce-00 first. Do not rebuild it here.
+- Brand bible: load the ce-00 bible. If none exists, run ce-00 first (EXPLORE: light intake only). Do not rebuild it here.
 - Crawl the site: Firecrawl map + scrape (sitemap.xml, all URLs, titles, H1s, word counts, internal links, broken links).
 - Screenshots desktop + phone (Claude in Chrome) of top pages.
 - Pull analytics if given: top pages, traffic sources, conversion path, bounce, device split. If none, say so.
@@ -62,10 +63,10 @@ GATE 1 (BUILD only): sitemap, flows, redirect map approved.
 ## PHASE 2: DESIGN SYSTEM
 - Tokens: color, type scale, spacing, radius, shadow, motion (3 motion words, durations, easing).
 - Components: nav, hero, product card, grid, accordion, review block, form, footer, buttons, badges.
-- Boards: one per page TEMPLATE (not every page), desktop + phone. Tools: gpt_image_2_5 / nano_banana_pro / flux_3_image (Higgsfield) with real packs composited, or Canva generate-design.
+- Boards: one per page TEMPLATE (not every page), desktop + phone. Tools: gpt_image_2_5 / nano_banana_pro / flux_3_image (Higgsfield) with real packs as references or composited, or Canva generate-design.
 - Three tiers from same inputs: TAME (clean, fast), NEW DIRECTION (new layout/imagery), SPECTACULAR (scroll film/3D/shaders; any page or section the user picks).
-- Spectacular assets follow the core asset-request format: loop first frame = last frame; one timed world per scroll section; occlusion transitions between sections; frame-sequence or short video export; mobile weight limits stated up front.
-GATE 2 (BUILD only): user picks tier, approves tokens + boards. Lock them.
+- Spectacular assets follow the core asset-request format: loop first frame = last frame; one timed world per scroll section; occlusion transitions between sections; frame-sequence or short video export; in BUILD, mobile weight limits stated up front.
+GATE 2 (BUILD only): user picks tier per page, approves tokens + boards. Lock them.
 
 ## PHASE 3: HOMEPAGE
 - Run ce-04-homepage Phases 1-5 using the locked system. Do not redo the audit or the brand intake.
@@ -75,7 +76,7 @@ GATE 3 (BUILD only): homepage approved on phone and desktop.
 - Build each template once: collection, product, article, about, contact. Pages are template + content.
 - Asset lock: product sheets (front + 3/4, real label), lifestyle, OG/share images, icons. Optimize: WebP/AVIF, lazy-load, alt text written, local fonts.
 - Optional per-page hero loops (Higgsfield, seamless, under 3 MB, poster frame). Quote first.
-GATE 4 (BUILD only): every asset is a named file. Nothing generated shows a label or text.
+GATE 4 (BUILD only): every asset is a named file. Every label and text matches the real source.
 
 ## PHASE 5: BUILD (pick a route)
 ROUTE A: Prototype (always first). Claude builds a clickable static site (HTML + Tailwind), mobile first. Shareable preview link.
@@ -116,6 +117,7 @@ FAIL = fix and re-run. Never launch on a fail.
 | Traffic drop after launch | Check redirect map, titles/H1s kept, canonicals, noindex. |
 | Scope creep | Templates first. New pages go to a Phase 2 backlog. |
 | Label warps or text garbles | Check against the real image; put the real label back or re-run. |
+| Place or action makes no sense | Re-check WORLD RULES; change the action, not the physics. |
 | Off-brand drift between pages | Rebuild from tokens, re-run Guardian. |
 | Slow pages | Compress, lazy-load, remove apps/scripts, drop that page's motion tier. |
 | Missing access | Ship prototype + handoff pack, say what is blocked. |
@@ -123,6 +125,6 @@ FAIL = fix and re-run. Never launch on a fail.
 | Client keeps changing boards | Gate 2 lock. Changes after = new scope, logged. |
 
 ## RUN ORDER SUMMARY
-EXPLORE: boards > prototype on spectacular tier > show me. No audit, sitemap, migration or budgets.
+EXPLORE: world rules > boards > prototype on spectacular tier > show me. No audit, sitemap, migration or budgets.
 BUILD: 0 audit (ce-00 bible) > G0 > 1 sitemap > G1 > 2 design system > G2 > 3 homepage (ce-04) > G3 > 4 templates + assets > G4 > 5 build (prototype first) > 6 migrate > 7 audit > 8 launch + handoff.
 Time: 1-2 weeks small site, 3-5 weeks 30+ pages. Credits: boards low, loops moderate. Always quote first.

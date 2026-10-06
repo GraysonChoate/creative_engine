@@ -9,7 +9,7 @@ Run this when the job is ONE page: the homepage (hero, motion, sections, convers
 Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
 
 ## MODE (pick first; default EXPLORE)
-- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real; no touching a live site or DNS; no credentials.
+- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real; no touching a live site or DNS; no credentials; WORLD RULES below.
 - BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner.
 
 ## WORLD RULES (always on, EXPLORE and BUILD)
@@ -18,11 +18,12 @@ Before any image or video prompt:
 2. Write 3 to 5 world rules, plus one line: where, when, and why the person is here doing this. Nothing random.
 3. Three layers. ANCHORS (people, product, place, reason) stay true to the world. EFFECTS may be fantasy, but each starts from a real cause in the anchors (she opens the bottle, the liquid swirls) and returns to the real. CAMERA is free (macro zoom, sky drop, thread-level close-up).
 4. Check every storyboard frame against the rules. If the place cannot hold the action, change the action.
+Camera moves and effects: see docs/PLAYBOOK-shots-effects.md at github.com/GraysonChoate/creative_engine. Read START-HERE.md there first.
 
 ## INPUTS (ask once, in plain words, only what is missing)
 - BRAND: URL or brand bible (from ce-00).
 - GOAL: sales | leads | launch | story. Pick one primary.
-- TIER: tame | new-direction | spectacular. If unsure, build all three boards, then ask. Spectacular can be used on any section or page the user chooses.
+- TIER: tame | new-direction | spectacular. EXPLORE defaults to spectacular. If unsure in BUILD, build all three boards, then ask. Spectacular can be used on any section or page the user chooses.
 - STACK: Shopify | other | none (preview only).
 - DELIVERY: prototype link | production build | both.
 - ASSETS: what the client already has (packshots, logo, photos, video).
@@ -41,7 +42,7 @@ Before any image or video prompt:
 11. Never use git/deploy jargon with the user.
 
 ## PHASE 0: HARNESS
-- Load the brand bible from ce-00. If none exists, run ce-00 first. Do not rebuild it here.
+- Load the brand bible from ce-00. If none exists, run ce-00 first (EXPLORE: light intake only). Do not rebuild it here.
 - AUDIT the existing homepage (Claude in Chrome or Firecrawl screenshot, desktop + phone): nav depth, hero clarity, product count, load weight, CTA count, mobile problems. Write a keep / fix / cut list. Keep what already works.
 - Marketing advisor step: look at 3-5 competitor homepages. Note what to match and what to beat.
 - Asset request: send the client a checklist of what is missing (hi-res packshots, label art, lifestyle shots, brand video, fonts).
@@ -59,20 +60,20 @@ GATE 1 (BUILD only): user approves concept, section plan and CTA inventory.
 
 ## PHASE 2: DESIGN BOARDS
 - One board image per section, desktop + phone, in the locked palette and type.
-- Tools: gpt_image_2_5 / nano_banana_pro / flux_3_image (via Higgsfield) for mood and layout; real pack images composited in. Or Canva (generate-design, resize-design) for layout boards.
+- Tools: gpt_image_2_5 / nano_banana_pro / flux_3_image (via Higgsfield) for mood and layout; real pack images as references or composited in. Or Canva (generate-design, resize-design) for layout boards.
 - Produce the tier(s) asked for. Same inputs, three looks:
-  - TAME: clean, fast, static + light reveals. Safe default.
+  - TAME: clean, fast, static + light reveals. Safe default for BUILD.
   - NEW DIRECTION: new layout and imagery, moderate motion, same brand rules.
-  - SPECTACULAR: scroll film, 3D, shader transitions. Use where the user wants it (any section or page); keep the weight budget for that page.
+  - SPECTACULAR: scroll film, 3D, shader transitions. Use where the user wants it (any section or page); in BUILD keep the weight budget for that page.
 - Contact sheet of boards to the user.
 GATE 2 (BUILD only): user picks the tier and approves the boards. Lock palette, fonts, spacing, section order.
 
 ## PHASE 3: ASSET LOCK
 - Product sheet per flagship: front + 3/4, real label. Remove backgrounds (remove_background) or use client cutouts.
 - Hero media: atmosphere loop (Higgsfield video, seamless with first frame = last frame, 1080p, 5-10s) or still. Product stays a real image or real label render.
-- Scroll film tier: asset request = one timed world per scroll section, start/end frames per scene, occlusion transitions between sections, frame sequence on canvas (or short video export), per-frame product tracking so packs sit on surfaces. State mobile weight limits before generating.
+- Scroll film tier: asset request = one timed world per scroll section, start/end frames per scene, occlusion transitions between sections, frame sequence on canvas (or short video export), per-frame product tracking so packs sit on surfaces. In BUILD, state mobile weight limits before generating.
 - 3D tier: Three.js with real label renders unwrapped onto the real silhouette. Do not use AI-generated 3D for labels. No outside 3D artist needed.
-- Optimize: WebP/AVIF images, video under 3 MB loops, poster frame for each video, local fonts.
+- Optimize (BUILD): WebP/AVIF images, video under 3 MB loops, poster frame for each video, local fonts.
 GATE 3 (BUILD only): every asset is a file, named, and checked against the bible. No video prompt or build step before this.
 
 ## PHASE 4: BUILD (pick a route)
@@ -108,6 +109,7 @@ FAIL = fix and re-run. Never ship on a fail.
 | Problem | Fix |
 |---|---|
 | Label warps or text garbles | Check against the real image; use the real label render or re-run. |
+| Place or action makes no sense | Re-check WORLD RULES; change the action, not the physics. |
 | Product floats | Add contact shadow, match perspective, per-frame tracking. |
 | Off-brand color | Re-lock palette tokens. Re-run Guardian. |
 | Heavy page, slow phone | Compress, lazy-load, pause video off-screen, drop to lower tier. |
@@ -117,6 +119,6 @@ FAIL = fix and re-run. Never ship on a fail.
 | Drift between boards and build | Rebuild from the locked boards, not memory. |
 
 ## RUN ORDER SUMMARY
-EXPLORE: boards > prototype (spectacular by default) > show me. No audit, weight budget or delivery.
+EXPLORE: world rules > boards > prototype (spectacular by default) > show me. No audit, weight budget or delivery.
 BUILD: 0 harness (ce-00) + audit > G0 > 1 strategy > G1 > 2 boards > G2 > 3 assets > G3 > 4 build (prototype first) > 5 audit > 6 deliver.
 Time: tame 1 day, new direction 2-3 days, spectacular 4-7 days. Credits: boards low, atmosphere loops moderate, scroll film high. Always quote first.

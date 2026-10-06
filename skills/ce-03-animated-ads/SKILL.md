@@ -5,14 +5,26 @@ description: "Run the full animated-ad workflow for any brand: motion strategy, 
 
 # CE-03 Animated Ads (universal)
 
-Mission: produce animated ads (motion graphics, product loops, hyper-motion, logo animation) for [BRAND] / [PRODUCTS] on [PLATFORMS] that look intentional, keep the real product and logo exact, and read with the sound off. Run each phase in order. STOP at every GATE and wait for a yes. Quote cost before any spend. State your reading of the request in one line first. Keep communication short and plain.
-LIBRARY: techniques and exact prompts live at github.com/GraysonChoate/creative_engine (docs/CE-03). Check it before inventing a method.
+Mission: produce animated ads (motion graphics, product loops, hyper-motion, logo animation) for [BRAND] / [PRODUCTS] on [PLATFORMS] that look intentional, keep the real product and logo exact, and read with the sound off. Quote cost before any spend. State your reading of the request in one line first. Keep communication short and plain.
+LIBRARY: techniques and exact prompts live at github.com/GraysonChoate/creative_engine (docs/CE-03). Read START-HERE.md there first. Check the library before inventing a method.
+
+## MODE (pick first; default EXPLORE)
+- EXPLORE: experiments, demos, pitches. No gates, audits, budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, seamless loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake people, reviews or claims shown as real; no flashing above 3 per second; no copyrighted music; WORLD RULES below.
+- BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner. STOP at every GATE and wait for a yes.
+
+## WORLD RULES (always on, EXPLORE and BUILD)
+Before any image or video prompt:
+1. Pick the world: REAL (live-action brand ad), STYLIZED REAL (painted, anime: real-world logic in a set look) or INVENTED (cartoon, new world).
+2. Write 3 to 5 world rules, plus one line: where, when, and why the person is here doing this. Nothing random.
+3. Three layers. ANCHORS (people, product, place, reason) stay true to the world. EFFECTS may be fantasy, but each starts from a real cause in the anchors (she opens the bottle, the liquid swirls) and returns to the real. CAMERA is free (macro zoom, sky drop, thread-level close-up).
+4. Check every storyboard frame against the rules. If the place cannot hold the action, change the action.
+Camera moves and effects: docs/PLAYBOOK-shots-effects.md in the library.
 
 ## Inputs (ask once for anything missing; otherwise infer)
 [BRAND URL] [PRODUCT + real packshot] [GOAL] [PLATFORMS + RATIOS] [LENGTH: 6 / 10 / 15s] [AUDIO: none | music | jingle | voiceover] [TIER: tame | new direction | spectacular] [MOTION WORDS: 3 adjectives for speed and feel] [BUDGET in credits]
 
-## Hard rules
-- The real packshot and logo are image layers. No model redraws a label, logo or text. Pack placement is measured so the product sits exactly on its surface, never floating.
+## Hard rules (BUILD; in EXPLORE only the ALWAYS ON items apply, plus placement and motion as craft)
+- The real packshot and logo are image layers or references. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image; if it fails, put the real layer back or re-run. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in) over flat cutout composites; keep the cutout composite as backup when the label must be exact. Pack placement is measured so the product sits exactly on its surface, never floating.
 - All text (headline, price, CTA, callouts) is set deterministically in code or the editor, never rendered by an image or video model.
 - Brand colors and fonts only; sample and verify hex values. Use local font files so renders never fall back.
 - Motion follows the brand's motion words. Default: slow, eased, purposeful. Motion either shows the product or reveals information; never decorative bobbing or constant wobble.
@@ -23,8 +35,8 @@ LIBRARY: techniques and exact prompts live at github.com/GraysonChoate/creative_
 - Never poll in a loop. Never spend without a quote and a yes. use_unlim only if I ask.
 
 ## Phase 0: Harness + motion language
-Load the ce-00 brand bible and asset library. If none exists, run ce-00 first. Do not redo intake here. Competitor motion ads come from the ce-00 marketing advisor brief; pull more with Apify only if it is thin. Then add a MOTION SECTION to the bible: 3 motion words, easing curves, durations, transition style, sound style. Check for an existing motion library and reuse approved styles.
-GATE 0: show bible, motion words, reference motion ads.
+Load the ce-00 brand bible and asset library. If none exists, run ce-00 first (EXPLORE: light intake only). Do not redo intake here. Competitor motion ads come from the ce-00 marketing advisor brief; pull more with Apify only if it is thin. Then add a MOTION SECTION to the bible: 3 motion words, easing curves, durations, transition style, sound style. Check for an existing motion library and reuse approved styles.
+GATE 0 (BUILD only): show bible, motion words, reference motion ads.
 
 ## Phase 1: Strategy
 1.1 Marketing advisor: pick the goal per ad (awareness hook, product proof, offer, launch).
@@ -36,35 +48,35 @@ GATE 0: show bible, motion words, reference motion ads.
 - Stylized or mixed-media look (Marketing Studio motion presets)
 - Real pack over a generated environment loop
 - 3D turntable (Three.js, real label renders unwrapped onto the real silhouette)
-1.3 Write a BEAT SHEET per ad: 0-2s hook, proof beats, CTA, end card, with timings. TAME = clean loop plus type. NEW DIRECTION = a stylized world. SPECTACULAR = a multi-scene hero with camera moves.
-GATE 1: approve beat sheets and the spend quote.
+1.3 Write a BEAT SHEET per ad: 0-2s hook, proof beats, CTA, end card, with timings. TAME = clean loop plus type. NEW DIRECTION = a stylized world. SPECTACULAR = a multi-scene hero with camera moves. EXPLORE defaults to spectacular.
+GATE 1 (BUILD only): approve beat sheets and the spend quote.
 
 ## Phase 2: Lock the assets
 Real packshot (transparent PNG), vector logo, color and type tokens, a generated background plate with no pack in it (still image first), audio choice. Measure each surface line, scale and light direction for pack placement.
-GATE 2: show the locked assets and plates.
+GATE 2 (BUILD only): show the locked assets and plates.
 
 ## Phase 3: Storyboard before motion
-3.1 Stills: one key frame per beat, using the real pack. 3.2 Animatic: rough timing from the stills (static cuts with timings, text in place). 3.3 Check legibility at phone size and in all target ratios.
-GATE 3: approve storyboard + animatic. Never jump to final motion.
+3.1 Stills: one key frame per beat, using the real pack. 3.2 Animatic: rough timing from the stills (static cuts with timings, text in place). 3.3 Check legibility at phone size and in all target ratios. 3.4 Check every frame against WORLD RULES and the frame check in START-HERE.md (physics, continuity, clutter, camera, logic).
+GATE 3 (BUILD only): approve storyboard + animatic. Never jump to final motion.
 
 ## Phase 4: Produce (choose the route per concept)
-ROUTE A: Presets (fast). Marketing Studio motion presets (types: hyper-motion, 2D motion, mixed media, SaaS motion) via get_presets (source marketing_studio, category motion) and show_marketing_studio_v2. Real product and logo go in as inputs. Run only on an explicit yes. Output 12-15s. Audit like any other route.
+ROUTE A: Presets (fast). Marketing Studio motion presets (types: hyper-motion, 2D motion, mixed media, SaaS motion) via get_presets (source marketing_studio, category motion) and show_marketing_studio_v2. Real product and logo go in as inputs. Run only on an explicit yes. Output 12-15s. Check like any other route.
 ROUTE B: Generated plate + composite. Video plate with start and end frame the same for a loop (Seedance 2.5 or Grok Video 1.5; FLUX 3 Video for 5-20s at 1080p). Then composite the real pack and logo on top with tracking so it stays locked to the surface. Compositing in code or Higgsedit.
-ROUTE C: Code-built motion (full control). Option 1: Higgsedit (video-editing workflow): scripts with frames, text, shapes, masks, custom shaders, 2.5D camera, MP4 output. Option 2: HTML with GSAP / Three.js rendered by a deterministic frame recorder (seek per frame, local fonts, base64-embedded textures) and encoded with ffmpeg. Use for kinetic type, 3D turntables, scroll-style reveals.
-ROUTE D: Logo sting. Animate the real logo in Higgsedit or code; generate a short sound sting with generate_audio; keep it under 3s; reuse it across the set.
+ROUTE C: Code-built motion (full control). Option 1: Higgsedit (video-editing workflow): scripts with frames, text, shapes, masks, custom shaders, 2.5D camera, MP4 output. Option 2: HTML with GSAP / Three.js rendered by a deterministic frame recorder (seek per frame, local fonts, base64-embedded textures) and encoded with ffmpeg. Use for kinetic type, 3D turntables, scroll-style reveals. Option 3: After Effects (needs a session linked to the user's computer): ExtendScript .jsx run through the app, rendered with aerender. Use for logo stings, tracking, precise text and compositing. Steps and rules: docs/AE-route.md in the library.
+ROUTE D: Logo sting. Animate the real logo in Higgsedit, After Effects or code; generate a short sound sting with generate_audio; keep it under 3s; reuse it across the set.
 ROUTE E: Scale. Native re-layout per ratio (9:16, 1:1, 4:5, 16:9), reframe or outpaint only when composition allows. Ad Multiplier for variants from one approved 4-30s source.
 Cost: quote first. Our earlier note: about 72 credits per 1080p Seedance take, about 2 credits per still. Many takes, keep the best.
 
-## Phase 5: Audit (a separate agent, never the producer)
+## Phase 5: Audit (BUILD only; a separate agent, never the producer). In EXPLORE, do the frame check from START-HERE.md and the label check only.
 5.1 Frame sheet every 0.25s: pack on surface and not floating; label legible and matches the real packshot; logo clearspace; text inside safe zones (key content in the middle 80% for 9:16); hex colors sampled.
 5.2 Motion QA: easing, speed against the motion words, loop seam invisible, no flicker, no flash above 3 Hz, no judder at 30fps.
 5.3 Sound-off test and phone-size test. Audio levels (about -14 LUFS for social), no clipping.
 5.4 BRAND GUARDIAN (ce-00 Step 5): colors, fonts, claims vs approved list, disclosure where needed.
 5.5 SKILL gauntlet-loop: 2+ adversarial rounds for looks-AI-generated, weak hook, clutter, pacing.
 5.6 Pass/fail table. Fix loop max 2, re-rolling only the failing segment.
-GATE 4: show contact sheet and clips.
+GATE 4 (BUILD only): show contact sheet and clips.
 
-## Phase 6: Finish and deliver
+## Phase 6: Finish and deliver (BUILD only)
 - Encode: H.264 MP4, yuv420p, 30fps (24 acceptable for loops), 1080p or higher; web loops 1-3 MB for phones, with poster frame; consider WebM.
 - Captions (subtitles skill) only where speech exists; burned callouts come from code.
 - End card with real logo and CTA. Name: [brand]_[product]_[type]_[len]_[ratio]_v[n].
@@ -72,12 +84,17 @@ GATE 4: show contact sheet and clips.
 - Save approved styles to the brand's MOTION LIBRARY. Update the bible and corrections log (ce-00 Step 6). Propagate corrections.
 
 ## Failure modes -> fix
-- Label warped or text garbled: use the real pack layer and code-set text.
+- Label warped or text garbled: check against the real image; put the real pack layer back or re-run; text set in code.
+- Place or action makes no sense: re-check WORLD RULES; change the action, not the physics.
 - Product floating: re-measure the surface line, add a contact shadow, track it.
 - Loop jump: match start and end frames, crossfade 2-4 frames.
 - Off-brand color: re-grade in code and re-sample.
 - Fallback font in the render: load local fonts, rerun.
 - Motion too busy: cut effects, slow the easing, remove secondary motion.
 - HTML capture without H.264: record frames and encode with ffmpeg.
+
+## Run order summary
+EXPLORE: world rules > beat sheet > stills + frame check > produce (spectacular by default) > show me.
+BUILD: 0 harness + motion words > G0 > 1 strategy > G1 > 2 lock > G2 > 3 storyboard > G3 > 4 produce > 5 audit > G4 > 6 finish and deliver.
 
 Output style: short, plain language, tables, no filler. Ask at most one question at a time.
