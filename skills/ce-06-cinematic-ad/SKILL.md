@@ -9,6 +9,10 @@ Run this for a story-driven ad of 30-90s: a concept, characters, locations, 8-14
 Short loops and kinetic graphics? Use ce-03. Talking creator clips? Use ce-02.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL], [IDEA].
 
+## MODE (pick first; default EXPLORE)
+- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real.
+- BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner.
+
 Core method (Higgsfield Academy, "Make a Cinematic Ad End-to-End"): ASSETS -> PROMPTING FRAMEWORK -> SCENES -> EDIT. Iteration is the skill: the final film is the best few seconds cut from many takes.
 LIBRARY: exact prompts and techniques live at github.com/GraysonChoate/creative_engine (docs/CE-03). Check it before inventing a method.
 
@@ -21,8 +25,8 @@ LIBRARY: exact prompts and techniques live at github.com/GraysonChoate/creative_
 - SOUND: music direction, voiceover yes/no, language.
 - PLACEMENT: TV/CTV | social | website hero | event screen.
 
-## HARD RULES
-1. Real product and logo always go in as images. No model redraws labels, logos or on-pack text.
+## HARD RULES (BUILD; in EXPLORE only the ALWAYS ON items apply, plus rules 3, 5, 7, 8, 10 as craft)
+1. Real packshots and logos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image; if it fails, put the real label back or re-run. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in) over flat cutout composites; keep the cutout composite as backup when the label must be exact.
 2. Brand name and tagline are set in code or Canva/editor, never generated as text in video. Exception: a logo sting built from the real logo file.
 3. Lock-first: every recurring thing is a locked image BEFORE any video prompt is written. If a face, prop or location wobbles, the film fails.
 4. No fake testimonials, fake customers, fake claims. Claims from the brand bible only. No real person's likeness without consent.
@@ -37,7 +41,7 @@ LIBRARY: exact prompts and techniques live at github.com/GraysonChoate/creative_
 - Load the brand bible from ce-00. If none exists, run ce-00 first. Do not rebuild it here.
 - Marketing advisor: watch 3-5 competitor/category ads (Higgsfield video_analysis_create or links). Note hook style, length, payoff. Say what to avoid.
 - Collect: packshots (front, 3/4, back), logo files, brand fonts, any real people photos (many varied photos per person if used; check Higgsfield's current Soul ID minimum), music/legal constraints.
-GATE 0: bible loaded, assets in hand, people/consent decided.
+GATE 0 (BUILD only): bible loaded, assets in hand, people/consent decided.
 
 ## PHASE 1: STORY
 - One-line premise. One emotional beat. One product moment (the payoff). One idea only.
@@ -45,7 +49,7 @@ GATE 0: bible loaded, assets in hand, people/consent decided.
 - Hook rule: the first shot must earn the next 3 seconds. Product appears early, hero moment late, pack shot last.
 - Script: scene table (# | duration | action | camera | sound | product visible?). Dialogue/VO minimal; text overlays marked for post.
 - Pitch 3 premises if asked, one paragraph each, pick one.
-GATE 1: user approves premise and scene table.
+GATE 1 (BUILD only): user approves premise and scene table.
 
 ## PHASE 2: ASSET LOCK (Step 1)
 Make each asset once, lock it, reuse everywhere. Generate in batches (cheap: about 1 credit per 8 stills on Soul Cinema), pick the best.
@@ -61,7 +65,7 @@ Make each asset once, lock it, reuse everywhere. Generate in batches (cheap: abo
 - Save to Higgsfield Elements with names (@hero, @rival, @street, @product) so prompts can reference them (manage_reference_elements). Upload images BEFORE pasting the prompt so tags bind. Tag the asset AND give a short role-scoped definition (e.g. "@hero = the runner, clothes only"); test both ways on one clip.
 - Do not re-describe a locked asset in the prompt: tag it and describe only what changes (clothes, action).
 - Compatibility test: one short clip of the hero in the location (Seedance, dynamic camera). If it does not hold, fix the assets before going on. A good test clip can become scene 1.
-GATE 2: all assets locked, named, brand-checked (Brand Guardian). Nothing proceeds before this.
+GATE 2 (BUILD only): all assets locked, named, brand-checked (Brand Guardian). Nothing proceeds before this.
 
 ## PHASE 3: PROMPTING FRAMEWORK (Step 2)
 - Claude writes the Seedance shot list in one fresh thread with: the script (as a file), every locked asset image, and a named list (@name + one-line description).
@@ -71,7 +75,7 @@ GATE 2: all assets locked, named, brand-checked (Brand Guardian). Nothing procee
 - Output: named prompts (1a, 1b, 2a...), each short: action beats + camera note + @names. Choreography by name (stepover, dolly-in, whip pan). Physical anchors ("boots on asphalt", "can lands in right palm").
 - Reuse rule: build hard scenes once (e.g. the physics-heavy one), then extend that prompt for later scenes instead of starting over.
 - Audio: decide music in the edit; use generate_audio for stings/SFX only if needed.
-GATE 3: user approves the style header and shot list.
+GATE 3 (BUILD only): user approves the style header and shot list.
 
 ## PHASE 4: SCENES (Step 3)
 - Model: Seedance 2.x via Higgsfield generate_video / generate_video_batch. 9:16 for vertical, 16:9 for master. Use locked images as references (omni_reference). Quote first; roughly 70 credits per 1080p take, so test at lower res where possible.
@@ -82,7 +86,7 @@ GATE 3: user approves the style header and shot list.
 - Reuse leftovers: unused good moments from one scene can fill another.
 - Pack shot (last, must be perfect): product enters (drop, reveal, push-in), light matches scene 1, camera moves (dolly-in / slow pullback). Brand name and tagline added in post from the real logo file, not generated. Optional logo sting: ce-03 Route D.
 - Optional: upscale_video for the final selects.
-GATE 4: every scene has a selected take that passes frozen-frame QA.
+GATE 4 (BUILD only): every scene has a selected take that passes frozen-frame QA.
 
 ## PHASE 5: EDIT + SOUND
 - Assemble: Higgsedit (video-editing workflow, JSX), or ffmpeg/DaVinci/CapCut. Cut best seconds, not whole takes. Match cuts on motion. Keep hook under 3s.
@@ -91,7 +95,7 @@ GATE 4: every scene has a selected take that passes frozen-frame QA.
 - Titles and logo from real files. Captions/subtitles (subtitles workflow) for sound-off.
 - Cutdowns: 30s, 15s, 6s, plus 9:16 and 1:1 (reframe, or re-cut). Ad Multiplier for variants.
 
-## PHASE 6: AUDIT (separate agent, not the maker)
+## PHASE 6: AUDIT (BUILD only; separate agent, not the maker; in EXPLORE judge by eye)
 Brand Guardian pass/fail: label accuracy, logo, palette, claims, tone, no off-brand imagery.
 Critic loop (gauntlet-loop, 2+ rounds, max 2 fix loops):
 - First 3 seconds hold attention. Story readable with sound off.
@@ -102,7 +106,7 @@ Critic loop (gauntlet-loop, 2+ rounds, max 2 fix loops):
 - Platform specs, safe zones, flashing under 3 per second.
 FAIL = fix and re-run. Never ship on a fail.
 
-## PHASE 7: DELIVERY
+## PHASE 7: DELIVERY (BUILD only)
 - Masters: MP4 H.264 yuv420p (30fps; 24fps for film look), 1080p minimum; ProRes on request. Posters/stills for thumbnails.
 - Hand over: final cut + cutdowns, subtitle files (SRT), still frames, shot list and style header (so it can be re-made), asset sheets, music/rights note, cost report (credits by step).
 - Save to memory: locked assets, style header, approved story, corrections.
@@ -113,7 +117,7 @@ FAIL = fix and re-run. Never ship on a fail.
 |---|---|
 | Face or outfit drifts between scenes | Re-lock character sheet, use as reference every time, one face per sheet, do not re-describe the face in the prompt. |
 | Plastic or flat look | Fix the location still first; add film grain + anamorphic to style header (not to sheets). |
-| Label warps or text garbles | Real pack image reference; add text in post. |
+| Label warps or text garbles | Real pack image reference; check against the real image; add text in post or put the real label back. |
 | Character runs backwards / wrong action | Director note: state direction and anchors; one-line fix; shorten the beat. |
 | Transformation falls flat | Ask for continuous motion plus macro impact shots (parts locking in), cut together. |
 | Pack shot static | Add dolly-in/pullback, match scene 1 light, assemble logo in post. |
@@ -123,5 +127,6 @@ FAIL = fix and re-run. Never ship on a fail.
 | Story too long | Collapse scenes; one idea only. |
 
 ## RUN ORDER SUMMARY
-0 harness (ce-00) > G0 > 1 story > G1 > 2 assets > G2 > 3 style header + shot list > G3 > 4 scenes > G4 > 5 edit + sound > 6 audit > 7 deliver.
+EXPLORE: story > assets > shots > scenes > quick edit. Judge by eye, show me, iterate.
+BUILD: 0 harness (ce-00) > G0 > 1 story > G1 > 2 assets > G2 > 3 style header + shot list > G3 > 4 scenes > G4 > 5 edit + sound > 6 audit > 7 deliver.
 Time: 30s film 2-4 days, 60-90s film 5-10 days. Credits: assets low, scenes high (budget 15-25 takes per minute). Always quote first.

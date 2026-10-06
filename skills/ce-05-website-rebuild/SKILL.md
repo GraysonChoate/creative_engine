@@ -8,6 +8,10 @@ description: "Universal master workflow for rebuilding a brand's full website: a
 Run this when the job is the WHOLE site (audit -> design -> code -> QA -> handoff). Homepage only? Use ce-04. This skill reuses ce-04 for the homepage step.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
 
+## MODE (pick first; default EXPLORE)
+- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real; no touching a live site or DNS; no credentials.
+- BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner.
+
 ## INPUTS (ask once, only what is missing)
 - SITE: current URL (or none for a new site).
 - GOAL: sales | leads | bookings | content | brand. One primary.
@@ -17,8 +21,8 @@ Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
 - ACCESS: admin/theme access, analytics, Search Console, DNS owner. If none: prototype only.
 - ASSETS: what exists (packshots, logo, photos, video, copy).
 
-## HARD RULES
-1. Real packs, logos, photos always go in as images. No model redraws labels, logos or text.
+## HARD RULES (BUILD; in EXPLORE only the ALWAYS ON items apply)
+1. Real packs, logos and photos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image; if it fails, put the real label back or re-run. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in) over flat cutout composites; keep the cutout composite as backup when the label must be exact.
 2. Text set in code. Brand palette and fonts only. Placeholders in dev only.
 3. No invented claims, reviews, people, numbers. Claims from the approved list only.
 4. NEVER break existing URLs. Every old URL gets a keep or a 301 redirect map. SEO traffic is protected first.
@@ -37,7 +41,7 @@ Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
 - Technical: page weight, LCP, mobile issues, accessibility, metadata, schema, redirects, forms, tracking pixels, apps/plugins.
 - Output: AUDIT table (Page | Traffic | Purpose | Keep / Merge / Cut / New | Notes). Plus top 10 problems ranked by revenue impact.
 - Marketing advisor: 3-5 competitor sites. What to match, what to beat.
-GATE 0: audit approved. Keep/merge/cut list agreed. Stop if SEO pages are not protected.
+GATE 0 (BUILD only): audit approved. Keep/merge/cut list agreed. Stop if SEO pages are not protected.
 
 ## PHASE 1: STRATEGY + SITEMAP
 - Concept spine: one sentence.
@@ -46,7 +50,7 @@ GATE 0: audit approved. Keep/merge/cut list agreed. Stop if SEO pages are not pr
 - User flows: top 2-3 journeys (e.g. land > product > cart). Count clicks. Fewer is better.
 - Redirect map: old URL > new URL for every cut/merged page.
 - Content plan: reuse existing copy where good; new copy marked DRAFT for client sign-off, claims checked.
-GATE 1: sitemap, flows, redirect map approved.
+GATE 1 (BUILD only): sitemap, flows, redirect map approved.
 
 ## PHASE 2: DESIGN SYSTEM
 - Tokens: color, type scale, spacing, radius, shadow, motion (3 motion words, durations, easing).
@@ -54,17 +58,17 @@ GATE 1: sitemap, flows, redirect map approved.
 - Boards: one per page TEMPLATE (not every page), desktop + phone. Tools: gpt_image_2_5 / nano_banana_pro / flux_3_image (Higgsfield) with real packs composited, or Canva generate-design.
 - Three tiers from same inputs: TAME (clean, fast), NEW DIRECTION (new layout/imagery), SPECTACULAR (scroll film/3D/shaders; any page or section the user picks).
 - Spectacular assets follow the core asset-request format: loop first frame = last frame; one timed world per scroll section; occlusion transitions between sections; frame-sequence or short video export; mobile weight limits stated up front.
-GATE 2: user picks tier, approves tokens + boards. Lock them.
+GATE 2 (BUILD only): user picks tier, approves tokens + boards. Lock them.
 
 ## PHASE 3: HOMEPAGE
 - Run ce-04-homepage Phases 1-5 using the locked system. Do not redo the audit or the brand intake.
-GATE 3: homepage approved on phone and desktop.
+GATE 3 (BUILD only): homepage approved on phone and desktop.
 
 ## PHASE 4: TEMPLATES + ASSET LOCK
 - Build each template once: collection, product, article, about, contact. Pages are template + content.
 - Asset lock: product sheets (front + 3/4, real label), lifestyle, OG/share images, icons. Optimize: WebP/AVIF, lazy-load, alt text written, local fonts.
 - Optional per-page hero loops (Higgsfield, seamless, under 3 MB, poster frame). Quote first.
-GATE 4: every asset is a named file. Nothing generated shows a label or text.
+GATE 4 (BUILD only): every asset is a named file. Nothing generated shows a label or text.
 
 ## PHASE 5: BUILD (pick a route)
 ROUTE A: Prototype (always first). Claude builds a clickable static site (HTML + Tailwind), mobile first. Shareable preview link.
@@ -75,12 +79,12 @@ ROUTE D: Higgsfield hosted. get_workflow_instructions("website-builder-flow"), c
 - SEO build: titles, meta, H1 per page, schema (Product, Organization, FAQ), sitemap.xml, robots.txt, canonical, OG/cover image, 301 map implemented.
 - Integrations: analytics, pixels, email capture, reviews app. Re-use existing IDs. Do not enter keys; user adds them.
 
-## PHASE 6: MIGRATION
+## PHASE 6: MIGRATION (BUILD only)
 - Content move: products, collections, posts, images, metafields. Verify counts match (old vs new).
 - Redirects live on staging. Test 100% of top-traffic URLs and a sample of the rest.
 - Freeze window: tell client when edits stop on the old site.
 
-## PHASE 7: AUDIT (separate agent, not the builder)
+## PHASE 7: AUDIT (BUILD only; separate agent, not the builder)
 Brand Guardian pass/fail: colors, fonts, labels, claims, tone, no placeholders.
 Critic loop (gauntlet-loop, 2+ rounds, max 2 fix loops):
 - Phone 390px + 768px + desktop. No horizontal scroll. Tap targets 44px.
@@ -92,7 +96,7 @@ Critic loop (gauntlet-loop, 2+ rounds, max 2 fix loops):
 - Tracking fires once, not twice.
 FAIL = fix and re-run. Never launch on a fail.
 
-## PHASE 8: LAUNCH + HANDOFF
+## PHASE 8: LAUNCH + HANDOFF (BUILD only)
 - Launch checklist (user approves each): freeze > final migration > swap domain/theme > verify redirects > submit sitemap > watch 404s + analytics 48h.
 - Rollback plan written before launch: how to restore the old site in minutes.
 - Hand over: source/theme, design system doc, sitemap + redirect map, asset folder, copy marked DRAFT, how-to-edit guide (plain language), performance before/after, cost report.
@@ -104,7 +108,7 @@ FAIL = fix and re-run. Never launch on a fail.
 |---|---|
 | Traffic drop after launch | Check redirect map, titles/H1s kept, canonicals, noindex. |
 | Scope creep | Templates first. New pages go to a Phase 2 backlog. |
-| Label warps or text garbles | Real pack image only. Never regenerate. |
+| Label warps or text garbles | Check against the real image; put the real label back or re-run. |
 | Off-brand drift between pages | Rebuild from tokens, re-run Guardian. |
 | Slow pages | Compress, lazy-load, remove apps/scripts, drop that page's motion tier. |
 | Missing access | Ship prototype + handoff pack, say what is blocked. |
@@ -112,5 +116,6 @@ FAIL = fix and re-run. Never launch on a fail.
 | Client keeps changing boards | Gate 2 lock. Changes after = new scope, logged. |
 
 ## RUN ORDER SUMMARY
-0 audit (ce-00 bible) > G0 > 1 sitemap > G1 > 2 design system > G2 > 3 homepage (ce-04) > G3 > 4 templates + assets > G4 > 5 build (prototype first) > 6 migrate > 7 audit > 8 launch + handoff.
+EXPLORE: boards > prototype on spectacular tier > show me. No audit, sitemap, migration or budgets.
+BUILD: 0 audit (ce-00 bible) > G0 > 1 sitemap > G1 > 2 design system > G2 > 3 homepage (ce-04) > G3 > 4 templates + assets > G4 > 5 build (prototype first) > 6 migrate > 7 audit > 8 launch + handoff.
 Time: 1-2 weeks small site, 3-5 weeks 30+ pages. Credits: boards low, loops moderate. Always quote first.

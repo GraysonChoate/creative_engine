@@ -8,6 +8,10 @@ description: "Universal master workflow for building or rebuilding a brand's hom
 Run this when the job is ONE page: the homepage (hero, motion, sections, conversion flow). For a whole site, use ce-05.
 Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
 
+## MODE (pick first; default EXPLORE)
+- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real; no touching a live site or DNS; no credentials.
+- BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner.
+
 ## INPUTS (ask once, in plain words, only what is missing)
 - BRAND: URL or brand bible (from ce-00).
 - GOAL: sales | leads | launch | story. Pick one primary.
@@ -16,8 +20,8 @@ Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE]
 - DELIVERY: prototype link | production build | both.
 - ASSETS: what the client already has (packshots, logo, photos, video).
 
-## HARD RULES
-1. Real packs, logos, photos always go in as images. No model redraws labels, logos or text.
+## HARD RULES (BUILD; in EXPLORE only the ALWAYS ON items apply, plus rule 9 as craft)
+1. Real packs, logos and photos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image; if it fails, put the real label back or re-run. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in) over flat cutout composites; keep the cutout composite as backup when the label must be exact.
 2. Text is set in code. Never baked into generated images.
 3. Brand palette and fonts only. Placeholders and off-palette colors exist in dev only, never in client-facing output.
 4. No invented claims, reviews, testimonials, people or numbers. Claims come only from the brand bible's approved list.
@@ -34,7 +38,7 @@ Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE]
 - AUDIT the existing homepage (Claude in Chrome or Firecrawl screenshot, desktop + phone): nav depth, hero clarity, product count, load weight, CTA count, mobile problems. Write a keep / fix / cut list. Keep what already works.
 - Marketing advisor step: look at 3-5 competitor homepages. Note what to match and what to beat.
 - Asset request: send the client a checklist of what is missing (hi-res packshots, label art, lifestyle shots, brand video, fonts).
-GATE 0: bible loaded, audit done, asset list agreed. Stop if the bible is missing claims or colors.
+GATE 0 (BUILD only): bible loaded, audit done, asset list agreed. Stop if the bible is missing claims or colors.
 
 ## PHASE 1: STRATEGY AND SECTION PLAN
 - One-line concept spine: what the page says in one sentence.
@@ -44,7 +48,7 @@ GATE 0: bible loaded, audit done, asset list agreed. Stop if the bible is missin
 - Optional dual-state toggle (e.g. two product pillars) only if the brand has two clear pillars. Toggle changes copy, color accent, product and price together.
 - CTA inventory: list every button and where it goes.
 - Copy: headlines and body from the brand voice and approved claims. Mark any new line as DRAFT for client sign-off.
-GATE 1: user approves concept, section plan and CTA inventory.
+GATE 1 (BUILD only): user approves concept, section plan and CTA inventory.
 
 ## PHASE 2: DESIGN BOARDS
 - One board image per section, desktop + phone, in the locked palette and type.
@@ -54,7 +58,7 @@ GATE 1: user approves concept, section plan and CTA inventory.
   - NEW DIRECTION: new layout and imagery, moderate motion, same brand rules.
   - SPECTACULAR: scroll film, 3D, shader transitions. Use where the user wants it (any section or page); keep the weight budget for that page.
 - Contact sheet of boards to the user.
-GATE 2: user picks the tier and approves the boards. Lock palette, fonts, spacing, section order.
+GATE 2 (BUILD only): user picks the tier and approves the boards. Lock palette, fonts, spacing, section order.
 
 ## PHASE 3: ASSET LOCK
 - Product sheet per flagship: front + 3/4, real label. Remove backgrounds (remove_background) or use client cutouts.
@@ -62,7 +66,7 @@ GATE 2: user picks the tier and approves the boards. Lock palette, fonts, spacin
 - Scroll film tier: asset request = one timed world per scroll section, start/end frames per scene, occlusion transitions between sections, frame sequence on canvas (or short video export), per-frame product tracking so packs sit on surfaces. State mobile weight limits before generating.
 - 3D tier: Three.js with real label renders unwrapped onto the real silhouette. Do not use AI-generated 3D for labels. No outside 3D artist needed.
 - Optimize: WebP/AVIF images, video under 3 MB loops, poster frame for each video, local fonts.
-GATE 3: every asset is a file, named, and checked against the bible. No video prompt or build step before this.
+GATE 3 (BUILD only): every asset is a file, named, and checked against the bible. No video prompt or build step before this.
 
 ## PHASE 4: BUILD (pick a route)
 ROUTE A: Prototype (fast, always first)
@@ -75,7 +79,7 @@ ROUTE D: Shopify
 - Output sections as theme-ready code. Quick-add hooks use real variant IDs from products.json. Do not touch the live theme without explicit approval.
 - Build in stages: nav + hero > sections > motion > commerce. Review each stage.
 
-## PHASE 5: AUDIT (separate agent, not the builder)
+## PHASE 5: AUDIT (BUILD only; separate agent, not the builder)
 Brand Guardian checks, pass/fail:
 - Colors and fonts match the bible. Labels match real packs. Claims are on the approved list. Tone matches voice.
 Critic loop (gauntlet-loop skill, 2+ rounds, max 2 fix loops):
@@ -87,7 +91,7 @@ Critic loop (gauntlet-loop skill, 2+ rounds, max 2 fix loops):
 - Links and forms work. Metadata and share image present.
 FAIL = fix and re-run. Never ship on a fail.
 
-## PHASE 6: DELIVERY
+## PHASE 6: DELIVERY (BUILD only)
 - Preview link (artifact or hosted build) + screenshots desktop and phone.
 - Hand over: files or repo, asset folder, section/CTA map, copy marked DRAFT, change list vs the old page, performance numbers.
 - Cost report (credits spent by step). Next-step offer: A/B variants, or run ce-05 for the full site.
@@ -96,7 +100,7 @@ FAIL = fix and re-run. Never ship on a fail.
 ## FAILURE MODES AND FIXES
 | Problem | Fix |
 |---|---|
-| Label warps or text garbles | Use real pack image or label render. Never regenerate. |
+| Label warps or text garbles | Check against the real image; use the real label render or re-run. |
 | Product floats | Add contact shadow, match perspective, per-frame tracking. |
 | Off-brand color | Re-lock palette tokens. Re-run Guardian. |
 | Heavy page, slow phone | Compress, lazy-load, pause video off-screen, drop to lower tier. |
@@ -106,5 +110,6 @@ FAIL = fix and re-run. Never ship on a fail.
 | Drift between boards and build | Rebuild from the locked boards, not memory. |
 
 ## RUN ORDER SUMMARY
-0 harness (ce-00) + audit > G0 > 1 strategy > G1 > 2 boards > G2 > 3 assets > G3 > 4 build (prototype first) > 5 audit > 6 deliver.
+EXPLORE: boards > prototype (spectacular by default) > show me. No audit, weight budget or delivery.
+BUILD: 0 harness (ce-00) + audit > G0 > 1 strategy > G1 > 2 boards > G2 > 3 assets > G3 > 4 build (prototype first) > 5 audit > 6 deliver.
 Time: tame 1 day, new direction 2-3 days, spectacular 4-7 days. Credits: boards low, atmosphere loops moderate, scroll film high. Always quote first.
