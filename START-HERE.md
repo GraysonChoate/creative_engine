@@ -16,7 +16,7 @@
    - **Logic:** the person is doing something in a place where nobody would.
    List each fail with a one-line fix. Fix, re-check, then show.
 10. **Fix small.** One-line change first. Rewrite last.
-11. **Pick the skill:** ce-00 brand setup (first, once per brand) | ce-01 image ads | ce-02 UGC | ce-03 animated ads | ce-04 homepage | ce-05 full website | ce-06 cinematic ad | ce-07 pitch deck (6 to 8 slides, before the client sends a brand guide).
+11. **Pick the skill:** ce-00 brand setup (first, once per brand) | ce-01 image ads | ce-02 UGC | ce-03 animated ads | ce-04 homepage | ce-05 full website | ce-06 cinematic ad | ce-07 pitch deck (length set by the user).
 12. **Lookup (do not read all):** `docs/DIRECTOR-PASS.md` for turning scenes into shots. `docs/PLAYBOOK-shots-effects.md` for camera moves and effects. `docs/CE-0*.md` for techniques and exact prompts.
 13. **After Effects** is available on the user's computer for compositing real packs and logos, type, transitions, grade, and web exports. See `docs/AE-route.md`.
 14. **Talk to the user** in simple words, as few as possible.
