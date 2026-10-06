@@ -10,7 +10,12 @@ A scene description is not a prompt. The user talks like a client ("she drops fr
    **Style > Subject and action > Camera (start, move, end, lens) > Light > Effect > Locks (what stays the same)**
 5. Add the camera words to the prompt itself. "Dynamic" alone means nothing to the model. Say what the camera does.
 6. Between shots: say how they connect (match cut, whip, push through steam, same light, same outfit).
-7. Show the user a one-line shot list (beat, camera, effect) with the images, not the long prompts.
+7. **Show the vision, then stop.** Send the user a short table, no long prompts:
+   | Scene | What happens | Camera | Effect | Feel |
+   One line each. End with: "Approve, or tell me what to change." Adjust and re-show until approved.
+8. **Next phase: elements and references.** After approval, list what must be locked (character, product pack, kitchen/location, outfit, logo), get or make each as an image, show them, then storyboard frames, then the frame check, then video.
+
+Order: brief > world rules > director pass > VISION (user approves) > elements and references (user approves) > storyboard frames + frame check > video.
 
 ## Vocabulary (use these exact words)
 | Type | Words |

@@ -665,6 +665,10 @@
     },
     {
      "t": "note",
+     "x": "Then the agent shows you the vision: a short scene-by-scene table (scene, what happens, camera, effect, feel). You approve or adjust. Only then: elements and references (character, pack, location, outfit), storyboard frames, frame check, video."
+    },
+    {
+     "t": "note",
      "x": "Full vocabulary and a five-shot worked example: docs/DIRECTOR-PASS.md in the repo."
     },
     {
