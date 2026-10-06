@@ -9,7 +9,7 @@ A reusable "brain and nervous system" for creative production. One shared core (
   - `CE-03-merge-pass-2.md`: exact prompts per entry (97 verified quotes), rule fixes, entries #48-92, branch gaps
   - `CE-04-skool-merge.md`: Skool Vault lessons (10), entries #93-163, rule conflicts C1-C6, WEB gap status
   - docs/CE-05-explore-build-mode.md
-  - START-HERE.md (read first), docs/PLAYBOOK-shots-effects.md
+  - START-HERE.md (read first), docs/DIRECTOR-PASS.md, docs/PLAYBOOK-shots-effects.md
   - ebook/ (content.json is the source; build.py makes Directing-the-Engine.html)
 - `sources/` saved prompt pages from each video (plain text)
 - `raw/` original research doc (17 YouTube video breakdowns)
