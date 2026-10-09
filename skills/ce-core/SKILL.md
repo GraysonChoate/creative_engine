@@ -102,7 +102,8 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Any video, motion, cinematic | docs/DIRECTOR-PASS.md |
 | Exact prompts and techniques | docs/CE-03-merge-pass-2.md, docs/CE-04-skool-merge.md, docs/CE-01-merge-pass.md |
 | Mode behavior | docs/CE-05-explore-build-mode.md |
-| After Effects | docs/AE-route.md, scripts/ae/ |
+| After Effects | docs/AE-route.md, scripts/ae/, library/ae-skills.md |
+| Creator findings (video, ads, web, AE plugin) | library/README.md (index; open one page only) |
 
 ## 12. STUB (paste this at the top of every ce skill, so rules hold even if CORE is not loaded)
 > Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; no real faces or voices without consent; no fake reviews, claims or results shown as real; world rules before any prompt.
