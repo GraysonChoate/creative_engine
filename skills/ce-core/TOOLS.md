@@ -35,3 +35,24 @@ ads-studio, product-photoshoot, ugc-review-video, ugc-product-video, ugc-unboxin
 
 ## Encode defaults
 H.264 MP4, yuv420p, 30 fps (24 for film look or loops), 1080p minimum. Social audio about -14 LUFS, true peak under -1 dB. Web loops 1 to 3 MB with a poster frame.
+
+## Pick the model by NEED (not by habit). Check models_explore if a name fails.
+| Need | Pick | Why |
+|---|---|---|
+| Exact text or a real pack on a still | gpt_image_2 with the real pack as reference | text rendering, editing, 4K |
+| Combine many reference images in one frame | nano_banana_pro or flux_3_image | many references |
+| A creator or any realistic person | soul_2 (Soul ID for a recurring face) | people, UGC, editorial |
+| Film-look stills, locations, cinematic characters | soul_cinematic, soul_location, soul_cast, cinematic_studio_2_5 | light and film feel |
+| Fast branded static ad set | ms_image (needs style_id) or marketing_studio_image | brand kit aware |
+| Props, packs, places that return | Reference Elements (manage_reference_elements) | locked once, tagged every shot |
+| A 3D object for a web page | image_to_3d or multi_image_to_3d (GLB) | scroll and 3D sites |
+| Video with sound, multi-shot, many references | seedance_2_5 | picture and sound in one pass |
+| Character across cuts, steady voice, start + end frame loops | kling3_0 | multi-shot, audio sync |
+| Film look, genre dial, speed ramp, camera control | cinematic_studio_3_0 or cinematic_studio_video_v2 | camera and color |
+| Ready ad formats from a product | marketing_studio_video (12 to 15 s) | one-click formats |
+| Copy motion from a clip onto a still | hf_mult_motion_control (Genjutsu) | motion transfer |
+| Restyle a clip, keep its motion | Genjutsu Restyle (get_presets genjutsu) | style change |
+| Cheap draft before a final | Seedance draft mode, grok_video_v15, or lower resolution | test motion first |
+| Big outdoor or atmosphere; restyle existing footage | Veo 3.1; WAN (only if listed by models_explore) | per Higgsfield article |
+Rules: the start image is the main control. A loop uses the same image as start and end. Stills first, drafts second, finals last. If unsure: models_explore(action:'recommend') with the need in words.
+Split of labor: models make people, places and products in motion. After Effects or code makes text, logos, exact colors, timing, loops and interaction.

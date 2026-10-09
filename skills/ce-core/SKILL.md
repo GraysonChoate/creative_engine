@@ -1,13 +1,30 @@
 ---
 name: ce-core
-description: Load first for ANY Creative Engine task (ce-00 to ce-07, after effects, motion). Holds the shared rules once: modes, always-on rules, world rules, director pass, lock-first, frame check, fix order, gates, contingencies, library index.
+description: "Load first for ANY Creative Engine task. Routes a vague request to the right skill, Higgsfield path and After Effects or code path, then holds the shared rules once: modes, always-on rules, world rules, director pass, lock-first, frame check, fix order, gates, contingencies, library index."
 ---
 
 # CE-CORE (the shared layer)
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
 Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-07).
-Models, prices, tool names: open TOOLS.md. Do not hardcode them in skills.
+Models, prices, tool names, and which model for which need: open TOOLS.md. Do not hardcode them in skills.
+
+## 0. ROUTE THE REQUEST (first, before any tool call; say the route in one line)
+1. Name the use case from how the request sounds. If it sounds like two, name both: run the first, its output feeds the second.
+2. Brand unknown, or "scrape this site" / "look at this ad": ce-00 first (Firecrawl for the site, Meta Ad Library via Claude in Chrome, ce-extract-video for a video ad). Then the use-case skill.
+3. Ask only what is missing, one question: real pack and logo, platform and ratio, length, audio.
+| Request sounds like | Skill | Higgsfield makes (media) | After Effects or code makes (graphics) |
+|---|---|---|---|
+| static ad, banner, social image | ce-01 | stills from the real pack as reference (TOOLS.md) | exact text, resize, layout |
+| UGC, creator, review, unboxing, try-on | ce-02 | one locked creator, ugc workflows or Marketing Studio | captions, end card |
+| animated ad, loop, hypermotion, kinetic, motion graphic | ce-03 | stills first, then the video model that fits the need (TOOLS.md) | kinetic type, logo sting, exact label, timing, loops |
+| cinematic ad, film, spot | ce-06 | director pass, locked elements, video | type, logo, grade |
+| homepage, landing, scroll site | ce-04 | hero and 360 loops, frame sequences, 3D object | the page, scroll, interaction |
+| full site | ce-05 | same as ce-04 per page | same |
+| deck, pitch | ce-07 | none (uses finished work) | slides |
+| "with interaction", "interactive", "clickable" | add ce-04 interaction layer to the media skill | the media only | hover, tap, scroll states, built in code over the finished assets |
+Every video route runs the same spine: vision table (section 6) > lock elements (section 7) > stills and frame check > video model by need > finish outside the model. Skills add only what is unique.
+Mixed request example: "animated ad for X's product with interaction" = ce-00 (scrape) > ce-03 (animation) > ce-04 interaction layer, delivered as one web piece. Say so in line 1.
 
 ## 1. MODE (say it in line 1, with a one-line reading of the request)
 - EXPLORE (default): experiments, demos, pitches. No gates, audits, weight budgets, brand checks or delivery steps. Keep craft (locks, previews, loops, lighting, short beats, one-line fixes). Default tier: spectacular.
