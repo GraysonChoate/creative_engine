@@ -41,7 +41,7 @@ The workflow skills live in the Creative Engine project. Brand facts live in the
 | Competitors | Firecrawl search + scrape 3-5; Meta Ad Library via browser (Claude in Chrome) |
 | Screenshots (desktop + phone) | Claude in Chrome |
 | Analytics, ad performance | Only if the client shares exports. Else UNKNOWN. |
-Save raw pulls in a `raw/` folder in the working project (not this repo). Never edit raw.
+Save raw pulls in a `raw/` folder. Never edit raw.
 
 ## STEP 2: BRAND BIBLE (fill every field, UNKNOWN where missing)
 1. IDENTITY: name, one-line positioning, mission, what they sell, price tier, where they sell.
