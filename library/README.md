@@ -7,7 +7,7 @@ Raw transcripts, frame sheets and full prompt pages stay on the Mac (Creative En
 |---|---|---|
 | Cinematic ads, motion graphics, Higgsfield prompt anatomy, sound in prompts, hyper-motion, 3D real estate, explainers | adil/Fable-Higgsfield-notes.md | Adil (video, ads, After Effects) |
 | After Effects + Astra, 7 workflows (localization, 9:16 resize, tracking) | adil/Adil-prompts-all-7.md (full prompts, large: open only the one you need), adil/Different-Language-notes.md, adil/AE-plugin-research.md | Adil |
-| How After Effects is installed and driven on the Mac (local MCP, probe) | adil/AE-install-log.md | Adil |
+| How After Effects is installed and driven on the Mac (local MCP) | ../docs/AE-route.md | Adil |
 | Website interactive components in code, code overlays on footage | jack-roberts.md | Jack Roberts (web only: ce-04, ce-05) |
 | Higgsfield plugin panel inside After Effects, dashboard motion recipe | zubair.md | Zubair (AE layer) |
 | The 13 native After Effects skills: what each covers, UI motion gaps | ae-skills.md | Tool skills (read in our own words; not redistributable) |

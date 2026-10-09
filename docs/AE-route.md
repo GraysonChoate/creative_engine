@@ -30,3 +30,9 @@ Use After Effects (AE) when the shot needs real compositing or motion design tha
 - aerender path: `/Applications/Adobe After Effects 2026/aerender`.
 - Not yet tested: importing a real logo/pack PNG, tracking, expressions, frame-sequence export.
 - Replace the save path inside the script before use.
+
+## Local tool status (Oct 2026)
+- The local route needs no cloud connector and no Higgsfield login. Package: `fnf-after-effects-mcp`. Chain: client -> local Node server -> osascript/ExtendScript -> After Effects. The Higgsfield panel is only for making media inside AE.
+- Installed on the Mac and checked: `doctor` all OK, 13 AE skills, `ae_project_info` answered in 245 ms. Write access is on. Free-form `eval.run` is off; our own osascript + .jsx route covers free-form scripts.
+- Not done yet: register the server with a Claude client so the `ae_*` tools show up in chat.
+- The 13 skills are not redistributable. Point to them, never edit them. See library/ae-skills.md.

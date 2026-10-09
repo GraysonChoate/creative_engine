@@ -11,7 +11,6 @@ A reusable "brain and nervous system" for creative production. One shared core (
   - docs/CE-05-explore-build-mode.md
   - START-HERE.md (read first), docs/DIRECTOR-PASS.md, docs/PLAYBOOK-shots-effects.md
 - `sources/` saved prompt pages from each video (plain text)
-- `raw/` original research doc (17 YouTube video breakdowns)
 - `library/` creator findings, one page each (index: library/README.md)
 - `skills/` v2.1 skills: ce-core, ce-00 to ce-07, ce-extract-video, gauntlet-loop (ce-core holds the shared rules; load it first)
 
