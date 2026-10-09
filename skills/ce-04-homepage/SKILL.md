@@ -3,22 +3,14 @@ name: "ce-04-homepage"
 description: "Universal master workflow for building or rebuilding a brand's homepage: audit, section plan, design boards, asset lock, tiered build (tame, new direction, spectacular), audit and delivery. Brand-agnostic."
 ---
 
+> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; no real faces or voices without consent; no fake reviews, claims or results shown as real; world rules before any prompt.
+
 # CE-04 HOMEPAGE BUILD
 
 Run this when the job is ONE page: the homepage (hero, motion, sections, conversion flow). For a whole site, use ce-05.
 Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
-
-## MODE (pick first; default EXPLORE)
-- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real; no touching a live site or DNS; no credentials; WORLD RULES below.
-- BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner.
-
-## WORLD RULES (always on, EXPLORE and BUILD)
-Before any image or video prompt:
-1. Pick the world: REAL (live-action brand ad), STYLIZED REAL (painted, anime: real-world logic in a set look) or INVENTED (cartoon, new world).
-2. Write 3 to 5 world rules, plus one line: where, when, and why the person is here doing this. Nothing random.
-3. Three layers. ANCHORS (people, product, place, reason) stay true to the world. EFFECTS may be fantasy, but each starts from a real cause in the anchors (she opens the bottle, the liquid swirls) and returns to the real. CAMERA is free (macro zoom, sky drop, thread-level close-up).
-4. Check every storyboard frame against the rules. If the place cannot hold the action, change the action.
-Camera moves and effects: see docs/PLAYBOOK-shots-effects.md at github.com/GraysonChoate/creative_engine. Read START-HERE.md there first.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Models and prices: ce-core/TOOLS.md.
+Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Hero motion, type reveals, loops and frame sequences built in After Effects: the After Effects layer.
 
 ## INPUTS (ask once, in plain words, only what is missing)
 - BRAND: URL or brand bible (from ce-00).
@@ -28,25 +20,20 @@ Camera moves and effects: see docs/PLAYBOOK-shots-effects.md at github.com/Grays
 - DELIVERY: prototype link | production build | both.
 - ASSETS: what the client already has (packshots, logo, photos, video).
 
-## HARD RULES (BUILD; in EXPLORE only the ALWAYS ON items apply, plus rule 9 as craft)
-1. Real packs, logos and photos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image; if it fails, put the real label back or re-run. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in) over flat cutout composites; keep the cutout composite as backup when the label must be exact.
-2. Text is set in code. Never baked into generated images.
-3. Brand palette and fonts only. Placeholders and off-palette colors exist in dev only, never in client-facing output.
-4. No invented claims, reviews, testimonials, people or numbers. Claims come only from the brand bible's approved list.
-5. One primary conversion path. One primary CTA per screen.
-6. Slow, deliberate motion. No bobbing. Motion either shows the product or opens information.
-7. Storyboard first: boards -> prototype -> production. Never jump to a finished page.
-8. Quote before any credit spend. Never poll; wait on jobs once.
-9. Products sit exactly on surfaces (shadows, contact, scale). Floating = fail.
-10. Do not claim a connector exists until a call succeeds. Figma, GitHub, Vercel and Shopify connectors may be missing; fall back (screenshots, public products.json, file output).
-11. Never use git/deploy jargon with the user.
+## PAGE RULES
+1. Brand palette and fonts only (BUILD). Placeholders and off-palette colors exist in dev only, never in client-facing output.
+2. One primary conversion path. One primary CTA per screen.
+3. Slow, deliberate motion. No bobbing. Motion either shows the product or opens information.
+4. Storyboard first: boards -> prototype -> production. Never jump to a finished page.
+5. Never use git/deploy jargon with the user.
+6. Do not claim Figma, GitHub, Vercel or Shopify connectors exist until a call succeeds; fall back (screenshots, public products.json, file output).
 
 ## PHASE 0: HARNESS
 - Load the brand bible from ce-00. If none exists, run ce-00 first (EXPLORE: light intake only). Do not rebuild it here.
 - AUDIT the existing homepage (Claude in Chrome or Firecrawl screenshot, desktop + phone): nav depth, hero clarity, product count, load weight, CTA count, mobile problems. Write a keep / fix / cut list. Keep what already works.
 - Marketing advisor step: look at 3-5 competitor homepages. Note what to match and what to beat.
 - Asset request: send the client a checklist of what is missing (hi-res packshots, label art, lifestyle shots, brand video, fonts).
-GATE 0 (BUILD only): bible loaded, audit done, asset list agreed. Stop if the bible is missing claims or colors.
+PLAN gate (BUILD only): bible loaded, audit done, asset list agreed. Stop if the bible is missing claims or colors.
 
 ## PHASE 1: STRATEGY AND SECTION PLAN
 - One-line concept spine: what the page says in one sentence.
@@ -56,25 +43,25 @@ GATE 0 (BUILD only): bible loaded, audit done, asset list agreed. Stop if the bi
 - Optional dual-state toggle (e.g. two product pillars) only if the brand has two clear pillars. Toggle changes copy, color accent, product and price together.
 - CTA inventory: list every button and where it goes.
 - Copy: headlines and body from the brand voice and approved claims. Mark any new line as DRAFT for client sign-off.
-GATE 1 (BUILD only): user approves concept, section plan and CTA inventory.
+PLAN gate (BUILD only): user approves concept, section plan and CTA inventory.
 
 ## PHASE 2: DESIGN BOARDS
 - One board image per section, desktop + phone, in the locked palette and type.
-- Tools: gpt_image_2_5 / nano_banana_pro / flux_3_image (via Higgsfield) for mood and layout; real pack images as references or composited in. Or Canva (generate-design, resize-design) for layout boards.
+- Tools: board models (TOOLS.md) for mood and layout; real pack images as references or composited in. Or Canva (generate-design, resize-design) for layout boards.
 - Produce the tier(s) asked for. Same inputs, three looks:
   - TAME: clean, fast, static + light reveals. Safe default for BUILD.
   - NEW DIRECTION: new layout and imagery, moderate motion, same brand rules.
   - SPECTACULAR: scroll film, 3D, shader transitions. Use where the user wants it (any section or page); in BUILD keep the weight budget for that page.
 - Contact sheet of boards to the user.
-GATE 2 (BUILD only): user picks the tier and approves the boards. Lock palette, fonts, spacing, section order.
+LOOK gate (BUILD only): user picks the tier and approves the boards. Lock palette, fonts, spacing, section order.
 
 ## PHASE 3: ASSET LOCK
 - Product sheet per flagship: front + 3/4, real label. Remove backgrounds (remove_background) or use client cutouts.
-- Hero media: atmosphere loop (Higgsfield video, seamless with first frame = last frame, 1080p, 5-10s) or still. Product stays a real image or real label render.
+- Hero media: atmosphere loop (video model, seamless with first frame = last frame, 1080p, 5-10s) or still. Product stays a real image or real label render.
 - Scroll film tier: asset request = one timed world per scroll section, start/end frames per scene, occlusion transitions between sections, frame sequence on canvas (or short video export), per-frame product tracking so packs sit on surfaces. In BUILD, state mobile weight limits before generating.
 - 3D tier: Three.js with real label renders unwrapped onto the real silhouette. Do not use AI-generated 3D for labels. No outside 3D artist needed.
 - Optimize (BUILD): WebP/AVIF images, video under 3 MB loops, poster frame for each video, local fonts.
-GATE 3 (BUILD only): every asset is a file, named, and checked against the bible. No video prompt or build step before this.
+ASSETS gate (BUILD only): every asset is a file, named, and checked against the bible. No video prompt or build step before this.
 
 ## PHASE 4: BUILD (pick a route)
 ROUTE A: Prototype (fast, always first)
@@ -105,20 +92,15 @@ FAIL = fix and re-run. Never ship on a fail.
 - Cost report (credits spent by step). Next-step offer: A/B variants, or run ce-05 for the full site.
 - Save to memory: approved tier, palette, fonts, copy decisions, corrections.
 
-## FAILURE MODES AND FIXES
+## EXTRA FAILURE MODES (shared ones are in ce-core)
 | Problem | Fix |
 |---|---|
-| Label warps or text garbles | Check against the real image; use the real label render or re-run. |
-| Place or action makes no sense | Re-check WORLD RULES; change the action, not the physics. |
-| Product floats | Add contact shadow, match perspective, per-frame tracking. |
-| Off-brand color | Re-lock palette tokens. Re-run Guardian. |
 | Heavy page, slow phone | Compress, lazy-load, pause video off-screen, drop to lower tier. |
 | Too busy | Cut sections. One job each. |
 | Motion feels gimmicky | Slow it down. Remove anything that does not show product or open info. |
-| Connector missing | Use screenshots, products.json, file output. Say so. |
 | Drift between boards and build | Rebuild from the locked boards, not memory. |
 
 ## RUN ORDER SUMMARY
 EXPLORE: world rules > boards > prototype (spectacular by default) > show me. No audit, weight budget or delivery.
-BUILD: 0 harness (ce-00) + audit > G0 > 1 strategy > G1 > 2 boards > G2 > 3 assets > G3 > 4 build (prototype first) > 5 audit > 6 deliver.
+BUILD: 0 harness (ce-00) + audit > PLAN > 1 strategy > PLAN > 2 boards > LOOK > 3 assets > ASSETS > 4 build (prototype first) > 5 audit > 6 deliver.
 Time: tame 1 day, new direction 2-3 days, spectacular 4-7 days. Credits: boards low, atmosphere loops moderate, scroll film high. Always quote first.

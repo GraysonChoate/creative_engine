@@ -3,22 +3,14 @@ name: "ce-05-website-rebuild"
 description: "Universal master workflow for rebuilding a brand's full website: audit, sitemap, design system, page templates, build, migration, QA, launch and handoff. Brand-agnostic."
 ---
 
+> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; no real faces or voices without consent; no fake reviews, claims or results shown as real; world rules before any prompt.
+
 # CE-05 FULL WEBSITE REBUILD
 
 Run this when the job is the WHOLE site (audit -> design -> code -> QA -> handoff). Homepage only? Use ce-04. This skill reuses ce-04 for the homepage step.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
-
-## MODE (pick first; default EXPLORE)
-- EXPLORE: experiments, demos, pitches. No gates, audits, weight budgets, brand checks, fallbacks or delivery steps. Keep craft only (locks, previews, loops, lighting, short beats, one-line fixes). ALWAYS ON: quote credits before spend; no real person's likeness without consent; no fake reviews or claims shown as real; no touching a live site or DNS; no credentials; WORLD RULES below.
-- BUILD: full gated workflow below. Use when I say "build", "ship", "client", or pick a winner.
-
-## WORLD RULES (always on, EXPLORE and BUILD)
-Before any image or video prompt:
-1. Pick the world: REAL (live-action brand ad), STYLIZED REAL (painted, anime: real-world logic in a set look) or INVENTED (cartoon, new world).
-2. Write 3 to 5 world rules, plus one line: where, when, and why the person is here doing this. Nothing random.
-3. Three layers. ANCHORS (people, product, place, reason) stay true to the world. EFFECTS may be fantasy, but each starts from a real cause in the anchors (she opens the bottle, the liquid swirls) and returns to the real. CAMERA is free (macro zoom, sky drop, thread-level close-up).
-4. Check every storyboard frame against the rules. If the place cannot hold the action, change the action.
-Camera moves and effects: see docs/PLAYBOOK-shots-effects.md at github.com/GraysonChoate/creative_engine. Read START-HERE.md there first.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Models and prices: ce-core/TOOLS.md.
+Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Page motion built in After Effects (loops, Lottie, frame sequences): the After Effects layer.
 
 ## INPUTS (ask once, only what is missing)
 - SITE: current URL (or none for a new site).
@@ -29,17 +21,14 @@ Camera moves and effects: see docs/PLAYBOOK-shots-effects.md at github.com/Grays
 - ACCESS: admin/theme access, analytics, Search Console, DNS owner. If none: prototype only.
 - ASSETS: what exists (packshots, logo, photos, video, copy).
 
-## HARD RULES (BUILD; in EXPLORE only the ALWAYS ON items apply)
-1. Real packs, logos and photos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image; if it fails, put the real label back or re-run. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in) over flat cutout composites; keep the cutout composite as backup when the label must be exact.
-2. Text set in code. Brand palette and fonts only. Placeholders in dev only.
-3. No invented claims, reviews, people, numbers. Claims from the approved list only.
-4. NEVER break existing URLs. Every old URL gets a keep or a 301 redirect map. SEO traffic is protected first.
-5. Never touch the live site or DNS without explicit approval. Build on staging/preview.
-6. Prototype before production. One stage at a time, review each.
-7. Quote before credit spend. Never poll jobs.
-8. Do not claim a connector exists until a call succeeds. Fallback: screenshots, public feeds (products.json, sitemap.xml), file output.
-9. No git/deploy jargon with the user.
-10. Do not collect or enter credentials. User signs in; Claude never types passwords.
+## SITE RULES
+1. Brand palette and fonts only (BUILD). Placeholders in dev only.
+2. NEVER break existing URLs. Every old URL gets a keep or a 301 redirect map. SEO traffic is protected first.
+3. Never touch the live site or DNS without explicit approval. Build on staging/preview.
+4. Prototype before production. One stage at a time, review each.
+5. No git/deploy jargon with the user.
+6. Do not collect or enter credentials. User signs in; Claude never types passwords.
+7. Do not claim a connector exists until a call succeeds. Fallback: screenshots, public feeds (products.json, sitemap.xml), file output.
 
 ## PHASE 0: HARNESS + SITE AUDIT
 - Brand bible: load the ce-00 bible. If none exists, run ce-00 first (EXPLORE: light intake only). Do not rebuild it here.
@@ -49,7 +38,7 @@ Camera moves and effects: see docs/PLAYBOOK-shots-effects.md at github.com/Grays
 - Technical: page weight, LCP, mobile issues, accessibility, metadata, schema, redirects, forms, tracking pixels, apps/plugins.
 - Output: AUDIT table (Page | Traffic | Purpose | Keep / Merge / Cut / New | Notes). Plus top 10 problems ranked by revenue impact.
 - Marketing advisor: 3-5 competitor sites. What to match, what to beat.
-GATE 0 (BUILD only): audit approved. Keep/merge/cut list agreed. Stop if SEO pages are not protected.
+PLAN gate (BUILD only): audit approved. Keep/merge/cut list agreed. Stop if SEO pages are not protected.
 
 ## PHASE 1: STRATEGY + SITEMAP
 - Concept spine: one sentence.
@@ -58,25 +47,25 @@ GATE 0 (BUILD only): audit approved. Keep/merge/cut list agreed. Stop if SEO pag
 - User flows: top 2-3 journeys (e.g. land > product > cart). Count clicks. Fewer is better.
 - Redirect map: old URL > new URL for every cut/merged page.
 - Content plan: reuse existing copy where good; new copy marked DRAFT for client sign-off, claims checked.
-GATE 1 (BUILD only): sitemap, flows, redirect map approved.
+PLAN gate (BUILD only): sitemap, flows, redirect map approved.
 
 ## PHASE 2: DESIGN SYSTEM
-- Tokens: color, type scale, spacing, radius, shadow, motion (3 motion words, durations, easing).
+- Tokens: color, type scale, spacing, radius, shadow, motion (3 motion words, durations, easing; from bible section 13).
 - Components: nav, hero, product card, grid, accordion, review block, form, footer, buttons, badges.
-- Boards: one per page TEMPLATE (not every page), desktop + phone. Tools: gpt_image_2_5 / nano_banana_pro / flux_3_image (Higgsfield) with real packs as references or composited, or Canva generate-design.
+- Boards: one per page TEMPLATE (not every page), desktop + phone. Tools: board models (TOOLS.md) with real packs as references or composited, or Canva generate-design.
 - Three tiers from same inputs: TAME (clean, fast), NEW DIRECTION (new layout/imagery), SPECTACULAR (scroll film/3D/shaders; any page or section the user picks).
 - Spectacular assets follow the core asset-request format: loop first frame = last frame; one timed world per scroll section; occlusion transitions between sections; frame-sequence or short video export; in BUILD, mobile weight limits stated up front.
-GATE 2 (BUILD only): user picks tier per page, approves tokens + boards. Lock them.
+LOOK gate (BUILD only): user picks tier per page, approves tokens + boards. Lock them.
 
 ## PHASE 3: HOMEPAGE
 - Run ce-04-homepage Phases 1-5 using the locked system. Do not redo the audit or the brand intake.
-GATE 3 (BUILD only): homepage approved on phone and desktop.
+LOOK gate (BUILD only): homepage approved on phone and desktop.
 
 ## PHASE 4: TEMPLATES + ASSET LOCK
 - Build each template once: collection, product, article, about, contact. Pages are template + content.
 - Asset lock: product sheets (front + 3/4, real label), lifestyle, OG/share images, icons. Optimize: WebP/AVIF, lazy-load, alt text written, local fonts.
-- Optional per-page hero loops (Higgsfield, seamless, under 3 MB, poster frame). Quote first.
-GATE 4 (BUILD only): every asset is a named file. Every label and text matches the real source.
+- Optional per-page hero loops (video model, seamless, under 3 MB, poster frame). Quote first.
+ASSETS gate (BUILD only): every asset is a named file. Every label and text matches the real source.
 
 ## PHASE 5: BUILD (pick a route)
 ROUTE A: Prototype (always first). Claude builds a clickable static site (HTML + Tailwind), mobile first. Shareable preview link.
@@ -111,20 +100,17 @@ FAIL = fix and re-run. Never launch on a fail.
 - Save to memory: tier, tokens, decisions, corrections, open items.
 - Next-step offer: ce-01 image ads and ce-03 animated ads using the new site's look.
 
-## FAILURE MODES AND FIXES
+## EXTRA FAILURE MODES (shared ones are in ce-core)
 | Problem | Fix |
 |---|---|
 | Traffic drop after launch | Check redirect map, titles/H1s kept, canonicals, noindex. |
 | Scope creep | Templates first. New pages go to a Phase 2 backlog. |
-| Label warps or text garbles | Check against the real image; put the real label back or re-run. |
-| Place or action makes no sense | Re-check WORLD RULES; change the action, not the physics. |
 | Off-brand drift between pages | Rebuild from tokens, re-run Guardian. |
 | Slow pages | Compress, lazy-load, remove apps/scripts, drop that page's motion tier. |
 | Missing access | Ship prototype + handoff pack, say what is blocked. |
-| Connector missing | Use crawl, screenshots, public feeds. Say so. |
-| Client keeps changing boards | Gate 2 lock. Changes after = new scope, logged. |
+| Client keeps changing boards | LOOK gate lock. Changes after = new scope, logged. |
 
 ## RUN ORDER SUMMARY
 EXPLORE: world rules > boards > prototype on spectacular tier > show me. No audit, sitemap, migration or budgets.
-BUILD: 0 audit (ce-00 bible) > G0 > 1 sitemap > G1 > 2 design system > G2 > 3 homepage (ce-04) > G3 > 4 templates + assets > G4 > 5 build (prototype first) > 6 migrate > 7 audit > 8 launch + handoff.
+BUILD: 0 audit (ce-00 bible) > PLAN > 1 sitemap > PLAN > 2 design system > LOOK > 3 homepage (ce-04) > LOOK > 4 templates + assets > ASSETS > 5 build (prototype first) > 6 migrate > 7 audit > 8 launch + handoff.
 Time: 1-2 weeks small site, 3-5 weeks 30+ pages. Credits: boards low, loops moderate. Always quote first.

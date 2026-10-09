@@ -13,7 +13,7 @@ A reusable "brain and nervous system" for creative production. One shared core (
   - ebook/ (content.json is the source; build.py makes Directing-the-Engine.html)
 - `sources/` saved prompt pages from each video (plain text)
 - `raw/` original research doc (17 YouTube video breakdowns)
-- `skills/` current ce-00 to ce-07 skill files (snapshot)
+- `skills/` v2.1 skills: ce-core, ce-00 to ce-07, ce-extract-video, gauntlet-loop (ce-core holds the shared rules; load it first)
 
 ## Status
 - Core library merged and tagged. Branch mapping not started.
