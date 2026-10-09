@@ -10,7 +10,7 @@ A reusable "brain and nervous system" for creative production. One shared core (
   - `CE-04-skool-merge.md`: Skool Vault lessons (10), entries #93-163, rule conflicts C1-C6, WEB gap status
   - docs/CE-05-explore-build-mode.md
   - START-HERE.md (read first), docs/DIRECTOR-PASS.md, docs/PLAYBOOK-shots-effects.md
-- `sources/` saved prompt pages from each video (plain text)
+- Originals (video prompt pages, transcripts) are kept on the owner's Mac only; docs mentioning `sources/` refer to those.
 - `library/` creator findings, one page each (index: library/README.md)
 - `skills/` v2.1 skills: ce-core, ce-00 to ce-07, ce-extract-video, gauntlet-loop (ce-core holds the shared rules; load it first)
 
