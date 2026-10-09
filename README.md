@@ -10,7 +10,7 @@ A reusable "brain and nervous system" for creative production. One shared core (
   - `CE-04-skool-merge.md`: Skool Vault lessons (10), entries #93-163, rule conflicts C1-C6, WEB gap status
   - docs/CE-05-explore-build-mode.md
   - START-HERE.md (read first), docs/DIRECTOR-PASS.md, docs/PLAYBOOK-shots-effects.md
-  - ebook/ (content.json is the source; build.py makes Directing-the-Engine.html)
+  - ebook/ (agent edition: content.json; personal edition: content-me.json; run build.py, or build.py me)
 - `sources/` saved prompt pages from each video (plain text)
 - `raw/` original research doc (17 YouTube video breakdowns)
 - `library/` creator findings, one page each (index: library/README.md)
