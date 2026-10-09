@@ -23,6 +23,7 @@ Models, prices, tool names, and which model for which need: open TOOLS.md. Do no
 | full site | ce-05 | same as ce-04 per page | same |
 | deck, pitch | ce-07 | none (uses finished work) | slides |
 | "with interaction", "interactive", "clickable" | add ce-04 interaction layer to the media skill | the media only | hover, tap, scroll states, built in code over the finished assets |
+
 Every video route runs the same spine: vision table (section 6) > lock elements (section 7) > stills and frame check > video model by need > finish outside the model. Skills add only what is unique.
 Mixed request example: "animated ad for X's product with interaction" = ce-00 (scrape) > ce-03 (animation) > ce-04 interaction layer, delivered as one web piece. Say so in line 1.
 
