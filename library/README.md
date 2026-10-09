@@ -6,7 +6,7 @@ Raw transcripts, frame sheets and full prompt pages stay on the Mac (Creative En
 | Need | Open | Creator focus |
 |---|---|---|
 | Cinematic ads, motion graphics, Higgsfield prompt anatomy, sound in prompts, hyper-motion, 3D real estate, explainers | adil/Fable-Higgsfield-notes.md | Adil (video, ads, After Effects) |
-| After Effects + Astra, 7 workflows (localization, 9:16 resize, tracking) | adil/Different-Language-notes.md, adil/AE-plugin-research.md | Adil |
+| After Effects + Astra, 7 workflows (localization, 9:16 resize, tracking) | adil/Adil-prompts-all-7.md (full prompts, large: open only the one you need), adil/Different-Language-notes.md, adil/AE-plugin-research.md | Adil |
 | How After Effects is installed and driven on the Mac (local MCP, probe) | adil/AE-install-log.md | Adil |
 | Website interactive components in code, code overlays on footage | jack-roberts.md | Jack Roberts (web only: ce-04, ce-05) |
 | Higgsfield plugin panel inside After Effects, dashboard motion recipe | zubair.md | Zubair (AE layer) |
@@ -16,7 +16,6 @@ Raw transcripts, frame sheets and full prompt pages stay on the Mac (Creative En
 Adil feeds ce-03, ce-06, ce-02 and the After Effects layer. Jack feeds ce-04 and ce-05 only. Zubair feeds the After Effects layer.
 
 ## Not in the repo (on purpose)
-- Adil's full prompt pages (his content; kept on the Mac).
 - Fable's motion-prompt skill and Jack's design loop (paywalled; we design our own).
 - The Higgsfield After Effects skills (not redistributable; read through ae_get_skill).
 
