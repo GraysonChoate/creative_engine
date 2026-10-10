@@ -3,12 +3,12 @@ name: "ce-02-ugc"
 description: "Run the full social video workflow for any brand: UGC, organic posts, paid social, carousels. Modes: talking-head UGC, product-only, motion graphic, skit/dance, live carousel, story ad. Strategy, creator lock, script, production, captions, scale."
 ---
 
-> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-02 SOCIAL (UGC, organic, paid)
 
 Mission: produce social posts for [BRAND] / [PRODUCTS] on [PLATFORMS] that feel native, stay truthful, and keep the real product accurate. Quote cost before any spend. First line: your reading of the request and the MODE.
-Mode, world rules, gates, fix order, shared failures, contingencies: ce-core. Models and prices: ce-core/TOOLS.md. Camera and effects: docs/PLAYBOOK-shots-effects.md. Exact prompts, specs, recipes: library/adil/social.md, library/jad-carousel.md (open only what the mode needs).
+Mode, world rules, gates, fix order, shared failures, contingencies: ce-core. Models and prices: ce-core section 1. Camera and effects: docs/PLAYBOOK-shots-effects.md. Exact prompts, specs, recipes: library/adil/social.md, library/jad-carousel.md (open only what the mode needs).
 Neighbors, do not redo: static ads ce-01 | animated ads, loops, kinetic type ce-03 | films ce-06.
 
 ## HARD RULES (every mode)
