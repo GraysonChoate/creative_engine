@@ -42,6 +42,25 @@ PLAN gate (BUILD only): show bible, motion words, reference motion ads.
 1.3 Write a BEAT SHEET per ad: 0-2s hook, proof beats, CTA, end card, with timings. TAME = clean loop plus type. NEW DIRECTION = a stylized world. SPECTACULAR = a multi-scene hero with camera moves. EXPLORE defaults to spectacular.
 PLAN gate (BUILD only): approve beat sheets and the spend quote.
 
+## Default brief (Adil's 10 parts; library/adil/Fable-Higgsfield-notes.md)
+Write it before Phase 2. It is the prompt skeleton for Routes A and B and the build spec for Route C. One line per part; skip a part only if the shot has nothing for it. World rules and the frame check stay in ce-core.
+1. FORMAT: length, ratio, fps, style, silent or not.
+2. PALETTE: locked hex list, one role per color (tokens from the bible).
+3. LOCKS: the hero and whatever must persist (the pack never changes; a stack only grows).
+4. CAMERA: allowed list, forbidden list.
+5. MOTION RULES: easing, no bounce, blur only while moving, one element animates at a time.
+6. BEAT SHEET: timed in seconds (1.3). Between beats use a SEAM: an in-world event carries the change (object motion, a wipe through glass), not a cut.
+7. EXACT COPY: every on-screen string quoted, "nothing else appears" (TEXT LOCK). Real brand text per ce-core section 3.
+8. AUDIO: soundscape, music with BPM, voice lines with times. Silent = N/A. Drafts: sound in the prompt. Client finals: layer it in the edit.
+9. NON-IP: invented brand, no real logos or people unless supplied and approved.
+10. HOLD + END STATE: last beat held still; end card exact.
+
+AE flow (Route C option 3; library/adil/Adil-prompts-all-7.md, section 1): brief > Higgsfield assets (stills first, clean cutouts with real alpha) > storyboard approval (the LOOK gate in Phase 3) > build in After Effects > editable project plus linked assets plus render.
+- Soundtrack is the master clock: measure its beats, then set cuts. No track: 140 BPM guide, silent preview. Use absolute musical time so frame rounding does not add up.
+- Tracking marks are computed from the animated transforms, never placed by hand.
+- Keep native text, separate images, shape layers, named layers, precomps.
+- Check the real render for clipping, detached marks, overlaps, flicker, missing footage, beat alignment.
+
 ## Phase 2: Lock the assets
 Real packshot (transparent PNG), vector logo, color and type tokens, a generated background plate with no pack in it (still image first), audio choice. Measure each surface line, scale and light direction for pack placement.
 ASSETS gate (BUILD only): show the locked assets and plates.
@@ -53,7 +72,7 @@ LOOK gate (BUILD only): approve storyboard + animatic. Never jump to final motio
 ## Phase 4: Produce (choose the route per concept)
 ROUTE A: Presets (fast). Marketing Studio motion presets (types: hyper-motion, 2D motion, mixed media, SaaS motion) via get_presets (source marketing_studio, category motion) and show_marketing_studio_v2. Real product and logo go in as inputs. Run only on an explicit yes. Output 12-15s. Check like any other route.
 ROUTE B: Generated plate + composite. Video plate with start and end frame the same for a loop (video model, ce-core section 1). Then composite the real pack and logo on top with tracking so it stays locked to the surface. Compositing in code, Higgsedit or After Effects.
-ROUTE C: Code-built motion (full control). Option 1: Higgsedit (video-editing workflow): scripts with frames, text, shapes, masks, custom shaders, 2.5D camera, MP4 output. Option 2: HTML with GSAP / Three.js rendered by a deterministic frame recorder (seek per frame, local fonts, base64-embedded textures) and encoded with ffmpeg. Use for kinetic type, 3D turntables, scroll-style reveals, app UI motion. Option 3: After Effects (needs a session linked to the user's computer): ExtendScript .jsx run through the app, rendered with aerender. Use for logo stings, tracking, precise text and compositing. Steps and rules: docs/AE-route.md and the After Effects layer.
+ROUTE C: Code-built motion (full control). Option 1: Higgsedit (video-editing workflow): scripts with frames, text, shapes, masks, custom shaders, 2.5D camera, MP4 output. Option 2: HTML with GSAP / Three.js rendered by a deterministic frame recorder (seek per frame, local fonts, base64-embedded textures) and encoded with ffmpeg. Use for kinetic type, 3D turntables, scroll-style reveals, app UI motion. Option 3: After Effects (needs a session linked to the user's computer): ExtendScript .jsx run through the app, rendered with aerender. Use for logo stings, tracking, precise text and compositing. Steps and rules: docs/AE-route.md and the After Effects layer. Default flow: AE flow under Default brief.
 ROUTE D: Logo sting. Animate the real logo in Higgsedit, After Effects or code; generate a short sound sting with generate_audio; keep it under 3s; reuse it across the set.
 ROUTE E: Scale. Native re-layout per ratio (9:16, 1:1, 4:5, 16:9), reframe or outpaint only when composition allows. Ad Multiplier for variants from one approved 4-30s source.
 Cost: spend line before every generation (ce-core section 0). Many takes, keep the best.
