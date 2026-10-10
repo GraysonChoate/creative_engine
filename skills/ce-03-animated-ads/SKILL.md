@@ -38,6 +38,7 @@ PLAN gate (BUILD only): show bible, motion words, reference motion ads.
 - Stylized or mixed-media look (Marketing Studio motion presets)
 - Real pack over a generated environment loop
 - 3D turntable (Three.js, real label renders unwrapped onto the real silhouette)
+- App UI motion (real screenshots or real app code animated in Route C; never model-drawn UI)
 1.3 Write a BEAT SHEET per ad: 0-2s hook, proof beats, CTA, end card, with timings. TAME = clean loop plus type. NEW DIRECTION = a stylized world. SPECTACULAR = a multi-scene hero with camera moves. EXPLORE defaults to spectacular.
 PLAN gate (BUILD only): approve beat sheets and the spend quote.
 
@@ -52,13 +53,13 @@ LOOK gate (BUILD only): approve storyboard + animatic. Never jump to final motio
 ## Phase 4: Produce (choose the route per concept)
 ROUTE A: Presets (fast). Marketing Studio motion presets (types: hyper-motion, 2D motion, mixed media, SaaS motion) via get_presets (source marketing_studio, category motion) and show_marketing_studio_v2. Real product and logo go in as inputs. Run only on an explicit yes. Output 12-15s. Check like any other route.
 ROUTE B: Generated plate + composite. Video plate with start and end frame the same for a loop (video model, ce-core section 1). Then composite the real pack and logo on top with tracking so it stays locked to the surface. Compositing in code, Higgsedit or After Effects.
-ROUTE C: Code-built motion (full control). Option 1: Higgsedit (video-editing workflow): scripts with frames, text, shapes, masks, custom shaders, 2.5D camera, MP4 output. Option 2: HTML with GSAP / Three.js rendered by a deterministic frame recorder (seek per frame, local fonts, base64-embedded textures) and encoded with ffmpeg. Use for kinetic type, 3D turntables, scroll-style reveals. Option 3: After Effects (needs a session linked to the user's computer): ExtendScript .jsx run through the app, rendered with aerender. Use for logo stings, tracking, precise text and compositing. Steps and rules: docs/AE-route.md and the After Effects layer.
+ROUTE C: Code-built motion (full control). Option 1: Higgsedit (video-editing workflow): scripts with frames, text, shapes, masks, custom shaders, 2.5D camera, MP4 output. Option 2: HTML with GSAP / Three.js rendered by a deterministic frame recorder (seek per frame, local fonts, base64-embedded textures) and encoded with ffmpeg. Use for kinetic type, 3D turntables, scroll-style reveals, app UI motion. Option 3: After Effects (needs a session linked to the user's computer): ExtendScript .jsx run through the app, rendered with aerender. Use for logo stings, tracking, precise text and compositing. Steps and rules: docs/AE-route.md and the After Effects layer.
 ROUTE D: Logo sting. Animate the real logo in Higgsedit, After Effects or code; generate a short sound sting with generate_audio; keep it under 3s; reuse it across the set.
 ROUTE E: Scale. Native re-layout per ratio (9:16, 1:1, 4:5, 16:9), reframe or outpaint only when composition allows. Ad Multiplier for variants from one approved 4-30s source.
-Cost: quote first (TOOLS.md has earlier notes). Many takes, keep the best.
+Cost: spend line before every generation (ce-core section 0). Many takes, keep the best.
 
 ## Phase 5: Audit (BUILD only; a separate agent, never the producer). In EXPLORE, do the frame check and the label check only.
-5.1 Frame sheet every 0.25s: pack on surface and not floating; label legible and matches the real packshot; logo clearspace; text inside safe zones (key content in the middle 80% for 9:16); hex colors sampled.
+5.1 Frame sheet every 0.25s: pack on surface and not floating; label legible and matches the real packshot, small print included; logo clearspace; text inside safe zones (key content in the middle 80% for 9:16); hex colors sampled.
 5.2 Motion QA: easing, speed against the motion words, loop seam invisible, no flicker, no flash above 3 Hz, no judder at 30fps.
 5.3 Sound-off test and phone-size test. Audio levels (about -14 LUFS for social), no clipping.
 5.4 BRAND GUARDIAN (ce-00 Step 5): colors, fonts, motion section, claims vs approved list, disclosure where needed.
