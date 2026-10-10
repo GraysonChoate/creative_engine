@@ -34,5 +34,6 @@ Use After Effects (AE) when the shot needs real compositing or motion design tha
 ## Local tool status (Oct 2026)
 - The local route needs no cloud connector and no Higgsfield login. Package: `fnf-after-effects-mcp`. Chain: client -> local Node server -> osascript/ExtendScript -> After Effects. The Higgsfield panel is only for making media inside AE.
 - Installed on the Mac and checked: `doctor` all OK, 13 AE skills, `ae_project_info` answered in 245 ms. Write access is on. Free-form `eval.run` is off; our own osascript + .jsx route covers free-form scripts.
-- Not done yet: register the server with a Claude client so the `ae_*` tools show up in chat.
+- Registered in the Claude desktop app (Oct 10 2026) as `after-effects` (node /opt/homebrew/lib/node_modules/fnf-after-effects-mcp/dist/index.js); 13 tools answer. Works in chats on that Mac with After Effects open.
+- Two routes, both live: Higgsfield Bridge (Higgsfield media + their motion skills inside AE) and this local server (pure AE work: comps, type, tracking, renders; free, no login). If neither shows in a chat: tell the user in one line to open After Effects and use a chat on the Mac. Never estimate setup time or silently switch to code.
 - The 13 skills are not redistributable. Point to them, never edit them. See library/ae-skills.md.
