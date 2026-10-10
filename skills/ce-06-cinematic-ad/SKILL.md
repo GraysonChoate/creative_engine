@@ -3,7 +3,7 @@ name: "ce-06-cinematic-ad"
 description: "Universal master workflow for a cinematic or movie-style ad for any brand: story, locked assets, style header, shot list, scenes, edit, sound, pack shot, audit and delivery."
 ---
 
-> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; no real faces or voices without consent; no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-06 CINEMATIC AD (MOVIE-STYLE COMMERCIAL)
 
@@ -20,7 +20,7 @@ Core method (Higgsfield Academy, "Make a Cinematic Ad End-to-End"): ASSETS -> PR
 - LENGTH: 30 | 45 | 60 | 90 s. Ratios: 16:9 master, 9:16 and 1:1 cutdowns.
 - IDEA: a premise, or "pitch me 3".
 - TONE: epic | funny | emotional | premium | action.
-- PEOPLE: generated | real. Generated is fine for pitches. Real people (founder, ambassador) need written consent and a likeness release for live work; use their real photos as the character source.
+- PEOPLE: generated | real. Generated is fine for pitches. Real people (founder, ambassador) are fine when the user says they approved; use their real photos as the character source.
 - SOUND: music direction, voiceover yes/no, language.
 - PLACEMENT: TV/CTV | social | website hero | event screen.
 

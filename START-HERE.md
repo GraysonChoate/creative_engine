@@ -1,7 +1,7 @@
 # START HERE (any agent, read this first)
 
 1. **Mode.** EXPLORE (default): experiments and demos. No gates, audits or budgets. BUILD: only when told "build", "ship", "client", or a winner is picked.
-2. **Always on, both modes:** quote credits before spending. No real person's likeness without consent. No fake reviews or claims shown as real.
+2. **Always on, both modes:** quote credits before spending. Real people are fine when the user says they or their client approved (note it once, never re-ask). No fake reviews or claims shown as real.
 3. **World rules.** Pick the world (REAL / STYLIZED REAL / INVENTED). Write 3 to 5 rules and one line: where, when, why. Nothing random.
 4. **Anchors, effects, camera.** Anchors (people, product, place, reason) fit the world. Effects may be fantasy but need a real cause and return to the real. Camera is free.
 5. **Real labels.** Text comes only from the real source. Check every result against the real image. If wrong, put the real label back or re-run.

@@ -34,9 +34,9 @@ Project or README text that says "stop at every gate / audit everything" applies
 
 ## 2. ALWAYS ON (both modes)
 1. Quote credits before any spend. Wait for a yes. Never poll: wait on jobs once. Same idempotency key on retries. use_unlim only if asked.
-2. Real label rule: real packs, logos, photos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image. If it fails, put the real label back or re-run. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in); keep the cutout composite as backup when the label must be exact. Never redraw real people's faces.
+2. Real label rule: real packs, logos, photos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image. If it fails, put the real label back or re-run. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in); keep the cutout composite as backup when the label must be exact.
 3. TEXT: default = set in code or the editor, because a model can misspell and real brand text must be exact (brand name, price, CTA, claims, legal, anything edited later). Generating text in the model is fine when it is short, fully specified and a typo costs nothing (portfolio, invented brand, launch-film headline): give an exact copy list, say nothing else appears, and frame-check every string. Use judgment by use case.
-4. No real person's likeness without consent. No voice cloning without consent. Generated people are adults 21+, never minors, never presented as real customers.
+4. REAL PEOPLE: if the user says the person or their company approved (owner, employee, creator, ambassador), take their word. Note it once in the brief (who approved, scope) and go. Do not ask for releases or re-confirm. Use the client's own site and social photos as the source. Generated people are adults 21+, never minors, never presented as real customers.
 5. No fake reviews, testimonials, customers, ratings, results, before/afters, numbers or endorsements shown as real. Claims only from the label or the approved list. Health or supplement: no disease, cure or results language.
 6. Safety: no flashing above 3 per second. No copyrighted music. No touching a live site or DNS. No credentials entered; the user signs in.
 7. WORLD RULES (section 4) before any image or video prompt.
@@ -108,7 +108,7 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Label fails twice | Path B composite or real packshot cutaway. |
 | After Effects not linked | Higgsedit or code route (GSAP / Three.js + ffmpeg). Say so. |
 | No site access | Prototype plus handoff pack. Say what is blocked. |
-| Real person requested, no consent | Stop. Use a generated adult. |
+| Real person requested | Use them. Note who approved, once. Only if the user gave no sign of approval: ask one question. |
 | Brief unclear | One question. EXPLORE: note UNKNOWN and go. |
 | Audit fails twice | Escalate to the user with the failing lines. |
 
@@ -124,4 +124,4 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Creator findings (video, ads, web, AE plugin) | library/README.md (index; open one page only) |
 
 ## 12. STUB (paste this at the top of every ce skill, so rules hold even if CORE is not loaded)
-> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; no real faces or voices without consent; no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.

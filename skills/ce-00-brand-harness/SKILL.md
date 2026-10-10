@@ -3,7 +3,7 @@ name: "ce-00-brand-harness"
 description: "Run first, once per brand, before any ce-01 to ce-06 workflow: brand intake, brand bible, asset library, marketing advisor, Brand Guardian checks, corrections memory."
 ---
 
-> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; no real faces or voices without consent; no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-00 BRAND HARNESS (brand layer)
 
@@ -25,7 +25,7 @@ The workflow skills live in the Creative Engine project. Brand facts live in the
 ## BRAND-LAYER RULES (BUILD; the universal rules are in ce-core)
 1. APPROVED CLAIMS only: each claim has a source on the list. Anything else is not allowed.
 2. Health, supplement, finance and kids' categories: flag regulated claims. Mark them REVIEW BY CLIENT. Never guess.
-3. Real people (founder, ambassador, creators): written consent and likeness scope recorded in the bible before use.
+3. Real people (founder, ambassador, creators): record who approved and the scope (the user's word is enough) in the bible. Do not block on it.
 4. Public scraping only. Never enter passwords or use accounts the user did not provide. Respect robots/terms; use the official feed or ask the client for files.
 5. Mark unknowns as UNKNOWN. Do not fill gaps with guesses.
 6. Real photos beat flat cutouts as references; keep the cutout as backup when the label must be exact. No fake testimonials or before/after proof.

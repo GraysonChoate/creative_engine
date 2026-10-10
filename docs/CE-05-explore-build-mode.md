@@ -5,7 +5,7 @@ Why: strict gates and checks suppressed early experiments. Fix: two modes.
 ## EXPLORE (default for experiments, demos, pitches)
 - No gates, audits, weight budgets, brand checks, fallbacks, delivery.
 - Keep craft only: locks, previews, loops, lighting, short beats, one-line fixes.
-- ALWAYS ON: quote credits; no real person's likeness without consent; no fake reviews or claims shown as real; sites: no touching a live site or DNS, no credentials.
+- ALWAYS ON: quote credits; real people are fine when the user says they approved (note it once, never re-ask); no fake reviews or claims shown as real; sites: no touching a live site or DNS, no credentials.
 - Spectacular tier is the default for ce-04 / ce-05.
 
 ## BUILD (full gated workflow)

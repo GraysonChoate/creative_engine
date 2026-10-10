@@ -3,7 +3,7 @@ name: "ce-01-image-ads"
 description: "Run the full static image-ad workflow for any brand: intake, strategy, production with real packshots, finishing, audit, delivery. Use when asked for image ads, Meta or social ad creatives."
 ---
 
-> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; no real faces or voices without consent; no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-01 Image Ads
 

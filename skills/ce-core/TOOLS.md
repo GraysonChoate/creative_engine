@@ -13,7 +13,7 @@ Prices below are earlier notes, not quotes. Always get a live quote first (ads_s
 | Product-shot template look | marketing_studio_2_image | Only if the label check passes. |
 | Fast presets (UGC, try-on, unboxing, hyper motion, wildcard, TV spot, motion) | Marketing Studio via show_marketing_studio_v2 and get_presets | Run only on an explicit yes. Real product and logo go in as inputs. |
 | Fast ads | Higgsfield Ads Studio | Ratios 1:1, 9:16, 16:9, 3:4. No 4:5. |
-| Sound sting / SFX / music | generate_audio | No cloned voices without consent. |
+| Sound sting / SFX / music | generate_audio | Voice clones OK when the user says the person approved. |
 | Upscale final selects | upscale_video | |
 | Background removal | remove_background | Keep originals untouched. |
 | Templated text and resize | Canva (autofill-design, resize-design, export-design) | |

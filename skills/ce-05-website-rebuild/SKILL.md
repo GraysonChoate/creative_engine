@@ -3,7 +3,7 @@ name: "ce-05-website-rebuild"
 description: "Universal master workflow for rebuilding a brand's full website: audit, sitemap, design system, page templates, build, migration, QA, launch and handoff. Brand-agnostic."
 ---
 
-> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; no real faces or voices without consent; no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-05 FULL WEBSITE REBUILD
 
