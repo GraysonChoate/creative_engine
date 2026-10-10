@@ -20,3 +20,4 @@
 12. **Lookup (do not read all):** `docs/DIRECTOR-PASS.md` for turning scenes into shots. `docs/PLAYBOOK-shots-effects.md` for camera moves and effects. `docs/CE-0*.md` for techniques and exact prompts.
 13. **After Effects** is available on the user's computer for compositing real packs and logos, type, transitions, grade, and web exports. See `docs/AE-route.md`.
 14. **Talk to the user** in simple words, as few as possible.
+15. **If an action is blocked or denied:** do not work around it. Try the same action once more. If it is blocked again, stop and tell the user in one line: "Blocked twice. Switch to manual approval and approve this step." Say what was blocked. Wait for the user, then retry.
