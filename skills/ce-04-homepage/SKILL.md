@@ -9,7 +9,7 @@ description: "Universal master workflow for building or rebuilding a brand's hom
 
 Run this when the job is ONE page: the homepage (hero, motion, sections, conversion flow). For a whole site, use ce-05.
 Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
-Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Models and prices: ce-core/TOOLS.md.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
 Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Hero motion, type reveals, loops and frame sequences built in After Effects: the After Effects layer.
 
 ## INPUTS (ask once, in plain words, only what is missing)

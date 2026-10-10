@@ -10,7 +10,7 @@ description: "Universal master workflow for a cinematic or movie-style ad for an
 Run this for a story-driven ad of 30-90s: a concept, characters, locations, 8-14 scenes, a payoff, a pack shot.
 Short loops and kinetic graphics? Use ce-03. Talking creator clips? Use ce-02.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL], [IDEA].
-Mode, always-on rules, world rules, DIRECTOR PASS + VISION, lock-first, frame check, fix order, shared failures, contingencies, library: see ce-core (sections 1-11). The VISION approval is always on, in EXPLORE and BUILD. Models and prices: ce-core/TOOLS.md.
+Mode, always-on rules, world rules, DIRECTOR PASS + VISION, lock-first, frame check, fix order, shared failures, contingencies, library: see ce-core (sections 1-11). The VISION approval is always on, in EXPLORE and BUILD. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
 Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Director vocabulary and worked example: docs/DIRECTOR-PASS.md.
 
 Core method (Higgsfield Academy, "Make a Cinematic Ad End-to-End"): ASSETS -> PROMPTING FRAMEWORK -> SCENES -> EDIT. Iteration is the skill: the final film is the best few seconds cut from many takes.
@@ -26,9 +26,9 @@ Core method (Higgsfield Academy, "Make a Cinematic Ad End-to-End"): ASSETS -> PR
 
 ## FILM RULES
 1. Real brand name and tagline: set in code or Canva/editor (exactness). Short invented or portfolio text may be generated with an exact copy list and a frame check. A logo sting is built from the real logo file.
-2. Lock-first (ce-core section 7): if a face, prop or location wobbles, the film fails.
+2. Lock-first (ce-core FRAME CHECK): if a face, prop or location wobbles, the film fails.
 3. Storyboard before video: script -> vision approved -> stills/map -> prompts -> takes -> edit.
-4. Fix a bad take smallest-first (ce-core section 8). The user gives plain-language director notes; Claude makes the edits.
+4. Fix a bad take smallest-first (ce-core FIX ORDER). The user gives plain-language director notes; Claude makes the edits.
 5. Keep each beat to 3 sentences or fewer. A long total prompt is fine when its beats are light. Overloaded beats drift. The style header carries the look.
 6. Ad disclosure and platform rules apply (AI-generated label where required).
 7. Slow, purposeful camera unless the tone is action. Nothing floats; products sit on surfaces with contact shadows.
@@ -45,7 +45,7 @@ PLAN gate (BUILD only): bible loaded, assets in hand, people/consent decided.
 - Hook rule: the first shot must earn the next 3 seconds. Product appears early, hero moment late, pack shot last.
 - Script: scene table (# | duration | action | camera | sound | product visible?). Dialogue/VO minimal; text overlays marked for post.
 - Pitch 3 premises if asked, one paragraph each, pick one.
-- VISION (always, EXPLORE and BUILD): run the DIRECTOR PASS (ce-core section 6), then show the user the scene-by-scene vision table and wait for approval or changes.
+- VISION (always, EXPLORE and BUILD): run the DIRECTOR PASS (ce-core DIRECTOR PASS), then show the user the scene-by-scene vision table and wait for approval or changes.
 PLAN gate (always): user approves the vision. In BUILD also the premise and scene table.
 
 ## PHASE 2: ELEMENTS AND REFERENCES (ASSET LOCK, Step 1)
@@ -73,14 +73,14 @@ ASSETS gate (always): user approves the locked set. In BUILD also brand-checked 
 - Output: named prompts (1a, 1b, 2a...), each short: action beats + camera note + @names. Choreography by name (stepover, dolly-in, whip pan). Physical anchors ("boots on asphalt", "can lands in right palm").
 - Reuse rule: build hard scenes once (e.g. the physics-heavy one), then extend that prompt for later scenes instead of starting over.
 - Audio: drafts and portfolio: write SFX and music into the prompt (soundscape + music lines, with times and BPM); it syncs to the action for free on most models (Kling adds 1.25-5 credits per 5 s clip). Client finals: layer sound in the edit so one sound can be fixed without regenerating. Judge the picture first; fix sound only on videos you keep.
-- Frame check (ce-core section 7) on the storyboard stills before any video. Fix, then show.
+- Frame check (ce-core FRAME CHECK) on the storyboard stills before any video. Fix, then show.
 LOOK gate (BUILD only): user approves the style header and shot list.
 
 ## PHASE 4: SCENES (Step 3)
 - Model: video model via Higgsfield generate_video / generate_video_batch (TOOLS.md). 9:16 for vertical, 16:9 for master. Use locked images as references (omni_reference). Quote first; test at lower res where possible.
 - Order: most important scenes first (the hook, the transformation, the payoff, the pack shot). If those fail, the film fails.
 - Batches: 3-4 takes per scene. Check every take (first/mid/last frame; in EXPLORE by eye): face stable, label intact, hands correct, product on surface, direction of motion right.
-- Failure loop: describe what is wrong as a director ("he runs forward, natural smile, eyes stay the same"). Claude applies the fix order (ce-core section 8). Max 4 rounds per scene, then change the shot design.
+- Failure loop: describe what is wrong as a director ("he runs forward, natural smile, eyes stay the same"). Claude applies the fix order (ce-core FIX ORDER). Max 4 rounds per scene, then change the shot design.
 - Trim the first and last half-second of every clip before cutting.
 - Reuse leftovers: unused good moments from one scene can fill another.
 - Pack shot (last, must be perfect): product enters (drop, reveal, push-in), light matches scene 1, camera moves (dolly-in / slow pullback). Brand name and tagline added in post from the real logo file, not generated. Optional logo sting: ce-03 Route D.

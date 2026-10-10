@@ -9,7 +9,7 @@ description: "Universal master workflow for rebuilding a brand's full website: a
 
 Run this when the job is the WHOLE site (audit -> design -> code -> QA -> handoff). Homepage only? Use ce-04. This skill reuses ce-04 for the homepage step.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
-Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Models and prices: ce-core/TOOLS.md.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
 Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Page motion built in After Effects (loops, Lottie, frame sequences): the After Effects layer.
 
 ## INPUTS (ask once, only what is missing)

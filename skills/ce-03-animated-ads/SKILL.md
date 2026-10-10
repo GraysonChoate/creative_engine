@@ -8,7 +8,7 @@ description: "Run the full animated-ad workflow for any brand: motion strategy, 
 # CE-03 Animated Ads
 
 Mission: produce animated ads (motion graphics, product loops, hyper-motion, logo animation) for [BRAND] / [PRODUCTS] on [PLATFORMS] that look intentional, keep the real product and logo exact, and read with the sound off. Quote cost before any spend. State your reading of the request in one line first.
-Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Models and prices: ce-core/TOOLS.md.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
 Camera moves and effects: docs/PLAYBOOK-shots-effects.md.
 After Effects work (type, logo sting, tracking, compositing, grade, export): the After Effects layer and docs/AE-route.md. This skill picks the route; the AE layer holds the craft.
 
@@ -46,12 +46,12 @@ Real packshot (transparent PNG), vector logo, color and type tokens, a generated
 ASSETS gate (BUILD only): show the locked assets and plates.
 
 ## Phase 3: Storyboard before motion
-3.1 Stills: one key frame per beat, using the real pack. 3.2 Animatic: rough timing from the stills (static cuts with timings, text in place). 3.3 Check legibility at phone size and in all target ratios. 3.4 Frame check (ce-core section 7) every frame against WORLD RULES.
+3.1 Stills: one key frame per beat, using the real pack. 3.2 Animatic: rough timing from the stills (static cuts with timings, text in place). 3.3 Check legibility at phone size and in all target ratios. 3.4 Frame check (ce-core FRAME CHECK) every frame against WORLD RULES.
 LOOK gate (BUILD only): approve storyboard + animatic. Never jump to final motion.
 
 ## Phase 4: Produce (choose the route per concept)
 ROUTE A: Presets (fast). Marketing Studio motion presets (types: hyper-motion, 2D motion, mixed media, SaaS motion) via get_presets (source marketing_studio, category motion) and show_marketing_studio_v2. Real product and logo go in as inputs. Run only on an explicit yes. Output 12-15s. Check like any other route.
-ROUTE B: Generated plate + composite. Video plate with start and end frame the same for a loop (video model, TOOLS.md). Then composite the real pack and logo on top with tracking so it stays locked to the surface. Compositing in code, Higgsedit or After Effects.
+ROUTE B: Generated plate + composite. Video plate with start and end frame the same for a loop (video model, ce-core section 1). Then composite the real pack and logo on top with tracking so it stays locked to the surface. Compositing in code, Higgsedit or After Effects.
 ROUTE C: Code-built motion (full control). Option 1: Higgsedit (video-editing workflow): scripts with frames, text, shapes, masks, custom shaders, 2.5D camera, MP4 output. Option 2: HTML with GSAP / Three.js rendered by a deterministic frame recorder (seek per frame, local fonts, base64-embedded textures) and encoded with ffmpeg. Use for kinetic type, 3D turntables, scroll-style reveals. Option 3: After Effects (needs a session linked to the user's computer): ExtendScript .jsx run through the app, rendered with aerender. Use for logo stings, tracking, precise text and compositing. Steps and rules: docs/AE-route.md and the After Effects layer.
 ROUTE D: Logo sting. Animate the real logo in Higgsedit, After Effects or code; generate a short sound sting with generate_audio; keep it under 3s; reuse it across the set.
 ROUTE E: Scale. Native re-layout per ratio (9:16, 1:1, 4:5, 16:9), reframe or outpaint only when composition allows. Ad Multiplier for variants from one approved 4-30s source.

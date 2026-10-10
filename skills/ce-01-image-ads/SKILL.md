@@ -8,7 +8,7 @@ description: "Run the full static image-ad workflow for any brand: intake, strat
 # CE-01 Image Ads
 
 Mission: produce a tested, brand-safe set of static ads for [BRAND] / [PRODUCTS] across [PLATFORMS], using the real product images as references or layers, never invented ones. State your reading of the request in one line first.
-Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Models and prices: ce-core/TOOLS.md.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
 Camera moves and effects: docs/PLAYBOOK-shots-effects.md.
 
 ## Inputs (ask once for anything missing; otherwise infer)
