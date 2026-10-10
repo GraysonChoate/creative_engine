@@ -44,7 +44,7 @@ Findings and options, not rules. Raw clips and frames stay on the Mac. Timings f
 ## Localization and resize (Adil workflows 6, 7)
 - Inputs: editable project, linked assets, finished video, target languages.
 - Translate all on-screen text including buttons and small labels. Brand and product names unchanged. Show the copy table before applying. Fonts with the glyphs needed. Fix text boxes, line breaks, reveal timing against character count. Keep timing, cuts, zooms.
-- Spoken clips: identify, translate, user reviews, regenerate, replace at the same duration. Own or consented voices only.
+- Spoken clips: identify, translate, user reviews, regenerate, replace at the same duration. Own or approved voices only.
 - Deliver a separate language version, the copy table and a review export. List text baked into footage that could not change.
 - Language-swap visuals: a scan line wipes old text to new, blur-out and refocus, flag selector box.
 - 9:16 resize: new 1080x1920 comp. Recompose, do not scale down. Stack paired panels, reflow grids, labels follow objects, cursors still reach the button, update masks and paths, duplicate nested comps, check extreme positions. Time claim conflicts: 50 min (video) vs 15 min (prompt page).

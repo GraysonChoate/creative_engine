@@ -3,7 +3,7 @@ name: "ce-02-ugc"
 description: "Run the full social video workflow for any brand: UGC, organic posts, paid social, carousels. Modes: talking-head UGC, product-only, motion graphic, skit/dance, live carousel, story ad. Strategy, creator lock, script, production, captions, scale."
 ---
 
-> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; no real faces or voices without consent; no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-02 SOCIAL (UGC, organic, paid)
 
@@ -12,12 +12,12 @@ Mode, world rules, gates, fix order, shared failures, contingencies: ce-core. Mo
 Neighbors, do not redo: static ads ce-01 | animated ads, loops, kinetic type ce-03 | films ce-06.
 
 ## HARD RULES (every mode)
-- TRUTH: a generated creator is a host or demonstrator, never a real customer. No invented purchase, ownership, results, before/after, ratings, reviews. First-person experience only from a consenting real person's own exact script.
+- TRUTH: a generated creator is a host or demonstrator, never a real customer. No invented purchase, ownership, results, before/after, ratings, reviews. First-person experience only when the real person supplies or approves the script.
 - CLAIMS: approved claims are an allowlist, verbatim, never strengthened or combined. No allowlist = claim-free copy about what is visibly shown. Health/supplement: no disease, cure or results language.
-- PEOPLE: generated adults 21+ or consenting adults only. Never a real founder, celebrity, public figure, minor, or anyone's likeness or voice without written consent.
+- PEOPLE: generated adults 21+, or real people the user says approved. Note it once, never re-ask. Never a minor.
 - DISCLOSURE: label product-present output as brand demo / creator concept / sponsored ad. Every post package carries it. An AI label may itself be the hook.
 - PRODUCT: every product close-up is checked against the real packshot; on a fail, cut to a real packshot insert or re-roll.
-- SAFETY: flash limit per ce-core. No web screenshots or copied images as material. Decline adult, gambling, drugs/Rx, tobacco, weapons, deceptive finance, political persuasion, fraud.
+- SAFETY: flash limit per ce-core. No third-party web images as material (the client's own site and social are fine). Decline adult, gambling, drugs/Rx, tobacco, weapons, deceptive finance, political persuasion, fraud.
 
 Everything below is a DEFAULT: default, why, flip when. Flip freely and say so in one line. Never ask to flip.
 
@@ -38,7 +38,7 @@ Zero-prompt versions: Marketing Studio (show_marketing_studio_v2). Real people: 
 ## Plan and lock
 - Load the ce-00 bible and assets (run ce-00 first if none). Competitor hooks come from the ce-00 brief; Apify only if thin, with NAMED accounts.
 - 5 hook angles (friction/confession, problem-first, claim-stack, contrast, mechanism, routine, offer) > CONCEPT MATRIX: hook x mode x length x creator x ratio, each with its claim source. TAME clean demo | NEW DIRECTION scenario story | SPECTACULAR impossible shots with the real pack intact (EXPLORE default). PLAN gate (BUILD).
-- Lock before any generation: real packshot + logo + use mechanic; ONE creator (consenting photo or one generated adult), same reference every clip, one face per sheet, never re-describe the face; location, wardrobe, voice. ASSETS gate (BUILD).
+- Lock before any generation: real packshot + logo + use mechanic; ONE creator (a real person's photos from the client's own site or social, or one generated adult), same reference every clip, one face per sheet, never re-describe the face; location, wardrobe, voice. ASSETS gate (BUILD).
 - Script: 10 s = 12-20 words, 12 s = 20-28, 15 s = 28-35. Save to a file; every claim maps to a source. LOOK gate (BUILD).
 
 ## DEFAULTS
@@ -50,7 +50,7 @@ Zero-prompt versions: Marketing Studio (show_marketing_studio_v2). Real people: 
 - CAPTIONS (spoken video): from a word-level transcript of the final audio; native editable text, never baked into the generation; reveal on the spoken beat, clear before the next phrase; free side of the frame, never over eyes or mouth; 9:16 safe zone top 12%, bottom 15%. Keep a clean master. Flip: silent loops use short callouts.
 - EDIT (creator edits): speech untouched, graphics on separate layers; punch in on the key word, settle, hold; generated cutaways about every 2-2.5 s with no text or logos in the art; crop baked-in platform UI. Recipe: library.
 - RATIO: 9:16 master, 1080p. Resizing 16:9 After Effects work: recompose in a new 1080x1920 comp, never scale down.
-- LOCALIZE (option, on request): copy table approved before applying, brand names unchanged, glyph-safe fonts, separate language version, spoken lines handled apart, own or consented voices only. Rules: library.
+- LOCALIZE (option, on request): copy table approved before applying, brand names unchanged, glyph-safe fonts, separate language version, spoken lines handled apart, own or approved voices only. Rules: library.
 - VARIANTS: one change per pair. Option: same locked structure in 4 looks; colorway swaps; split-screen comparison; Ad Multiplier.
 - MASTER + TIMING SHEET (series, variants, carousel): beats or BPM, word onsets and cut map first; everything snaps to it; then swap layers (language, look, SKU, ratio). Flip: one-offs.
 - BRIEF FIRST (big jobs): model writes a production brief from the idea or a reference ad; user approves; then build. Copy a reference's structure, never its content or likeness.
@@ -69,7 +69,7 @@ Frame check every clip (frames spaced evenly, every product close-up, 2-3 mid-wo
 Metric: 3-second hold, thumbstop, CTR. Name: [brand]_[product]_[mode]_[hook]_[len]_v[n]. Add UTMs. Log results in the bible corrections log. Deliver (BUILD): finals, clean masters, scripts, claim-source table, audit table, A/B plan, cost report; propagate corrections.
 
 ## Real-creator route
-Brief (hook, approved claims, shot list, do/don't), usage-rights release, disclosure language, spec (9:16, 1080p+, raw + clean audio), Guardian review. Hybrid is fine: real voice or footage plus packshot cutaways.
+Brief (hook, approved claims, shot list, do/don't), approval note (who approved, scope), disclosure language, spec (9:16, 1080p+, raw + clean audio), Guardian review. Hybrid is fine: real voice or footage plus packshot cutaways.
 
 ## Extra failures (shared: ce-core)
 Hands or clones: fix the staging line, re-roll that clip. Lip slop: cut spoken words. Generic script: friction opener plus one concrete. Music appears despite "no music": music and captions always go in post.
