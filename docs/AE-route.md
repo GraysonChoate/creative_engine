@@ -37,3 +37,23 @@ Use After Effects (AE) when the shot needs real compositing or motion design tha
 - Registered in the Claude desktop app (Oct 10 2026) as `after-effects` (node /opt/homebrew/lib/node_modules/fnf-after-effects-mcp/dist/index.js); 13 tools answer. Works in chats on that Mac with After Effects open.
 - Two routes, both live: Higgsfield Bridge (Higgsfield media + their motion skills inside AE) and this local server (pure AE work: comps, type, tracking, renders; free, no login). If neither shows in a chat: tell the user in one line to open After Effects and use a chat on the Mac. Never estimate setup time or silently switch to code.
 - The 13 skills are not redistributable. Point to them, never edit them. See library/ae-skills.md.
+
+## Route test, Oct 10 2026 (tested = ran and looked at the frame)
+| Job | Local `ae_*` server | Higgsfield Bridge |
+|---|---|---|
+| Build a comp, type, keyframes, easing | Tested. 3 s 1920x1080 30 fps comp, one centered line, 3 eased tracks (position, opacity, scale). About 0.25 s per call. | Not tested |
+| Render one frame to PNG | Tested. `ae_render_frame`, 0.3 s and 1.5 s both correct (fade and move visible, then settled) | Not tested |
+| Save the project | Tested. `ae_save_project` with a path | Not tested |
+| Higgsfield media made or edited inside AE (generate, reframe, upscale, remove background) | No | Yes (panel tools; per Zubair and Adil). Not tested |
+| Higgsfield motion skills and presets | No | Yes. Not tested |
+| Tracking, expressions, effects, masks, mattes, 3D | In the catalog (`effect`, `expression`, `mask`, `layer.set_track_matte`, camera and light layers). Not tested | Not tested |
+| Cost | Free, no login | Higgsfield credits: quote first |
+| Needs | After Effects open, Node server | After Effects 2025+, panel open, Higgsfield login |
+| Pick it when | Pure AE work: comps, type, rigs, renders | The job starts from Higgsfield media or a Higgsfield motion skill |
+
+Test notes
+- Local: ran through our stdio probe (`~/.ce-ae/call.mjs`, same server) because `after-effects` is not registered in this cloud chat. Not yet run from a registered chat on the Mac.
+- Bridge: the panel is installed (`ai.higgsfield.cep` in the CEP extensions folder), but no Bridge tools are in this chat, so nothing was listed or run. Needs a chat on the Mac with the Bridge tile green. Credits used: 0.
+- Args that worked: `layer.create_text` then `text.set_style` (font `Arial-BoldMT`, `justification: "center"`); `keyframe.add` with `property: ["Transform","Position"]`; `keyframe.set_easing` with `preset: "ease"`.
+- Fit check: 170 px bold with tracking 20 fills the frame edge to edge. Use about 140 px for this line.
+- Files: Mac, `Creative Engine/after effects/_ae-route-test/` (project and 2 frames).
