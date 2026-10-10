@@ -53,6 +53,17 @@ Mixed request example: "animated ad for X's product with interaction" = ce-00 (s
 Rules: the start image is the main control. A loop uses the same image as start and end. Stills first, drafts second, finals last. Before any spend, check the model takes every input the shot needs (start frame, references, audio). Need not in this table: models_explore(action:'recommend') with the need in words, then add the row here.
 Split of labor: models make people, places and products in motion. After Effects or code makes text, logos, exact colors, timing, loops and interaction.
 
+FINISH LAYER (pick per job; name it in the spend line):
+
+| Job | Use |
+|---|---|
+| Simple overlays: icons, captions, kinetic type, end card | Code (free, fast) |
+| Graphics pinned to moving things, exact real label on a moving product, layered compositing, an editable project, resize or language versions | After Effects |
+| Higgsfield media made or edited inside After Effects; Higgsfield motion presets | After Effects via the Higgsfield Bridge tools |
+| Pure After Effects work: comps, type, tracking, expressions, renders | After Effects via the local `ae_*` tools |
+
+Check first: Bridge or `ae_*` tools in this chat and After Effects open = use them. Missing = one line: "Open After Effects and use a chat on your Mac to use it." Wait. Never estimate setup time or switch to code silently. Steps: docs/AE-route.md.
+
 ## 2. MODE (say it in line 1, with a one-line reading of the request)
 - EXPLORE (default): experiments, demos, pitches. No gates, audits, weight budgets, brand checks or delivery steps. Keep craft (locks, previews, loops, lighting, short beats, one-line fixes). Default tier: spectacular.
 - BUILD: say "build", "ship", "client", or pick a winner. Full gated workflow, audit by a separate agent, logs.
@@ -135,7 +146,7 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Credits short | Hook, payoff, pack shot first; test low-res; fewer takes; lower tier. |
 | No packshot | Ask the client. Never generate a pack from nothing. |
 | Label fails twice | Composite the real label or real packshot cutaway. |
-| After Effects not linked | Higgsedit or code route (GSAP / Three.js + ffmpeg). Say so. |
+| After Effects tools missing | Say the one line in section 1 FINISH LAYER and wait. Use code only if the user says so. |
 | No site access | Prototype plus handoff pack. Say what is blocked. |
 | Real person requested | Use them. Note who approved, once. Only if the user gave no sign of approval: ask one question. |
 | Brief unclear | One question. EXPLORE: note UNKNOWN and go. |
