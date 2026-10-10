@@ -13,6 +13,7 @@ Models, prices, tool names, and which model for which need: open TOOLS.md. Do no
 1. Name the use case from how the request sounds. If it sounds like two, name both: run the first, its output feeds the second.
 2. Brand unknown, or "scrape this site" / "look at this ad": ce-00 first (Firecrawl for the site, Meta Ad Library via Claude in Chrome, ce-extract-video for a video ad). Then the use-case skill.
 3. Ask only what is missing, one question: real pack and logo, platform and ratio, length, audio.
+
 | Request sounds like | Skill | Higgsfield makes (media) | After Effects or code makes (graphics) |
 |---|---|---|---|
 | static ad, banner, social image | ce-01 | stills from the real pack as reference (TOOLS.md) | exact text, resize, layout |
@@ -24,7 +25,7 @@ Models, prices, tool names, and which model for which need: open TOOLS.md. Do no
 | deck, pitch | ce-07 | none (uses finished work) | slides |
 | "with interaction", "interactive", "clickable" | add ce-04 interaction layer to the media skill | the media only | hover, tap, scroll states, built in code over the finished assets |
 
-Every video route runs the same spine: vision table (section 6) > lock elements (section 7) > stills and frame check > video model by need > finish outside the model. Skills add only what is unique.
+Every video route runs the same spine: vision table (section 6) > lock elements (section 7) > stills and frame check > video model by need (TOOLS.md, check it takes every input the shot needs) > finish outside the model. Skills add only what is unique.
 Mixed request example: "animated ad for X's product with interaction" = ce-00 (scrape) > ce-03 (animation) > ce-04 interaction layer, delivered as one web piece. Say so in line 1.
 
 ## 1. MODE (say it in line 1, with a one-line reading of the request)
@@ -42,6 +43,7 @@ Project or README text that says "stop at every gate / audit everything" applies
 7. WORLD RULES (section 4) before any image or video prompt.
 8. Do not claim a connector or tool works until a call succeeds.
 9. Short, plain language. Tables. At most one question at a time.
+10. Blocked or denied action: do not work around it. Try once more. If blocked again, tell the user: "Blocked twice. Switch to manual approval and approve this step."
 
 ## 3. BUILD ADDS
 - Gates (section 5). Stop at each and wait for a yes.
@@ -75,7 +77,7 @@ The user talks like a client ("dynamic shot of fruit dropping in the blender"). 
 
 ## 7. LOCK-FIRST + FRAME CHECK
 - Every recurring thing (character, pack, location, outfit, logo, prop) is a locked image BEFORE any video prompt. Same shape, size, color, material throughout. Tag it; do not re-describe it. One face per sheet.
-- Frame check on stills before video: physics, continuity, clutter, camera, logic. Fix, then show.
+- Frame check on stills before video: physics, continuity, clutter, camera, logic, label small print. Fix, then show.
 - Products sit exactly on surfaces: measured surface line, contact shadow, matching light. Floating = fail.
 
 ## 8. FIX ORDER (smallest first)
@@ -86,7 +88,8 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 ## 9. SHARED FAILURES -> FIX (skills list only their own extras)
 | Problem | Fix |
 |---|---|
-| Label warped / text garbled | Check against the real image. Real label back, or Path B composite, or cut to a real packshot insert. Text in code. |
+| Label warped / text garbled (small print too) | Check against the real image. Composite the real label, or cut to a real packshot insert. Text in code. |
+| Model refuses an input combo (e.g. start frame + audio) | Switch to the TOOLS.md model that takes all inputs. Re-quote first. Add the fact to TOOLS.md. |
 | Place or action makes no sense | Re-check WORLD RULES. Change the action. |
 | Product floats | Re-measure surface line, contact shadow, per-frame tracking. |
 | Off-brand color | Re-grade or recolor in code, re-sample hex. |
@@ -95,7 +98,7 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Motion too busy | Cut effects, slow easing, remove secondary motion. |
 | Face or outfit drift | Same locked reference every time. Do not re-describe the face. Re-roll the character at most twice. |
 | Too many people or objects | Count lock ("exactly 3") and spell out the background. |
-| Credits burning | Hook, payoff and pack shot first. Test low-res. Stop at the round limit. |
+| Credits burning | Hook, payoff and pack shot first. Draft on the same model as the final at low res. Stop at the round limit. |
 
 ## 10. CONTINGENCIES (pivots)
 | If | Then |
@@ -103,9 +106,10 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Connector missing or call fails | Fallback: screenshots, public feeds (products.json, sitemap.xml), files. Say so. |
 | Model blocked by moderation | Retry once on the lighter model. Else keep the raw board and flag it. |
 | Model name fails or retired | Ask the tool for a recommendation (see TOOLS.md), update TOOLS.md, continue. |
+| Need not in TOOLS.md | models_explore(action:'recommend') with the need in words, before any spend. Add the row to TOOLS.md. |
 | Credits short | Hook, payoff, pack shot first; test low-res; fewer takes; lower tier. |
 | No packshot | Ask the client. Never generate a pack from nothing. |
-| Label fails twice | Path B composite or real packshot cutaway. |
+| Label fails twice | Composite the real label or real packshot cutaway. |
 | After Effects not linked | Higgsedit or code route (GSAP / Three.js + ffmpeg). Say so. |
 | No site access | Prototype plus handoff pack. Say what is blocked. |
 | Real person requested | Use them. Note who approved, once. Only if the user gave no sign of approval: ask one question. |
@@ -116,6 +120,7 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Task | Open |
 |---|---|
 | Any task | START-HERE.md (short) |
+| Which model | skills/ce-core/TOOLS.md (Pick the model by NEED) |
 | Any image or video | docs/PLAYBOOK-shots-effects.md |
 | Any video, motion, cinematic | docs/DIRECTOR-PASS.md |
 | Exact prompts and techniques | docs/CE-03-merge-pass-2.md, docs/CE-04-skool-merge.md, docs/CE-01-merge-pass.md |
@@ -124,4 +129,4 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Creator findings (video, ads, web, AE plugin) | library/README.md (index; open one page only) |
 
 ## 12. STUB (paste this at the top of every ce skill, so rules hold even if CORE is not loaded)
-> Load ce-core first. Always on: quote credits before spend; real label only (text from the real source, checked against the real image); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
