@@ -42,6 +42,16 @@ Fast fallback with no custom look: Higgsfield `faceless-video` workflow (get_wor
 Engines (confirm names with models_explore before the plan; names change): a fast collage engine for Mixed Media; seedance (720p std) for the diorama and any "make it impressive" brief, with native SFX on. Retries count toward the quote: max 2 per block, then change the prompt. Over the quote = stop and re-quote.
 Tool names in the source skill (video-explainer workflow, explainer_video, gemini_omni, seedance_2_0) were not live on 2026-10-11: check get_workflow_instructions and models_explore first. No assembly tool = video-montage workflow or ffmpeg, captions in code.
 
+## Block prompt template (Mixed Media; diorama version in references/diorama-doc.md)
+```
+Block {N}
+STYLE REFERENCE: Match the attached style key EXACTLY — editorial mixed-media collage, archival photo cutouts with white paper borders, flat bold color fields, halftone and paper grain textures, hand-drawn marker annotations, snappy motion-graphics animation, non-photorealistic, no live-action.
+SCENE: {collage that illustrates this block's line: cutouts, one color field, annotations, chart or map}.
+MOTION: {entrances with slight overshoot, one camera move, what animates; one loud thing at a time}.
+AUDIO: {ambient bed + 1-2 paper, whoosh or tick SFX; no voice}.
+NEGATIVE: readable text, letters, words, numbers, captions, subtitles, watermark, logo, photorealism, live-action footage, 3D render, lip-sync, talking characters, color drift.
+```
+
 ## Rules that save credits
 - Text: Mixed Media clips carry no text at all (it garbles); diorama allows one short prop label, fenced in the negative.
 - No one speaks on screen; narration is added at assembly.
