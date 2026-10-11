@@ -28,7 +28,7 @@ What they say: section 7.
 - One grade and one light grain over the whole edit; no extra sharpening; match AI clips to real ones. [M]
 - Sound: room tone under the voice (~-40 dB), music 15-20 dB under speech, master ~-14 LUFS, peaks under -1 dBTP. SFX only on real actions. [W]
 - Captions: 1-3 words per chunk, max 10 words per second; previous phrase greys as the next lands; colour follows the background. [M]
-- Talking head + graphics layouts: round face-cam bubble bottom-right (~1/3 height); head card shrinks to a corner while content takes the stage, then grows back; uneven split (face left, demo right); label chips add one per spoken item, newest in the accent. Build in AE or code. [W, frames: Jad, Chase, Zubair]
+- Talking head + graphics layouts: round face-cam bubble bottom-right (~1/3 height); head card shrinks to a corner while content takes the stage, then grows back; uneven split (face left, demo right); label chips add one per spoken item, newest in the accent. Build in AE or code. Graphics fire on the spoken word: a checklist ticks as each item is named; a count-up sits beside the product, never on the label or face. [W, frames: Jad, Chase, Zubair, Liv Body test]
 
 ## 3. Expensive look (footage)
 1. Frame 1 is the ad: start from a perfect still, never text-to-video. Fix the still first; images are cheap. [M]
@@ -76,7 +76,7 @@ A loose arc, not a template. Sources: Kallaway (hooks), Hormozi (hook, retain, r
 | Turn | "But..." What changed, or the surprise | "The ones who stay do one thing differently." |
 | Show | The product does one thing on screen, one concrete detail | "Watch: every rep, counted right here." |
 | Reward | Pays off what the hook promised, or more | "That's it. They can see they showed up." |
-| Close | Paid: one next step. Organic: none, back on the speaker | |
+| Close | Paid: one next step. Organic: none, or a comment ask; never a sale | |
 
 Short content can do all six in 2-3 lines. The reward must pay off the hook, or the hook is a lie.
 
@@ -92,7 +92,7 @@ Awareness picks the angle (Schwartz). Default: unaware or problem-aware (scales 
 | Product-aware | a demo, or the main doubt answered |
 | Most aware | the offer |
 
-When the product shows: organic = product at 40-60%, the story survives with it deleted, no hard CTA. Paid = product right after the problem, one CTA, disclosure. One paid script can serve cold and warm viewers (Hott).
+When the product shows: organic = product at 40-60%, the story survives with it deleted, no sale CTA (a comment ask is fine). Paid = product right after the problem, one CTA, disclosure. One paid script can serve cold and warm viewers (Hott).
 
 Say it like a person:
 - Spoken, not written: contractions, fragments, one concrete number (approved claims only). No three-part lists, no ad words. Written copy is the first tell. [W]
