@@ -1,12 +1,12 @@
 ---
 name: ce-08-explainer
-description: "Make a narrated explainer video end to end with Higgsfield: topic, fact-checked script, locked style key, clips, documentary voiceover, one assembled MP4. Use for explainer, Vox-style, faceless, documentary, data story, 'make a video about X', even with no topic given."
+description: "Make a narrated explainer video end to end with Higgsfield: topic, fact-checked script, locked style key, clips, documentary voiceover, one MP4. Use for explainer, Vox-style, faceless, documentary, data story, data story."
 ---
 
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-08 Explainer (Vox collage or paper-diorama documentary)
-Version 2.3 (2026-10-11). Adapted from @sanjii's vox-motion-graphics skill (Higgsfield blog). Full templates: skills/ce-08-explainer/references/ (repo).
+Version 2.3 (2026-10-11). Adapted from @sanjii's vox-motion-graphics skill (Higgsfield blog). Full templates: skills/ce-08-explainer/references/ (repo github.com/GraysonChoate/creative_engine).
 
 Mission: one request (a topic, or none) becomes one finished narrated explainer MP4. Fact-driven, one locked look, one narrator.
 Shared rules, spend line, model table, finish layer: ce-core. Story engine and voice timing: ce-core section 7.
@@ -31,7 +31,7 @@ Fast fallback with no custom look: Higgsfield `faceless-video` workflow (get_wor
 | T Topic | Given, or search 2-3 "trending this week" angles; pick one with a why/how core, one surprising number, strong visuals. No active tragedies, no gossip, nothing unverifiable. One runner-up. | free |
 | R Research | 2-3 sources; hook stat, 3-5 facts, the turn. Cross-check every number with a second source. Keep a Sources list. Never script from memory. | free |
 | 2 Script | N blocks, 20-24 words each, plain spoken text, numbers spelled out. Cold open > stakes > evidence (one idea per block, escalating) > the turn > kicker that reframes block 1. Curious, precise, a little wry. | free |
-| 3 Prompts | One prompt per block from the reference template: STYLE (verbatim tokens) / SCENE / MOTION / AUDIO (ambient + SFX, no speech) / NEGATIVE (verbatim). Apply the story engine. | free |
+| 3 Prompts | One prompt per block from the template below: STYLE (verbatim tokens) / SCENE / MOTION / AUDIO (ambient + SFX, no speech) / NEGATIVE (verbatim). Apply the story engine. | free |
 | PLAN | One message: topic + angle, script, block count, style, voice, then the SPEND LINE for the whole run (style key + N clips + N voice takes + assembly) from a live quote (get_cost on one clip). Wait for a yes. | 0 |
 | 1 Style key | Mixed media 9:16: resolve_explainer_preset (free). 16:9 or diorama: one generate_image (nano_banana_pro) from the reference prompt; reuse the job id forever after. | low |
 | 4a Test | Block 1 only: clip + voice take. Frame check (ce-core section 8) and voice timing. Fix the prompt before batching. | 1 block |

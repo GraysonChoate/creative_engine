@@ -7,7 +7,7 @@ description: "Load first for ANY Creative Engine task. Routes a vague request to
 Version 2.3 (2026-10-11). Changes: CHANGELOG.md.
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
-Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-07).
+Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-08).
 Which model for which need: section 1. Roles, prices, workflow names, specs: section 14. Do not hardcode them in other skills.
 
 ## 0. ROUTE THE REQUEST (first, before any tool call; say the route in one line)
