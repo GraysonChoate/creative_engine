@@ -1,6 +1,6 @@
 # Creative Engine
 
-A reusable "brain and nervous system" for creative production. One shared core (ce-core) feeds thin skills: ce-00 brand, ce-01 image ads, ce-02 UGC/social, ce-03 animated ads, ce-04 homepage, ce-05 website, ce-06 cinematic ad, ce-07 pitch deck, plus ce-extract-video and gauntlet-loop. Any brand plugs in on top.
+A reusable "brain and nervous system" for creative production. One shared core (ce-core) feeds thin skills: ce-00 brand, ce-01 image ads, ce-02 UGC/social, ce-03 animated ads, ce-04 homepage, ce-05 website, ce-06 cinematic ad, ce-07 pitch deck, ce-08 explainer, plus ce-extract-video and gauntlet-loop. Any brand plugs in on top.
 
 ## Layout
 - `START-HERE.md`: 3 lines. Load ce-core first.

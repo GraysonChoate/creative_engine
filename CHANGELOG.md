@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3 (2026-10-11)
+- New ce-08-explainer: narrated explainer pipeline (Vox collage or paper diorama), adapted from @sanjii's vox-motion-graphics skill. One approval covers the paid run; 1-block test before batching; unverified tool names flagged; politician-likeness routing removed.
+- ce-core: explainer route; section 7 STORY ENGINE and VOICE TIMING; aspect_ratio and preset_recommendation rules.
+
 ## 2.2 (2026-10-11)
 - ce-core holds TOOLS (section 14): roles, live Higgsfield workflow names, credit notes, specs, safe zone. TOOLS.md is a pointer.
 - ce-core section 8 absorbs START-HERE (lock list, shot card, frame check). START-HERE is 3 lines.

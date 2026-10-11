@@ -4,7 +4,7 @@ description: "Load first for ANY Creative Engine task. Routes a vague request to
 ---
 
 # CE-CORE (the shared layer)
-Version 2.2 (2026-10-11). Changes: CHANGELOG.md.
+Version 2.3 (2026-10-11). Changes: CHANGELOG.md.
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
 Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-07).
@@ -26,6 +26,7 @@ Which model for which need: section 1. Roles, prices, workflow names, specs: sec
 | full site | ce-05 | same as ce-04 per page | same |
 | deck, pitch | ce-07 | none (uses finished work) | slides |
 | app screens, app demo, app UI motion | ce-03 (Route C, code or After Effects) + ce-04 interaction layer | device and lifestyle shots only; never model-drawn UI | UI motion from real screenshots or real app code, exact UI text |
+| explainer, Vox-style, faceless, documentary, data story | ce-08 | style key, clips, narrator voice | captions, assembly |
 | "with interaction", "interactive", "clickable" | add ce-04 interaction layer to the media skill | the media only | hover, tap, scroll states, built in code over the finished assets |
 
 Every video route runs the same spine: vision table (section 7) > lock elements (section 8) > stills and frame check > video model by need (section 1, check it takes every input the shot needs) > finish outside the model. Skills add only what is unique.
@@ -51,7 +52,7 @@ Mixed request example: "animated ad for X's product with interaction" = ce-00 (s
 | Cheap draft before a final | the SAME model as the final, at lower resolution or draft mode | another model behaves differently and may not take the same inputs |
 | Big outdoor or atmosphere; restyle existing footage | Veo 3.1; WAN (only if listed by models_explore) | per Higgsfield article |
 
-Rules: the start image is the main control. A loop uses the same image as start and end. Stills first, drafts second, finals last. Upscale or 4K only after the user approves the whole cut, only the approved final, quoted first. Before any spend, check the model takes every input the shot needs (start frame, references, audio). Need not in this table: models_explore(action:'recommend') with the need in words, then add the row here.
+Rules: the start image is the main control. A loop uses the same image as start and end. Stills first, drafts second, finals last. Upscale or 4K only after the user approves the whole cut, only the approved final, quoted first. Before any spend, check the model takes every input the shot needs (start frame, references, audio). Pass aspect_ratio on every clip. A preset_recommendation notice: decline, resubmit with declined_preset_id. Need not in this table: models_explore(action:'recommend') with the need in words, then add the row here.
 Split of labor: models make people, places and products in motion. After Effects or code makes text, logos, exact colors, timing, loops and interaction.
 
 FINISH LAYER (pick per job; name it in the spend line):
@@ -110,6 +111,8 @@ The user talks like a client ("dynamic shot of fruit dropping in the blender"). 
 1. Turn every beat into a shot: named shot size, angle, lens, camera start / move / end, speed, light, and an effect with a real cause. Put those words in the prompt. "Dynamic" is not a camera move. A plain scene description is not a prompt.
 2. Show the VISION first: a short table, one line per scene (scene | what happens | camera | effect | feel). Stop: "Approve, or tell me what to change." No images or video before approval.
 3. Then elements and references, storyboard frames, frame check, video.
+4. STORY ENGINE (any video over 15 s): one object travels through every scene and escalates; the finale pays it off. A question hook, answered only at the end. Write each clip as one camera move that starts and ends in motion blur, so hard cuts read as one shot. An impact about every 3 s and one speed ramp per clip; alternate extreme macro and wide. One reveal shot the video is remembered by.
+5. VOICE TIMING (narration): one locked voice. Check every take's real length against its window before assembly; re-voice only outliers. One flowing sentence times better than choppy ones; spell numbers out. Narration is added at assembly; no one speaks on screen unless it is a talking-head format.
 
 ## 8. LOCK-FIRST, SHOT CARD, FRAME CHECK
 - LOCK: list everything that appears in 2+ shots: character, pack, every prop and place. Make each once as a reference (front, side, top, size next to a hand) or use the real one. Same shape, size, color, material in every shot. Tag it; never re-describe it. One face per sheet. Show the locked set before any shot.
@@ -161,6 +164,7 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Exact prompts and techniques | docs/CE-01-merge-pass.md (#1-47), docs/CE-03-merge-pass-2.md (#48-92), docs/CE-04-skool-merge.md (#93-163) |
 | Assemble finished scenes into a scroll ad | docs/BRIEF-scroll-assembly.md |
 | After Effects | docs/AE-route.md, scripts/ae/, library/ae-skills.md |
+| Explainer prompt templates, diorama style, moderation map | skills/ce-08-explainer/references/ |
 | Creator findings (video, ads, web, AE plugin) | library/README.md (index; open one page only) |
 
 ## 13. STUB (paste this at the top of every ce skill, so rules hold even if CORE is not loaded)

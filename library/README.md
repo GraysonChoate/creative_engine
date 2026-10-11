@@ -23,4 +23,4 @@ Adil feeds ce-03, ce-06, ce-02 (social) and the After Effects layer. Jad feeds c
 - The Higgsfield After Effects skills (not redistributable; read through ae_get_skill).
 
 ## Open gaps
-After Effects layer (ce-08) not built. App UI motion branch not started. Sound layer pinned (separate session, ElevenLabs).
+After Effects: ce-core FINISH LAYER + docs/AE-route.md. App UI motion branch not started. Sound layer pinned (separate session, ElevenLabs).
