@@ -19,7 +19,7 @@ Which model for which need: section 1. Roles, prices, workflow names, specs: sec
 | Request sounds like | Skill | Higgsfield makes (media) | After Effects or code makes (graphics) |
 |---|---|---|---|
 | static ad, banner, social image | ce-01 | stills from the real pack as reference (section 1) | exact text, resize, layout |
-| UGC, creator, review, unboxing, try-on | ce-02 | one locked creator, ugc workflows or Marketing Studio | captions, end card |
+| UGC, creator, review, unboxing, try-on | ce-02 | one locked creator, ugc-video workflow or Marketing Studio | captions, end card |
 | animated ad, loop, hypermotion, kinetic, motion graphic | ce-03 | stills first, then the video model that fits the need (section 1) | kinetic type, logo sting, exact label, timing, loops |
 | cinematic ad, film, spot | ce-06 | director pass, locked elements, video | type, logo, grade |
 | homepage, landing, scroll site | ce-04 | hero and 360 loops, frame sequences, 3D object | the page, scroll, interaction |
