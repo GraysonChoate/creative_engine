@@ -50,7 +50,7 @@ Mixed request example: "animated ad for X's product with interaction" = ce-00 (s
 | Cheap draft before a final | the SAME model as the final, at lower resolution or draft mode | another model behaves differently and may not take the same inputs |
 | Big outdoor or atmosphere; restyle existing footage | Veo 3.1; WAN (only if listed by models_explore) | per Higgsfield article |
 
-Rules: the start image is the main control. A loop uses the same image as start and end. Stills first, drafts second, finals last. Before any spend, check the model takes every input the shot needs (start frame, references, audio). Need not in this table: models_explore(action:'recommend') with the need in words, then add the row here.
+Rules: the start image is the main control. A loop uses the same image as start and end. Stills first, drafts second, finals last. Upscale or 4K only after the user approves the whole cut, only the approved final, quoted first. Before any spend, check the model takes every input the shot needs (start frame, references, audio). Need not in this table: models_explore(action:'recommend') with the need in words, then add the row here.
 Split of labor: models make people, places and products in motion. After Effects or code makes text, logos, exact colors, timing, loops and interaction.
 
 FINISH LAYER (pick per job; name it in the spend line):

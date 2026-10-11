@@ -84,7 +84,7 @@ LOOK gate (BUILD only): user approves the style header and shot list.
 - Trim the first and last half-second of every clip before cutting.
 - Reuse leftovers: unused good moments from one scene can fill another.
 - Pack shot (last, must be perfect): product enters (drop, reveal, push-in), light matches scene 1, camera moves (dolly-in / slow pullback). Brand name and tagline added in post from the real logo file, not generated. Optional logo sting: ce-03 Route D.
-- Optional: upscale_video for the final selects.
+- Optional: upscale_video, only after the whole cut is approved, quoted first.
 FINAL gate (BUILD only): every scene has a selected take that passes frozen-frame QA.
 
 ## PHASE 5: EDIT + SOUND
