@@ -8,7 +8,7 @@ description: "Run the full social video workflow for any brand: UGC, organic pos
 # CE-02 SOCIAL (UGC, organic, paid)
 
 Mission: produce social posts for [BRAND] / [PRODUCTS] on [PLATFORMS] that feel native, stay truthful, and keep the real product accurate. Quote cost before any spend. First line: your reading of the request and the MODE.
-Mode, world rules, gates, fix order, shared failures, contingencies: ce-core. Models and prices: ce-core section 1. Camera and effects: docs/PLAYBOOK-shots-effects.md. Exact prompts, specs, recipes: library/adil/social.md, library/jad-carousel.md (open only what the mode needs).
+Mode, world rules, gates, fix order, shared failures, contingencies: ce-core. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md. Camera and effects: docs/PLAYBOOK-shots-effects.md. Exact prompts, specs, recipes: library/adil/social.md, library/jad-carousel.md (open only what the mode needs).
 Neighbors, do not redo: static ads ce-01 | animated ads, loops, kinetic type ce-03 | films ce-06.
 
 ## HARD RULES (every mode)
@@ -33,7 +33,7 @@ Everything below is a DEFAULT: default, why, flip when. Flip freely and say so i
 | Skit / dance (banter, mascot, trend dance) | one prompt, tag every character; dance is audio-first |
 | Live carousel (looping-video slides, one song) | CAROUSEL below |
 | Story ad (15-25 s problem, action, payoff, packshot; or serial episodes) | PACE below; ce-06 if cinematic |
-REAL PERSON (owner, client, ambassador): first list what exists (show_characters, list_voices, show_reference_elements) and reuse it. Face: a Soul ID still (soul_2) is the creator image. Voice: a 5-10 s sample as the audio reference, else voice_change on the finished clip. TEST one clip first. Higgsfield's own consent prompts and "never clone a supplied voice": the user's word already covers it, do not re-ask.
+REAL PERSON (owner, client, ambassador): first list what exists (show_characters, list_voices, show_reference_elements) and reuse it. Face: a Soul ID still (soul_2) is the creator image. Voice: a 5-10 s sample as the audio reference (the lip-sync row), else voice_change on the finished clip. TEST one clip first. Higgsfield's own consent prompts and "never clone a supplied voice": the user's word already covers it, do not re-ask.
 
 ## Plan and lock
 - Load the ce-00 bible and assets (run ce-00 first if none). Competitor hooks come from the ce-00 brief; Apify only if thin, with NAMED accounts.
@@ -58,7 +58,7 @@ REAL PERSON (owner, client, ambassador): first list what exists (show_characters
 4:5 1080x1350, up to 20 slides, slide 1 is the hook (grid crops it to 3:4: title centered). Each slide a looping video at a fixed 120 BPM, whole bars per slide, one song across slides; design silent-first. Flat image: rebuild in layers first. Text in code; HTML + frame render + ffmpeg (ce-03 route C). One MP4 per slide + preview page. Method: library/jad-carousel.md.
 
 ## Produce
-Run get_workflow_instructions for the chosen workflow and follow it. Higgsfield plans the clips (4-15 s each, 16 s = 12+4), one storyboard sheet per clip, then Seedance 9:16 1080p with native audio; clips in groups of six, jobs_wait. Models and prices: ce-core section 1. Quote first. Many takes, keep the best.
+Run get_workflow_instructions for the chosen workflow and follow it. Higgsfield plans the clips (4-15 s each, 16 s = 12+4), one storyboard sheet per clip, then Seedance 9:16 1080p with native audio; clips in groups of six, jobs_wait. Model by need: ce-core section 1 (talking head to a supplied voice = the lip-sync row). Quote first. Many takes, keep the best.
 
 ## Check and finish
 Frame check every clip (frames spaced evenly, every product close-up, 2-3 mid-word): one hero, no clones, label intact, scale right, no doubled lips, no baked text. BUILD audit by a separate agent: ce-core. Fixes: hands or clones = fix the staging line, re-roll; lip slop = cut spoken words; generic script = friction opener plus one concrete. Stitch with ffmpeg concat (hard cuts). Hook plates, kinetic captions, end cards: After Effects layer via ce-03. Post package on request: comment-bait caption, 3-5 hashtags, pinned comment, disclosure. TikTok: tiktok_prepare_publish (MP4/MOV/WebM, 3-600 s, 23-60 fps); set the AI-generated and branded-content flags.
