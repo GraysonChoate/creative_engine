@@ -75,7 +75,7 @@ Project or README text that says "stop at every gate / audit everything" applies
 3. TEXT: default = set in code or the editor, because a model can misspell and real brand text must be exact (brand name, price, CTA, claims, legal, anything edited later). Generating text in the model is fine when it is short, fully specified and a typo costs nothing (portfolio, invented brand, launch-film headline): give an exact copy list, say nothing else appears, and frame-check every string. Use judgment by use case.
 4. REAL PEOPLE: if the user says the person or their company approved (owner, employee, creator, ambassador), take their word. Note it once in the brief (who approved, scope) and go. Do not ask for releases or re-confirm. Use the client's own site and social photos as the source. Generated people are adults 21+, never minors, never presented as real customers.
 5. No fake reviews, testimonials, customers, ratings, results, before/afters, numbers or endorsements shown as real. Claims only from the label or the approved list. Health or supplement: no disease, cure or results language.
-6. Safety: no flashing above 3 per second. No copyrighted music. No touching a live site or DNS. No credentials entered; the user signs in.
+6. Safety: no flashing above 3 per second (this wins; fast cuts are fine, full-frame bright/dark flashes or strobes are not). No copyrighted music. No touching a live site or DNS. No credentials entered; the user signs in.
 7. WORLD RULES (section 5) before any image or video prompt.
 8. Do not claim a connector or tool works until a call succeeds.
 9. Short, plain language. Tables. At most one question at a time.

@@ -19,6 +19,7 @@ Prices below are earlier notes, not quotes. Always get a live quote first (ads_s
 | Templated text and resize | Canva (autofill-design, resize-design, export-design) | |
 | Editor / assemble | Higgsedit (video-editing workflow), subtitles workflow, ffmpeg | ffmpeg concat, stream copy, hard cuts. |
 | Motion graphics, compositing, tracking, type | After Effects (ExtendScript .jsx + aerender), else code (GSAP, Three.js, frame recorder + ffmpeg) | AE needs a session linked to the user's computer. See docs/AE-route.md. |
+| Code-built motion graphics, captions, carousels | HyperFrames or Remotion; Whisper for word timestamps | Free, exact text, frame-accurate renders. See library/social-motion.md. |
 | Scroll and web | GSAP + ScrollTrigger + Lenis, Three.js, GLSL, IntersectionObserver | |
 | Label composite | OpenCV (align, overlay true label, verify) | |
 | Crawl and scrape | Firecrawl | |
@@ -34,7 +35,7 @@ ads-studio, product-photoshoot, ugc-review-video, ugc-product-video, ugc-unboxin
 - Budget 15 to 25 takes per minute of film.
 
 ## Encode defaults
-H.264 MP4, yuv420p, 30 fps (24 for film look or loops), 1080p minimum. Social audio about -14 LUFS, true peak under -1 dB. Web loops 1 to 3 MB with a poster frame.
+H.264 MP4, yuv420p, 30 fps (24 for film look or loops; 60 for code-built motion graphics), 1080p minimum. Social audio about -14 LUFS, true peak under -1 dB. Web loops 1 to 3 MB with a poster frame.
 
 ## Pick the model by NEED
 Lives in ce-core SKILL.md section 1 (so every agent has it without the repo). Update it there only.

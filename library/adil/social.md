@@ -26,7 +26,7 @@ Findings and options, not rules. Raw clips and frames stay on the Mac. Timings f
 - Hook then reveal on creator footage: 1 s telephoto hook, fast zoom-out landing on the creator framing, creator says the kept line.
 
 ## Cut maps (16:9 sources, adapt to 9:16)
-- 15 s product ad: hook macro 0-2, three usage beats, four 0.3 s macro cuts at 6.5-8, film burn at 13, packshot 13-15 with products in the right third. The 0.3 s strobe cuts clash with the flash limit in ce-core: soften them.
+- 15 s product ad: hook macro 0-2, three usage beats, four 0.3 s macro cuts at 6.5-8, film burn at 13, packshot 13-15 with products in the right third. Fast cuts are fine; avoid bright/dark flashes faster than 3 per second (ce-core safety wins).
 - Counts: 8 s = 5 shots and 4 cuts (first four fast, last holds about half). 12 s = 7 shots and 6 cuts. 3 shots = last by far the longest.
 - 22 s story = 11 shots; 1 s impact shots; slow motion only in two shots.
 - Speed ramp on every cut: fast in, slow middle, fast out. The frame is never empty.

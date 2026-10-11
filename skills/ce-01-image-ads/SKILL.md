@@ -52,7 +52,7 @@ PATH C: TEMPLATED SCALE (Canva)
 Motion variants of an approved static (subtle loop, parallax, animated type): hand off to the After Effects layer via ce-03.
 
 ## Phase 3: Finish
-3.1 Set text, logo, price, CTA in Canva or code. Safe zones: keep key content inside the 80% center for 9:16; keep text under about 20% of the image.
+3.1 Set text, logo, price, CTA in Canva or code. Safe zones: for 9:16 use the Meta Reels zone (nothing key in the top 14%, bottom 35% or 6% at each side); keep text under about 20% of the image.
 3.2 Export every concept at every ratio. Naming: [brand]_[product]_[angle]_[tier]_[ratio]_v[n].
 LOOK gate (BUILD only): show a contact sheet (all concepts, all ratios).
 
