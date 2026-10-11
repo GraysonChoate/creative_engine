@@ -1,6 +1,6 @@
 # Shot and Effect Playbook (v1, grows with every new video)
 
-How to use: find the move you want, copy the prompt phrase, and give it a real cause. Effects need a real trigger (see START-HERE rule 4). Numbers beat adjectives.
+How to use: find the move you want, copy the prompt phrase, and give it a real cause. Effects need a real trigger (ce-core section 5, WORLD RULES). Numbers beat adjectives.
 
 | Move / effect | Plain words | Prompt phrase (from the research) | Real cause example | Watch out |
 |---|---|---|---|---|

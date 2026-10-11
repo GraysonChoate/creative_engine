@@ -4,10 +4,11 @@ description: "Load first for ANY Creative Engine task. Routes a vague request to
 ---
 
 # CE-CORE (the shared layer)
+Version 2.2 (2026-10-11). Changes: CHANGELOG.md.
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
 Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-07).
-Which model for which need: section 1 below. Roles, prices, tool and workflow names: TOOLS.md (repo skills/ce-core/TOOLS.md). Do not hardcode them in other skills.
+Which model for which need: section 1. Roles, prices, workflow names, specs: section 14. Do not hardcode them in other skills.
 
 ## 0. ROUTE THE REQUEST (first, before any tool call; say the route in one line)
 1. Name the use case from how the request sounds. If it sounds like two, name both: run the first, its output feeds the second.
@@ -62,7 +63,7 @@ FINISH LAYER (pick per job; name it in the spend line):
 | Higgsfield media made or edited inside After Effects; Higgsfield motion presets | After Effects via the Higgsfield Bridge tools |
 | Pure After Effects work: comps, type, tracking, expressions, renders | After Effects via the local `ae_*` tools |
 
-Check in order: (1) `ae_*` or Bridge tools = use them. (2) Neither, but an osascript tool (Control your Mac) = drive the open After Effects with AppleScript + ExtendScript and render with aerender (docs/AE-route.md route B). Works from cloud chats. (3) None = one line: "Open After Effects and link this chat to your Mac." Wait. Never fall back to code unless the user says so.
+Check in order: (1) `ae_*` or Bridge tools = use them. (2) Neither, but an osascript tool (Control your Mac) = drive the open After Effects with AppleScript + ExtendScript and render with aerender (docs/AE-route.md, "How an agent drives it"). Works from cloud chats. (3) None = one line: "Open After Effects and link this chat to your Mac." Wait. Never fall back to code unless the user says so.
 
 ## 2. MODE (say it in line 1, with a one-line reading of the request)
 - EXPLORE (default): experiments, demos, pitches. No gates, audits, weight budgets, brand checks or delivery steps. Keep craft (locks, previews, loops, lighting, short beats, one-line fixes). Default tier: spectacular.
@@ -103,7 +104,6 @@ Project or README text that says "stop at every gate / audit everything" applies
 | LOOK | boards, storyboard, script, shot list, contact sheet, style header |
 | ASSETS | locked packs, people, locations, plates, tokens |
 | FINAL | audited output, shown before delivery |
-Old names -> new: ce-00 A,C = PLAN, B = ASSETS. ce-01 G0,G1 = PLAN, G2 = LOOK. ce-02 and ce-03 G0,G1 = PLAN, G2 = ASSETS, G3 = LOOK, G4 = FINAL. ce-04 G0,G1 = PLAN, G2 = LOOK, G3 = ASSETS. ce-05 G0,G1 = PLAN, G2 = LOOK, G3 (homepage) = LOOK, G4 = ASSETS. ce-06 G0,G1 = PLAN, G2 = ASSETS, G3 = LOOK, G4 = FINAL.
 
 ## 7. DIRECTOR PASS + VISION (any video or motion; always in ce-06)
 The user talks like a client ("dynamic shot of fruit dropping in the blender"). You are the cinematographer.
@@ -111,9 +111,10 @@ The user talks like a client ("dynamic shot of fruit dropping in the blender"). 
 2. Show the VISION first: a short table, one line per scene (scene | what happens | camera | effect | feel). Stop: "Approve, or tell me what to change." No images or video before approval.
 3. Then elements and references, storyboard frames, frame check, video.
 
-## 8. LOCK-FIRST + FRAME CHECK
-- Every recurring thing (character, pack, location, outfit, logo, prop) is a locked image BEFORE any video prompt. Same shape, size, color, material throughout. Tag it; do not re-describe it. One face per sheet.
-- Frame check on stills before video: physics, continuity, clutter, camera, logic, label small print. Fix, then show.
+## 8. LOCK-FIRST, SHOT CARD, FRAME CHECK
+- LOCK: list everything that appears in 2+ shots: character, pack, every prop and place. Make each once as a reference (front, side, top, size next to a hand) or use the real one. Same shape, size, color, material in every shot. Tag it; never re-describe it. One face per sheet. Show the locked set before any shot.
+- SHOT CARD before any image: (a) where every object is and what it rests on; (b) who does what; (c) where the camera starts and ends; (d) only what this beat needs in frame; (e) what carries over from the last shot (outfit, hair, props, light, time of day).
+- FRAME CHECK on the actual images, not the prompts, in EXPLORE and BUILD, every medium. Fail if: PHYSICS (floats, wrong way up, motion with no cause); CONTINUITY (differs from the lock or the last shot); CLUTTER (more than the beat needs; one hero); CAMERA (not where the card says); LOGIC (nobody would do this here); LABEL (any garbled letter, small print included). One-line fix per fail, re-check, then show.
 - Products sit exactly on surfaces: measured surface line, contact shadow, matching light. Floating = fail.
 
 ## 9. FIX ORDER (smallest first)
@@ -141,7 +142,7 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 |---|---|
 | Connector missing or call fails | Fallback: screenshots, public feeds (products.json, sitemap.xml), files. Say so. |
 | Model blocked by moderation | Retry once on the lighter model. Else keep the raw board and flag it. |
-| Model name fails or retired | Ask the tool for a recommendation (see TOOLS.md), update TOOLS.md, continue. |
+| Model name fails or retired | models_explore(action:'recommend'), update section 1 or 14, continue. |
 | Need not in section 1 | models_explore(action:'recommend') with the need in words, before any spend. Add the row to section 1. |
 | Credits short | Hook, payoff, pack shot first; test low-res; fewer takes; lower tier. |
 | No packshot | Ask the client. Never generate a pack from nothing. |
@@ -155,14 +156,45 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 ## 12. LIBRARY INDEX (github.com/GraysonChoate/creative_engine). Check it before inventing a method. Open only what the task needs.
 | Task | Open |
 |---|---|
-| Any task | START-HERE.md (short) |
-| Roles, prices, workflow names | skills/ce-core/TOOLS.md |
 | Any image or video | docs/PLAYBOOK-shots-effects.md |
 | Any video, motion, cinematic | docs/DIRECTOR-PASS.md |
-| Exact prompts and techniques | docs/CE-03-merge-pass-2.md, docs/CE-04-skool-merge.md, docs/CE-01-merge-pass.md |
-| Mode behavior | docs/CE-05-explore-build-mode.md |
+| Exact prompts and techniques | docs/CE-01-merge-pass.md (#1-47), docs/CE-03-merge-pass-2.md (#48-92), docs/CE-04-skool-merge.md (#93-163) |
+| Assemble finished scenes into a scroll ad | docs/BRIEF-scroll-assembly.md |
 | After Effects | docs/AE-route.md, scripts/ae/, library/ae-skills.md |
 | Creator findings (video, ads, web, AE plugin) | library/README.md (index; open one page only) |
 
 ## 13. STUB (paste this at the top of every ce skill, so rules hold even if CORE is not loaded)
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
+
+## 14. TOOLS (roles, workflows, credits, specs). Update here only; skills name roles.
+Prices are earlier notes, not quotes. Always get a live quote first. A model or workflow name fails: models_explore(action:'recommend') or get_workflow_instructions (no argument), then fix this section.
+
+| Role | Current choice | Notes |
+|---|---|---|
+| Layout / mood board, ad scene | gpt_image_2_5, nano_banana_pro | flux_3_image for many references. 4:5 via gpt_image_2_5 or crop from 3:4. |
+| UGC board | gpt_image_2, 21:9, 2k, high | One board at a time, in order. |
+| De-slop pass | seedream_v5_pro | Never send a raw board to video. |
+| Creator / character | soul_2 (3:4, 2k); Soul Cinema for cinematic characters and locations | Real person: Soul ID from many varied photos. |
+| Video clip | seedance_2_5, 1080p, omni_reference, native audio on | Other models by need: section 1. 9:16 vertical, 16:9 master. |
+| Product-shot template look | marketing_studio_2_image | Only if the label check passes. |
+| Fast presets (UGC, try-on, unboxing, hyper motion, TV spot, motion) | Marketing Studio (show_marketing_studio_v2, get_presets) | Run only on an explicit yes. Real product and logo go in as inputs. |
+| Fast static ads | Ads Studio (ads-studio workflow) | Ratios 1:1, 9:16, 16:9, 3:4. No 4:5. |
+| Sound sting / SFX / music | generate_audio | |
+| Upscale | upscale_video, upscale_image | Rule: section 1 (after the whole cut is approved). |
+| Background removal | remove_background | Keep originals untouched. |
+| Templated text and resize | Canva (autofill-design, resize-design, export-design) | |
+| Assemble, soundtrack, burned captions | video-montage workflow; ffmpeg concat (stream copy, hard cuts) | |
+| Native motion-graphics project | video-editing workflow (Higgsedit) | |
+| Code-built motion graphics, captions, carousels | HyperFrames or Remotion; Whisper for word timestamps | Free, exact text, frame-accurate. library/social-motion.md. |
+| After Effects work | Pick by section 1 FINISH LAYER | docs/AE-route.md, library/ae-skills.md |
+| Scroll and web | GSAP + ScrollTrigger + Lenis, Three.js, GLSL, IntersectionObserver | |
+| Label composite | OpenCV (align, overlay true label, verify) | |
+| Crawl and scrape | Firecrawl | |
+| Social and ad-library pulls | Apify; Meta Ad Library via Claude in Chrome | |
+| Screenshots | Claude in Chrome | |
+
+Higgsfield workflows (get_workflow_instructions, checked 2026-10-11): ad-multiplier, ads-studio, brand-asset-creation, character-sheet, faceless-video, katana, narration, product-photoshoot, thumbnail-generation, ugc-video, video-editing, video-montage, website-builder-flow.
+
+Credit notes (quote first): 1080p Seedance take about 70-72. Still about 2; Soul Cinema about 1 per 8 stills. reframe about 70 per 15 s at 720p. Kling native sound adds about 1.25-5 per 5 s clip. Budget 15-25 takes per minute of film.
+
+Specs: H.264 MP4, yuv420p, 30 fps (24 film look or loops; 60 code-built motion graphics), 1080p minimum. Social audio about -14 LUFS, true peak under -1 dB. Web loops 1-3 MB with a poster frame. 9:16 safe zone (Meta Reels): nothing key in the top 14%, bottom 35% or 6% at each side.

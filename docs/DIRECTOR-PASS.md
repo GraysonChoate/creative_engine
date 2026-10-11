@@ -5,8 +5,8 @@ A scene description is not a prompt. The user talks like a client ("she drops fr
 ## Steps
 1. Split the request into beats (one action each).
 2. For each beat, pick from the table below: shot size, angle, lens, camera move, speed, light, effect.
-3. Give the effect a real cause (START-HERE rule 4). Check physics: where is the camera physically?
-4. Write the shot card (START-HERE rule 8), then the prompt in this order:
+3. Give the effect a real cause (ce-core section 5). Check physics: where is the camera physically?
+4. Write the shot card (ce-core section 8), then the prompt in this order:
    **Style > Subject and action > Camera (start, move, end, lens) > Light > Effect > Locks (what stays the same)**
 5. Add the camera words to the prompt itself. "Dynamic" alone means nothing to the model. Say what the camera does.
 6. Between shots: say how they connect (match cut, whip, push through steam, same light, same outfit).
@@ -46,7 +46,7 @@ Full moves with real causes: `docs/PLAYBOOK-shots-effects.md`.
 `Cinematic live-action beverage ad, bright home kitchen, morning. A woman in a cream knit sweater (same as locked sheet) pours a scoop of collagen powder into an upright blender on the counter. Medium close-up, eye level, 50mm lens, shallow depth of field. The camera arcs slowly left around the blender at counter height, then racks focus from the scoop to the powder cloud. Soft window backlight makes the powder glow. The product pack stands upright on the counter behind the blender, softly out of focus, label facing camera. Powder falls in slow motion. Nothing else on the counter. Same outfit, hair, and light as the previous shot.`
 
 ## Check before showing
-Does every prompt name: shot size, angle, lens, camera start/move/end, light, and the effect with its cause? If any is missing, add it. Then run the frame check on the images (START-HERE rule 9).
+Does every prompt name: shot size, angle, lens, camera start/move/end, light, and the effect with its cause? If any is missing, add it. Then run the frame check on the images (ce-core section 8).
 
 ## Props are elements too
 Any object that returns gets locked like a product. Blender in shot 1 and glass in shot 5: both get a reference sheet first. The agent may invent the design, but after it is chosen it is fixed. Close-ups show a piece of it, so the reference must still match that piece. Add a size line to the prompt ("the same 14-inch blender as image 3, next to a 6-inch glass"). If a shot shows a different size or shape, that shot fails the frame check; re-run with the reference attached.

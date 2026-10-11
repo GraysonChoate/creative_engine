@@ -6,9 +6,10 @@ description: "Run the full static image-ad workflow for any brand: intake, strat
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-01 Image Ads
+Version 2.2 (2026-10-11).
 
 Mission: produce a tested, brand-safe set of static ads for [BRAND] / [PRODUCTS] across [PLATFORMS], using the real product images as references or layers, never invented ones. State your reading of the request in one line first.
-Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles, prices, specs: ce-core section 14.
 Camera moves and effects: docs/PLAYBOOK-shots-effects.md.
 
 ## Inputs (ask once for anything missing; otherwise infer)
@@ -35,12 +36,12 @@ PLAN gate (BUILD only): approve the matrix and the spend quote.
 PATH A: FAST (Higgsfield Ads Studio)
 - A1 SKILL: get_workflow_instructions("ads-studio") and follow it exactly.
 - A2 CONNECTOR: ads_studio_create_brand (website) + ads_studio_add_product (page URL + packshot images). Wait until ready. Do not poll.
-- A3 ads_studio_quote, tell the credits, wait for yes, then ads_studio_generate. Ratios per TOOLS.md (4:5 is not offered: crop or use Path B).
+- A3 ads_studio_quote, tell the credits, wait for yes, then ads_studio_generate. Ratios per ce-core section 14 (4:5 is not offered: crop or use Path B).
 - A4 Read the run once when asked. Treat output as concepts to check, not final.
 
 PATH B: ACCURATE (locked-pack composite). Use when the label must be exact, or as backup when a real-reference render fails the label check.
 - B1 SKILL: get_workflow_instructions("product-photoshoot") for scene and lighting recipes.
-- B2 MODEL: build the scene WITHOUT the pack (empty surface, props, lighting, depth) with the board model at 4:5 / 3:4 / 9:16 / 1:1; multi-reference model if needed (TOOLS.md).
+- B2 MODEL: build the scene WITHOUT the pack (empty surface, props, lighting, depth) with the board model at 4:5 / 3:4 / 9:16 / 1:1; multi-reference model if needed (ce-core section 14).
 - B3 CODE: composite the real transparent packshot onto a measured surface line (contact shadow, matching light direction). The product must sit on the surface exactly, never floating.
 - B4 If a model rendered the pack, CODE (OpenCV): align to the real packshot, overlay the true label back, verify.
 - B5 MODEL optional: Marketing Studio Product Shot for template-led looks, only if the label check passes.
@@ -49,10 +50,10 @@ PATH C: TEMPLATED SCALE (Canva)
 - C1 CONNECTOR Canva: build or pick a brand template; autofill-design with headline/price/CTA/packshot per concept; resize-design to every ratio; export-design (PNG/JPG).
 - C2 Use C after A or B to set final text and resize.
 
-Motion variants of an approved static (subtle loop, parallax, animated type): hand off to the After Effects layer via ce-03.
+Motion variants of an approved static (subtle loop, parallax, animated type): hand off to ce-03 (finish: ce-core FINISH LAYER).
 
 ## Phase 3: Finish
-3.1 Set text, logo, price, CTA in Canva or code. Safe zones: for 9:16 use the Meta Reels zone (nothing key in the top 14%, bottom 35% or 6% at each side); keep text under about 20% of the image.
+3.1 Set text, logo, price, CTA in Canva or code. Safe zones: 9:16 safe zone: ce-core section 14; keep text under about 20% of the image.
 3.2 Export every concept at every ratio. Naming: [brand]_[product]_[angle]_[tier]_[ratio]_v[n].
 LOOK gate (BUILD only): show a contact sheet (all concepts, all ratios).
 

@@ -3,7 +3,7 @@
 Paste this to the agent after every scene is made and approved.
 
 ---
-All scenes are done and approved. Now assemble them into one cinematic scroll experience that works like a website. Read START-HERE.md, docs/AE-route.md and ce-04 (spectacular tier) first. Work in EXPLORE mode.
+All scenes are done and approved. Now assemble them into one cinematic scroll experience that works like a website. Load ce-core, then read docs/AE-route.md and ce-04 (spectacular tier) first. Work in EXPLORE mode.
 
 **What I have:** [folder path with the scene clips, locked element images, real logo and pack files, music if any]
 **Goal:** the page scrolls like a film. Scroll down = the film plays forward. Scroll up = it plays back. Text and the product appear at the right moments.

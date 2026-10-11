@@ -1,20 +1,16 @@
 # Creative Engine
 
-A reusable "brain and nervous system" for creative production. One shared core (Higgsfield, Seedance, Blender, cinematic craft) feeds thin branches (image ads, UGC, animated ads, cinematic ad, website, app). Any brand or project plugs in on top.
+A reusable "brain and nervous system" for creative production. One shared core (ce-core) feeds thin skills: ce-00 brand, ce-01 image ads, ce-02 UGC/social, ce-03 animated ads, ce-04 homepage, ce-05 website, ce-06 cinematic ad, ce-07 pitch deck, plus ce-extract-video and gauntlet-loop. Any brand plugs in on top.
 
-## Structure
-- `docs/` merged technique library
-  - `CE-01-merge-pass.md`: ~70 raw techniques merged into 47 entries, tagged Universal / Shared / Film-only
-  - `CE-02-video-links.md`: real prompt/skill links from the 17 source videos
-  - `CE-03-merge-pass-2.md`: exact prompts per entry (97 verified quotes), rule fixes, entries #48-92, branch gaps
-  - `CE-04-skool-merge.md`: Skool Vault lessons (10), entries #93-163, rule conflicts C1-C6, WEB gap status
-  - docs/CE-05-explore-build-mode.md
-  - START-HERE.md (read first), docs/DIRECTOR-PASS.md, docs/PLAYBOOK-shots-effects.md
-- Originals (video prompt pages, transcripts) are kept on the owner's Mac only; docs mentioning `sources/` refer to those.
-- `library/` creator findings, one page each (index: library/README.md)
-- `skills/` v2.1 skills: ce-core, ce-00 to ce-07, ce-extract-video, gauntlet-loop (ce-core holds the shared rules; load it first)
+## Layout
+- `START-HERE.md`: 3 lines. Load ce-core first.
+- `skills/`: the skills. `ce-core/SKILL.md` holds routing, models, tools, prices and every shared rule.
+- `docs/`: technique library (CE-01 #1-47, CE-03 #48-92, CE-04 #93-163), DIRECTOR-PASS, PLAYBOOK, AE-route, scroll-assembly brief, video links.
+- `library/`: creator findings, one page each (index: library/README.md).
+- `scripts/`: `check.py` (repo checks, also run on every push), `sync_report.py` (repo vs saved skills), `ae/` (After Effects scripts).
+- Originals (prompt pages, transcripts) stay on the owner's Mac; docs that mention `sources/` mean those.
 
-## Status
-- Core library merged and tagged. Branch mapping not started.
-- Known gaps: website export (scroll playback, WebGL, 3D files), UGC playbook, image-ad layout/copy/testing, app UI.
-- Open conflicts between skills and the library: ce-06 edit rule, spectacular tier scope, repeated intake steps.
+## Rules for editors
+- One rule lives in one place. Shared rules go in ce-core; skills hold only what is unique.
+- Bump the version line and add a CHANGELOG entry when a skill changes. Then sync the saved skills (scripts/sync_report.py shows which).
+- Run `python3 scripts/check.py` before pushing.

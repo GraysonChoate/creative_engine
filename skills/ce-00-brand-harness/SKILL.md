@@ -6,6 +6,7 @@ description: "Run first, once per brand, before any ce-01 to ce-06 workflow: bra
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-00 BRAND HARNESS (brand layer)
+Version 2.2 (2026-10-11).
 
 Run once per brand. Every other workflow (ce-01 to ce-07) loads this output instead of redoing intake.
 If a brand bible exists: load it, check it is current (see REFRESH), skip intake.
@@ -56,7 +57,7 @@ Save raw pulls in a `raw/` folder. Never edit raw.
 10. PROOF: real reviews, press, numbers (each with source).
 11. GOALS + CONSTRAINTS: goal, budget, deadline, must-keep items, no-go items.
 12. WORLD: world type (real / stylized real / invented) and 3 to 5 world rules. Every workflow reads these.
-13. MOTION: 3 motion words (speed and feel), easing curves, durations, transition style, sound style, plus the MOTION LIBRARY (approved motion styles, reusable). ce-03 and the After Effects layer read and extend this section. Check it before building new motion.
+13. MOTION: 3 motion words (speed and feel), easing curves, durations, transition style, sound style, plus the MOTION LIBRARY (approved motion styles, reusable). ce-03 and all After Effects work read and extend this section. Check it before building new motion.
 Output: brand-bible.md. Show the user a 10-line summary and the UNKNOWN list.
 PLAN gate (BUILD only): user confirms the bible. Fill or accept UNKNOWNs.
 

@@ -6,11 +6,12 @@ description: "Run the full animated-ad workflow for any brand: motion strategy, 
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-03 Animated Ads
+Version 2.2 (2026-10-11).
 
 Mission: produce animated ads (motion graphics, product loops, hyper-motion, logo animation) for [BRAND] / [PRODUCTS] on [PLATFORMS] that look intentional, keep the real product and logo exact, and read with the sound off. Quote cost before any spend. State your reading of the request in one line first.
-Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles, prices, specs: ce-core section 14.
 Camera moves and effects: docs/PLAYBOOK-shots-effects.md.
-After Effects work (type, logo sting, tracking, compositing, grade, export): the After Effects layer and docs/AE-route.md. This skill picks the route; the AE layer holds the craft.
+After Effects work (type, logo sting, tracking, compositing, grade, export): ce-core FINISH LAYER (which route), docs/AE-route.md and library/ae-skills.md (how).
 
 ## Inputs (ask once for anything missing; otherwise infer)
 [BRAND URL] [PRODUCT + real packshot] [GOAL] [PLATFORMS + RATIOS] [LENGTH: 6 / 10 / 15s] [AUDIO: none | music | jingle | voiceover] [TIER: tame | new direction | spectacular] [MOTION WORDS: 3 adjectives for speed and feel, read from the bible section 13] [BUDGET in credits]
@@ -72,13 +73,13 @@ LOOK gate (BUILD only): approve storyboard + animatic. Never jump to final motio
 ## Phase 4: Produce (choose the route per concept)
 ROUTE A: Presets (fast). Marketing Studio motion presets (types: hyper-motion, 2D motion, mixed media, SaaS motion) via get_presets (source marketing_studio, category motion) and show_marketing_studio_v2. Real product and logo go in as inputs. Run only on an explicit yes. Output 12-15s. Check like any other route.
 ROUTE B: Generated plate + composite. Video plate with start and end frame the same for a loop (video model, ce-core section 1). Then composite the real pack and logo on top with tracking so it stays locked to the surface. Compositing in code, Higgsedit or After Effects.
-ROUTE C: Code-built motion (full control). Option 1: Higgsedit (video-editing workflow): scripts with frames, text, shapes, masks, custom shaders, 2.5D camera, MP4 output. Option 2: HyperFrames or Remotion, or HTML with GSAP / Three.js rendered by a deterministic frame recorder (seek per frame, local fonts, base64-embedded textures) and encoded with ffmpeg. Use for kinetic type, 3D turntables, scroll-style reveals, app UI motion. Option 3: After Effects (needs a session linked to the user's computer): ExtendScript .jsx run through the app, rendered with aerender. Use for logo stings, tracking, precise text and compositing. Steps and rules: docs/AE-route.md and the After Effects layer. Default flow: AE flow under Default brief.
+ROUTE C: Code-built motion (full control). Option 1: Higgsedit (video-editing workflow): scripts with frames, text, shapes, masks, custom shaders, 2.5D camera, MP4 output. Option 2: HyperFrames or Remotion, or HTML with GSAP / Three.js rendered by a deterministic frame recorder (seek per frame, local fonts, base64-embedded textures) and encoded with ffmpeg. Use for kinetic type, 3D turntables, scroll-style reveals, app UI motion. Option 3: After Effects (route order: ce-core FINISH LAYER): ExtendScript .jsx run through the app, rendered with aerender. Use for logo stings, tracking, precise text and compositing. Steps: docs/AE-route.md, library/ae-skills.md. Default flow: AE flow under Default brief.
 ROUTE D: Logo sting. Animate the real logo in Higgsedit, After Effects or code; generate a short sound sting with generate_audio; keep it under 3s; reuse it across the set.
 ROUTE E: Scale. Native re-layout per ratio (9:16, 1:1, 4:5, 16:9), reframe or outpaint only when composition allows. Ad Multiplier for variants from one approved 4-30s source.
 Cost: spend line before every generation (ce-core section 0). Many takes, keep the best.
 
 ## Phase 5: Audit (BUILD only; a separate agent, never the producer). In EXPLORE, do the frame check and the label check only.
-5.1 Frame sheet every 0.25s: pack on surface and not floating; label legible and matches the real packshot, small print included; logo clearspace; text inside safe zones (9:16 Meta Reels zone: nothing key in the top 14%, bottom 35% or 6% at each side); hex colors sampled.
+5.1 Frame sheet every 0.25s: pack on surface and not floating; label legible and matches the real packshot, small print included; logo clearspace; text inside safe zones (9:16 safe zone: ce-core section 14); hex colors sampled.
 5.2 Motion QA: easing, speed against the motion words, loop seam invisible, no flicker, no flash above 3 Hz, no judder at 30fps.
 5.3 Sound-off test and phone-size test. Audio levels (about -14 LUFS for social), no clipping.
 5.4 BRAND GUARDIAN (ce-00 Step 5): colors, fonts, motion section, claims vs approved list, disclosure where needed.
@@ -87,8 +88,8 @@ Cost: spend line before every generation (ce-core section 0). Many takes, keep t
 FINAL gate (BUILD only): show contact sheet and clips.
 
 ## Phase 6: Finish and deliver (BUILD only)
-- Encode per TOOLS.md. Web loops with poster frame; consider WebM.
-- Captions (subtitles skill) only where speech exists; burned callouts come from code.
+- Encode per ce-core section 14. Web loops with poster frame; consider WebM.
+- Captions (video-montage workflow or code) only where speech exists; burned callouts come from code.
 - End card with real logo and CTA. Name: [brand]_[product]_[type]_[len]_[ratio]_v[n].
 - Deliver: finals per ratio, clean masters, source project (editable), storyboard, audit table, cost report.
 - Save approved styles to the bible's MOTION LIBRARY (section 13). Update the bible and corrections log (ce-00 Step 6). Propagate corrections.

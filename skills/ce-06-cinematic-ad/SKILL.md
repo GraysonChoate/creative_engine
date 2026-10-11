@@ -6,11 +6,12 @@ description: "Universal master workflow for a cinematic or movie-style ad for an
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-06 CINEMATIC AD (MOVIE-STYLE COMMERCIAL)
+Version 2.2 (2026-10-11).
 
 Run this for a story-driven ad of 30-90s: a concept, characters, locations, 8-14 scenes, a payoff, a pack shot.
 Short loops and kinetic graphics? Use ce-03. Talking creator clips? Use ce-02.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL], [IDEA].
-Mode, always-on rules, world rules, DIRECTOR PASS + VISION, lock-first, frame check, fix order, shared failures, contingencies, library: see ce-core (sections 1-11). The VISION approval is always on, in EXPLORE and BUILD. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
+Mode, always-on rules, world rules, DIRECTOR PASS + VISION, lock-first, frame check, fix order, shared failures, contingencies, library: see ce-core (sections 1-11). The VISION approval is always on, in EXPLORE and BUILD. Which model: ce-core section 1. Roles, prices, specs: ce-core section 14.
 Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Director vocabulary and worked example: docs/DIRECTOR-PASS.md.
 
 Core method (Higgsfield Academy, "Make a Cinematic Ad End-to-End"): ASSETS -> PROMPTING FRAMEWORK -> SCENES -> EDIT. Iteration is the skill: the final film is the best few seconds cut from many takes.
@@ -49,7 +50,7 @@ PLAN gate (BUILD only): bible loaded, assets in hand, people/consent decided.
 PLAN gate (always): user approves the vision. In BUILD also the premise and scene table.
 
 ## PHASE 2: ELEMENTS AND REFERENCES (ASSET LOCK, Step 1)
-Only after the vision is approved. Make each asset once, lock it, reuse everywhere. Show the locked set to the user. Generate in batches (cheap; TOOLS.md), pick the best.
+Only after the vision is approved. Make each asset once, lock it, reuse everywhere. Show the locked set to the user. Generate in batches (cheap; ce-core section 14), pick the best.
 | Asset | Tool | Note |
 |---|---|---|
 | Product sheet (front/back/top or 3/4) | board model from the real packshot | Real label stays; used as reference in every product shot |
@@ -72,27 +73,27 @@ ASSETS gate (always): user approves the locked set. In BUILD also brand-checked 
 - Reference role labels: say what each reference is for ("image 1 = hero identity, image 2 = location, image 3 = pack label").
 - Output: named prompts (1a, 1b, 2a...), each short: action beats + camera note + @names. Choreography by name (stepover, dolly-in, whip pan). Physical anchors ("boots on asphalt", "can lands in right palm").
 - Reuse rule: build hard scenes once (e.g. the physics-heavy one), then extend that prompt for later scenes instead of starting over.
-- Audio: drafts and portfolio: write SFX and music into the prompt (soundscape + music lines, with times and BPM); it syncs to the action for free on most models (Kling adds 1.25-5 credits per 5 s clip). Client finals: layer sound in the edit so one sound can be fixed without regenerating. Judge the picture first; fix sound only on videos you keep.
+- Audio: drafts and portfolio: write SFX and music into the prompt (soundscape + music lines, with times and BPM); it syncs to the action for free on most models (Kling charges extra: ce-core section 14). Client finals: layer sound in the edit so one sound can be fixed without regenerating. Judge the picture first; fix sound only on videos you keep.
 - Frame check (ce-core FRAME CHECK) on the storyboard stills before any video. Fix, then show.
 LOOK gate (BUILD only): user approves the style header and shot list.
 
 ## PHASE 4: SCENES (Step 3)
-- Model: video model via Higgsfield generate_video / generate_video_batch (TOOLS.md). 9:16 for vertical, 16:9 for master. Use locked images as references (omni_reference). Quote first; test at lower res where possible.
+- Model: video model via Higgsfield generate_video / generate_video_batch (ce-core section 14). 9:16 for vertical, 16:9 for master. Use locked images as references (omni_reference). Quote first; test at lower res where possible.
 - Order: most important scenes first (the hook, the transformation, the payoff, the pack shot). If those fail, the film fails.
 - Batches: 3-4 takes per scene. Check every take (first/mid/last frame; in EXPLORE by eye): face stable, label intact, hands correct, product on surface, direction of motion right.
 - Failure loop: describe what is wrong as a director ("he runs forward, natural smile, eyes stay the same"). Claude applies the fix order (ce-core FIX ORDER). Max 4 rounds per scene, then change the shot design.
 - Trim the first and last half-second of every clip before cutting.
 - Reuse leftovers: unused good moments from one scene can fill another.
 - Pack shot (last, must be perfect): product enters (drop, reveal, push-in), light matches scene 1, camera moves (dolly-in / slow pullback). Brand name and tagline added in post from the real logo file, not generated. Optional logo sting: ce-03 Route D.
-- Optional: upscale_video, only after the whole cut is approved, quoted first.
+- Optional: upscale_video (ce-core section 1 rule).
 FINAL gate (BUILD only): every scene has a selected take that passes frozen-frame QA.
 
 ## PHASE 5: EDIT + SOUND
-- Assemble: Higgsedit (video-editing workflow, JSX), After Effects (the After Effects layer and docs/AE-route.md, needs a session linked to the user's computer), or ffmpeg/DaVinci/CapCut. Cut best seconds, not whole takes. Match cuts on motion. Keep hook under 3s.
-- Titles, pack-shot type, logo reveal, grade and finish: After Effects layer when available.
+- Assemble: Higgsedit (video-editing workflow, JSX), After Effects (ce-core FINISH LAYER, docs/AE-route.md), or ffmpeg/DaVinci/CapCut. Cut best seconds, not whole takes. Match cuts on motion. Keep hook under 3s.
+- Titles, pack-shot type, logo reveal, grade and finish: After Effects (ce-core FINISH LAYER).
 - Cleanup first (remove stray text, objects, glitches), then one grade across all scenes. Re-light mismatches (relight_image on stills before regenerating is cheaper than fixing in post).
 - Sound: licensed music or generated (generate_audio), VO (voice tools, with consent for any cloned voice), SFX layers. Mix: dialogue first, music -14 LUFS integrated, true peak under -1 dB.
-- Titles and logo from real files. Captions/subtitles (subtitles workflow) for sound-off.
+- Titles and logo from real files. Captions for sound-off (video-montage workflow or code).
 - Cutdowns: 30s, 15s, 6s, plus 9:16 and 1:1 (reframe, or re-cut). Ad Multiplier for variants.
 
 ## PHASE 6: AUDIT (BUILD only; separate agent, not the maker; in EXPLORE judge by eye)
@@ -107,7 +108,7 @@ Critic loop (gauntlet-loop, 2+ rounds, max 2 fix loops):
 FAIL = fix and re-run. Never ship on a fail.
 
 ## PHASE 7: DELIVERY (BUILD only)
-- Masters per TOOLS.md encode defaults (24fps for film look); ProRes on request. Posters/stills for thumbnails.
+- Masters per ce-core section 14 encode defaults (24fps for film look); ProRes on request. Posters/stills for thumbnails.
 - Hand over: final cut + cutdowns, subtitle files (SRT), still frames, shot list and style header (so it can be re-made), asset sheets, music/rights note, cost report (credits by step).
 - Save to memory: locked assets, style header, approved story, corrections.
 - Next-step offers: scale cutdowns (ce-03/ce-02), put the film on the homepage hero (ce-04).

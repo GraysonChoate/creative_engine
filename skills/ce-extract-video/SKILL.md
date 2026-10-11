@@ -1,11 +1,12 @@
 ---
 name: "ce-extract-video"
-description: "Use when the user supplies a YouTube video folder (transcript, recordings, prompts) to mine techniques for the Creative Engine and After Effects layer."
+description: "Use when the user supplies a YouTube video folder (transcript, recordings, prompts) to mine techniques for the Creative Engine and its After Effects route."
 ---
 
 > Load ce-core first. Keep answers short and in plain words. Build nothing until the user approves.
 
 # CE-EXTRACT-VIDEO: same steps for every video
+Version 2.2 (2026-10-11).
 
 One folder = one video. Never describe a video from frames alone. Never claim to hear audio.
 
@@ -25,6 +26,6 @@ Speech comes from the transcript. If a clip has audio and no transcript, try to 
 ## Rules
 - Transcript first, frames second.
 - Never overwrite the user's original files.
-- Additions to the After Effects layer are proposed at a gate, never built unasked.
+- Additions to the After Effects route (docs/AE-route.md) are proposed at a gate, never built unasked.
 - Pinned ideas (for example the sound-effects layer) stay pinned until the user asks.
 - Update the notes if a mistake is found; say what changed.

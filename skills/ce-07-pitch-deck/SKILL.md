@@ -6,6 +6,7 @@ description: "Build a creative pitch or concept deck from Creative Engine output
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-07 PITCH DECK (creative concept deck)
+Version 2.2 (2026-10-11).
 
 Run this when the job is a deck to win ideas, inspiration and feedback. It assembles work from ce-00, ce-04/05, ce-06 and others. It does not make new films.
 Works for any project: website rebuild, campaign, film, product launch. Variables: [BRAND], [GOAL], [LENGTH: set by me], [DIRECTIONS: how many looks to show].

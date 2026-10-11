@@ -6,11 +6,12 @@ description: "Universal master workflow for building or rebuilding a brand's hom
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-04 HOMEPAGE BUILD
+Version 2.2 (2026-10-11).
 
 Run this when the job is ONE page: the homepage (hero, motion, sections, conversion flow). For a whole site, use ce-05.
 Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
-Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
-Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Hero motion, type reveals, loops and frame sequences built in After Effects: the After Effects layer.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles, prices, specs: ce-core section 14.
+Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Hero motion, type reveals, loops and frame sequences built in After Effects: ce-core FINISH LAYER, docs/AE-route.md.
 
 ## INPUTS (ask once, in plain words, only what is missing)
 - BRAND: URL or brand bible (from ce-00).
@@ -26,7 +27,6 @@ Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Hero motion, type reve
 3. Slow, deliberate motion. No bobbing. Motion either shows the product or opens information.
 4. Storyboard first: boards -> prototype -> production. Never jump to a finished page.
 5. Never use git/deploy jargon with the user.
-6. Do not claim Figma, GitHub, Vercel or Shopify connectors exist until a call succeeds; fall back (screenshots, public products.json, file output).
 
 ## PHASE 0: HARNESS
 - Load the brand bible from ce-00. If none exists, run ce-00 first (EXPLORE: light intake only). Do not rebuild it here.
@@ -47,7 +47,7 @@ PLAN gate (BUILD only): user approves concept, section plan and CTA inventory.
 
 ## PHASE 2: DESIGN BOARDS
 - One board image per section, desktop + phone, in the locked palette and type.
-- Tools: board models (TOOLS.md) for mood and layout; real pack images as references or composited in. Or Canva (generate-design, resize-design) for layout boards.
+- Tools: board models (ce-core section 14) for mood and layout; real pack images as references or composited in. Or Canva (generate-design, resize-design) for layout boards.
 - Produce the tier(s) asked for. Same inputs, three looks:
   - TAME: clean, fast, static + light reveals. Safe default for BUILD.
   - NEW DIRECTION: new layout and imagery, moderate motion, same brand rules.

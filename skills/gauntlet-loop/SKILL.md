@@ -4,6 +4,7 @@ description: "Use when producing client-facing visual output (websites, sales de
 ---
 
 # Gauntlet Loop (Design Critic Loop)
+Version 2.2 (2026-10-11).
 
 Source: Jack Roberts' "AI Automation Vault" — the most-repeated technique in his course. Core premise: **the model that built something cannot grade its own homework.** A fresh-context critic judging the *rendered output* (a screenshot/frame), not the underlying code, catches what the builder is blind to. This is the anti-AI-slop mechanism.
 

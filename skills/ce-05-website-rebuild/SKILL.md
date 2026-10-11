@@ -6,11 +6,12 @@ description: "Universal master workflow for rebuilding a brand's full website: a
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
 
 # CE-05 FULL WEBSITE REBUILD
+Version 2.2 (2026-10-11).
 
 Run this when the job is the WHOLE site (audit -> design -> code -> QA -> handoff). Homepage only? Use ce-04. This skill reuses ce-04 for the homepage step.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
-Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles and prices: ce-core/TOOLS.md.
-Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Page motion built in After Effects (loops, Lottie, frame sequences): the After Effects layer.
+Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles, prices, specs: ce-core section 14.
+Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Page motion built in After Effects (loops, Lottie, frame sequences): ce-core FINISH LAYER, docs/AE-route.md.
 
 ## INPUTS (ask once, only what is missing)
 - SITE: current URL (or none for a new site).
@@ -28,7 +29,6 @@ Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Page motion built in A
 4. Prototype before production. One stage at a time, review each.
 5. No git/deploy jargon with the user.
 6. Do not collect or enter credentials. User signs in; Claude never types passwords.
-7. Do not claim a connector exists until a call succeeds. Fallback: screenshots, public feeds (products.json, sitemap.xml), file output.
 
 ## PHASE 0: HARNESS + SITE AUDIT
 - Brand bible: load the ce-00 bible. If none exists, run ce-00 first (EXPLORE: light intake only). Do not rebuild it here.
@@ -52,9 +52,9 @@ PLAN gate (BUILD only): sitemap, flows, redirect map approved.
 ## PHASE 2: DESIGN SYSTEM
 - Tokens: color, type scale, spacing, radius, shadow, motion (3 motion words, durations, easing; from bible section 13).
 - Components: nav, hero, product card, grid, accordion, review block, form, footer, buttons, badges.
-- Boards: one per page TEMPLATE (not every page), desktop + phone. Tools: board models (TOOLS.md) with real packs as references or composited, or Canva generate-design.
+- Boards: one per page TEMPLATE (not every page), desktop + phone. Tools: board models (ce-core section 14) with real packs as references or composited, or Canva generate-design.
 - Three tiers from same inputs: TAME (clean, fast), NEW DIRECTION (new layout/imagery), SPECTACULAR (scroll film/3D/shaders; any page or section the user picks).
-- Spectacular assets follow the core asset-request format: loop first frame = last frame; one timed world per scroll section; occlusion transitions between sections; frame-sequence or short video export; in BUILD, mobile weight limits stated up front.
+- Spectacular assets follow the ce-04 scroll-film asset request: loop first frame = last frame; one timed world per scroll section; occlusion transitions between sections; frame-sequence or short video export; in BUILD, mobile weight limits stated up front.
 LOOK gate (BUILD only): user picks tier per page, approves tokens + boards. Lock them.
 
 ## PHASE 3: HOMEPAGE
