@@ -1,6 +1,6 @@
 ---
 name: ce-08-explainer
-description: "Make a narrated explainer video end to end with Higgsfield: topic, fact-checked script, locked style key, clips, documentary voiceover, one MP4. Use for explainer, Vox-style, faceless, documentary, data story, data story."
+description: "Make a narrated explainer video end to end with Higgsfield: topic, fact-checked script, locked style key, clips, documentary voiceover, one MP4. Use for explainer, Vox-style, faceless, documentary, data story."
 ---
 
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
