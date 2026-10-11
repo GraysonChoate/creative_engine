@@ -8,7 +8,7 @@ Raw transcripts, frame sheets and full prompt pages stay on the Mac (Creative En
 | Cinematic ads, motion graphics, Higgsfield prompt anatomy, sound in prompts, hyper-motion, 3D real estate, explainers | adil/Fable-Higgsfield-notes.md | Adil (video, ads, After Effects) |
 | After Effects + Astra, 7 workflows (localization, 9:16 resize, tracking) | adil/Adil-prompts-all-7.md (full prompts, large: open only the one you need), adil/Different-Language-notes.md, adil/AE-plugin-research.md | Adil |
 | How After Effects is installed and driven on the Mac (local MCP) | ../docs/AE-route.md | Adil |
-| Social defaults: natural AI creator, organic edit, expensive look, overlays, motion graphics, conflict picks | social-motion.md | All sources + Oct 2026 research (ce-02) |
+| Social defaults: script (what the creator says), natural AI creator, organic edit, expensive look, overlays, motion graphics, conflict picks | social-motion.md | All sources + Oct 2026 research (ce-02) |
 | Social video recipes: creator edits, captions, hooks, cut maps, realism, localization, 9:16 resize | adil/social.md | Adil + source videos (ce-02) |
 | Live carousels: beat/bar grid, layers, HyperFrames, ACE-Step | jad-carousel.md | Jad M.H (ce-02 carousel mode) |
 | Website interactive components in code, code overlays on footage | jack-roberts.md | Jack Roberts (web only: ce-04, ce-05) |

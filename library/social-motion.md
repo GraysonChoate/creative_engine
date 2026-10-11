@@ -1,15 +1,15 @@
 # Social motion: look human, look expensive, move with purpose
 Defaults for ce-02, with source tags. ce-02 HARD RULES always win. Open only the section the job needs.
 Evidence: [S] official doc or study · [M] several practitioners agree · [W] one source or editor habit. Untested by us unless marked.
-Sources: CE Google Doc (17 film breakdowns), Mac folders (Adil, Zubair, Jack Roberts, Random AI, Chase AI, Jad M.H), Oct 11 2026 research report "Natural AI UGC avatars".
+Sources: CE Google Doc (17 film breakdowns), Mac folders (Adil, Zubair, Jack Roberts, Random AI, Chase AI, Jad M.H), Oct 11 2026 research report "Natural AI UGC avatars", Oct 11 2026 script research (section 7).
 
 ## 1. Natural AI creator (talking head)
+What they say: section 7.
+
 | Area | Default | Why / flip |
 |---|---|---|
 | Motion | Ask for natural head and brow movement; one glance off-camera, then back to the lens, per shot | Head motion is the top driver of "looks real" (ρ 0.76); lip-sync accuracy barely counted [S] |
 | Clip | Generate 6-10 s (hooks 5-8 s). AI face on screen 2-4 s per shot. Lip-synced line under 8 s | Sync and identity drift after 8-10 s [M] |
-| Lines | 1-2 lines of 5-10 words per shot. Speech ~150 wpm (~25 words per 10 s) | Native-audio models hold short lines [M] |
-| Script | Spoken, not written: contractions, fragments, one honest opener ("Okay, I wasn't gonna post this, but..."), one concrete number. No three-part lists, no ad words | Written copy is the first tell [W] |
 | Voice | A human acts the line on a phone, then voice_change onto the locked voice. Clone sample 1-2 min, dry, at ad energy. Never stock TTS for a creator | Clones judged human 58% vs real 62%; stock TTS 41% [S] |
 | Delivery | Motion follows the audio: flat read = flat face. Write tone and pauses into the prompt ("with a half-smile", "brief pause, then"). Keep breaths | [M] |
 | Lock | One creator image (best of ~8) or a Soul ID (20-80 photos), one voice, reused on every clip. Describe clothes, never the face | Face and voice drift between clips is a top tell [M] |
@@ -66,5 +66,46 @@ Route: type, data, carousels, loops = code (HyperFrames, Remotion; ce-03 route C
 ## 6. Tools (license)
 HyperFrames (Apache 2.0; skills /motion-graphics, /embedded-captions, /talking-head-recut, /music-to-video) · Remotion · Whisper (word timestamps for cuts and captions) · ACE-Step (MIT, local music by BPM) · motion-video-kit (MIT: loudness, frozen-frame, contact-sheet scripts) · SlopMonster (MIT, AI-copy check). Read third-party skills before running.
 
+## 7. Script (what the creator says)
+A loose arc, not a template. Sources: Kallaway (hooks), Hormozi (hook, retain, reward), Schwartz (awareness), Barry Hott, Savannah Sanchez, Dara Denney, Motion, TikTok. [M] unless marked.
+
+| Beat | Job | Example (placeholder, host voice; first person only for a real person) |
+|---|---|---|
+| Hook (0-3 s) | Name the topic, then surprise | "Every January the gym is packed. But by March..." |
+| Lean in | Their real, specific pain or wish, said their way | "...half of them are gone." |
+| Turn | "But..." What changed, or the surprise | "The ones who stay do one thing differently." |
+| Show | The product does one thing on screen, one concrete detail | "Watch: every rep, counted right here." |
+| Reward | Pays off what the hook promised, or more | "That's it. They can see they showed up." |
+| Close | Paid: one next step. Organic: none, back on the speaker | |
+
+Short content can do all six in 2-3 lines. The reward must pay off the hook, or the hook is a lie.
+
+Hook builder (Kallaway): 1 topic + a reason to care; 2 one surprising line, often starting "but"; 3 snap the other way, still on topic. Short sentences first. Value inside ~4 s. Angles: friction/confession ("Okay, I wasn't gonna post this, but..."), problem-first, claim-stack, contrast, mechanism, routine, offer.
+
+Awareness picks the angle (Schwartz). Default: unaware or problem-aware (scales best, per Denney).
+
+| Viewer | Open with |
+|---|---|
+| Unaware | a moment they know |
+| Problem-aware | the problem, in their words |
+| Solution-aware | why other fixes fail |
+| Product-aware | a demo, or the main doubt answered |
+| Most aware | the offer |
+
+When the product shows: organic = product at 40-60%, the story survives with it deleted, no hard CTA. Paid = product right after the problem, one CTA, disclosure. One paid script can serve cold and warm viewers (Hott).
+
+Say it like a person:
+- Spoken, not written: contractions, fragments, one concrete number (approved claims only). No three-part lists, no ad words. Written copy is the first tell. [W]
+- Clear over clever. Assume they don't know or care about the brand. (Hott)
+- 1-2 lines of 5-10 words per shot; native-audio models hold short lines. Speech runs ~150 wpm; ce-02's word counts sit below that on purpose, to leave room for pauses.
+- Energy is half the script: write tone and pauses into the line. "Be interesting to listen to." (Sanchez)
+
+Check before any credits (all five must pass):
+1. Can you say the post in one sentence?
+2. Does the reward pay off the hook?
+3. Clear, not clever?
+4. One concrete detail, with its source?
+5. Read aloud: does it sound like a person?
+
 ## Not verified
-Seedance 2.5 specifics (sources tested 2.0). One guide says Seedance's API blocks human face references: test on Higgsfield. Most numbers come from vendors selling AI UGC tools. Nothing here has been tested by us.
+Seedance 2.5 specifics (sources tested 2.0). One guide says Seedance's API blocks human face references: test on Higgsfield. Most numbers come from vendors selling AI UGC tools. Section 7 books (Schwartz, Hormozi) not re-read; their frameworks are well known. Nothing here has been tested by us.
