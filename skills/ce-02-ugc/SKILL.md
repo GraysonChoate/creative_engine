@@ -37,7 +37,7 @@ REAL PERSON (owner, client, ambassador): first list what exists (show_characters
 
 ## Plan and lock
 - Load the ce-00 bible and assets (run ce-00 first if none). Competitor hooks come from the ce-00 brief; Apify only if thin, with NAMED accounts.
-- Hook angles (friction/confession, problem-first, claim-stack, contrast, mechanism, routine, offer) > CONCEPT MATRIX, default 3 rows ("3 reels" = 3 concepts): hook x mode x length x creator, each with its claim source. TAME clean demo | NEW DIRECTION scenario story | SPECTACULAR impossible shots with the real pack intact (EXPLORE default). PLAN gate (BUILD).
+- Hook angles (friction/confession, problem-first, claim-stack, contrast, mechanism, routine, offer) > CONCEPT MATRIX, one row per post asked for (1, 3, 10: any count; no number given = offer 3): hook x mode x length x creator, each with its claim source. TAME clean demo | NEW DIRECTION scenario story | SPECTACULAR impossible shots with the real pack intact (EXPLORE default). PLAN gate (BUILD).
 - Lock before any generation: real packshot + logo + use mechanic; ONE creator (a real person's Soul ID or photos from the client's own site or social, or one generated adult), same reference every clip, one face per sheet, never re-describe the face; location, wardrobe, voice. ASSETS gate (BUILD).
 - Script: 10 s = 12-20 words, 12 s = 20-28, 15 s = 28-35. Save to a file; every claim maps to a source. LOOK gate (BUILD).
 
