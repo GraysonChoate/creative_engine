@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6 (2026-10-12)
+- ce-core section 8: SEE IT (view every output by any route; six-step order, tested 2026-10-12) and APPROVED FILE (checks and prompts read the saved outline, never memory; old drafts marked SUPERSEDED). Frame check now compares to the approved shot table. Section 14: viewing row; Whisper not a fallback. Rule 3.1: a redo over the quote needs a re-quote.
+- ce-02: continuity table checks against the approved shot table. gauntlet-loop: critics must see the frames. From the Liv Body UGC builder.
+
 ## 2.5 (2026-10-12)
 - New ce-09-research: trend brief from the best mid-size creators (ranked by plays vs followers), their dialogue, shots and audio, cached 7 days. Run after ce-00 for social, ad, motion, film and site jobs.
 - ce-02: draft ladder (480p drafts, riskiest shot first, last-frame chaining), continuity table, step gates, two output files. Adapted from the Liv Body UGC builder process.

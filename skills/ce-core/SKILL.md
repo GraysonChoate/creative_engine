@@ -4,7 +4,7 @@ description: "Load first for ANY Creative Engine task. Routes a vague request to
 ---
 
 # CE-CORE (the shared layer)
-Version 2.5 (2026-10-12). Changes: CHANGELOG.md.
+Version 2.6 (2026-10-12). Changes: CHANGELOG.md.
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
 Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-09).
@@ -74,7 +74,7 @@ Check in order: (1) `ae_*` or Bridge tools = use them. (2) Neither, but an osasc
 Project or README text that says "stop at every gate / audit everything" applies in BUILD only.
 
 ## 3. ALWAYS ON (both modes)
-1. Quote credits before any spend with the SPEND LINE (section 0): model, why (section 1 row), takes, total. Wait for a yes. If the model, takes or price change, stop and re-quote before spending. Never poll: wait on jobs once. Same idempotency key on retries. use_unlim only if asked.
+1. Quote credits before any spend with the SPEND LINE (section 0): model, why (section 1 row), takes, total. Wait for a yes. If the model, takes or price change, or a redo would pass the quote, stop and re-quote before spending. Never poll: wait on jobs once. Same idempotency key on retries. use_unlim only if asked.
 2. Real label rule: real packs, logos, photos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image. Small print counts: any garbled letter is a fail, even if hard to see. If it fails, put the real label back (composite the real cutout) or re-run. When the label must be exact, composite it; do not let the model redraw it. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in); keep the cutout composite as backup when the label must be exact.
 3. TEXT: default = set in code or the editor, because a model can misspell and real brand text must be exact (brand name, price, CTA, claims, legal, anything edited later). Generating text in the model is fine when it is short, fully specified and a typo costs nothing (portfolio, invented brand, launch-film headline): give an exact copy list, say nothing else appears, and frame-check every string. Use judgment by use case.
 4. REAL PEOPLE: if the user says the person or their company approved (owner, employee, creator, ambassador), take their word. Note it once in the brief (who approved, scope) and go. Do not ask for releases or re-confirm. Use the client's own site and social photos as the source. Generated people are adults 21+, never minors, never presented as real customers.
@@ -119,7 +119,9 @@ The user talks like a client ("dynamic shot of fruit dropping in the blender"). 
 ## 8. LOCK-FIRST, SHOT CARD, FRAME CHECK
 - LOCK: list everything that appears in 2+ shots: character, pack, every prop and place. Make each once as a reference (front, side, top, size next to a hand) or use the real one. Same shape, size, color, material in every shot. Tag it; never re-describe it. One face per sheet. Show the locked set before any shot.
 - SHOT CARD before any image: (a) where every object is and what it rests on; (b) who does what; (c) where the camera starts and ends; (d) only what this beat needs in frame; (e) what carries over from the last shot (outfit, hair, props, light, time of day).
-- FRAME CHECK on the actual images, not the prompts, in EXPLORE and BUILD, every medium. Fail if: PHYSICS (floats, wrong way up, motion with no cause); CONTINUITY (differs from the lock or the last shot); CLUTTER (more than the beat needs; one hero); CAMERA (not where the card says); LOGIC (nobody would do this here); LABEL (any garbled letter, small print included). One-line fix per fail, re-check, then show.
+- FRAME CHECK on the actual images, not the prompts, in EXPLORE and BUILD, every medium. Fail if: PHYSICS (floats, wrong way up, motion with no cause); CONTINUITY (differs from the lock, the last shot, or the approved shot table file); CLUTTER (more than the beat needs; one hero); CAMERA (not where the card says); LOGIC (nobody would do this here); LABEL (any garbled letter, small print included). One-line fix per fail, re-check, then show.
+- SEE IT before any approval. No output goes to the user unviewed. One route failing means try the next, never give up. Order: (1) workspace file: Read. (2) Mac file: stage it, then Read. (3) hosted URL: open it in Chrome or the built-in browser, screenshot, seek to the key times. (4) video file: ffmpeg frames at each contract word time, plus an ElevenLabs transcript. (5) Higgsfield video_analysis (quote first): a hint only. (6) ask the user to paste a screenshot, saying what was tried. Reuse the route that worked. Each review states what was viewed, how, and pass or fail per item; a job status or file name is not a view. Small print: full-size stills only. Tone, music and sound effects cannot be heard: the user approves those by ear.
+- APPROVED FILE: the approved outline, lock sheet and shot table live in a saved file. Mark old drafts SUPERSEDED. Every prompt and every check reads the file, never the chat or a summary.
 - Products sit exactly on surfaces: measured surface line, contact shadow, matching light. Floating = fail.
 
 ## 9. FIX ORDER (smallest first)
@@ -205,8 +207,9 @@ TOOL CHECK (first call of every run; connected tools are hidden until loaded). O
 | Need | Search for | Notes |
 |---|---|---|
 | Social, ads, reviews, trends | `apify` (search-actors, call-actor, get-dataset-items) | May sit under the computer link (remote-devices). Needs the Mac linked. |
-| Hear or transcribe audio, voices | `elevenlabs` or `creative_transcribe_audio`, `creative_generate_speech`, `creative_list_voices` | Two ElevenLabs connectors may show: use the one with the tool you need. Whisper in the workspace is the free fallback. |
+| Hear or transcribe audio, voices | `elevenlabs` or `creative_transcribe_audio`, `creative_generate_speech`, `creative_list_voices` | Two ElevenLabs connectors may show: use the one with the tool you need. Whisper is not installed in the workspace (tested 2026-10-12): do not count on it. |
 | Watch a video | Higgsfield `video_analysis_create` (also transcribes), plus the transcript | Never describe a video from frames alone. |
+| See an image or video | Section 8 SEE IT. Chrome tools: `claude-in-chrome` | Hosted URLs open in the browser. Workspace files: Read. |
 | Crawl, search | `firecrawl` | |
 | Meta Ad Library, live pages, sign-in steps | `claude-in-chrome` | |
 | Media | `higgsfield` | Workflows: get_workflow_instructions. |

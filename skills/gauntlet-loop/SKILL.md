@@ -4,7 +4,7 @@ description: "Use when producing client-facing visual output (websites, sales de
 ---
 
 # Gauntlet Loop (Design Critic Loop)
-Version 2.2 (2026-10-11).
+Version 2.6 (2026-10-12).
 
 Source: Jack Roberts' "AI Automation Vault" — the most-repeated technique in his course. Core premise: **the model that built something cannot grade its own homework.** A fresh-context critic judging the *rendered output* (a screenshot/frame), not the underlying code, catches what the builder is blind to. This is the anti-AI-slop mechanism.
 
@@ -32,6 +32,7 @@ Don't start from a bare prompt. Pull in:
    - **System critic** — does this obey the design system? Consistent type scale, color tokens, spacing rules, component reuse?
    - **Craft critic** — is this well-made on its own terms? Named anti-slop tells to watch for: violet/purple gradients, Inter-for-everything, three-or-six identical cards, frosted glass, default-rounded sections, generic "seamless/innovative/elevate" copy, bounce-on-every-hover.
    
+   A critic must actually see the rendered frames (ce-core section 8 SEE IT). One that cannot says so and fails the round; it never critiques from text.
    Each critic gives a pass/fail plus specific, actionable fixes — not vague praise or vague criticism.
 
 **6. Revise** — address every fail from every critic. Don't cherry-pick.
