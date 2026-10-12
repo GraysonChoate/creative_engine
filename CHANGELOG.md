@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.5 (2026-10-12)
+- New ce-09-research: trend brief from the best mid-size creators (ranked by plays vs followers), their dialogue, shots and audio, cached 7 days. Run after ce-00 for social, ad, motion, film and site jobs.
+- ce-02: draft ladder (480p drafts, riskiest shot first, last-frame chaining), continuity table, step gates, two output files. Adapted from the Liv Body UGC builder process.
+- ce-core: route step 2 (research), draft rule in section 1, library index row.
+
 ## 2.4 (2026-10-12)
 - ce-core: TOOL CHECK (section 0 step 0, section 14). Connected tools are hidden until loaded; one ToolSearch first, one report line, never "missing" before it. Rule 3.8 and a contingency row added.
 - Stub (section 13) and all skill stubs carry the same one-clause tool rule.
