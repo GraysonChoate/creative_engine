@@ -15,7 +15,7 @@ What they say: section 7.
 | Lock | One creator image (best of ~8) or a Soul ID (20-80 photos), one voice, reused on every clip. Describe clothes, never the face | Face and voice drift between clips is a top tell [M] |
 | Prompt add-on | "phone front camera selfie framing, slight handheld micro-movement, ambient room tone, single take, exactly two arms, five fingers per hand" | Vendor template [W]. Positive words only; models misread "not" |
 | Set | Ordinary lived-in room, one light direction, slightly soft, real skin texture | Studio-perfect sets and waxy skin read AI [M] |
-| Product | Simple beats: look down at it, turn it to the lens, hold it closer for the CTA. Real product photo as reference; check label at 100% | Hands and labels fail most [M] |
+| Product | Simple beats when they fit the setting: look down at it, turn it to the lens, hold it closer for the CTA. Real product photo as reference; check label at 100% | Hands and labels fail most [M] |
 | Takes | 2+ per prompt; budget 30-40% redos at first, 10-15% once a template works | [W] |
 | Persona (series) | Short bible: niche, 3 opinions, energy level, humor, 2-3 verbal tics, 2-3 outfits, 2 home locations. Demos and reacts, never claims results | [S] for no-claims (FTC); rest inference |
 
