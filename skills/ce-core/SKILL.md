@@ -4,7 +4,7 @@ description: "Load first for ANY Creative Engine task. Routes a vague request to
 ---
 
 # CE-CORE (the shared layer)
-Version 2.7 (2026-10-12). Changes: CHANGELOG.md.
+Version 2.8 (2026-10-12). Changes: CHANGELOG.md.
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
 Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-09).
@@ -16,7 +16,7 @@ Which model for which need: section 1. Roles, prices, workflow names, specs: sec
 2. Social, ad, motion, film or site job: after ce-00, run ce-09 research (light version if a brief under 7 days old exists). Then the use-case skill.
 2b. Brand unknown, or "scrape this site" / "look at this ad": ce-00 first (Firecrawl for the site, Meta Ad Library via Claude in Chrome, ce-extract-video for a video ad). Then the use-case skill.
 3. Ask only what is missing, one question: real pack and logo, platform and ratio, length, audio.
-4. SPEND LINE before every generation, every time: `Route: skill > step > model (section 1 row) > inputs OK > N credits. Go?` No line, no spend. A new model, take count or price is a new line.
+4. SPEND LINE before every generation, every time: `Route: skill > step > model (section 1 row) > inputs OK > N credits. Go?` No line, no spend. INPUT CHECK: "inputs OK" lists every slot by name (start frame, face refs, voice or audio ref, gesture clip, packshot, logo, font). An empty slot blocks the line. Audio is named by whose voice, never just "takes audio". A blank slot is filled by the model with an invention. A new model, take count or price is a new line.
 
 | Request sounds like | Skill | Higgsfield makes (media) | After Effects or code makes (graphics) |
 |---|---|---|---|
@@ -122,6 +122,8 @@ The user talks like a client ("dynamic shot of fruit dropping in the blender"). 
 - FRAME CHECK on the actual images, not the prompts, in EXPLORE and BUILD, every medium. Fail if: PHYSICS (floats, wrong way up, motion with no cause); CONTINUITY (differs from the lock, the last shot, or the approved shot table file); CLUTTER (more than the beat needs; one hero); CAMERA (not where the card says); LOGIC (nobody would do this here); LABEL (any garbled letter, small print included). One-line fix per fail, re-check, then show.
 - SEE IT before any approval. No output goes to the user unviewed. One route failing means try the next, never give up. Order: (1) workspace file: Read. (2) Mac file: stage it, then Read. (3) hosted URL: open it in Chrome or the built-in browser, screenshot, seek to the key times. (4) video file: ffmpeg frames at each contract word time, plus an ElevenLabs transcript. (5) Higgsfield video_analysis (quote first): a hint only. (6) ask the user to paste a screenshot, saying what was tried. Reuse the route that worked. Each review states what was viewed, how, and pass or fail per item; a job status or file name is not a view. A defect the check finds is fixed or quoted in the same reply, never only listed. Small print: full-size stills only. Tone, music and sound effects cannot be heard: the user approves those by ear.
 - POSITION TABLE (any multi-shot video, free, approved with the storyboard): for each neighbouring pair of shots, where the camera, every object, the hands and the background sit. A cut may hide a move; a continuous pair may not. Stills do not prove motion: the riskiest moving shots (falling powder, pours, a label in motion) get the 480p test first.
+- READ FIRST: each brand folder keeps a list of files that hold the recipe (lessons log, performance bible, engine feedback, voice recipe). Re-read all of them after any context reset and before any paid step.
+- VOICE TEST: a job with spoken lines runs its shortest talking shot first as a draft. The user approves the voice by ear before the full run. The agent checks the words by transcript only; it cannot judge whose voice it is.
 - APPROVED FILE: the approved outline, lock sheet and shot table live in a saved file. Mark old drafts SUPERSEDED. Every prompt and every check reads the file, never the chat or a summary.
 - Products sit exactly on surfaces: measured surface line, contact shadow, matching light. Floating = fail.
 

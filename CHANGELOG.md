@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.8 (2026-10-12)
+- ce-core: INPUT CHECK on the spend line (every slot named, empty slot blocks, audio names the voice); READ FIRST list; VOICE TEST.
+- ce-02: voice is a lock item before any video.
+- Cause: Liv Body builder ran talking shots with no voice reference; model invented a voice (30 credits).
+
 ## 2.7 (2026-10-12)
 - From the Liv Body UGC builder logs: library/social-motion.md section 8 (tested checks: voice, hands and props, likeness, label and graphics, ending, review, tooling).
 - ce-core: POSITION TABLE (neighbouring-shot check) and "defect found = fixed or quoted in the same reply" in section 8; 30% redo buffer in 3.1; credit notes corrected (Seedance 1080p was 70, live quote 120 per 10 s; draft, upscale and Kling prices); two contingency rows (face-model refused, shell upload).
