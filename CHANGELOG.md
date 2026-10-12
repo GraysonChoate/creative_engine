@@ -3,6 +3,7 @@
 ## 2.5 (2026-10-12)
 - New ce-09-research: trend brief from the best mid-size creators (ranked by plays vs followers), their dialogue, shots and audio, cached 7 days. Run after ce-00 for social, ad, motion, film and site jobs.
 - ce-02: draft ladder (480p drafts, riskiest shot first, last-frame chaining), continuity table, step gates, two output files. Adapted from the Liv Body UGC builder process.
+- ce-02 and ce-08 audits now run gauntlet-loop (BUILD). ce-08 gets an Audit step.
 - ce-core: route step 2 (research), draft rule in section 1, library index row.
 
 ## 2.4 (2026-10-12)

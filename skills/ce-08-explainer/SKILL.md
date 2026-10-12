@@ -6,7 +6,7 @@ description: "Make a narrated explainer video end to end with Higgsfield: topic,
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 # CE-08 Explainer (Vox collage or paper-diorama documentary)
-Version 2.3 (2026-10-11). Adapted from @sanjii's vox-motion-graphics skill (Higgsfield blog). Full templates: skills/ce-08-explainer/references/ (repo github.com/GraysonChoate/creative_engine).
+Version 2.5 (2026-10-12). Adapted from @sanjii's vox-motion-graphics skill (Higgsfield blog). Full templates: skills/ce-08-explainer/references/ (repo github.com/GraysonChoate/creative_engine).
 
 Mission: one request (a topic, or none) becomes one finished narrated explainer MP4. Fact-driven, one locked look, one narrator.
 Shared rules, spend line, model table, finish layer: ce-core. Story engine and voice timing: ce-core section 7.
@@ -60,6 +60,9 @@ NEGATIVE: readable text, letters, words, numbers, captions, subtitles, watermark
 - Failed or nsfw with no error text = moderation: named politicians and close-up recognizable faces fail; use anonymous mid-shot figures with censor bars. Swap flagged images (e.g. mushroom cloud), keep the idea.
 - Music: native SFX bed from the video engine, or a licensed or generated track in post (ce-core section 3.6).
 - Languages: same visuals, new voice takes in the new language, re-assemble (quote first).
+
+## Audit (BUILD only; a separate agent, never the maker. EXPLORE: frame check only)
+Every number in the script against the Sources list, then gauntlet-loop (2+ fresh-context rounds on rendered frames): looks-AI-generated, clutter, caption safe zone, voice pacing, style drift between blocks. Max 2 fix loops.
 
 ## Deliver
 The MP4, topic and angle in one line, the full script, the Sources list, credits used vs quoted. Offer, don't run: YouTube title, description and tags.
