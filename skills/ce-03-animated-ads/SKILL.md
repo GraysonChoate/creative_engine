@@ -6,7 +6,7 @@ description: "Run the full animated-ad workflow for any brand: motion strategy, 
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 # CE-03 Animated Ads
-Version 2.2 (2026-10-11).
+Version 2.3 (2026-10-12).
 
 Mission: produce animated ads (motion graphics, product loops, hyper-motion, logo animation) for [BRAND] / [PRODUCTS] on [PLATFORMS] that look intentional, keep the real product and logo exact, and read with the sound off. Quote cost before any spend. State your reading of the request in one line first.
 Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles, prices, specs: ce-core section 14.
@@ -63,7 +63,7 @@ AE flow (Route C option 3; library/adil/Adil-prompts-all-7.md, section 1): brief
 - Check the real render for clipping, detached marks, overlaps, flicker, missing footage, beat alignment.
 
 ## Phase 2: Lock the assets
-Real packshot (transparent PNG), vector logo, color and type tokens, a generated background plate with no pack in it (still image first), audio choice. Measure each surface line, scale and light direction for pack placement.
+Real packshot (transparent PNG), vector logo, color and type tokens, a generated background plate with no pack in it (still image first), audio choice (voice lines: voice and reference named, ce-core INPUT CHECK). Measure each surface line, scale and light direction for pack placement.
 ASSETS gate (BUILD only): show the locked assets and plates.
 
 ## Phase 3: Storyboard before motion

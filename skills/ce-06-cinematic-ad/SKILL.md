@@ -6,7 +6,7 @@ description: "Universal master workflow for a cinematic or movie-style ad for an
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 # CE-06 CINEMATIC AD (MOVIE-STYLE COMMERCIAL)
-Version 2.2 (2026-10-11).
+Version 2.3 (2026-10-12).
 
 Run this for a story-driven ad of 30-90s: a concept, characters, locations, 8-14 scenes, a payoff, a pack shot.
 Short loops and kinetic graphics? Use ce-03. Talking creator clips? Use ce-02.
@@ -57,6 +57,7 @@ Only after the vision is approved. Make each asset once, lock it, reuse everywhe
 | Hero character sheet | cinematic character model (real person: Soul ID from many varied photos; generated: prompt) | Layout only in prompt (full body + face close-up); one face per sheet |
 | Side characters / rival | cinematic model or AICast | Different silhouette and palette from hero |
 | Location(s) | cinematic model, anamorphic, film grain | MOST IMPORTANT image: video inherits its texture and light |
+| Voice (any speech or VO) | real clip or clone, reference, pitch, gesture clip | Locked here, before scenes. Voice test first (ce-core section 8) |
 | Props / costume / creature | Claude writes sheet prompt (front + back views); cinematic model renders | Same world, same style |
 | Layout map | schematic image (board model) | Pins spatial shots: where things stand, camera paths |
 - Character, prop and costume sheets: neutral gray background, flat shadowless light, no grain or lens look. Put the cinema look in locations and video prompts, not in sheets.
@@ -73,7 +74,7 @@ ASSETS gate (always): user approves the locked set. In BUILD also brand-checked 
 - Reference role labels: say what each reference is for ("image 1 = hero identity, image 2 = location, image 3 = pack label").
 - Output: named prompts (1a, 1b, 2a...), each short: action beats + camera note + @names. Choreography by name (stepover, dolly-in, whip pan). Physical anchors ("boots on asphalt", "can lands in right palm").
 - Reuse rule: build hard scenes once (e.g. the physics-heavy one), then extend that prompt for later scenes instead of starting over.
-- Audio: drafts and portfolio: write SFX and music into the prompt (soundscape + music lines, with times and BPM); it syncs to the action for free on most models (Kling charges extra: ce-core section 14). Client finals: layer sound in the edit so one sound can be fixed without regenerating. Judge the picture first; fix sound only on videos you keep.
+- Audio: drafts and portfolio: write SFX and music into the prompt (soundscape + music lines, with times and BPM); it syncs to the action for free on most models (Kling charges extra: ce-core section 14). Client finals: layer sound in the edit so one sound can be fixed without regenerating. Judge the picture first; fix sound only on videos you keep. Exception: spoken lines need the locked voice in the take.
 - Frame check (ce-core FRAME CHECK) on the storyboard stills before any video. Fix, then show.
 LOOK gate (BUILD only): user approves the style header and shot list.
 

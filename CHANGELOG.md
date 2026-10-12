@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.9 (2026-10-12)
+- Audit pass. ce-core: Whisper row fixed (not installed); SEE IT audio line (measure words, pace, pitch; voice identity by ear). ce-06: voice is a locked asset; spoken lines are exempt from "fix sound later". ce-03: voice named in the asset lock.
+- Held for the social branch (not edited): ce-02 "clone" vs "never a TTS clone"; ce-09 Whisper; library/social-motion.md Whisper.
+
 ## 2.8 (2026-10-12)
 - ce-core: INPUT CHECK on the spend line (every slot named, empty slot blocks, audio names the voice); READ FIRST list; VOICE TEST.
 - ce-02: voice is a lock item before any video.

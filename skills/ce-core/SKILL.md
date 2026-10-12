@@ -4,7 +4,7 @@ description: "Load first for ANY Creative Engine task. Routes a vague request to
 ---
 
 # CE-CORE (the shared layer)
-Version 2.8 (2026-10-12). Changes: CHANGELOG.md.
+Version 2.9 (2026-10-12). Changes: CHANGELOG.md.
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
 Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-09).
@@ -120,7 +120,7 @@ The user talks like a client ("dynamic shot of fruit dropping in the blender"). 
 - LOCK: list everything that appears in 2+ shots: character, pack, every prop and place. Make each once as a reference (front, side, top, size next to a hand) or use the real one. Same shape, size, color, material in every shot. Tag it; never re-describe it. One face per sheet. Show the locked set before any shot.
 - SHOT CARD before any image: (a) where every object is and what it rests on; (b) who does what; (c) where the camera starts and ends; (d) only what this beat needs in frame; (e) what carries over from the last shot (outfit, hair, props, light, time of day).
 - FRAME CHECK on the actual images, not the prompts, in EXPLORE and BUILD, every medium. Fail if: PHYSICS (floats, wrong way up, motion with no cause); CONTINUITY (differs from the lock, the last shot, or the approved shot table file); CLUTTER (more than the beat needs; one hero); CAMERA (not where the card says); LOGIC (nobody would do this here); LABEL (any garbled letter, small print included). One-line fix per fail, re-check, then show.
-- SEE IT before any approval. No output goes to the user unviewed. One route failing means try the next, never give up. Order: (1) workspace file: Read. (2) Mac file: stage it, then Read. (3) hosted URL: open it in Chrome or the built-in browser, screenshot, seek to the key times. (4) video file: ffmpeg frames at each contract word time, plus an ElevenLabs transcript. (5) Higgsfield video_analysis (quote first): a hint only. (6) ask the user to paste a screenshot, saying what was tried. Reuse the route that worked. Each review states what was viewed, how, and pass or fail per item; a job status or file name is not a view. A defect the check finds is fixed or quoted in the same reply, never only listed. Small print: full-size stills only. Tone, music and sound effects cannot be heard: the user approves those by ear.
+- SEE IT before any approval. No output goes to the user unviewed. One route failing means try the next, never give up. Order: (1) workspace file: Read. (2) Mac file: stage it, then Read. (3) hosted URL: open it in Chrome or the built-in browser, screenshot, seek to the key times. (4) video file: ffmpeg frames at each contract word time, plus an ElevenLabs transcript. (5) Higgsfield video_analysis (quote first): a hint only. (6) ask the user to paste a screenshot, saying what was tried. Reuse the route that worked. Each review states what was viewed, how, and pass or fail per item; a job status or file name is not a view. A defect the check finds is fixed or quoted in the same reply, never only listed. Small print: full-size stills only. Audio: measure what code can (words by transcript, pace, pitch, pauses). Whose voice it is, tone, music and sound effects cannot be heard: the user approves those by ear.
 - POSITION TABLE (any multi-shot video, free, approved with the storyboard): for each neighbouring pair of shots, where the camera, every object, the hands and the background sit. A cut may hide a move; a continuous pair may not. Stills do not prove motion: the riskiest moving shots (falling powder, pours, a label in motion) get the 480p test first.
 - READ FIRST: each brand folder keeps a list of files that hold the recipe (lessons log, performance bible, engine feedback, voice recipe). Re-read all of them after any context reset and before any paid step.
 - VOICE TEST: a job with spoken lines runs its shortest talking shot first as a draft. The user approves the voice by ear before the full run. The agent checks the words by transcript only; it cannot judge whose voice it is.
@@ -200,7 +200,7 @@ Prices are earlier notes, not quotes. Always get a live quote first. A model or 
 | Templated text and resize | Canva (autofill-design, resize-design, export-design) | |
 | Assemble, soundtrack, burned captions | video-montage workflow; ffmpeg concat (stream copy, hard cuts) | |
 | Native motion-graphics project | video-editing workflow (Higgsedit) | |
-| Code-built motion graphics, captions, carousels | HyperFrames or Remotion; Whisper for word timestamps | Free, exact text, frame-accurate. library/social-motion.md. |
+| Code-built motion graphics, captions, carousels | HyperFrames or Remotion; ElevenLabs transcription for word timestamps (Whisper is not installed) | Free, exact text, frame-accurate. library/social-motion.md. |
 | After Effects work | Pick by section 1 FINISH LAYER | docs/AE-route.md, library/ae-skills.md |
 | Scroll and web | GSAP + ScrollTrigger + Lenis, Three.js, GLSL, IntersectionObserver | |
 | Label composite | OpenCV (align, overlay true label, verify) | |
