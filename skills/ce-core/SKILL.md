@@ -4,13 +4,14 @@ description: "Load first for ANY Creative Engine task. Routes a vague request to
 ---
 
 # CE-CORE (the shared layer)
-Version 2.3 (2026-10-11). Changes: CHANGELOG.md.
+Version 2.4 (2026-10-12). Changes: CHANGELOG.md.
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
 Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-08).
 Which model for which need: section 1. Roles, prices, workflow names, specs: section 14. Do not hardcode them in other skills.
 
 ## 0. ROUTE THE REQUEST (first, before any tool call; say the route in one line)
+0. TOOL CHECK (section 14): one ToolSearch to load the tools this route needs. Connected tools are hidden until loaded.
 1. Name the use case from how the request sounds. If it sounds like two, name both: run the first, its output feeds the second.
 2. Brand unknown, or "scrape this site" / "look at this ad": ce-00 first (Firecrawl for the site, Meta Ad Library via Claude in Chrome, ce-extract-video for a video ad). Then the use-case skill.
 3. Ask only what is missing, one question: real pack and logo, platform and ratio, length, audio.
@@ -79,7 +80,7 @@ Project or README text that says "stop at every gate / audit everything" applies
 5. No fake reviews, testimonials, customers, ratings, results, before/afters, numbers or endorsements shown as real. Claims only from the label or the approved list. Health or supplement: no disease, cure or results language.
 6. Safety: no flashing above 3 per second (this wins; fast cuts are fine, full-frame bright/dark flashes or strobes are not). No copyrighted music. No touching a live site or DNS. No credentials entered; the user signs in.
 7. WORLD RULES (section 5) before any image or video prompt.
-8. Do not claim a connector or tool works until a call succeeds.
+8. Do not claim a connector or tool works until a call succeeds. Do not claim it is missing until the TOOL CHECK (section 14) has searched for it. Say where you looked.
 9. Short, plain language. Tables. At most one question at a time.
 10. Blocked or denied action: do not work around it. Try once more. If blocked again, tell the user: "Blocked twice. Switch to manual approval and approve this step."
 
@@ -143,7 +144,8 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 ## 11. CONTINGENCIES (pivots)
 | If | Then |
 |---|---|
-| Connector missing or call fails | Fallback: screenshots, public feeds (products.json, sitemap.xml), files. Say so. |
+| Tool not in the list | Run the TOOL CHECK (section 14) first. Still absent: say where you looked, then fallback: screenshots, public feeds (products.json, sitemap.xml), files. |
+| Connector call fails | Retry once, then the same fallbacks. Say so. |
 | Model blocked by moderation | Retry once on the lighter model. Else keep the raw board and flag it. |
 | Model name fails or retired | models_explore(action:'recommend'), update section 1 or 14, continue. |
 | Need not in section 1 | models_explore(action:'recommend') with the need in words, before any spend. Add the row to section 1. |
@@ -168,7 +170,7 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Creator findings (video, ads, web, AE plugin) | library/README.md (index; open one page only) |
 
 ## 13. STUB (paste this at the top of every ce skill, so rules hold even if CORE is not loaded)
-> Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 ## 14. TOOLS (roles, workflows, credits, specs). Update here only; skills name roles.
 Prices are earlier notes, not quotes. Always get a live quote first. A model or workflow name fails: models_explore(action:'recommend') or get_workflow_instructions (no argument), then fix this section.
@@ -196,6 +198,17 @@ Prices are earlier notes, not quotes. Always get a live quote first. A model or 
 | Crawl and scrape | Firecrawl | |
 | Social and ad-library pulls | Apify; Meta Ad Library via Claude in Chrome | |
 | Screenshots | Claude in Chrome | |
+
+TOOL CHECK (first call of every run; connected tools are hidden until loaded). One ToolSearch, `select:` the exact names or a keyword, for what the route needs:
+| Need | Search for | Notes |
+|---|---|---|
+| Social, ads, reviews, trends | `apify` (search-actors, call-actor, get-dataset-items) | May sit under the computer link (remote-devices). Needs the Mac linked. |
+| Hear or transcribe audio, voices | `elevenlabs` or `creative_transcribe_audio`, `creative_generate_speech`, `creative_list_voices` | Two ElevenLabs connectors may show: use the one with the tool you need. Whisper in the workspace is the free fallback. |
+| Watch a video | Higgsfield `video_analysis_create` (also transcribes), plus the transcript | Never describe a video from frames alone. |
+| Crawl, search | `firecrawl` | |
+| Meta Ad Library, live pages, sign-in steps | `claude-in-chrome` | |
+| Media | `higgsfield` | Workflows: get_workflow_instructions. |
+Report once, one line: `Tools: loaded X, Y. Missing Z (searched: ...).` Never say "I can't" or "not connected" before this line exists. Missing after the search: tell the user which connector to add.
 
 Higgsfield workflows (get_workflow_instructions, checked 2026-10-11): ad-multiplier, ads-studio, brand-asset-creation, character-sheet, faceless-video, katana, narration, product-photoshoot, thumbnail-generation, ugc-video, video-editing, video-montage, website-builder-flow.
 

@@ -3,7 +3,7 @@ name: ce-08-explainer
 description: "Make a narrated explainer video end to end with Higgsfield: topic, fact-checked script, locked style key, clips, documentary voiceover, one MP4. Use for explainer, Vox-style, faceless, documentary, data story."
 ---
 
-> Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt.
+> Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 # CE-08 Explainer (Vox collage or paper-diorama documentary)
 Version 2.3 (2026-10-11). Adapted from @sanjii's vox-motion-graphics skill (Higgsfield blog). Full templates: skills/ce-08-explainer/references/ (repo github.com/GraysonChoate/creative_engine).

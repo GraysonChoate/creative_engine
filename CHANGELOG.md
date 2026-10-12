@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4 (2026-10-12)
+- ce-core: TOOL CHECK (section 0 step 0, section 14). Connected tools are hidden until loaded; one ToolSearch first, one report line, never "missing" before it. Rule 3.8 and a contingency row added.
+- Stub (section 13) and all skill stubs carry the same one-clause tool rule.
+
 ## 2.3 (2026-10-11)
 - New ce-08-explainer: narrated explainer pipeline (Vox collage or paper diorama), adapted from @sanjii's vox-motion-graphics skill. One approval covers the paid run; 1-block test before batching; unverified tool names flagged; politician-likeness routing removed.
 - ce-core: explainer route; section 7 STORY ENGINE and VOICE TIMING; aspect_ratio and preset_recommendation rules.
