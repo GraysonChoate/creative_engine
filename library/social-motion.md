@@ -11,7 +11,7 @@ What they say: section 7.
 | Motion | Ask for natural head and brow movement; one glance off-camera, then back to the lens, per shot | Head motion is the top driver of "looks real" (ρ 0.76); lip-sync accuracy barely counted [S] |
 | Clip | Generate 6-10 s (hooks 5-8 s). AI face on screen 2-4 s per shot. Lip-synced line under 8 s | Sync and identity drift after 8-10 s [M] |
 | Voice | A human acts the line on a phone, then voice_change onto the locked voice. Clone sample 1-2 min, dry, at ad energy. Never stock TTS for a creator | Clones judged human 58% vs real 62%; stock TTS 41% [S] |
-| Delivery | Motion follows the audio: flat read = flat face. Write tone and pauses into the prompt ("with a half-smile", "brief pause, then"). Keep breaths | [M] |
+| Delivery | Motion follows the audio: flat read = flat face. Write tone and pauses into the prompt ("with a half-smile", "brief pause, then"). Keep breaths inside a line; cut the gaps between lines | [M] |
 | Lock | One creator image (best of ~8) or a Soul ID (20-80 photos), one voice, reused on every clip. Describe clothes, never the face | Face and voice drift between clips is a top tell [M] |
 | Prompt add-on | "phone front camera selfie framing, slight handheld micro-movement, ambient room tone, single take, exactly two arms, five fingers per hand" | Vendor template [W]. Positive words only; models misread "not" |
 | Set | Ordinary lived-in room, one light direction, slightly soft, real skin texture | Studio-perfect sets and waxy skin read AI [M] |
@@ -95,9 +95,9 @@ Awareness picks the angle (Schwartz). Default: unaware or problem-aware (scales 
 When the product shows: organic = product at 40-60%, the story survives with it deleted, no sale CTA (a comment ask is fine). Paid = product right after the problem, one CTA, disclosure. One paid script can serve cold and warm viewers (Hott).
 
 Say it like a person:
-- Spoken, not written: contractions, fragments, one concrete number (approved claims only). No three-part lists, no ad words. Written copy is the first tell. [W]
+- Spoken, not written: contractions, fragments, one concrete number (approved claims only). No adjective triads in one sentence ("fast, clean, easy"), no ad words. Written copy is the first tell. [W]
 - Clear over clever. Assume they don't know or care about the brand. (Hott)
-- 1-2 lines of 5-10 words per shot; native-audio models hold short lines. Speech runs ~150 wpm; ce-02's word counts sit below that on purpose, to leave room for pauses.
+- 1-2 lines of 5-10 words per shot; native-audio models hold short lines. Pace bands: Speech, below.
 - Energy is half the script: write tone and pauses into the line. "Be interesting to listen to." (Sanchez)
 
 Check before any credits (all five must pass):
@@ -106,6 +106,28 @@ Check before any credits (all five must pass):
 3. Clear, not clever?
 4. One concrete detail, with its source?
 5. Read aloud: does it sound like a person?
+
+### Speech (viral fitness and wellness TikTok, Oct 2026; 12 transcripts) [W]
+Pace = words per second from the first word's start to the last word's end, from an ElevenLabs word-timestamp transcript, never by ear. Talk over B-roll counts; a planned silent beat does not.
+- PACE: voice-over, list and recipe 3.2-3.8 (median 3.4). Lip-synced talking head 2.8-3.2 (our gate: under 2.8 fails; a real person: her measured pace, Paige 3.3 [T]). Clip length = line length + 0.3 s: the model stretches a short line to fill a long clip (7 words in 4 s ran 2.35 and failed [T]).
+- GAPS: 0.3 s or less between lines; breaths inside a line stay. One placed pause (0.8-1.5 s) before the turn, or one action beat (2-6 s, the product does something, then a reaction line). Never both.
+- LINE 1: no greeting; the product or claim is named. One hook type; check who may say it:
+
+| Type | Template | Who may say it |
+|---|---|---|
+| Stop + enemy | "Stop [doing X]. [number] [fact]." | Anyone; enemy by category, fact sourced |
+| List promise | "The truth about [X]." / "Top [N]..." | Anyone ("I work at..." = real role only) |
+| Confession twist | "I started [X] for [reason]. But no one told me [surprise]." | Real person only; the surprise is on the claims list |
+| Callout | "Some of you [do X], then wonder why [result]." | Anyone; a habit or look, never a health promise |
+| Price math | "[N]% cheaper than [Y]." | Anyone; the sum is in the claim source |
+| Identity brag | "When it comes to [X], I [know it]." | Real person with a real record |
+| You asked | "You've been asking what I [do for X]." | Real person, real comments |
+
+- WORDS: a number in the first 2 lines; "you"; commands for steps; each ingredient named, one per line, shown on its word; admit one real flaw. No ad words. Fillers ("like") are never written in; a real person's own may stay.
+- LISTS: a spoken ranked list is fine (one item per line and per shot, rank on screen).
+- CLOSE: echo the hook's claim word for word, or one question, or (organic) a short jab. Paid: one CTA.
+- BODY: product or result to the lens in second 1; eyes on the lens when a face shows; hands busy. A credential prop (badge, coat) in second 1, real role only. Start frame of a talking shot: mouth closed, soft expression, eyes to the lens (a frame prompted mid-word made her open on a surprised "O") [T].
+- REGISTER: casual, the speaker's own words. Profanity only if the brand bible allows (default off).
 
 ## 8. Tested checks for talking-head and recipe posts [T]
 Source: the Liv Body UGC builder's logs (LESSONS, PLAYBOOK, ENGINE-FEEDBACK, Oct 2026). A take that fails is regenerated, never repaired (post fixes: color or crop only).
@@ -123,4 +145,4 @@ Source: the Liv Body UGC builder's logs (LESSONS, PLAYBOOK, ENGINE-FEEDBACK, Oct
 | Tooling | Save asset IDs in a file and never re-upload. Never retype signed URLs: write them to a file. Seedance finalize needs a draft made with `draft:true`. Apify: pass `fields=`, save big results to a file and parse in code. Poll 55 s or less. Clear working folders at the start of a run. |
 
 ## Not verified
-Seedance 2.5 specifics (sources tested 2.0). One guide says Seedance's API blocks human face references: test on Higgsfield. Most numbers come from vendors selling AI UGC tools. Section 7 books (Schwartz, Hormozi) not re-read; their frameworks are well known. Nothing here has been tested by us.
+Seedance 2.5 specifics (sources tested 2.0). One guide says Seedance's API blocks human face references: test on Higgsfield. Most numbers come from vendors selling AI UGC tools. Section 7 books (Schwartz, Hormozi) not re-read; their frameworks are well known. Speech pace bands above 3.2 words/s and the hook types come from 12 viral transcripts, not our tests. Nothing here has been tested by us.

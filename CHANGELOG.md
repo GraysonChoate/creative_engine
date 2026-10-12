@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.10 (2026-10-12)
+- Social branch speech proposal applied (reviewed by the director). library/social-motion.md section 7: Speech (pace bands, gaps, 7 hook types with who may say each, close, body) [W]; section 1 breaths; three-part-list ban narrowed to adjective triads.
+- ce-02: length by pace, hook type, close; voice route reconciled with the tested clone route; duplicate OUTPUT bullet removed (word budget).
+- Changed from the proposal: lip-sync band 2.8-3.2 (our tested gate is 2.8; Paige 3.3), identity brag real person only, added clip length = line length + 0.3 s and a closed-mouth start frame [T] (Liv Body test).
+- ce-09 step 5 reports pace, hook type, close type, real person. ce-00 voice switch: profanity, slang, fillers.
+
 ## 2.9 (2026-10-12)
 - Audit pass. ce-core: Whisper row fixed (not installed); SEE IT audio line (measure words, pace, pitch; voice identity by ear). ce-06: voice is a locked asset; spoken lines are exempt from "fix sound later". ce-03: voice named in the asset lock.
 - Held for the social branch (not edited): ce-02 "clone" vs "never a TTS clone"; ce-09 Whisper; library/social-motion.md Whisper.

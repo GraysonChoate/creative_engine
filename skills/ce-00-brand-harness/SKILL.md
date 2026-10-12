@@ -6,7 +6,7 @@ description: "Run first, once per brand, before any ce-01 to ce-06 workflow: bra
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 # CE-00 BRAND HARNESS (brand layer)
-Version 2.2 (2026-10-11).
+Version 2.10 (2026-10-12).
 
 Run once per brand. Every other workflow (ce-01 to ce-07) loads this output instead of redoing intake.
 If a brand bible exists: load it, check it is current (see REFRESH), skip intake.
@@ -47,7 +47,7 @@ Save raw pulls in a `raw/` folder. Never edit raw.
 ## STEP 2: BRAND BIBLE (fill every field, UNKNOWN where missing)
 1. IDENTITY: name, one-line positioning, mission, what they sell, price tier, where they sell.
 2. AUDIENCE: primary, secondary, pains, desires, words they use.
-3. VOICE: 3 voice words, do / don't list, 5 sample lines lifted from the real site, banned words.
+3. VOICE: 3 voice words, do / don't list, 5 sample lines lifted from the real site, banned words, profanity yes/no (default no), slang level, filler tolerance.
 4. VISUAL: palette (hex, role), banned colors, fonts (name, weight, role, license/source), logo versions + clear space + min size, photo style. Motion: see section 13.
 5. PRODUCTS: per product: name, variants, benefit line, ingredients/specs, real image files (front, 3/4, back).
 6. APPROVED CLAIMS: each claim + source + any required disclaimer. Plus BANNED CLAIMS.
