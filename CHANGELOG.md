@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7 (2026-10-12)
+- From the Liv Body UGC builder logs: library/social-motion.md section 8 (tested checks: voice, hands and props, likeness, label and graphics, ending, review, tooling).
+- ce-core: POSITION TABLE (neighbouring-shot check) and "defect found = fixed or quoted in the same reply" in section 8; 30% redo buffer in 3.1; credit notes corrected (Seedance 1080p was 70, live quote 120 per 10 s; draft, upscale and Kling prices); two contingency rows (face-model refused, shell upload).
+- ce-02: four-layer outline, ingredient add moment (was "own shot"), position table in the continuity check, pointer to section 8. ce-09: brand collab posts, platform by median plays, Apify fields rule.
+
 ## 2.6 (2026-10-12)
 - ce-core section 8: SEE IT (view every output by any route; six-step order, tested 2026-10-12) and APPROVED FILE (checks and prompts read the saved outline, never memory; old drafts marked SUPERSEDED). Frame check now compares to the approved shot table. Section 14: viewing row; Whisper not a fallback. Rule 3.1: a redo over the quote needs a re-quote.
 - ce-02: continuity table checks against the approved shot table. gauntlet-loop: critics must see the frames. From the Liv Body UGC builder.

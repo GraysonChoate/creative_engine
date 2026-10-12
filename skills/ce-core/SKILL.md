@@ -4,7 +4,7 @@ description: "Load first for ANY Creative Engine task. Routes a vague request to
 ---
 
 # CE-CORE (the shared layer)
-Version 2.6 (2026-10-12). Changes: CHANGELOG.md.
+Version 2.7 (2026-10-12). Changes: CHANGELOG.md.
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
 Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-09).
@@ -74,7 +74,7 @@ Check in order: (1) `ae_*` or Bridge tools = use them. (2) Neither, but an osasc
 Project or README text that says "stop at every gate / audit everything" applies in BUILD only.
 
 ## 3. ALWAYS ON (both modes)
-1. Quote credits before any spend with the SPEND LINE (section 0): model, why (section 1 row), takes, total. Wait for a yes. If the model, takes or price change, or a redo would pass the quote, stop and re-quote before spending. Never poll: wait on jobs once. Same idempotency key on retries. use_unlim only if asked.
+1. Quote credits before any spend with the SPEND LINE (section 0): model, why (section 1 row), takes, total. Wait for a yes. If the model, takes or price change, or a redo would pass the quote, stop and re-quote before spending. A plan of 3+ takes includes a 30% redo buffer, named in the line; log actual credits per step. Never poll: wait on jobs once. Same idempotency key on retries. use_unlim only if asked.
 2. Real label rule: real packs, logos, photos go in as images. AI may copy label text from a real reference, but text comes only from the real source and every result is checked against the real image. Small print counts: any garbled letter is a fail, even if hard to see. If it fails, put the real label back (composite the real cutout) or re-run. When the label must be exact, composite it; do not let the model redraw it. Never invent text, logos or products for a real brand. Prefer real images as references for new renders (light and shadow built in); keep the cutout composite as backup when the label must be exact.
 3. TEXT: default = set in code or the editor, because a model can misspell and real brand text must be exact (brand name, price, CTA, claims, legal, anything edited later). Generating text in the model is fine when it is short, fully specified and a typo costs nothing (portfolio, invented brand, launch-film headline): give an exact copy list, say nothing else appears, and frame-check every string. Use judgment by use case.
 4. REAL PEOPLE: if the user says the person or their company approved (owner, employee, creator, ambassador), take their word. Note it once in the brief (who approved, scope) and go. Do not ask for releases or re-confirm. Use the client's own site and social photos as the source. Generated people are adults 21+, never minors, never presented as real customers.
@@ -120,7 +120,8 @@ The user talks like a client ("dynamic shot of fruit dropping in the blender"). 
 - LOCK: list everything that appears in 2+ shots: character, pack, every prop and place. Make each once as a reference (front, side, top, size next to a hand) or use the real one. Same shape, size, color, material in every shot. Tag it; never re-describe it. One face per sheet. Show the locked set before any shot.
 - SHOT CARD before any image: (a) where every object is and what it rests on; (b) who does what; (c) where the camera starts and ends; (d) only what this beat needs in frame; (e) what carries over from the last shot (outfit, hair, props, light, time of day).
 - FRAME CHECK on the actual images, not the prompts, in EXPLORE and BUILD, every medium. Fail if: PHYSICS (floats, wrong way up, motion with no cause); CONTINUITY (differs from the lock, the last shot, or the approved shot table file); CLUTTER (more than the beat needs; one hero); CAMERA (not where the card says); LOGIC (nobody would do this here); LABEL (any garbled letter, small print included). One-line fix per fail, re-check, then show.
-- SEE IT before any approval. No output goes to the user unviewed. One route failing means try the next, never give up. Order: (1) workspace file: Read. (2) Mac file: stage it, then Read. (3) hosted URL: open it in Chrome or the built-in browser, screenshot, seek to the key times. (4) video file: ffmpeg frames at each contract word time, plus an ElevenLabs transcript. (5) Higgsfield video_analysis (quote first): a hint only. (6) ask the user to paste a screenshot, saying what was tried. Reuse the route that worked. Each review states what was viewed, how, and pass or fail per item; a job status or file name is not a view. Small print: full-size stills only. Tone, music and sound effects cannot be heard: the user approves those by ear.
+- SEE IT before any approval. No output goes to the user unviewed. One route failing means try the next, never give up. Order: (1) workspace file: Read. (2) Mac file: stage it, then Read. (3) hosted URL: open it in Chrome or the built-in browser, screenshot, seek to the key times. (4) video file: ffmpeg frames at each contract word time, plus an ElevenLabs transcript. (5) Higgsfield video_analysis (quote first): a hint only. (6) ask the user to paste a screenshot, saying what was tried. Reuse the route that worked. Each review states what was viewed, how, and pass or fail per item; a job status or file name is not a view. A defect the check finds is fixed or quoted in the same reply, never only listed. Small print: full-size stills only. Tone, music and sound effects cannot be heard: the user approves those by ear.
+- POSITION TABLE (any multi-shot video, free, approved with the storyboard): for each neighbouring pair of shots, where the camera, every object, the hands and the background sit. A cut may hide a move; a continuous pair may not. Stills do not prove motion: the riskiest moving shots (falling powder, pours, a label in motion) get the 480p test first.
 - APPROVED FILE: the approved outline, lock sheet and shot table live in a saved file. Mark old drafts SUPERSEDED. Every prompt and every check reads the file, never the chat or a summary.
 - Products sit exactly on surfaces: measured surface line, contact shadow, matching light. Floating = fail.
 
@@ -159,6 +160,8 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | No site access | Prototype plus handoff pack. Say what is blocked. |
 | Real person requested | Use them. Note who approved, once. Only if the user gave no sign of approval: ask one question. |
 | Brief unclear | One question. EXPLORE: note UNKNOWN and go. |
+| Face-model training refused for a real person | Use photos the person or client uploaded themselves, not scraped ones. Note the approval once. Else a reference-image route. |
+| Media will not upload from the shell | The shell reaches only package sites. Use media_import_url with a public URL, or the Higgsfield sandbox (sandbox_exec) for files from a site. |
 | Audit fails twice | Escalate to the user with the failing lines. |
 
 ## 12. LIBRARY INDEX (github.com/GraysonChoate/creative_engine). Check it before inventing a method. Open only what the task needs.
@@ -217,6 +220,6 @@ Report once, one line: `Tools: loaded X, Y. Missing Z (searched: ...).` Never sa
 
 Higgsfield workflows (get_workflow_instructions, checked 2026-10-11): ad-multiplier, ads-studio, brand-asset-creation, character-sheet, faceless-video, katana, narration, product-photoshoot, thumbnail-generation, ugc-video, video-editing, video-montage, website-builder-flow.
 
-Credit notes (quote first): 1080p Seedance take about 70-72. Still about 2; Soul Cinema about 1 per 8 stills. reframe about 70 per 15 s at 720p. Kling native sound adds about 1.25-5 per 5 s clip. Budget 15-25 takes per minute of film.
+Credit notes (quote first; `get_cost:true` on a generate_* call is a free exact quote; Liv Body test 2026-10-12): Seedance 2.5 480p draft about 18 per 6 s (needs `draft:true` to finalize); 1080p about 120 per 10 s, or 60 per 6 s finalized from a draft; ByteDance upscale 480p to 1080p about 1.3 and keeps the chosen take; Kling 3.0 pro about 2.5 per s (the cheap route for non-talking shots). Still about 2; Soul Cinema about 1 per 8 stills. reframe about 70 per 15 s at 720p. Kling native sound adds about 1.25-5 per 5 s clip. Budget 15-25 takes per minute of film.
 
 Specs: H.264 MP4, yuv420p, 30 fps (24 film look or loops; 60 code-built motion graphics), 1080p minimum. Social audio about -14 LUFS, true peak under -1 dB. Web loops 1-3 MB with a poster frame. 9:16 safe zone (Meta Reels): nothing key in the top 14%, bottom 35% or 6% at each side.

@@ -1,6 +1,6 @@
 # Social motion: look human, look expensive, move with purpose
 Defaults for ce-02, with source tags. ce-02 HARD RULES always win. Open only the section the job needs.
-Evidence: [S] official doc or study · [M] several practitioners agree · [W] one source or editor habit. Untested by us unless marked.
+Evidence: [S] official doc or study · [M] several practitioners agree · [W] one source or editor habit · [T] tested by us (Liv Body, Oct 2026). Untested by us unless marked.
 Sources: CE Google Doc (17 film breakdowns), Mac folders (Adil, Zubair, Jack Roberts, Random AI, Chase AI, Jad M.H), Oct 11 2026 research report "Natural AI UGC avatars", Oct 11 2026 script research (section 7).
 
 ## 1. Natural AI creator (talking head)
@@ -106,6 +106,21 @@ Check before any credits (all five must pass):
 3. Clear, not clever?
 4. One concrete detail, with its source?
 5. Read aloud: does it sound like a person?
+
+## 8. Tested checks for talking-head and recipe posts [T]
+Source: the Liv Body UGC builder's logs (LESSONS, PLAYBOOK, ENGINE-FEEDBACK, Oct 2026). A take that fails is regenerated, never repaired (post fixes: color or crop only).
+
+| Area | Check |
+|---|---|
+| Voice | Audit the shot's own audio, not the voice file: the video model re-voices every line. Reject on: a repeated word or any word over 0.6 s (transcripts hide stutters; check long words on a spectrogram); a voiced run under 135 Hz for 50 ms (octave drop; use the creator's own pitch range, hers was 170-230 Hz); words not exact; pace under 2.8 words/s or a gap over 0.4 s. Time each line to her measured pace (hers 3.3 words/s) before generating. |
+| Voice clone | It copies phrases from the reference clip: the reference shares no sentences with the script. Transcript-check every line. No pitch-shift, time-stretch or sentence splits on the voice; wrong voice = regenerate. |
+| Cuts and sound | Cut only in measured silence (shot noise floor + 7 dB), never at transcript word times (word ends run 0.15-0.5 s late); no speech within 30 ms of a cut. Zooms and crops are video-only keys. Final -14 LUFS (+/-1), measured. SFX gain 0.25 after loudnorm, at least 8 dB under the voice, ducked. |
+| Hands and props | ONE ACTION, ONE TOOL per clip (a scoop turned into a spoon in a multi-step clip). Prop list per shot, utensil list across all shots. Every frame: 2 hands or fewer, each arm joins her shoulder, nothing moves without a hand, gesture matches the words (two fingers on "one scoop" fails). |
+| Likeness | Soul ID from 20+ varied frames (10 screenshots drifted the jaw). Check the first and last frame of each shot. Shots 6-8 s, chained from the last frame. A real 5 s hand-talking clip as the video reference gave constant natural gestures. Two drafts per shot for talking shots (about +36 credits). |
+| Label and graphics | Keep fine print out of close-ups, or composite the real label; never patch a label on normal shots. No blend transitions (ghost frames): eased snap-zoom. Exclusion zones: face and product label; any caption or graphic frame on either fails the render (no face detected = no face box). Tags last 0.7 s or more and end at the next cut. Every graphic is tied to a spoken word: beat, graphic, why. Motion style per job: calm (ads) or playful (creator content: overshoot pops, SFX). |
+| Ending | A closing shot: CTA line in a warm falling tone, wave or smile, 0.3 s audio fade (about 50 credits). Never stop on the last line. |
+| Review | Contact sheet at 160 px or larger and 5 fps, plus full-size product crops, never small thumbnails. Report "verified" and "not verified" separately; never "clean" for what was not checked. |
+| Tooling | Save asset IDs in a file and never re-upload. Never retype signed URLs: write them to a file. Seedance finalize needs a draft made with `draft:true`. Apify: pass `fields=`, save big results to a file and parse in code. Poll 55 s or less. Clear working folders at the start of a run. |
 
 ## Not verified
 Seedance 2.5 specifics (sources tested 2.0). One guide says Seedance's API blocks human face references: test on Higgsfield. Most numbers come from vendors selling AI UGC tools. Section 7 books (Schwartz, Hormozi) not re-read; their frameworks are well known. Nothing here has been tested by us.
