@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.11 (2026-10-13)
+- Cause: two Liv Body homepage runs (elevated and cinematic) skipped audit, plan and boards, reused old assets, and delivered a jar on a plain plinth. EXPLORE mode said "no gates" and agents read that as "no phases"; the code layer (Three.js, WebGL, GLSL) was a tool name with no rules; "elevate" was undefined.
+- library/web-motion.md (new): the three-layer split, the ROUTING RULE (what the visitor does with an element decides the layer), ELEVATE defined, six code moves (real 3D product with real label, scroll-scrubbed film, WebGL hero loop, shader transitions, particles, parallax), per-layer asset handoff, checks.
+- ce-core section 2: EXPLORE runs every phase with show-and-go gates; skipping a phase is a failure in both modes; ELEVATE rule; a pre-decided prompt is input, not a skip. FINISH LAYER: code is a first-class web layer, "never fall back to code" scoped to After Effects jobs. Library index and section 14 row point to web-motion.md.
+- ce-04 2.3: Phase 0 WORLD INVENTORY and best-in-niche references; Phase 1 ELEMENT ROUTING TABLE and CONSOLIDATION; EXPLORE run order lists all phases. ce-05 2.3: same pointer.
+
 ## 2.10 (2026-10-12)
 - Social branch speech proposal applied (reviewed by the director). library/social-motion.md section 7: Speech (pace bands, gaps, 7 hook types with who may say each, close, body) [W]; section 1 breaths; three-part-list ban narrowed to adjective triads.
 - ce-02: length by pace, hook type, close; voice route reconciled with the tested clone route; duplicate OUTPUT bullet removed (word budget).

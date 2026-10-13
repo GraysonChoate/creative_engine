@@ -6,12 +6,13 @@ description: "Universal master workflow for rebuilding a brand's full website: a
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 # CE-05 FULL WEBSITE REBUILD
-Version 2.2 (2026-10-11).
+Version 2.3 (2026-10-13).
 
 Run this when the job is the WHOLE site (audit -> design -> code -> QA -> handoff). Homepage only? Use ce-04. This skill reuses ce-04 for the homepage step.
 Brand-agnostic. Variables: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
 Mode, always-on rules, world rules, gates, fix order, shared failures, contingencies, library: see ce-core. Which model: ce-core section 1. Roles, prices, specs: ce-core section 14.
 Camera moves and effects: docs/PLAYBOOK-shots-effects.md. Page motion built in After Effects (loops, Lottie, frame sequences): ce-core FINISH LAYER, docs/AE-route.md.
+Which layer makes each element, elevate defined, 3D product, scroll film, transitions: library/web-motion.md. READ IT on every run; every page template gets an element routing table (ce-04 Phase 1) before build. In EXPLORE every phase still runs, gates are show-and-go (ce-core section 2).
 
 ## INPUTS (ask once, only what is missing)
 - SITE: current URL (or none for a new site).

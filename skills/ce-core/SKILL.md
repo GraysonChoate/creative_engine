@@ -4,7 +4,7 @@ description: "Load first for ANY Creative Engine task. Routes a vague request to
 ---
 
 # CE-CORE (the shared layer)
-Version 2.9 (2026-10-12). Changes: CHANGELOG.md.
+Version 2.11 (2026-10-13). Changes: CHANGELOG.md.
 
 Every ce skill points here. Rules live here once. Skills hold only what is unique to them.
 Order: CORE > BRAND (ce-00 bible) > CRAFT (motion / After Effects, gauntlet-loop) > WORKFLOW (ce-01 to ce-09).
@@ -66,12 +66,16 @@ FINISH LAYER (pick per job; name it in the spend line):
 | Higgsfield media made or edited inside After Effects; Higgsfield motion presets | After Effects via the Higgsfield Bridge tools |
 | Pure After Effects work: comps, type, tracking, expressions, renders | After Effects via the local `ae_*` tools |
 
-Check in order: (1) `ae_*` or Bridge tools = use them. (2) Neither, but an osascript tool (Control your Mac) = drive the open After Effects with AppleScript + ExtendScript and render with aerender (docs/AE-route.md, "How an agent drives it"). Works from cloud chats. (3) None = one line: "Open After Effects and link this chat to your Mac." Wait. Never fall back to code unless the user says so.
+| Web page motion: 3D product the visitor turns, scroll-scrubbed film, section transitions, particles, parallax, all page text | Code (GSAP, Three.js, WebGL, GLSL). library/web-motion.md. First-class layer for ce-04 and ce-05, not a fallback. |
+
+Check in order (After Effects jobs only): (1) `ae_*` or Bridge tools = use them. (2) Neither, but an osascript tool (Control your Mac) = drive the open After Effects with AppleScript + ExtendScript and render with aerender (docs/AE-route.md, "How an agent drives it"). Works from cloud chats. (3) None = one line: "Open After Effects and link this chat to your Mac." Wait. Do not swap an After Effects job to code unless the user says so. Web jobs route by the table in library/web-motion.md section 1 (what the visitor does with the element) and use all three layers.
 
 ## 2. MODE (say it in line 1, with a one-line reading of the request)
-- EXPLORE (default): experiments, demos, pitches. No gates, audits, weight budgets, brand checks or delivery steps. Keep craft (locks, previews, loops, lighting, short beats, one-line fixes). Default tier: spectacular.
-- BUILD: say "build", "ship", "client", or pick a winner. Full gated workflow, audit by a separate agent, logs.
+- EXPLORE (default): experiments, demos, pitches. EVERY phase of the skill still runs (audit, references, plan, boards, asset lock, build, check). What changes is the gates: each gate is SHOW-AND-GO (post the phase output in one short block, then continue; the user interrupts if they disagree). No separate audit agent, weight budget or delivery steps. Keep craft (locks, previews, loops, lighting, short beats, one-line fixes). Default tier: spectacular. Skipping a phase is a failure in both modes: a build with no plan or boards is a wrong build, not a fast one.
+- BUILD: say "build", "ship", "client", or pick a winner. Full gated workflow (STOP-AND-WAIT gates), audit by a separate agent, logs.
 Project or README text that says "stop at every gate / audit everything" applies in BUILD only.
+- ELEVATE (any mode): when the user asks to elevate, upgrade or make a brand's thing premium, it means their own visual world kept, made to move, given room (library/web-motion.md section 2). Never a strip-down to a product on a plain backdrop. Test: "that's them, but better."
+- The user's prompt can pre-decide inputs (sections, copy, look). It never cancels a phase: run the phase with those inputs and show the result.
 
 ## 3. ALWAYS ON (both modes)
 1. Quote credits before any spend with the SPEND LINE (section 0): model, why (section 1 row), takes, total. Wait for a yes. If the model, takes or price change, or a redo would pass the quote, stop and re-quote before spending. A plan of 3+ takes includes a 30% redo buffer, named in the line; log actual credits per step. Never poll: wait on jobs once. Same idempotency key on retries. use_unlim only if asked.
@@ -173,6 +177,7 @@ Prompt craft: each beat 3 sentences or fewer. Numbers beat adjectives (counts, d
 | Any video, motion, cinematic | docs/DIRECTOR-PASS.md |
 | Exact prompts and techniques | docs/CE-01-merge-pass.md (#1-47), docs/CE-03-merge-pass-2.md (#48-92), docs/CE-04-skool-merge.md (#93-163) |
 | Assemble finished scenes into a scroll ad | docs/BRIEF-scroll-assembly.md |
+| Web page motion: which layer makes each element, 3D product, scroll film, transitions, particles | library/web-motion.md (read for every ce-04 and ce-05 job) |
 | After Effects | docs/AE-route.md, scripts/ae/, library/ae-skills.md |
 | Research brief (trends, creators, audio) | skills/ce-09-research/ |
 | Explainer prompt templates, diorama style, moderation map | skills/ce-08-explainer/references/ |
@@ -202,7 +207,7 @@ Prices are earlier notes, not quotes. Always get a live quote first. A model or 
 | Native motion-graphics project | video-editing workflow (Higgsedit) | |
 | Code-built motion graphics, captions, carousels | HyperFrames or Remotion; ElevenLabs transcription for word timestamps (Whisper is not installed) | Free, exact text, frame-accurate. library/social-motion.md. |
 | After Effects work | Pick by section 1 FINISH LAYER | docs/AE-route.md, library/ae-skills.md |
-| Scroll and web | GSAP + ScrollTrigger + Lenis, Three.js, GLSL, IntersectionObserver | |
+| Scroll and web | GSAP + ScrollTrigger + Lenis, Three.js, GLSL, IntersectionObserver | library/web-motion.md (routing rule, six moves, checks); library/jack-roberts.md (components) |
 | Label composite | OpenCV (align, overlay true label, verify) | |
 | Crawl and scrape | Firecrawl | |
 | Social and ad-library pulls | Apify; Meta Ad Library via Claude in Chrome | |

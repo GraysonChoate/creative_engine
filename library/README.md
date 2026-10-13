@@ -11,6 +11,7 @@ Raw transcripts, frame sheets and full prompt pages stay on the Mac (Creative En
 | Social defaults: script (what the creator says), natural AI creator, organic edit, expensive look, overlays, motion graphics, conflict picks, tested checks (voice, hands, label, ending) | social-motion.md | All sources + Oct 2026 research (ce-02) |
 | Social video recipes: creator edits, captions, hooks, cut maps, realism, localization, 9:16 resize | adil/social.md | Adil + source videos (ce-02) |
 | Live carousels: beat/bar grid, layers, HyperFrames, ACE-Step | jad-carousel.md | Jad M.H (ce-02 carousel mode) |
+| Web page motion: the routing rule (which layer makes each element), elevate defined, real 3D product, scroll-scrubbed film, shader transitions, particles, parallax, checks | web-motion.md | Engine rules (ce-04, ce-05; read every time) |
 | Website interactive components in code, code overlays on footage | jack-roberts.md | Jack Roberts (web only: ce-04, ce-05) |
 | Higgsfield plugin panel inside After Effects, dashboard motion recipe | zubair.md | Zubair (AE layer) |
 | The 13 native After Effects skills: what each covers, UI motion gaps | ae-skills.md | Tool skills (read in our own words; not redistributable) |
