@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.13 (2026-10-13)
+- Cause: layers (Higgsfield film, Three.js, type) were checked alone, never against each other; nav, tabs and cards were defaults; text contrast, overlaps and scroll length were never measured.
+- library/web-motion.md 1.2: 2e LAYER CONTRACT (five axes per hand-off, locked before quoting, side-by-side sheet required), 2f LEGIBILITY, OCCLUSION, SCROLL EFFICIENCY, NAV (measured).
+- ce-04 2.5: contracts in Phase 1 before quotes; nav board and component sheet in Phase 2; 4b gate requires the side-by-side sheets and 2f reports.
+- gauntlet-loop 2.8: critics receive the sheets and reports.
+
 ## 2.12 (2026-10-13)
 - Cause: Liv Body V1/V2 homepage runs passed brand and layout but failed synergy (worlds picked first, brand elements dropped on top; Paige as a thumbnail on a cherry splash; the real brand video logged as a grey poster and cut), craft (nav, grid, baselines unchecked) and pacing (builder recordings used short bursts that hid 4-17 s holds).
 - library/web-motion.md 1.1: 2b SYNERGY (one sentence per section, world built out from the brand's real element, motion matches copy, real material first), 2c CRAFT PASS (measured gate: grid, nav, type, spacing, components, color, images), 2d REAL-SCROLL RECORDING (constant wheel, whole page, dead-air report; user recording is the reference).

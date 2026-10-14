@@ -4,7 +4,7 @@ description: "Use when producing client-facing visual output (websites, sales de
 ---
 
 # Gauntlet Loop (Design Critic Loop)
-Version 2.7 (2026-10-13).
+Version 2.8 (2026-10-13).
 
 Source: Jack Roberts' "AI Automation Vault" — the most-repeated technique in his course. Core premise: **the model that built something cannot grade its own homework.** A fresh-context critic judging the *rendered output* (a screenshot/frame), not the underlying code, catches what the builder is blind to. This is the anti-AI-slop mechanism.
 
@@ -35,7 +35,7 @@ Don't start from a bare prompt. Pull in:
    - **Synergy critic** (web and motion work) — does every element in each section trace to that section's one-sentence story? Is the world built from the brand's real element, or was a world picked and the element dropped on it? Does the thing that moves match what the copy says? Name every element that is "just there."
    - **Pacing critic** (anything that scrolls or plays) — judges the real-scroll recording strips (library/web-motion.md 2d), never stills. Names every stretch over 1.5 s where nothing changes, every element that pops in fully formed, every hand-off that cuts instead of carries.
    
-   For motion and web work, critics are given the recording strips, not resting screenshots; a still cannot show a hold or a cut. The craft critic also reads the measured craft-pass numbers (web-motion 2c) and fails any missing measurement.
+   For motion and web work, critics are given the recording strips, the side-by-side hand-off sheets and the legibility and occlusion reports (web-motion 2e, 2f), not resting screenshots; a still cannot show a hold or a cut. The craft critic also reads the measured craft-pass numbers (web-motion 2c) and fails any missing measurement.
    A critic must actually see the rendered frames (ce-core section 8 SEE IT). One that cannot says so and fails the round; it never critiques from text.
    Each critic gives a pass/fail plus specific, actionable fixes — not vague praise or vague criticism.
 

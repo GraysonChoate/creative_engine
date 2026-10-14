@@ -6,7 +6,7 @@ description: "Universal master workflow for building or rebuilding a brand's hom
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 # CE-04 HOMEPAGE BUILD
-Version 2.4 (2026-10-13).
+Version 2.5 (2026-10-13).
 
 Run this when the job is ONE page: the homepage (hero, motion, sections, conversion flow). For a whole site, use ce-05.
 Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
@@ -42,6 +42,7 @@ PLAN gate (BUILD only): bible loaded, audit done, asset list agreed. Stop if the
 ## PHASE 1: STRATEGY AND SECTION PLAN
 - One-line concept spine: what the page says in one sentence.
 - STORY LINE PER SECTION: one sentence each. Every element in the section (world, photo, product, price, copy, motion) must trace to that sentence (library/web-motion.md 2b). The world is built out from the brand's real element in that section, never chosen first.
+- LAYER CONTRACTS: one per hand-off between film, 3D and type (library/web-motion.md 2e), written here, before any clip is quoted.
 - SHOP FIRST: it is a store. A visitor sees a product, its price, its rating and a way to buy within the first two screens. Ratings, badges and compare-at prices that exist on the real site stay.
 - Trim to 3-5 flagship products. Everything else lives one click deeper.
 - Navigation: one sticky nav, 5 items max, one CTA.
@@ -54,7 +55,7 @@ PLAN gate (BUILD only): bible loaded, audit done, asset list agreed. Stop if the
 PLAN gate (BUILD only): user approves concept, section plan and CTA inventory.
 
 ## PHASE 2: DESIGN BOARDS
-- One board image per section, desktop + phone, in the locked palette and type.
+- One board image per section, desktop + phone, in the locked palette and type. Plus a NAV board and a COMPONENT SHEET (tabs, pills, cards, buttons, every state) (web-motion 2f).
 - Tools: board models (ce-core section 14) for mood and layout; real pack images as references or composited in. Or Canva (generate-design, resize-design) for layout boards.
 - Produce the tier(s) asked for. Same inputs, three looks:
   - TAME: clean, fast, static + light reveals. Safe default for BUILD.
@@ -83,7 +84,7 @@ ROUTE D: Shopify
 - Build in stages: nav + hero > sections > motion > commerce. Review each stage.
 
 ## PHASE 4b: CRAFT GATE (both modes, before any frame goes to the user)
-Measure, do not eyeball: library/web-motion.md 2c (grid, nav, type scale, spacing, components, color, images). Report the numbers. Then the real-scroll recording with the dead-air report (2d). Only then show the user.
+Measure, do not eyeball: web-motion 2c (grid, nav, type, spacing, components, colour, images), 2e side-by-side sheets for every hand-off against the contracts, 2f legibility, occlusion, scroll-efficiency and nav reports. Then the real-scroll recording with the dead-air report (2d). Only then show the user.
 
 ## PHASE 5: AUDIT (BUILD only; separate agent, not the builder)
 Brand Guardian checks, pass/fail:

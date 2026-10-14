@@ -1,5 +1,5 @@
 # Web motion: the code layer (3D, scroll film, transitions, particles)
-Version 1.1 (2026-10-13). For ce-04 and ce-05. Companion to jack-roberts.md (interactive components) and ../docs/BRIEF-scroll-assembly.md (AE frame sequence route).
+Version 1.2 (2026-10-13). For ce-04 and ce-05. Companion to jack-roberts.md (interactive components) and ../docs/BRIEF-scroll-assembly.md (AE frame sequence route).
 
 The engine has three layers that make motion. This page is the third one. It is not a fallback: for a web page, code is a first-class medium, equal to Higgsfield and After Effects.
 
@@ -52,6 +52,24 @@ A mock-up is judged as the finished thing. "It's a demo" lowers nothing.
 
 ## 2d. REAL-SCROLL RECORDING (the only honest motion check)
 Stills hide pacing. Every motion check records a real scroll: Playwright or headed Chromium at 1440x900, constant wheel input at about 2400 px/s for the WHOLE page (never a short burst, which hides holds), page video on, then frames at 2 fps as strips. Report: total px, seconds, and every stretch over 1.5 s where nothing on screen changes (dead air). Any such stretch is a fail unless it is the one reading hold per section. The user's own recording at that rate is the reference; a builder recording that disagrees with it is wrong, not the user's.
+
+## 2e. LAYER CONTRACT (how film, 3D and type agree, frame by frame)
+The layers are checked against each other, never alone. Every hand-off (film to 3D, 3D to film, film or 3D to type) is a contract written in Phase 1 before any clip is quoted, and measured in Phase 4b after the build.
+| Axis | Must match | Measured by |
+|---|---|---|
+| Position | product centre and base x/y, within 1% of viewport | pixel measure on both frames at the hand-off px |
+| Scale | product height as % of viewport, within 1% | same |
+| Light | key direction and colour, rim, shadow angle and softness | sampled from the film frame, set on the 3D scene, compared side by side |
+| Time | one scroll px where both layers are at their matching frame | the ScrollTrigger table, verified on the recording |
+| Surface | contact shadow on the same plane in both layers | compared at the hand-off frame |
+Type near a product declares its relationship (baseline on the product base, left edge on the grid, colour sampled from the scene) and that relationship holds through the whole motion, not only at rest.
+SIDE-BY-SIDE SHEET (required output): for every hand-off, one image: film frame left, 3D or next frame right, same scroll px, the five numbers written on it. Any miss is a fail before the page is shown.
+
+## 2f. LEGIBILITY, OCCLUSION, SCROLL EFFICIENCY, NAV (measured)
+- Legibility: every text element's contrast against what is actually behind it at 0, 50 and 100% of its motion (not at rest). Body 4.5:1, headline 3:1, nothing under 14 px. Price and rating never smaller than the product name. Report the lowest value per element.
+- Occlusion: on every recorded frame, bounding boxes of text, price, button, tab, product and face. Any text or control overlapping a product, a face or other text is listed; one overlap is a fail.
+- Scroll efficiency: product, price and buy visible within two screens; whole page under 7 screens. Anything stacked vertically that reads better side by side (a product and its copy, three tubs and three prices, a quote and its author) goes horizontal. Every beat's scroll length is in the table with a one-line reason.
+- Nav as a designed object: its own board in Phase 2. Logo lockup and clear space, item spacing, cart with count, one treatment that reads over every world (dark, sky, water, white) without per-section hacks, scroll behaviour (shrink, blur or colour), and it never covers a headline. Tabs, pills, cards and buttons get a component sheet with every state (rest, hover, active, added), measured once and reused.
 
 ## 3. THE SIX CODE MOVES
 
@@ -108,7 +126,7 @@ Stills hide pacing. Every motion check records a real scroll: Playwright or head
 | Type, prices, buttons, legal | - | - | brand fonts, copy list word for word |
 
 ## 6. CHECK (before showing the user)
-- Section story lines listed; every element traced (2b). Craft pass measured and reported (2c). Real-scroll recording with dead-air report (2d).
+- Section story lines listed; every element traced (2b). Craft pass measured (2c). Real-scroll recording with dead-air report (2d). Side-by-side sheets for every hand-off (2e). Legibility, occlusion, scroll-efficiency and nav reports (2f).
 - Screenshot every section at desktop; every transition at 0, 50, 100 percent scroll progress.
 - 3D label at four angles against the real render.
 - Weight and first-load time against the tier budget.
