@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.14 (2026-10-14)
+- Cause: Liv Body V1.7 passed stills at scroll positions but the live page had a sticky film beat opening over the bundle, pre-selected picker state, 14 of 17 products flat with no shadow beside 3 modelled ones, and a Whey model with the wrong silhouette. None of it shows in stills; all of it shows on a click.
+- library/web-motion.md 1.3: 2g INTERACTION WALK (click every state, scroll every seam, measure every 3D model against its render; mixed treatments fail).
+- ce-04 2.6: 4b gate requires the interaction walk.
+
 ## 2.13 (2026-10-13)
 - Cause: layers (Higgsfield film, Three.js, type) were checked alone, never against each other; nav, tabs and cards were defaults; text contrast, overlaps and scroll length were never measured.
 - library/web-motion.md 1.2: 2e LAYER CONTRACT (five axes per hand-off, locked before quoting, side-by-side sheet required), 2f LEGIBILITY, OCCLUSION, SCROLL EFFICIENCY, NAV (measured).

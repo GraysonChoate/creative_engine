@@ -1,5 +1,5 @@
 # Web motion: the code layer (3D, scroll film, transitions, particles)
-Version 1.2 (2026-10-13). For ce-04 and ce-05. Companion to jack-roberts.md (interactive components) and ../docs/BRIEF-scroll-assembly.md (AE frame sequence route).
+Version 1.3 (2026-10-14). For ce-04 and ce-05. Companion to jack-roberts.md (interactive components) and ../docs/BRIEF-scroll-assembly.md (AE frame sequence route).
 
 The engine has three layers that make motion. This page is the third one. It is not a fallback: for a web page, code is a first-class medium, equal to Higgsfield and After Effects.
 
@@ -71,6 +71,9 @@ SIDE-BY-SIDE SHEET (required output): for every hand-off, one image: film frame 
 - Scroll efficiency: product, price and buy visible within two screens; whole page under 7 screens. Anything stacked vertically that reads better side by side (a product and its copy, three tubs and three prices, a quote and its author) goes horizontal. Every beat's scroll length is in the table with a one-line reason.
 - Nav as a designed object: its own board in Phase 2. Logo lockup and clear space, item spacing, cart with count, one treatment that reads over every world (dark, sky, water, white) without per-section hacks, scroll behaviour (shrink, blur or colour), and it never covers a headline. Tabs, pills, cards and buttons get a component sheet with every state (rest, hover, active, added), measured once and reused.
 
+## 2g. INTERACTION WALK (stills at scroll positions do not find these)
+Before any build is shown, an agent clicks everything a visitor can click and screenshots each state: every tab, every card, every picker chip, every hover, every drag, the cart count. Then it scrolls every section seam at about 300 px/s and screenshots the seam at 0/25/50/75/100%. Report: a table of element | state | screenshot | pass or fail. Specific traps this catches: a sticky or pinned element from the next section opening over the current one; pre-selected state on load; products that render differently from each other (some 3D, some flat) with no stated reason; a swap or drop animation that only runs on one trigger; a 3D model whose silhouette does not match its real render (lid height, body ratio, label panel facing). Any product shown in 3D is compared side by side to its real render at 0/90/180/270; silhouette and wrap registration are measured, not assumed. Mixed treatments (3 products modelled, 14 flat) are a fail unless the brief chose it.
+
 ## 3. THE SIX CODE MOVES
 
 ### 3.1 Real 3D product with the real label (touchable)
@@ -126,7 +129,7 @@ SIDE-BY-SIDE SHEET (required output): for every hand-off, one image: film frame 
 | Type, prices, buttons, legal | - | - | brand fonts, copy list word for word |
 
 ## 6. CHECK (before showing the user)
-- Section story lines listed; every element traced (2b). Craft pass measured (2c). Real-scroll recording with dead-air report (2d). Side-by-side sheets for every hand-off (2e). Legibility, occlusion, scroll-efficiency and nav reports (2f).
+- Section story lines listed; every element traced (2b). Craft pass measured (2c). Real-scroll recording with dead-air report (2d). Side-by-side sheets for every hand-off (2e). Legibility, occlusion, scroll-efficiency and nav reports (2f). Interaction walk table with screenshots (2g).
 - Screenshot every section at desktop; every transition at 0, 50, 100 percent scroll progress.
 - 3D label at four angles against the real render.
 - Weight and first-load time against the tier budget.
