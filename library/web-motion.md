@@ -1,5 +1,5 @@
 # Web motion: the code layer (3D, scroll film, transitions, particles)
-Version 1.3 (2026-10-14). For ce-04 and ce-05. Companion to jack-roberts.md (interactive components) and ../docs/BRIEF-scroll-assembly.md (AE frame sequence route).
+Version 1.4 (2026-10-14). For ce-04 and ce-05. Companion to jack-roberts.md (interactive components) and ../docs/BRIEF-scroll-assembly.md (AE frame sequence route).
 
 The engine has three layers that make motion. This page is the third one. It is not a fallback: for a web page, code is a first-class medium, equal to Higgsfield and After Effects.
 
@@ -74,6 +74,19 @@ SIDE-BY-SIDE SHEET (required output): for every hand-off, one image: film frame 
 ## 2g. INTERACTION WALK (stills at scroll positions do not find these)
 Before any build is shown, an agent clicks everything a visitor can click and screenshots each state: every tab, every card, every picker chip, every hover, every drag, the cart count. Then it scrolls every section seam at about 300 px/s and screenshots the seam at 0/25/50/75/100%. Report: a table of element | state | screenshot | pass or fail. Specific traps this catches: a sticky or pinned element from the next section opening over the current one; pre-selected state on load; products that render differently from each other (some 3D, some flat) with no stated reason; a swap or drop animation that only runs on one trigger; a 3D model whose silhouette does not match its real render (lid height, body ratio, label panel facing). Any product shown in 3D is compared side by side to its real render at 0/90/180/270; silhouette and wrap registration are measured, not assumed. Mixed treatments (3 products modelled, 14 flat) are a fail unless the brief chose it.
 
+## 2h. SELF-AUDIT STANDARD (run after every build, before every freeze)
+Write SELF-AUDIT.md: one row per check, PASS or FAIL with the measured number, a screenshot path for every FAIL. A FAIL is fixed before moving on, or the row says why. Never round a FAIL into a PASS.
+A. MOTION (real-scroll recording, constant 2,400 px/s, whole page): A1 no stretch over 1.5 s with nothing changing except one reading hold per section. A2 no pops: every arrival eases out over 0.6-1.2 s with 40-80 ms stagger; every exit fades; list single-frame appearances. A3 at every seam the next section's first element is rising before this section's last has left; screenshot seams at 25/50/75%. A4 scroll up and back through every section: nothing changes that scroll did not drive. A5 no pin over 60 vh.
+B. LAYERS: B1 every 3D product vs its real render at 0/90/180/270: silhouette within 1%, lid height within 2%, front panel facing at rest, label readable at 2x; side-by-side sheet per product. B2 every product (3D or flat) has a contact shadow sized to its base; zoom each base at 2x: no gap, no fringe, no jagged edge. B3 every film-to-3D hand-off: position and scale within 1%, light and shadow angle matched, five numbers written on a side-by-side. B4 nothing floats: list every object and its surface.
+C. CRAFT (measured): C1 one grid left edge per column. C2 one type scale, max 6 sizes. C3 one radius, one shadow, one pill, one tile, one hover (4-6 px lift, 200 ms); count each. C4 the same three spacings (eyebrow-headline, headline-body, body-button) in every section. C5 nothing within 24 px of a viewport edge or another element; buttons 50% more padding than default. C6 nav: logo size and clear space, item spacing, cart on baseline, one treatment over every world, never covers a headline.
+D. LEGIBILITY AND OCCLUSION: D1 every text element's contrast vs what is behind it at 0/50/100% of its motion; body 4.5:1, headline 3:1, nothing under 14 px. D2 bounding boxes on every frame: any text or control over a product, a face or other text is a FAIL.
+E. SYNERGY: E1 one sentence per section; every element traced; anything "just there" removed. E2 each world built from the brand's real element in it. E3 what moves is what the copy is about.
+F. STORE: F1 product, price and buy within two screens. F2 every price, rating and badge matches the live site today. F3 every button does something visible when clicked. F4 copy only from the live site, word for word.
+G. INTERACTION WALK: G1 every tab, card, chip, hover and drag clicked and screenshotted; state table with a path per row. G2 cold load: nothing pre-selected, cart 0, picker 0 of N.
+H. PREMIUM: H1 beside apple.com/airpods-pro and aesop.com, list every place ours looks cheaper; each is a FAIL until fixed. H2 would a visitor notice a product is 3D rather than photographed? FAIL if yes. H3 "that's them, but better": FAIL if a fan would not say it, and say why.
+I. DEPLOY: I1 deploy/ loads from the folder alone (npx serve), hero screenshot attached. I2 relative paths, no localhost, video MP4+WebM, under 100 MB. I3 no console errors on load or during a full scroll.
+Final line: total checks, PASS, FAIL, and the one thing to fix first with one more hour.
+
 ## 3. THE SIX CODE MOVES
 
 ### 3.1 Real 3D product with the real label (touchable)
@@ -129,7 +142,7 @@ Before any build is shown, an agent clicks everything a visitor can click and sc
 | Type, prices, buttons, legal | - | - | brand fonts, copy list word for word |
 
 ## 6. CHECK (before showing the user)
-- Section story lines listed; every element traced (2b). Craft pass measured (2c). Real-scroll recording with dead-air report (2d). Side-by-side sheets for every hand-off (2e). Legibility, occlusion, scroll-efficiency and nav reports (2f). Interaction walk table with screenshots (2g).
+- Section story lines listed; every element traced (2b). Craft pass measured (2c). Real-scroll recording with dead-air report (2d). Side-by-side sheets for every hand-off (2e). Legibility, occlusion, scroll-efficiency and nav reports (2f). Interaction walk table with screenshots (2g). SELF-AUDIT.md per the standard (2h).
 - Screenshot every section at desktop; every transition at 0, 50, 100 percent scroll progress.
 - 3D label at four angles against the real render.
 - Weight and first-load time against the tier budget.

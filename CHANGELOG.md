@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.15 (2026-10-14)
+- library/web-motion.md 1.4: 2h SELF-AUDIT STANDARD, nine groups (motion, layers, craft, legibility/occlusion, synergy, store, interaction walk, premium, deploy), each check measured with a number, written to SELF-AUDIT.md before every freeze.
+- ce-04 2.7: 4b gate requires SELF-AUDIT.md.
+
 ## 2.14 (2026-10-14)
 - Cause: Liv Body V1.7 passed stills at scroll positions but the live page had a sticky film beat opening over the bundle, pre-selected picker state, 14 of 17 products flat with no shadow beside 3 modelled ones, and a Whey model with the wrong silhouette. None of it shows in stills; all of it shows on a click.
 - library/web-motion.md 1.3: 2g INTERACTION WALK (click every state, scroll every seam, measure every 3D model against its render; mixed treatments fail).

@@ -6,7 +6,7 @@ description: "Universal master workflow for building or rebuilding a brand's hom
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 # CE-04 HOMEPAGE BUILD
-Version 2.6 (2026-10-14).
+Version 2.7 (2026-10-14).
 
 Run this when the job is ONE page: the homepage (hero, motion, sections, conversion flow). For a whole site, use ce-05.
 Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
@@ -84,7 +84,7 @@ ROUTE D: Shopify
 - Build in stages: nav + hero > sections > motion > commerce. Review each stage.
 
 ## PHASE 4b: CRAFT GATE (both modes, before any frame goes to the user)
-Measure, do not eyeball: web-motion 2c (grid, nav, type, spacing, components, colour, images), 2e side-by-side sheets for every hand-off against the contracts, 2f legibility, occlusion, scroll-efficiency and nav reports, 2g interaction walk (every clickable state screenshotted, every seam scrolled). Then the real-scroll recording with the dead-air report (2d). Only then show the user.
+Measure, do not eyeball: web-motion 2c (grid, nav, type, spacing, components, colour, images), 2e side-by-side sheets for every hand-off against the contracts, 2f legibility, occlusion, scroll-efficiency and nav reports, 2g interaction walk (every clickable state screenshotted, every seam scrolled), 2h SELF-AUDIT.md (the scored standard; a FAIL is fixed or explained before the freeze). Then the real-scroll recording with the dead-air report (2d). Only then show the user.
 
 ## PHASE 5: AUDIT (BUILD only; separate agent, not the builder)
 Brand Guardian checks, pass/fail:
