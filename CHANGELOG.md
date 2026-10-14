@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.12 (2026-10-13)
+- Cause: Liv Body V1/V2 homepage runs passed brand and layout but failed synergy (worlds picked first, brand elements dropped on top; Paige as a thumbnail on a cherry splash; the real brand video logged as a grey poster and cut), craft (nav, grid, baselines unchecked) and pacing (builder recordings used short bursts that hid 4-17 s holds).
+- library/web-motion.md 1.1: 2b SYNERGY (one sentence per section, world built out from the brand's real element, motion matches copy, real material first), 2c CRAFT PASS (measured gate: grid, nav, type, spacing, components, color, images), 2d REAL-SCROLL RECORDING (constant wheel, whole page, dead-air report; user recording is the reference).
+- ce-04 2.4: BRAND MATERIAL FIRST in Phase 0; STORY LINE PER SECTION and SHOP FIRST in Phase 1; Phase 4b CRAFT GATE; run order updated.
+- gauntlet-loop 2.7: synergy critic and pacing critic; critics judge recording strips for motion work; craft critic reads the measured numbers.
+
 ## 2.11 (2026-10-13)
 - Cause: two Liv Body homepage runs (elevated and cinematic) skipped audit, plan and boards, reused old assets, and delivered a jar on a plain plinth. EXPLORE mode said "no gates" and agents read that as "no phases"; the code layer (Three.js, WebGL, GLSL) was a tool name with no rules; "elevate" was undefined.
 - library/web-motion.md (new): the three-layer split, the ROUTING RULE (what the visitor does with an element decides the layer), ELEVATE defined, six code moves (real 3D product with real label, scroll-scrubbed film, WebGL hero loop, shader transitions, particles, parallax), per-layer asset handoff, checks.

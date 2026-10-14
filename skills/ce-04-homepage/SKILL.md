@@ -6,7 +6,7 @@ description: "Universal master workflow for building or rebuilding a brand's hom
 > Load ce-core first. Always on: quote credits before spend (model, why, total; re-quote if anything changes); real label only (text from the real source, checked against the real image, small print included); real brand text (name, price, CTA, claims) is set in code or checked letter by letter against the source; real people and voices are fine when the user says the person or client approved (note it once in the brief, never re-ask); no fake reviews, claims or results shown as real; world rules before any prompt; a connector (Apify, ElevenLabs, Firecrawl, Higgsfield, Chrome) is never "missing" until ToolSearch has looked for it (ce-core section 14 TOOL CHECK).
 
 # CE-04 HOMEPAGE BUILD
-Version 2.3 (2026-10-13).
+Version 2.4 (2026-10-13).
 
 Run this when the job is ONE page: the homepage (hero, motion, sections, conversion flow). For a whole site, use ce-05.
 Brand-agnostic. Every brand detail is a variable: [BRAND], [PRODUCT], [AUDIENCE], [GOAL].
@@ -33,6 +33,7 @@ Mode note: in EXPLORE every phase below still runs; the gates are show-and-go (c
 ## PHASE 0: HARNESS
 - Load the brand bible from ce-00. If none exists, run ce-00 first (EXPLORE: light intake only). Do not rebuild it here.
 - AUDIT the existing homepage (Claude in Chrome or Firecrawl screenshot, desktop + phone): nav depth, hero clarity, product count, load weight, CTA count, mobile problems. Write a keep / fix / cut list. Keep what already works.
+- BRAND MATERIAL FIRST: every real video, photo, label art and lifestyle image on the site is downloaded and listed BEFORE any world is imagined. A video that renders as a poster is still a video: fetch its source URL and frame it. Cutting real brand footage is a Phase 0 failure.
 - WORLD INVENTORY: list every visual world the site already uses (each hero banner, each campaign image: subject, setting, ingredient, color, mood). These are the raw material for elevate. Save the screenshots. Nothing in the build may replace these worlds with a generic one.
 - Marketing advisor step: look at 3-5 competitor or best-in-niche homepages (Refero, Mobbin, Awwwards, or the user's references). Note what to match and what to beat. One line each.
 - Asset request: send the client a checklist of what is missing (hi-res packshots, label art, lifestyle shots, brand video, fonts).
@@ -40,6 +41,8 @@ PLAN gate (BUILD only): bible loaded, audit done, asset list agreed. Stop if the
 
 ## PHASE 1: STRATEGY AND SECTION PLAN
 - One-line concept spine: what the page says in one sentence.
+- STORY LINE PER SECTION: one sentence each. Every element in the section (world, photo, product, price, copy, motion) must trace to that sentence (library/web-motion.md 2b). The world is built out from the brand's real element in that section, never chosen first.
+- SHOP FIRST: it is a store. A visitor sees a product, its price, its rating and a way to buy within the first two screens. Ratings, badges and compare-at prices that exist on the real site stay.
 - Trim to 3-5 flagship products. Everything else lives one click deeper.
 - Navigation: one sticky nav, 5 items max, one CTA.
 - Section plan (default, adjust to GOAL): Hero > proof strip > flagship products > how it works / benefits > social proof (real only) > secondary offer > footer. One job per section.
@@ -79,6 +82,9 @@ ROUTE D: Shopify
 - Output sections as theme-ready code. Quick-add hooks use real variant IDs from products.json. Do not touch the live theme without explicit approval.
 - Build in stages: nav + hero > sections > motion > commerce. Review each stage.
 
+## PHASE 4b: CRAFT GATE (both modes, before any frame goes to the user)
+Measure, do not eyeball: library/web-motion.md 2c (grid, nav, type scale, spacing, components, color, images). Report the numbers. Then the real-scroll recording with the dead-air report (2d). Only then show the user.
+
 ## PHASE 5: AUDIT (BUILD only; separate agent, not the builder)
 Brand Guardian checks, pass/fail:
 - Colors and fonts match the bible. Labels match real packs. Claims are on the approved list. Tone matches voice.
@@ -106,6 +112,6 @@ FAIL = fix and re-run. Never ship on a fail.
 | Drift between boards and build | Rebuild from the locked boards, not memory. |
 
 ## RUN ORDER SUMMARY
-EXPLORE: 0 audit + world inventory + references > 1 plan + routing table (show) > 2 boards (show) > 3 asset lock (show, quote) > 4 build > 6-point section check (show). Gates are show-and-go. No separate audit agent, weight budget or delivery.
+EXPLORE: 0 brand material + audit + world inventory + references > 1 story lines + plan + routing table (show) > 2 boards (show) > 3 asset lock (show, quote) > 4 build > 4b craft gate + real-scroll recording (show) > gauntlet. Gates are show-and-go. No separate audit agent, weight budget or delivery.
 BUILD: 0 harness (ce-00) + audit > PLAN > 1 strategy > PLAN > 2 boards > LOOK > 3 assets > ASSETS > 4 build (prototype first) > 5 audit > 6 deliver.
 Time: tame 1 day, new direction 2-3 days, spectacular 4-7 days. Credits: boards low, atmosphere loops moderate, scroll film high. Always quote first.

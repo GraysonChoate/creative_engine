@@ -1,5 +1,5 @@
 # Web motion: the code layer (3D, scroll film, transitions, particles)
-Version 1.0 (2026-10-13). For ce-04 and ce-05. Companion to jack-roberts.md (interactive components) and ../docs/BRIEF-scroll-assembly.md (AE frame sequence route).
+Version 1.1 (2026-10-13). For ce-04 and ce-05. Companion to jack-roberts.md (interactive components) and ../docs/BRIEF-scroll-assembly.md (AE frame sequence route).
 
 The engine has three layers that make motion. This page is the third one. It is not a fallback: for a web page, code is a first-class medium, equal to Higgsfield and After Effects.
 
@@ -30,6 +30,28 @@ Elevate = the brand's own visual world, kept, made to move, given room. Not a di
 - Add: motion with a job (the ingredient bursts, the cloud drifts, the callout line draws itself), big clean type, one hero instead of five, transitions that carry something from one section into the next.
 - Test: a fan of the brand should say "that's them, but better." If it could be any brand, it failed.
 - A product alone on a plain backdrop is a downgrade unless the brand's own site is already that minimal.
+
+## 2b. SYNERGY (one sentence per section; every element traces to it)
+Each section says one sentence. Write it first. Then every element must be traceable to that sentence or it goes:
+- World (background, light, time of day, surface) is built OUT FROM the brand's real element in that section, never chosen first and the element dropped on top. Paige's beach photo means the section's water is her water, her light, her product (Collagen). A cherry splash belongs to Relief, not to her.
+- The thing that moves is the thing the copy is about. "Energy, focus, pump" = the burst. "Save 20%" = the stack grows and the number counts. "Everyday wellness" = the brand's real footage of a real day.
+- Products, prices, ratings and badges are elements of the story, not UI dropped in afterwards: a price sits beside the product it prices, on the same surface, lit the same.
+- Real brand material first: the brand's own video, photos and label art are mined before anything is generated. An agent that logs a real video as "a grey poster" and cuts it has failed Phase 0.
+- Test per element: "why is this here, and what is it next to?" A generic answer ("background", "a nice photo") fails.
+
+## 2c. CRAFT PASS (its own gate; measured, never eyeballed)
+Before any screenshot goes to the user, measure and report:
+- Grid: one left edge for every headline, body and button in a column; section gutters identical; content max-width identical across sections.
+- Nav: logo size and clear space, item spacing, cart and icons on one baseline, announcement bar height, nav background behaves the same over every world (same blur or none, same contrast).
+- Type: one scale (eyebrow, h1, h2, body, small, legal), same letter-spacing per step, same line-height per step, headline never kisses an image edge, measure under 70 characters.
+- Spacing: eyebrow to headline, headline to body, body to button are the same three numbers in every section.
+- Components: one button radius, one card radius, one shadow, one pill; the same hover on every button.
+- Color: one accent per view; price and compare-at on one baseline; rating stars one size.
+- Images: no element cut by the viewport by accident; product base and shadow inside the frame; no photo as a hard rectangle unless every photo is.
+A mock-up is judged as the finished thing. "It's a demo" lowers nothing.
+
+## 2d. REAL-SCROLL RECORDING (the only honest motion check)
+Stills hide pacing. Every motion check records a real scroll: Playwright or headed Chromium at 1440x900, constant wheel input at about 2400 px/s for the WHOLE page (never a short burst, which hides holds), page video on, then frames at 2 fps as strips. Report: total px, seconds, and every stretch over 1.5 s where nothing on screen changes (dead air). Any such stretch is a fail unless it is the one reading hold per section. The user's own recording at that rate is the reference; a builder recording that disagrees with it is wrong, not the user's.
 
 ## 3. THE SIX CODE MOVES
 
@@ -86,6 +108,7 @@ Elevate = the brand's own visual world, kept, made to move, given room. Not a di
 | Type, prices, buttons, legal | - | - | brand fonts, copy list word for word |
 
 ## 6. CHECK (before showing the user)
+- Section story lines listed; every element traced (2b). Craft pass measured and reported (2c). Real-scroll recording with dead-air report (2d).
 - Screenshot every section at desktop; every transition at 0, 50, 100 percent scroll progress.
 - 3D label at four angles against the real render.
 - Weight and first-load time against the tier budget.
