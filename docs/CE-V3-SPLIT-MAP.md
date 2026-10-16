@@ -112,4 +112,4 @@ Listen first (never re-ask what was said) → research → ask only gaps, max 5,
 - Routing is by role; Higgsfield fills the roles today, ElevenLabs = voice, After Effects/code = finish. Swap = one row.
 
 ## 7. Status
-Step 1 done: the 9 Core files are drafted in `v3/ce-core/` of this repo (README, intake, storyboard, tickets, export-table, tools/routing, freeze, ledger, lessons, naming). Next: step 2, create the ce-core repo and move Core-bound files.
+Step 1 done: the 9 Core files are drafted in `v3/ce-core/` of this repo (README, intake, storyboard, tickets, export-table, tools/routing, freeze, ledger, lessons, naming). Step 2 done: github.com/GraysonChoate/ce-core is live (3.0.0, 35 files, commit babe8ec). SKILL.md rewritten on the spine. Next: step 3, clients/_template + move LIV Body into clients/liv-body; then step 4, ce-web.
