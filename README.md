@@ -1,3 +1,7 @@
+> **ARCHIVED (2026-10-16).** This is Creative Engine v2. It is replaced by v3, split into separate repos:
+> [ce-core](https://github.com/GraysonChoate/ce-core) (the brain) · [ce-realism](https://github.com/GraysonChoate/ce-realism) · [ce-cinematic](https://github.com/GraysonChoate/ce-cinematic) · [ce-motion](https://github.com/GraysonChoate/ce-motion) · [ce-web](https://github.com/GraysonChoate/ce-web).
+> Don't load the ce-00…ce-09 skills from here. Kept for history only.
+
 # Creative Engine
 
 A reusable "brain and nervous system" for creative production. One shared core (ce-core) feeds thin skills: ce-00 brand, ce-01 image ads, ce-02 UGC/social, ce-03 animated ads, ce-04 homepage, ce-05 website, ce-06 cinematic ad, ce-07 pitch deck, ce-08 explainer, ce-09 research, plus ce-extract-video and gauntlet-loop. Any brand plugs in on top.

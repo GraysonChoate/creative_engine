@@ -1,3 +1,5 @@
+> **ARCHIVED (2026-10-16):** v2. Use the v3 repos (ce-core + engines). See README.md.
+
 # START HERE (any agent)
 
 1. Load ce-core (skills/ce-core/SKILL.md). It routes the request, picks the model and the finish layer, and holds every shared rule.
