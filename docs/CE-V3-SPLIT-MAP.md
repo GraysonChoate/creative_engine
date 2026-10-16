@@ -106,7 +106,10 @@ Listen first (never re-ask what was said) → research → ask only gaps, max 5,
 8. ce-app last, when there's a job for it.
 9. Archive the old creative_engine repo read-only.
 
-## 6. Open decisions (yours)
-- Repo names as above, or a prefix you prefer?
-- Core as a git submodule in each engine, or each engine copies Core at a tagged version? (Submodule = one fix everywhere; copy = simpler for the team later.)
-- Keep Higgsfield as the default video tool in routing, or make routing model-agnostic from day one?
+## 6. Decisions (2026-10-16)
+- Repo names as above.
+- Core is a git submodule in each engine now; switch to tagged copies when handed to the team.
+- Routing is by role; Higgsfield fills the roles today, ElevenLabs = voice, After Effects/code = finish. Swap = one row.
+
+## 7. Status
+Step 1 done: the 9 Core files are drafted in `v3/ce-core/` of this repo (README, intake, storyboard, tickets, export-table, tools/routing, freeze, ledger, lessons, naming). Next: step 2, create the ce-core repo and move Core-bound files.
