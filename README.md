@@ -1,3 +1,6 @@
+> **RETIRED (2026-10-25).** This is Creative Engine v2. Do not use it or its ce-00 to ce-09 skills.
+> The current engine (v4.2) is 5 repos: [ce-core](https://github.com/GraysonChoate/ce-core) (load first) + [ce-realism](https://github.com/GraysonChoate/ce-realism), [ce-cinematic](https://github.com/GraysonChoate/ce-cinematic), [ce-motion](https://github.com/GraysonChoate/ce-motion), [ce-web](https://github.com/GraysonChoate/ce-web).
+
 > **ARCHIVED (2026-10-16).** This is Creative Engine v2. It is replaced by v3, split into separate repos:
 > [ce-core](https://github.com/GraysonChoate/ce-core) (the brain) · [ce-realism](https://github.com/GraysonChoate/ce-realism) · [ce-cinematic](https://github.com/GraysonChoate/ce-cinematic) · [ce-motion](https://github.com/GraysonChoate/ce-motion) · [ce-web](https://github.com/GraysonChoate/ce-web).
 > Don't load the ce-00…ce-09 skills from here. Kept for history only.
